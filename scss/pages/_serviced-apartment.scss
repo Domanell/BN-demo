@@ -1,0 +1,9 @@
+.serviced-apartment__hero {
+	@extend .features-hero_new;
+	padding-top: 100px;
+	img {
+		left: 45%;
+		max-width: 65%;
+		bottom: -80px;
+	}
+}

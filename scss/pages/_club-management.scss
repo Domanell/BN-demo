@@ -1,0 +1,108 @@
+.club-page__hero {
+	@extend .segment__hero;
+	background: url(../img/club-hero-clouds.png) repeat-x, #f6f8fa;
+	background-position: bottom;
+	padding-bottom: 120px;
+	padding-top: 30px;
+	@include mq($max-width: 991px) {
+		font-size: 24px;
+	}
+}
+
+.club-page__center-text {
+	background: linear-gradient(0deg, #fff 1%, #f5f9fc 100%);
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	padding: 20px 0 50px 0;
+}
+
+.club-page__main-title {
+	text-align: center;
+	padding-bottom: 20px;
+	h2 {
+		color: #303030;
+		padding-bottom: 25px;
+		@extend .title-h2;
+	}
+	p {
+		padding-bottom: 20px;
+		color: #525252;
+	}
+}
+
+.club-page__articles {
+	@extend .segment__articles;
+	padding-bottom: 45px;
+	@include mq($max-width: 991px) {
+		padding-bottom: 0;
+	}
+}
+.club-page__article {
+	@extend .segment__article;
+	padding: 0;
+	position: relative;
+	color: #2d2d2d;
+	article {
+		padding: 50px 0;
+		@include mq($max-width: 991px) {
+			padding: 30px 0 20px;
+		}
+		p {
+			padding-bottom: 20px;
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+	}
+	ul {
+		li {
+			padding-bottom: 20px;
+			position: relative;
+			padding-left: 35px;
+			background: url(../img/club-management-list-icon.png) no-repeat left top;
+			color: #2d2d2d;
+			.unstyled {
+				font-size: inherit;
+				font-weight: inherit;
+				color: inherit;
+				padding: 0;
+			}
+		}
+	}
+
+	.segment-article-figure__right {
+		justify-content: flex-start;
+	}
+}
+
+.club-management-list {
+	margin-top: 40px;
+	.segment-list-box {
+		width: 25%;
+		padding: 0 20px;
+		@include mq($max-width: 991px) {
+			padding: 10px;
+		}
+		@include mq($max-width: 767px) {
+			width: 50%;
+			margin-bottom: 0px;
+		}
+		@include mq($max-width: 576px) {
+			width: 260px;
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.rtl {
+	.club-page__article {
+		ul {
+			li {
+				padding-left: 0;
+				padding-right: 35px;
+				background-position-x: right;
+			}
+		}
+	}
+}

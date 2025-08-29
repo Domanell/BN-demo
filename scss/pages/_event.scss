@@ -1,0 +1,8 @@
+.event-hero {
+	img {
+		width: 60%;
+		@include mq($max-width: 1200px) {
+			bottom: 0;
+		}
+	}
+}

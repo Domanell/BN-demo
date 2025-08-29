@@ -1,0 +1,23 @@
+.business-analytics__hero {
+	@extend .features-hero_new;
+	padding-bottom: 160px;
+	padding-top: 30px;
+	p {
+		font-weight: 500;
+	}
+	@include mq($max-width: 991px) {
+		text-align: center;
+		padding-top: 30px;
+	}
+	img {
+		position: static;
+		width: auto;
+	}
+}
+
+.business-analytics__pricing {
+	@extend .features-pricing;
+}
+.business-analytics__bottom {
+	padding-bottom: 50px;
+}

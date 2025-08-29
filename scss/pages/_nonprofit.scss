@@ -1,0 +1,10 @@
+.nonprofit-hero {
+	padding-top: 70px;
+	@include mq($max-width: 991px) {
+		padding-top: 30px;
+	}
+	.nonprofit-hero__img {
+		max-width: 55%;
+		bottom: -20%;
+	}
+}
