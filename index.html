@@ -319,14 +319,14 @@
 						<!-- Hero content -->
 						<div class="row align-items-center justify-content-between">
 							<div class="col-lg-7">
-								<div class="hero__main">
+								<div class="hero__main ">
 									<h1 class="h1">The Only Salesforce Property Management System Built to Scale Enterprise Portfolios</h1>
 									<h2 class="h4">Run your property business in Salesforce — increase revenue, cut manual work, and scale faster.</h2>
 									<a class="button" href="/demo">See Your ROI</a>
 								</div>
 							</div>
 							<div class="col-lg-5">
-								<img src="img/homepage-hero.jpg" alt="The Only Salesforce Property Management System Built to Scale Enterprise Portfolios" class="hero__img adaptive-img" />
+								<img src="img/homepage-hero.jpg" alt="The Only Salesforce Property Management System Built to Scale Enterprise Portfolios" class="hero__img" />
 								<!-- <video src="lv_0_20250827192059.mp4" autoplay width="480" loop></video> -->
 							</div>
 						</div>
@@ -337,8 +337,8 @@
 						<div class="homepage-block__header">
 							<h2 class="h2">Why Choose Booking Ninjas?</h2>
 						</div>
-						<div class="row">
-							<div class="col-sm-2 col-lg-4">
+						<div class="row gy-4 justify-content-center">
+							<div class="col-sm-6 col-md-4">
 								<div class="plain-card">
 									<img class="plain-card__icon" src="img/icons/solar_dollar-broken.svg" alt="Proven ROI Icon" />
 									<div class="plain-card__content">
@@ -347,7 +347,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-2 col-lg-4">
+							<div class="col-sm-6 col-md-4">
 								<div class="plain-card">
 									<img class="plain-card__icon" src="img/icons/tabler_view-360.svg" alt="Scale Without Staff Icon" />
 									<div class="plain-card__content">
@@ -356,7 +356,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-2 col-lg-4">
+							<div class="col-sm-6 col-md-4">
 								<div class="plain-card">
 									<img class="plain-card__icon" src="img/icons/si_shield-security-line.svg" alt="Government-Tested Security Icon" />
 									<div class="plain-card__content">
@@ -389,7 +389,7 @@
 					<div class="container">
 						<div class="homepage-block__header">
 							<h2 class="h2">Why Choose Booking Ninjas?</h2>
-							<p>Bring reservations, CRM, and accounting together in one system — leaner, faster, built for growth.</p>
+							<p class="homepage-block__subtitle">Bring reservations, CRM, and accounting together in one system — leaner, faster, built for growth.</p>
 						</div>
 
 						<div class="pms-growth">
@@ -442,14 +442,14 @@
 				</div>
 				<div class="homepage-block why-salesforce">
 					<div class="container">
-						<div class="row why-salesforce__row ">
-							<div class="col-lg-8">
+						<div class="row gy-5 why-salesforce__row">
+							<div class="col-md-8 col-lg-8">
 								<div class="why-salesforce__content">
-									<h2 class="h2 why-salesforce__title">Why Salesforce-Powered Property Management Changes Everything</h2>
+									<h2 class="h2 why-salesforce__title">Why Salesforce - Powered Property Management Changes Everything</h2>
 									<a href="#" class="button">View on AppExchange</a>
 								</div>
 							</div>
-							<div class="col-3">
+							<div class="col-auto col-md-4 col-lg-auto">
 								<div class="why-salesforce__image">
 									<img src="img/icons/salesforce-on-app-exchange.svg" alt="Salesforce App Exchange Icon" />
 								</div>
@@ -515,6 +515,7 @@
 					<div class="container">
 						<div class="homepage-block__header">
 							<h2 class="h2">Built for Large Scale, Multi-Property Operations</h2>
+							<p class="homepage-block__subtitle">Powering Growth Across Every Property Type</p>
 						</div>
 						<div class="swiper">
 							<div class="swiper-wrapper">
@@ -664,8 +665,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="homepage-block">
-					<div class="container">
+				<div class="homepage-block app-integration">
+					<div class="container ovh">
 						<div class="homepage-block__header">
 							<h2 class="h2">Integrations That Power Every Operation</h2>
 							<p class="homepage-block__subtitle">Plug in. Run faster.</p>
@@ -894,26 +895,19 @@
 				</div>
 				<div class="homepage-block">
 					<div class="container">
-						<div class="base-cta-card row justify-content-between">
-							<!-- <div class="base-cta-card__content">
-								<h2 class="base-cta-card__title">Ready to Run Your Entire Portfolio on <span>Salesforce?</span></h2>
-								<p>Future-ready operations – grow revenue, reduce expenses, maximum control of your portfolio.</p>
-							</div>
-							<div class="base-cta-card__actions">
-								<a href="#" class="button-inverse">See Your ROI</a>
-							</div> -->
-
-							<div class="col-12 col-lg-8 col-xl-6 mb-auto align-items-spread">
-								<h2 class="base-cta-card__title">Ready to Run Your Entire Portfolio on <span>Salesforce?</span></h2>
-
-								<div class="row">
-									<p class="col-md-10 col-lg-9">
-										Future-ready operations – grow revenue, reduce expenses, maximum control of your portfolio.
-									</p>
+						<div class="base-cta-card">
+							<div class="base-cta-card__row row flex-lg-nowrap gy-5 justify-content-between">
+								<div class="col-12 col-lg-8 col-xl-6 mb-auto align-items-spread">
+									<h2 class="base-cta-card__title">Ready to Run Your Entire Portfolio on <span>Salesforce?</span></h2>
+									<div class="row">
+										<p class="col-md-10 col-lg-9">
+											Future-ready operations – grow revenue, reduce expenses, maximum control of your portfolio.
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="col-auto">
-								<a href="#" class="button-inverse">See Your ROI</a>
+								<div class="col-auto">
+									<a href="#" class="button-inverse">See Your ROI</a>
+								</div>
 							</div>
 						</div>
 					</div>

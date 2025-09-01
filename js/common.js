@@ -99,9 +99,11 @@ $(document).on('ready', function () {
 			slidesPerGroup: 3,
 			spaceBetween: 32,
 			breakpoints: {
-				0: { slidesPerView: 1 },
-				768: { slidesPerView: 2 },
-				1024: { slidesPerView: 3 },
+				0: { slidesPerView: 1, slidesPerGroup: 1 },
+				480: { slidesPerView: 1.5, slidesPerGroup: 1 },
+				768: { slidesPerView: 'auto', slidesPerGroup: 2 },
+				992: { slidesPerView: 'auto', slidesPerGroup: 2 },
+				1200: { slidesPerView: 'auto', slidesPerGroup: 3 },
 			},
 			pagination: {
 				el: '.solution-slider__pagination',
