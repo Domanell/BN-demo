@@ -364,7 +364,7 @@ $(document).on('ready', function () {
 		const menuMobileHead = menu.querySelector('.menu__mobile-head');
 		const menuBack = menu.querySelector('.menu__back');
 		const menuClose = menu.querySelector('.menu__close');
-		const headerMenu = document.querySelector('header .menu');
+		const header = document.querySelector('header');
 
 		let subMenu = null;
 
@@ -375,7 +375,7 @@ $(document).on('ready', function () {
 			activeDropdown.querySelector('.categories-menu__item.active')?.classList.remove('active');
 			activeDropdown.querySelector('.categories-menu__links.active')?.classList.remove('active');
 
-			const category = activeDropdown.querySelectorAll('.categories-menu__item');
+			const categoryList = activeDropdown.querySelectorAll('.categories-menu__item');
 			const categoryLinks = activeDropdown.querySelectorAll('.categories-menu__links');
 			const categoryData = activeDropdown.querySelector('.categories-menu__data');
 
@@ -383,27 +383,27 @@ $(document).on('ready', function () {
 				categoryData?.classList.remove('active');
 			} else {
 				categoryData.classList.add('active');
-				category[catIndex]?.classList.add('active');
+				categoryList[catIndex]?.classList.add('active');
 				categoryLinks[catIndex]?.classList.add('active');
-				menuCurrentTitle.textContent = menuCurrentTitle.textContent + ' > ' + category[catIndex].textContent.trim();
+				menuCurrentTitle.textContent = menuCurrentTitle.textContent + ' > ' + categoryList[catIndex].textContent.trim();
 			}
 		};
 
 		const hideMegaMenu = (keepMenuActive = false) => {
-			headerMenu?.classList.toggle('active', keepMenuActive);
+			menu?.classList.toggle('active', keepMenuActive);
 			menuOverlay?.classList.toggle('active', keepMenuActive);
 			document.querySelector('.menu__dropdown.active')?.classList.remove('active');
 		};
 
 		const handleHoverMenu = (item) => {
-			changeCategory(window.innerWidth < 992 ? -1 : 0);
 			const hasMegaMenu = item.classList.contains('menu__item--has-submenu');
-			hideMegaMenu(hasMegaMenu);
+			// hideMegaMenu(hasMegaMenu);
 
 			if (hasMegaMenu) {
 				subMenu = item.querySelector('.menu__dropdown');
 				subMenu?.classList.add('active');
 				menuOverlay?.classList.add('active');
+				changeCategory(window.innerWidth < 992 ? -1 : 0);
 			}
 		};
 
@@ -412,13 +412,19 @@ $(document).on('ready', function () {
 		};
 
 		const showMobileMenu = () => {
-			menu.classList.add('active');
+			menuCurrentTitle.textContent = '';
+			menu.classList.add('active', 'animated');
 			document.body.classList.add('no-scroll');
+			header.classList.add('active');
 		};
 
 		const hideMobileMenu = () => {
 			menu.classList.remove('active');
 			document.body.classList.remove('no-scroll');
+			header.classList.remove('active');
+			setTimeout(() => {
+				menu.classList.remove('animated');
+			}, 400);
 			closeSubMenuMobile();
 		};
 
@@ -468,16 +474,17 @@ $(document).on('ready', function () {
 		});
 
 		// Mobile menu click handler - only for mobile submenu navigation
-		menu.querySelector('.menu__list')?.addEventListener('click', (event) => {
-			if (!menu.classList.contains('active')) return;
+		menu.querySelectorAll('.menu__link-title')?.forEach((linkTitle) => {
+			linkTitle.addEventListener('click', (event) => {
+				if (!menu.classList.contains('active') || window.innerWidth >= 992) return;
 
-			const submenuItem = event.target.closest('.menu__item--has-submenu');
-			if (submenuItem) {
-				event.preventDefault();
-				openSubMenuMobile(submenuItem);
-			}
+				const submenuItem = event.target.closest('.menu__item--has-submenu');
+				if (submenuItem) {
+					event.preventDefault();
+					openSubMenuMobile(submenuItem);
+				}
+			});
 		});
-
 		// Category menu click handler - works in both desktop and mobile
 		menu.addEventListener('click', (event) => {
 			const categoryItem = event.target.closest('.categories-menu__item');
