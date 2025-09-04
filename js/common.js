@@ -1,4 +1,5 @@
 $(document).on('ready', function () {
+	const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 	//fancybox
 	$('.fancybox').fancybox({
 		helpers: {
@@ -36,7 +37,7 @@ $(document).on('ready', function () {
 
 	if ($('.property-slider').length) {
 		const $container = $('.property-slider');
-		// Add Swiper CSS hooks and structure on the fly (no HTML changes needed)
+		// Add Swiper structure
 		$container.addClass('swiper');
 		if ($container.find('.swiper-wrapper').length === 0) {
 			const $slides = $container.children('.property-slider__slide');
@@ -56,8 +57,8 @@ $(document).on('ready', function () {
 			spaceBetween: 0,
 			slideToClickedSlide: true,
 			navigation: {
-				nextEl: $container.find('.swiper-arrow--next')[0],
-				prevEl: $container.find('.swiper-arrow--prev')[0],
+				nextEl: '.swiper-arrow--next',
+				prevEl: '.swiper-arrow--prev',
 			},
 			breakpoints: {
 				0: { slidesPerView: 1, centeredSlides: true },
@@ -82,8 +83,8 @@ $(document).on('ready', function () {
 			slidesPerView: 3,
 			spaceBetween: 12,
 			navigation: {
-				nextEl: $cc.find('.swiper-arrow--next')[0],
-				prevEl: $cc.find('.swiper-arrow--prev')[0],
+				nextEl: '.swiper-arrow--next',
+				prevEl: '.swiper-arrow--prev',
 			},
 			breakpoints: {
 				0: { slidesPerView: 1 },
@@ -104,6 +105,10 @@ $(document).on('ready', function () {
 				768: { slidesPerView: 'auto', slidesPerGroup: 2 },
 				992: { slidesPerView: 'auto', slidesPerGroup: 2 },
 				1200: { slidesPerView: 'auto', slidesPerGroup: 3 },
+			},
+			navigation: {
+				nextEl: '.swiper-arrow--next',
+				prevEl: '.swiper-arrow--prev',
 			},
 			pagination: {
 				el: '.solution-slider__pagination',
@@ -382,7 +387,7 @@ $(document).on('ready', function () {
 			if (catIndex < 0) {
 				categoryData?.classList.remove('active');
 			} else {
-				categoryData.classList.add('active');
+				categoryData?.classList.add('active');
 				categoryList[catIndex]?.classList.add('active');
 				categoryLinks[catIndex]?.classList.add('active');
 				menuCurrentTitle.textContent = menuCurrentTitle.textContent + ' > ' + categoryList[catIndex].textContent.trim();
@@ -500,6 +505,24 @@ $(document).on('ready', function () {
 		menuBack?.addEventListener('click', backMenu);
 		menuClose?.addEventListener('click', toggleMobileMenu);
 		window.addEventListener('resize', handleResize);
+	}
+
+	// Autoplay videos on iOS
+	if (isIOS) {
+		document.querySelectorAll('video[autoplay]').forEach((video) => {
+			if (video.paused) {
+				video.play().catch(() => {
+					const unlock = () => {
+						video.play();
+						document.removeEventListener('touchstart', unlock);
+						document.removeEventListener('click', unlock);
+					};
+
+					document.addEventListener('touchstart', unlock, { passive: true });
+					document.addEventListener('click', unlock);
+				});
+			}
+		});
 	}
 });
 
