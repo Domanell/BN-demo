@@ -94,8 +94,8 @@ $(document).on('ready', function () {
 		});
 	}
 
-	if ($('.solution-slider').length) {
-		const solutionSlider = new Swiper('.solution-slider .swiper', {
+	if ($('.slider-outside').length) {
+		const solutionSlider = new Swiper('.slider-outside .swiper', {
 			slidesPerView: 'auto',
 			slidesPerGroup: 3,
 			spaceBetween: 32,
@@ -111,10 +111,10 @@ $(document).on('ready', function () {
 				prevEl: '.swiper-arrow--prev',
 			},
 			pagination: {
-				el: '.solution-slider__pagination',
+				el: '.slider-outside__pagination',
 				clickable: true,
-				bulletClass: 'solution-slider__bullet',
-				bulletActiveClass: 'solution-slider__bullet--active',
+				bulletClass: 'slider-outside__bullet',
+				bulletActiveClass: 'slider-outside__bullet--active',
 			},
 		});
 	}
