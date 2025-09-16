@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="initial-scale=1" />
+		<title>Booking Ninjas: Combined Property Management/ Salesforce Solution Application</title>
+		<link rel="icon" type="image/png" href="favicon.ico" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+		<link rel="stylesheet" href="css/fontawesome.css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-grid.css" />
+		<link href="css/screen.css" rel="stylesheet" media="screen" />
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container header__wrapper">
+					<div class="header__logo">
+						<a class="logo" href="/"><img alt="Booking Ninjas Logo" src="img/logo.svg" /></a>
+					</div>
+					<div class="header__button">
+						<a href="#" class="button-secondary">View the Solution</a>
+					</div>
+					<div class="header__menu">
+						<nav class="menu">
+							<div class="menu__mobile-head">
+								<div class="menu__back"><i class="fa fa-chevron-left"></i></div>
+								<div class="menu__current-title"></div>
+								<div class="menu__close"><i class="fa fa-times"></i></div>
+							</div>
+							<ul class="menu__list mobile-menu">
+								<li class="menu__item">
+									<a href="/" class="menu__link-title">Home</a>
+								</li>
+								<li class="menu__item menu__item--has-submenu">
+									<span class="menu__link-title">Features</span>
+									<div class="menu__dropdown">
+										<div class="categories-menu container">
+											<div class="categories-menu__col categories-menu__category">
+												<p class="categories-menu__col-title">Category</p>
+												<ul class="categories-menu__list mobile-menu">
+													<li class="categories-menu__item active">
+														<img src="img/icons/hotel-01.svg" alt="Reservations &amp; Operations" />
+														Reservations &amp; Operations
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/business-center-outline-rounded.svg" alt="Finance &amp; Revenue" />
+														Finance &amp; Revenue
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/cleaning-outline.svg" alt="Property &amp; Task Management" />
+														Property &amp; Task Management
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/stash_integrations.svg" alt="Integrations &amp; Communication" />
+														Integrations &amp; Communication
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/reports.svg" alt="Insights &amp; Reporting" />
+														Insights &amp; Reporting
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/light_captive-portal.svg" alt="User Access &amp; Portals" />
+														User Access &amp; Portals
+													</li>
+												</ul>
+											</div>
+											<div class="categories-menu__col categories-menu__data mobile-menu">
+												<p class="categories-menu__col-title">Features</p>
+												<!-- Reservations and Operations -->
+												<div class="categories-menu__links active">
+													<ul>
+														<li><a href="#">Booking Engine</a></li>
+														<li><a href="#">Booking &amp; Reservation Management</a></li>
+														<li><a href="#">Group Booking</a></li>
+														<li><a href="#">Availability Calendar Grid</a></li>
+														<li><a href="#">Check-in / Check-out Management</a></li>
+														<li><a href="#">Resource/Class Scheduling</a></li>
+														<li><a href="#">Attendance Tracking</a></li>
+														<li><a href="#">POS (Point of Sale)</a></li>
+														<li><a href="#">Ticketing System</a></li>
+														<li><a href="#">Digital Waivers &amp; E-signatures</a></li>
+													</ul>
+												</div>
+												<!-- Finance and Revenue -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Rate Types &amp; Controller</a></li>
+														<li><a href="#">Time-Based Booking Options</a></li>
+														<li><a href="#">Promotions &amp; Discounts</a></li>
+														<li><a href="#">Invoicing &amp; Receipts</a></li>
+														<li><a href="#">Transactions &amp; Payments</a></li>
+														<li><a href="#">Refunds &amp; Adjustments</a></li>
+														<li><a href="#">Owner Statements</a></li>
+														<li><a href="#">Occupancy &amp; Revenue Forecasting</a></li>
+													</ul>
+												</div>
+												<!-- Property and Task Management -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Housekeeping &amp; Maintenance</a></li>
+														<li><a href="#">Task Management</a></li>
+														<li><a href="#">Inventory Management</a></li>
+														<li><a href="#">Access Control (Smart Entry)</a></li>
+														<li><a href="#">Staff App</a></li>
+														<li><a href="#">Maintenance &amp; Reminder Flows</a></li>
+														<li><a href="#">Booking &amp; Task Automation</a></li>
+													</ul>
+												</div>
+												<!-- Integrations and Communication -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Salesforce</a></li>
+														<li><a href="#">Einstein AI</a></li>
+														<li><a href="#">Lightning</a></li>
+														<li><a href="#">Compliance (Salesforce Compliance)</a></li>
+														<li><a href="#">Security &amp; Privacy</a></li>
+														<li><a href="#">Channel Manager (Airbnb, Booking.com, Expedia, Agoda)</a></li>
+														<li><a href="#">WhatsApp &amp; SMS Messaging</a></li>
+														<li><a href="#">Email Notifications &amp; Confirmations</a></li>
+														<li><a href="#">Slack Integration</a></li>
+														<li><a href="#">Internal Notes &amp; Task Comments</a></li>
+														<li><a href="#">Automated Reminders &amp; Alerts</a></li>
+														<li><a href="#">Guest Review Management</a></li>
+														<li><a href="#">Surveys &amp; Feedback</a></li>
+													</ul>
+												</div>
+												<!-- Insights and Reporting -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Custom Dashboards</a></li>
+														<li><a href="#">Standard &amp; Exportable Reports</a></li>
+														<li><a href="#">KPI Tracking &amp; Optimization Tools</a></li>
+													</ul>
+												</div>
+												<!-- User Access and Portals -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Owner Portal</a></li>
+														<li><a href="#">Tenant Portal</a></li>
+														<li><a href="#">Member Portal</a></li>
+														<li><a href="#">Guest Portal</a></li>
+														<li><a href="#">Student Portal</a></li>
+													</ul>
+												</div>
+												<div class="categories-menu__all">
+													<a href="#" class="">All Features <i class="fas fa-arrow-right"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu__item">
+									<a href="/pricing" class="menu__link-title">Pricing</a>
+								</li>
+								<li class="menu__item menu__item--has-submenu">
+									<span class="menu__link-title">Solutions</span>
+									<div class="menu__dropdown">
+										<div class="categories-menu container">
+											<div class="categories-menu__col categories-menu__category">
+												<p class="categories-menu__col-title">Category</p>
+												<ul class="categories-menu__list mobile-menu">
+													<li class="categories-menu__item active">
+														<img src="img/icons/hotel-outline-rounded.svg" alt="Hospitality &amp; Tourism" />
+														Hospitality &amp; Tourism
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/parks.svg" alt="Recreational Facilities" />
+														Recreational Facilities
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/residential.svg" alt="Residential Real Estate" />
+														Residential Real Estate
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/events.svg" alt="Events &amp; Venues" />
+														Events &amp; Venues
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/workspace.svg" alt="Commercial &amp; Workspaces" />
+														Commercial &amp; Workspaces
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/marine.svg" alt="Marine &amp; Luxury Recreation" />
+														Marine &amp; Luxury Recreation
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/specialty-housing.svg" alt="Specialty Housing" />
+														Specialty Housing
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/nonprofit.svg" alt="Nonprofit &amp; Governmental" />
+														Nonprofit &amp; Governmental
+													</li>
+												</ul>
+											</div>
+											<div class="categories-menu__col categories-menu__data mobile-menu">
+												<p class="categories-menu__col-title">Solutions</p>
+												<!-- Hospitality and Tourism -->
+												<div class="categories-menu__links active">
+													<ul>
+														<li><a href="#">Hotels</a></li>
+														<li><a href="#">Hostels</a></li>
+														<li><a href="#">Vacation Rentals</a></li>
+														<li><a href="#">Serviced Apartments</a></li>
+														<li><a href="#">Airbnb (as a platform)</a></li>
+														<li><a href="#">Restaurants</a></li>
+														<li><a href="#">Villas</a></li>
+													</ul>
+												</div>
+												<!-- Recreational Facilities -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Leisure Facility</a></li>
+														<li><a href="#">Parks &amp; Recreation</a></li>
+														<li><a href="#">Campground</a></li>
+														<li><a href="#">Equestrian Clubs</a></li>
+														<li><a href="#">YOGA</a></li>
+													</ul>
+												</div>
+												<!-- Residential Real Estate -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Condominiums</a></li>
+														<li><a href="#">Multi-Family Residential</a></li>
+														<li><a href="#">Residential</a></li>
+														<li><a href="#">Corporate Housing</a></li>
+														<li><a href="#">Serviced Apartments</a></li>
+													</ul>
+												</div>
+												<!-- Events and Venues -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Event Spaces</a></li>
+														<li><a href="#">Conference Centers</a></li>
+														<li><a href="#">Banquet Halls</a></li>
+													</ul>
+												</div>
+												<!-- Commercial and Workspaces -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Coworking Space</a></li>
+														<li><a href="#">Office Spaces</a></li>
+													</ul>
+												</div>
+												<!-- Marine and Luxury Recreation -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Yacht</a></li>
+														<li><a href="#">Marina</a></li>
+													</ul>
+												</div>
+												<!-- Specialty Housing -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Student Housing</a></li>
+														<li><a href="#">Senior Living</a></li>
+													</ul>
+												</div>
+												<!-- Nonprofit and Governmental -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Government</a></li>
+														<li><a href="#">Nonprofit</a></li>
+														<li><a href="#">YMCA</a></li>
+													</ul>
+												</div>
+												<div class="categories-menu__all">
+													<a href="#" class="">All Solutions <i class="fas fa-arrow-right"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu__item menu__item--has-submenu language-menu">
+									<span class="menu__link-title menu__link-title--no-hover">
+										<div class="language-menu__item">
+											<span class="fi fi-us fis flag language-menu__icon"></span>
+											<span class="language-menu__name">English </span>
+										</div>
+									</span>
+									<div class="menu__dropdown">
+										<ul class="container language-list">
+											<li>
+												<a href="/es/" class="language-list__item active"><span class="fi fi-us fis flag"></span> English</a>
+											</li>
+											<li>
+												<a href="/es/" class="language-list__item"><span class="fi fi-es fis flag"></span> Español</a>
+											</li>
+											<li>
+												<a href="/pt/" class="language-list__item"><span class="fi fi-br fis flag"></span> Portuguese</a>
+											</li>
+											<li>
+												<a href="/id/" class="language-list__item"><span class="fi fi-id fis flag"></span> Indonesian</a>
+											</li>
+											<li>
+												<a href="/tr/" class="language-list__item"><span class="fi fi-tr fis flag"></span> Turkish</a>
+											</li>
+											<li>
+												<a href="/de/" class="language-list__item"><span class="fi fi-de fis flag"></span> German</a>
+											</li>
+											<li>
+												<a href="/ae/" class="language-list__item"><span class="fi fi-ae fis flag"></span> Arabic</a>
+											</li>
+											<li>
+												<a href="/it/" class="language-list__item"><span class="fi fi-it fis flag"></span> Italian</a>
+											</li>
+											<li>
+												<a href="/nl/" class="language-list__item"><span class="fi fi-nl fis flag"></span> Dutch</a>
+											</li>
+											<li>
+												<a href="/fr/" class="language-list__item"><span class="fi fi-fr fis flag"></span> French</a>
+											</li>
+											<li>
+												<a href="/el/" class="language-list__item"><span class="fi fi-gr fis flag"></span> Greek</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- CTA buttons in mobile menu -->
+								<li class="menu__item menu__item--button menu__item--mobile">
+									<a href="#" class="button-secondary">View the Solution</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="menu-overlay"></div>
+						<div class="mobile-menu-trigger">
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<div class="hero-base">
+					<div class="container">
+						<div class="hero-base__wrapper">
+							<div class="hero-base__content">
+								<h1 class="hero-base__title h1">Enterprise Plans. Power at <mark>Every</mark> Scale</h1>
+								<p class="hero-base__text text--limit-lg h4">One standard of excellence. The same enterprise software at every tier.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="subscription-length">
+					<div class="container">
+						<ul class="tabs subscription-length__tabs" role="tablist">
+							<li class="tabs__item" role="presentation">
+								<button class="tabs__button active" role="tab" aria-selected="true" data-tab="monthly">Monthly</button>
+							</li>
+							<li class="tabs__item" role="presentation">
+								<button class="tabs__button" role="tab" aria-selected="false" data-tab="annualy">Annual</button>
+							</li>
+						</ul>
+						<p>Save {!$Label.Annual_Subscription_Discount}% on annual subscription</p>
+					</div>
+				</div>
+
+				<div class="block pricing-table">
+					<div class="container">
+						<div class="row g-4">
+							<!-- Company size selector -->
+							<div class="col-12 col-lg-4">
+								<div class="pricing-card">
+									<h2 class="pricing-card__title">Plans</h2>
+									<ul class="pricing-size">
+										<!-- <apex:repeat value="{!products}" var="product" id="productList">
+											<li class="pricing-size__item {!IF(product.primary,'active','')}" data-id="{!product.order}">
+												<p class="pricing-size__name">{!product.name}</p>
+												<div class="pricing-size__amount">{!product.size} units</div>
+												<div class="pricing-size__icon">
+													<i class="fa fa-chevron-right"></i>
+												</div>
+											</li>
+										</apex:repeat> -->
+										<li class="pricing-size__item active" data-id="10">
+											<p class="pricing-size__name">Freemium</p>
+											<div class="pricing-size__amount">1-5 units</div>
+											<div class="pricing-size__icon">
+												<i class="fa fa-chevron-right"></i>
+											</div>
+										</li>
+										<li class="pricing-size__item" data-id="20">
+											<p class="pricing-size__name">Extra Small</p>
+											<div class="pricing-size__amount">5-50 units</div>
+											<div class="pricing-size__icon">
+												<i class="fa fa-chevron-right"></i>
+											</div>
+										</li>
+										<li class="pricing-size__item" data-id="30">
+											<p class="pricing-size__name">Small</p>
+											<div class="pricing-size__amount">50-100 units</div>
+											<div class="pricing-size__icon">
+												<i class="fa fa-chevron-right"></i>
+											</div>
+										</li>
+										<li class="pricing-size__item" data-id="40">
+											<p class="pricing-size__name">Medium</p>
+											<div class="pricing-size__amount">100-300 units</div>
+											<div class="pricing-size__icon">
+												<i class="fa fa-chevron-right"></i>
+											</div>
+										</li>
+										<li class="pricing-size__item" data-id="50">
+											<p class="pricing-size__name">Large</p>
+											<div class="pricing-size__amount">300-600 units</div>
+											<div class="pricing-size__icon">
+												<i class="fa fa-chevron-right"></i>
+											</div>
+										</li>
+										<li class="pricing-size__item" data-id="60">
+											<p class="pricing-size__name">Extra Large</p>
+											<div class="pricing-size__amount">600-1500 units</div>
+											<div class="pricing-size__icon">
+												<i class="fa fa-chevron-right"></i>
+											</div>
+										</li>
+										<li class="pricing-size__item" data-id="70">
+											<p class="pricing-size__name">Enterprise</p>
+											<div class="pricing-size__amount">1500-2500 units</div>
+											<div class="pricing-size__icon">
+												<i class="fa fa-chevron-right"></i>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- Pricing plan -->
+							<div class="col-12 col-lg-8">
+								<div class="pricing-card pricing-plan">
+									<div class="pricing-plan__header row g-4">
+										<div class="col-md-6 offset-md-3">
+											<p class="pricing-card__title pricing-plan__name">Plan</p>
+											<p class="pricing-plan__subtitle"><span class="pricing-plan__short-info"></span> • <span class="pricing-plan__size"></span> units</p>
+										</div>
+										<div class="col-md-3">
+											<div class="currency-selector">
+												<select class="currency-selector__select" name="currency" id="currency-select">
+													<!-- <apex:repeat value="{!Currency}" var="cur">
+														<apex:outputPanel layout="none" rendered="{!cur.code == 'USD'}">
+															<option value="{!cur.code}" data-rate="{!cur.rate}" data-currency-symbol="{!cur.symbol}" selected="selected">{!cur.code}</option>
+														</apex:outputPanel>
+														<apex:outputPanel layout="none" rendered="{!cur.code != 'USD'}">
+															<option value="{!cur.code}" data-rate="{!cur.rate}" data-currency-symbol="{!cur.symbol}">{!cur.code}</option>
+														</apex:outputPanel>
+													</apex:repeat> -->
+													<option value="USD" data-rate="1" data-currency-symbol="$">USD</option>
+													<option value="COP" data-rate="3903.32" data-currency-symbol="$">COP</option>
+												</select>
+												<i class="fas fa-chevron-down currency-selector__icon"></i>
+											</div>
+										</div>
+									</div>
+									<div class="pricing-plan__subscription">
+										<div class="pricing-plan__subscription-price">
+											<span class="pricing-plan__subscription-price-wrap">
+												<span class="pricing-plan__currency-symbol">$</span>
+												<span class="pricing-plan__price">0</span>
+											</span>
+											<span class="pricing-plan__period">/month</span>
+										</div>
+										<p class="pricing-plan__implementation">
+											+ One-time implementation fee&nbsp;<span class="pricing-plan__currency-symbol">$</span
+											><span class="pricing-plan__implementation-price">0</span>
+										</p>
+									</div>
+
+									<div class="pricing-plan__description">
+										<img src="img/icons/question-circle.svg" alt="info icon" />
+										<span class="pricing-plan__description-text"> </span>
+									</div>
+									<!-- Pricing features -->
+									<ul class="pricing-plan__features circled-list">
+										<li>Guest Management</li>
+										<li>Inventory Management</li>
+										<li>User Management</li>
+										<li>Reporting</li>
+										<li>Invoicing + Payment API</li>
+										<li>Housekeeping Management</li>
+										<li>Add-On Features</li>
+										<li>Availability Hour Grid</li>
+										<li>Reservation Management</li>
+										<li>Mobile Apps</li>
+									</ul>
+									<div class="pricing-plan__buttons">
+										<a href="#" class="button-outline">WhatsApp Us <i class="fas fa-chevron-right"></i></a>
+										<a href="#" class="button-outline">Schedule a Demo <i class="fas fa-chevron-right"></i></a>
+										<a href="/checkout?order=40&length=monthly&currency=usd" class="button pricing-plan__button"
+											>Start now <i class="fas fa-chevron-right"></i
+										></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__top">
+						<a class="footer__logo" href="/">
+							<img alt="Booking Ninjas Logo" src="img/logo-white.svg" />
+						</a>
+						<div class="footer__row row">
+							<div class="col-lg-9 col-xl-8">
+								<nav class="footer__nav row">
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Company</div>
+										<ul class="footer__list">
+											<li><a href="/about-us">About Us</a></li>
+											<li><a href="/core-values-of-booking-ninjas-product">Core Values</a></li>
+											<li><a href="/booking-ninjas-careers">Careers</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Product</div>
+										<ul class="footer__list">
+											<li><a href="#">Features</a></li>
+											<li><a href="#">Solutions</a></li>
+											<li><a href="/pricing">Pricing</a></li>
+											<li><a href="/blog">Blog</a></li>
+											<li><a href="/faqs">FAQs</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Resources</div>
+										<ul class="footer__list">
+											<li><a href="#">Client Portal</a></li>
+											<li><a href="/blog">Blog</a></li>
+											<li><a href="/faqs">FAQs</a></li>
+											<li><a href="/customer-stories">Customer Stories</a></li>
+											<li><a href="/booking-ninjas-webinars">Webinars</a></li>
+											<li><a href="#">Pilot</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Legal &amp; Contact</div>
+										<ul class="footer__list">
+											<li><a href="/terms-and-conditions">Terms of Use</a></li>
+											<li><a href="/privacy-policy">Privacy Policy</a></li>
+											<li><a href="/meeting">Contact Us</a></li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+							<div class="col-lg-auto text_center">
+								<img src="img/salesforce-section-icon-1.png" alt="Salesforce Partner Badge" />
+							</div>
+						</div>
+						<div class="footer__badges">
+							<img src="img/icons/badge-aicpa.png" alt="AICPA Badge" />
+							<img src="img/icons/badge-gdpr.png" alt="GDPR Badge" />
+							<img src="img/icons/badge-owasp.png" alt="OWASP Badge" />
+							<img src="img/icons/badge-gt.svg" alt="Government Tested Badge" />
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<div class="row justify-content-center justify-content-lg-between">
+							<div class="col-lg-6">
+								<form
+									id="j_id0:j_id1:footer-form"
+									name="j_id0:j_id1:footer-form"
+									method="post"
+									action="/BN_Index"
+									class="footer__form"
+									enctype="application/x-www-form-urlencoded"
+								>
+									<input type="hidden" name="j_id0:j_id1:footer-form" value="j_id0:j_id1:footer-form" />
+									<input type="text" name="j_id0:j_id1:footer-form:j_id199" value="" required="required" placeholder="Enter Your Email" /><input
+										class="button footer-btn-submit"
+										id="j_id0:j_id1:footer-form:j_id200"
+										name="j_id0:j_id1:footer-form:j_id200"
+										onclick="return A4J.AJAX.Submit('j_id0:j_id1:footer\x2Dform',event,{'similarityGroupingId':'j_id0:j_id1:footer\x2Dform:j_id200','html5Validate':true,'parameters':{'j_id0:j_id1:footer\x2Dform:j_id200':'j_id0:j_id1:footer\x2Dform:j_id200'} } );"
+										value="Subscribe"
+										type="submit"
+									/>
+									<div id="j_id0:j_id1:footer-form:j_id203"></div>
+								</form>
+								<div class="modal modal__success" id="modal-thanks">
+									<div class="modal__success-icon"><i class="far fa-check-circle"></i></div>
+									<p>Thanks</p>
+									<p>We send a monthly email with announcements, tips, news, feature updates, and important info. We'll only e-mail you if it's important.</p>
+								</div>
+								<p class="footer__form-text">Only strategic updates that matter — delivered monthly.</p>
+							</div>
+							<div class="col-auto">
+								<nav class="footer__social">
+									<a href="https://www.facebook.com/bookingninjas" target="_blank"><i class="fab fa-facebook"></i></a>
+									<a href="https://www.instagram.com/bookingninjas" target="_blank"><i class="fab fa-instagram"></i></a>
+									<a href="https://www.youtube.com/channel/UCOrcTzmQnmY7DG2nzwfa8zw" target="_blank"><i class="fab fa-youtube"></i></a>
+									<a href="https://www.linkedin.com/company/5346092/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+									<a href="https://twitter.com/bookingninjas" target="_blank"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.pinterest.com/bookingninjas" target="_blank"><i class="fab fa-pinterest"></i></a>
+									<a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N3A00000DvKtaUAF" target="_blank"><i class="fab fa-salesforce"></i></a>
+								</nav>
+								<p class="footer__copyright">All rights reserved &copy; 2020 - Booking Ninjas</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!--SCRIPT -->
+		<script src="js/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/wow.js"></script>
+		<script src="js/common.js"></script>
+		<script>
+			// TODO:
+			// - Add product.description to the JSON
+			// - Add product.sortInfo to the JSON
+			// - Add product.description to the JSON
+			document.addEventListener('DOMContentLoaded', () => {
+				// const productsData = JSON.parse('{!JSENCODE(productsJson)}');
+				// TODO: Replace the static data below with the dynamic data from Salesforce
+				const productsData = [
+					{
+						size: '1-5',
+						primary: true,
+						order: 10,
+						name: 'Freemium',
+						monthlyFeeAfterDiscount: 0,
+						monthlyFee: 0,
+						implementationFeeAfterDiscount: 474.05,
+						implementationFee: 499,
+						implementationDeposit: 30,
+						id: '01tHp00000AJjK5IAL',
+						features: [
+							{
+								name: 'Guest Management',
+								description: 'Gain full control of managing your guests by leveraging our mobile and desktop app.',
+							},
+							{
+								name: 'Reservation Management',
+								description: 'Save up on operational costs by digitizing your reservation calendar for real-time online booking.',
+							},
+							{
+								name: 'Housekeeping Management',
+								description: 'Monitor your staff, assign tasks, systematically handle checklists all from the comfort of your room, office, or wherever.',
+							},
+							{
+								name: 'User Management',
+								description:
+									'Save money on software license purchases by getting multiple user access, total control, and integration of your whole establishment.',
+							},
+							{
+								name: 'Inventory Management',
+								description: 'Never have an inventory out of place with automated tracking of inventory across multiple channels and devices.',
+							},
+							{
+								name: 'Availability Hour Grid',
+								description: 'Improve room efficiency by managing the availability of your rooms or properties with this powerful and dynamic interface.',
+							},
+							{
+								name: 'Invoicing + Payment API',
+								description: 'Create, send out your invoices, and receive payments without worrying about manual bookkeeping anymore.',
+							},
+							{
+								name: 'Reporting',
+								description:
+									'Monitor your business statistics online, collect and analyze data to be used to develop future forecasts, marketing plans, and track progress with the latest technology.',
+							},
+							{
+								name: 'Mobile Apps',
+								description:
+									'Get push notification, instant updates, and instant online access with the Booking Ninjas mobile apps available across android and ios platforms.',
+							},
+							{
+								name: 'Add-On Features*',
+								description: 'Add extensions to the Booking Ninjas core PMS to create an even more customized instance for your business.',
+							},
+						],
+						annualDiscount: 'All',
+					},
+					{
+						size: '5-50',
+						primary: false,
+						order: 20,
+						name: 'Extra Small',
+						monthlyFeeAfterDiscount: 1230.25,
+						monthlyFee: 1295,
+						implementationFeeAfterDiscount: 7950,
+						implementationFee: 7950,
+						implementationDeposit: 30,
+						id: '01t1Q000008WnZDQA0',
+						features: [
+							{
+								name: 'Guest Management',
+								description: 'Gain full control of managing your guests by leveraging our mobile and desktop app.',
+							},
+							{
+								name: 'Reservation Management',
+								description: 'Save up on operational costs by digitizing your reservation calendar for real-time online booking.',
+							},
+							{
+								name: 'Housekeeping Management',
+								description: 'Monitor your staff, assign tasks, systematically handle checklists all from the comfort of your room, office, or wherever.',
+							},
+							{
+								name: 'User Management',
+								description:
+									'Save money on software license purchases by getting multiple user access, total control, and integration of your whole establishment.',
+							},
+							{
+								name: 'Inventory Management',
+								description: 'Never have an inventory out of place with automated tracking of inventory across multiple channels and devices.',
+							},
+							{
+								name: 'Availability Hour Grid',
+								description: 'Improve room efficiency by managing the availability of your rooms or properties with this powerful and dynamic interface.',
+							},
+							{
+								name: 'Invoicing + Payment API',
+								description: 'Create, send out your invoices, and receive payments without worrying about manual bookkeeping anymore.',
+							},
+							{
+								name: 'Reporting',
+								description:
+									'Monitor your business statistics online, collect and analyze data to be used to develop future forecasts, marketing plans, and track progress with the latest technology.',
+							},
+							{
+								name: 'Mobile Apps',
+								description:
+									'Get push notification, instant updates, and instant online access with the Booking Ninjas mobile apps available across android and ios platforms.',
+							},
+							{
+								name: 'Add-On Features*',
+								description: 'Add extensions to the Booking Ninjas core PMS to create an even more customized instance for your business.',
+							},
+						],
+						annualDiscount: 'Subscription Fee',
+					},
+					{
+						size: '50-100',
+						primary: false,
+						order: 30,
+						name: 'Small',
+						monthlyFeeAfterDiscount: 2090,
+						monthlyFee: 2200,
+						implementationFeeAfterDiscount: 14980,
+						implementationFee: 14980,
+						implementationDeposit: 5,
+						id: '01t1Q000008WnZEQA0',
+						features: [
+							{
+								name: 'Guest Management',
+								description: 'Gain full control of managing your guests by leveraging our mobile and desktop app.',
+							},
+							{
+								name: 'Reservation Management',
+								description: 'Save up on operational costs by digitizing your reservation calendar for real-time online booking.',
+							},
+							{
+								name: 'Housekeeping Management',
+								description: 'Monitor your staff, assign tasks, systematically handle checklists all from the comfort of your room, office, or wherever.',
+							},
+							{
+								name: 'User Management',
+								description:
+									'Save money on software license purchases by getting multiple user access, total control, and integration of your whole establishment.',
+							},
+							{
+								name: 'Inventory Management',
+								description: 'Never have an inventory out of place with automated tracking of inventory across multiple channels and devices.',
+							},
+							{
+								name: 'Availability Hour Grid',
+								description: 'Improve room efficiency by managing the availability of your rooms or properties with this powerful and dynamic interface.',
+							},
+							{
+								name: 'Invoicing + Payment API',
+								description: 'Create, send out your invoices, and receive payments without worrying about manual bookkeeping anymore.',
+							},
+							{
+								name: 'Reporting',
+								description:
+									'Monitor your business statistics online, collect and analyze data to be used to develop future forecasts, marketing plans, and track progress with the latest technology.',
+							},
+							{
+								name: 'Mobile Apps',
+								description:
+									'Get push notification, instant updates, and instant online access with the Booking Ninjas mobile apps available across android and ios platforms.',
+							},
+							{
+								name: 'Add-On Features*',
+								description: 'Add extensions to the Booking Ninjas core PMS to create an even more customized instance for your business.',
+							},
+						],
+						annualDiscount: 'Subscription Fee',
+					},
+					{
+						size: '100-300',
+						primary: false,
+						order: 40,
+						name: 'Medium',
+						monthlyFeeAfterDiscount: 4607.5,
+						monthlyFee: 4850,
+						implementationFeeAfterDiscount: 19865,
+						implementationFee: 19865,
+						implementationDeposit: 30,
+						id: '01t1Q000008WnZIQA0',
+						features: [
+							{
+								name: 'Guest Management',
+								description: 'Gain full control of managing your guests by leveraging our mobile and desktop app.',
+							},
+							{
+								name: 'Reservation Management',
+								description: 'Save up on operational costs by digitizing your reservation calendar for real-time online booking.',
+							},
+							{
+								name: 'Housekeeping Management',
+								description: 'Monitor your staff, assign tasks, systematically handle checklists all from the comfort of your room, office, or wherever.',
+							},
+							{
+								name: 'User Management',
+								description:
+									'Save money on software license purchases by getting multiple user access, total control, and integration of your whole establishment.',
+							},
+							{
+								name: 'Inventory Management',
+								description: 'Never have an inventory out of place with automated tracking of inventory across multiple channels and devices.',
+							},
+							{
+								name: 'Availability Hour Grid',
+								description: 'Improve room efficiency by managing the availability of your rooms or properties with this powerful and dynamic interface.',
+							},
+							{
+								name: 'Invoicing + Payment API',
+								description: 'Create, send out your invoices, and receive payments without worrying about manual bookkeeping anymore.',
+							},
+							{
+								name: 'Reporting',
+								description:
+									'Monitor your business statistics online, collect and analyze data to be used to develop future forecasts, marketing plans, and track progress with the latest technology.',
+							},
+							{
+								name: 'Mobile Apps',
+								description:
+									'Get push notification, instant updates, and instant online access with the Booking Ninjas mobile apps available across android and ios platforms.',
+							},
+							{
+								name: 'Add-On Features*',
+								description: 'Add extensions to the Booking Ninjas core PMS to create an even more customized instance for your business.',
+							},
+						],
+						annualDiscount: 'Subscription Fee',
+					},
+					{
+						size: '300-600',
+						primary: false,
+						order: 50,
+						name: 'Large',
+						monthlyFeeAfterDiscount: 5022.65,
+						monthlyFee: 5287,
+						implementationFeeAfterDiscount: 29200,
+						implementationFee: 29200,
+						implementationDeposit: 30,
+						id: '01t1Q000008WnZNQA0',
+						features: [
+							{
+								name: 'Guest Management',
+								description: 'Gain full control of managing your guests by leveraging our mobile and desktop app.',
+							},
+							{
+								name: 'Reservation Management',
+								description: 'Save up on operational costs by digitizing your reservation calendar for real-time online booking.',
+							},
+							{
+								name: 'Housekeeping Management',
+								description: 'Monitor your staff, assign tasks, systematically handle checklists all from the comfort of your room, office, or wherever.',
+							},
+							{
+								name: 'User Management',
+								description:
+									'Save money on software license purchases by getting multiple user access, total control, and integration of your whole establishment.',
+							},
+							{
+								name: 'Inventory Management',
+								description: 'Never have an inventory out of place with automated tracking of inventory across multiple channels and devices.',
+							},
+							{
+								name: 'Availability Hour Grid',
+								description: 'Improve room efficiency by managing the availability of your rooms or properties with this powerful and dynamic interface.',
+							},
+							{
+								name: 'Invoicing + Payment API',
+								description: 'Create, send out your invoices, and receive payments without worrying about manual bookkeeping anymore.',
+							},
+							{
+								name: 'Reporting',
+								description:
+									'Monitor your business statistics online, collect and analyze data to be used to develop future forecasts, marketing plans, and track progress with the latest technology.',
+							},
+							{
+								name: 'Mobile Apps',
+								description:
+									'Get push notification, instant updates, and instant online access with the Booking Ninjas mobile apps available across android and ios platforms.',
+							},
+							{
+								name: 'Add-On Features*',
+								description: 'Add extensions to the Booking Ninjas core PMS to create an even more customized instance for your business.',
+							},
+						],
+						annualDiscount: 'Subscription Fee',
+					},
+					{
+						size: '600-1500',
+						primary: false,
+						order: 60,
+						name: 'Extra Large (XL)',
+						monthlyFeeAfterDiscount: 6080,
+						monthlyFee: 6400,
+						implementationFeeAfterDiscount: 39500,
+						implementationFee: 39500,
+						implementationDeposit: 30,
+						id: '01t1Q000008Wp28QAC',
+						features: [
+							{
+								name: 'Guest Management',
+								description: 'Gain full control of managing your guests by leveraging our mobile and desktop app.',
+							},
+							{
+								name: 'Reservation Management',
+								description: 'Save up on operational costs by digitizing your reservation calendar for real-time online booking.',
+							},
+							{
+								name: 'Housekeeping Management',
+								description: 'Monitor your staff, assign tasks, systematically handle checklists all from the comfort of your room, office, or wherever.',
+							},
+							{
+								name: 'User Management',
+								description:
+									'Save money on software license purchases by getting multiple user access, total control, and integration of your whole establishment.',
+							},
+							{
+								name: 'Inventory Management',
+								description: 'Never have an inventory out of place with automated tracking of inventory across multiple channels and devices.',
+							},
+							{
+								name: 'Availability Hour Grid',
+								description: 'Improve room efficiency by managing the availability of your rooms or properties with this powerful and dynamic interface.',
+							},
+							{
+								name: 'Invoicing + Payment API',
+								description: 'Create, send out your invoices, and receive payments without worrying about manual bookkeeping anymore.',
+							},
+							{
+								name: 'Reporting',
+								description:
+									'Monitor your business statistics online, collect and analyze data to be used to develop future forecasts, marketing plans, and track progress with the latest technology.',
+							},
+							{
+								name: 'Mobile Apps',
+								description:
+									'Get push notification, instant updates, and instant online access with the Booking Ninjas mobile apps available across android and ios platforms.',
+							},
+							{
+								name: 'Add-On Features*',
+								description: 'Add extensions to the Booking Ninjas core PMS to create an even more customized instance for your business.',
+							},
+						],
+						annualDiscount: 'Subscription Fee',
+					},
+					{
+						size: '1500-2500',
+						primary: false,
+						order: 70,
+						name: 'Extra Extra Large (XXL)',
+						monthlyFeeAfterDiscount: 9333.75,
+						monthlyFee: 9825,
+						implementationFeeAfterDiscount: 39500,
+						implementationFee: 39500,
+						implementationDeposit: 30,
+						id: '01tUc000002gCQDIA2',
+						features: [
+							{
+								name: 'Guest Management',
+								description: 'Gain full control of managing your guests by leveraging our mobile and desktop app.',
+							},
+							{
+								name: 'Reservation Management',
+								description: 'Save up on operational costs by digitizing your reservation calendar for real-time online booking.',
+							},
+							{
+								name: 'Housekeeping Management',
+								description: 'Monitor your staff, assign tasks, systematically handle checklists all from the comfort of your room, office, or wherever.',
+							},
+							{
+								name: 'User Management',
+								description:
+									'Save money on software license purchases by getting multiple user access, total control, and integration of your whole establishment.',
+							},
+							{
+								name: 'Inventory Management',
+								description: 'Never have an inventory out of place with automated tracking of inventory across multiple channels and devices.',
+							},
+							{
+								name: 'Availability Hour Grid',
+								description: 'Improve room efficiency by managing the availability of your rooms or properties with this powerful and dynamic interface.',
+							},
+							{
+								name: 'Invoicing + Payment API',
+								description: 'Create, send out your invoices, and receive payments without worrying about manual bookkeeping anymore.',
+							},
+							{
+								name: 'Reporting',
+								description:
+									'Monitor your business statistics online, collect and analyze data to be used to develop future forecasts, marketing plans, and track progress with the latest technology.',
+							},
+							{
+								name: 'Mobile Apps',
+								description:
+									'Get push notification, instant updates, and instant online access with the Booking Ninjas mobile apps available across android and ios platforms.',
+							},
+							{
+								name: 'Add-On Features*',
+								description: 'Add extensions to the Booking Ninjas core PMS to create an even more customized instance for your business.',
+							},
+						],
+						annualDiscount: 'Subscription Fee',
+					},
+					{
+						size: '2500+',
+						primary: false,
+						order: 80,
+						name: 'Enterprise',
+						monthlyFeeAfterDiscount: 30642.25,
+						monthlyFee: 32255,
+						implementationFeeAfterDiscount: 129500,
+						implementationFee: 129500,
+						implementationDeposit: 30,
+						id: '01t1Q000008WnZFQA0',
+						features: [
+							{
+								name: 'Guest Management',
+								description: 'Gain full control of managing your guests by leveraging our mobile and desktop app.',
+							},
+							{
+								name: 'Reservation Management',
+								description: 'Save up on operational costs by digitizing your reservation calendar for real-time online booking.',
+							},
+							{
+								name: 'Housekeeping Management',
+								description: 'Monitor your staff, assign tasks, systematically handle checklists all from the comfort of your room, office, or wherever.',
+							},
+							{
+								name: 'User Management',
+								description:
+									'Save money on software license purchases by getting multiple user access, total control, and integration of your whole establishment.',
+							},
+							{
+								name: 'Inventory Management',
+								description: 'Never have an inventory out of place with automated tracking of inventory across multiple channels and devices.',
+							},
+							{
+								name: 'Availability Hour Grid',
+								description: 'Improve room efficiency by managing the availability of your rooms or properties with this powerful and dynamic interface.',
+							},
+							{
+								name: 'Invoicing + Payment API',
+								description: 'Create, send out your invoices, and receive payments without worrying about manual bookkeeping anymore.',
+							},
+							{
+								name: 'Reporting',
+								description:
+									'Monitor your business statistics online, collect and analyze data to be used to develop future forecasts, marketing plans, and track progress with the latest technology.',
+							},
+							{
+								name: 'Mobile Apps',
+								description:
+									'Get push notification, instant updates, and instant online access with the Booking Ninjas mobile apps available across android and ios platforms.',
+							},
+							{
+								name: 'Add-On Features*',
+								description: 'Add extensions to the Booking Ninjas core PMS to create an even more customized instance for your business.',
+							},
+						],
+						annualDiscount: 'Subscription Fee',
+					},
+				];
+				let rate = 1.0;
+				let currencyISO = 'USD';
+				let currencySymbol = '$';
+				let isDiscount = false;
+				let subscription = 'monthly';
+				let currentPlanOrder = '10';
+
+				const subscriptionTabs = document.querySelectorAll('.subscription-length button');
+				const currencySelector = document.querySelector('.currency-selector__select');
+				const pricingPlans = document.querySelectorAll('.pricing-size__item');
+
+				function getPlanByOrder(order) {
+					const orderNumber = Number(order);
+					return productsData.find((product) => product.order === orderNumber);
+				}
+
+				function changePricingPlan(planOrder) {
+					const plan = getPlanByOrder(planOrder);
+
+					updatePlanContent(plan);
+					updateRates(plan);
+				}
+
+				function updateRates(plan = {}) {
+					const submitButton = document.querySelector('.pricing-plan__button');
+					const subscriptionPriceLabel = document.querySelector('.pricing-plan__price');
+					const implementationPriceLabel = document.querySelector('.pricing-plan__implementation-price');
+					const currencySymbolLabels = document.querySelectorAll('.pricing-plan__currency-symbol');
+
+					const priceToUse = isDiscount ? plan.monthlyFeeAfterDiscount : plan.monthlyFee;
+					const implementationToUse = isDiscount ? plan.implementationFeeAfterDiscount : plan.implementationFee;
+
+					const formatNumberWithCommas = (number) => {
+						const value = number * rate;
+						// Determine if the number has a fractional part
+						const formattedNumber =
+							value % 1 === 0
+								? value.toFixed(0) // No fractional part, so no decimal places
+								: value % 0.1 === 0
+								? value.toFixed(1) // One fractional digit (like 47.50)
+								: value.toFixed(2); // Two fractional digits (like 47.25)
+
+						return formattedNumber.replace(/\B(?=(\d{3})+(?!\d))/g, ','); // Add commas for thousands
+					};
+
+					subscriptionPriceLabel.textContent = formatNumberWithCommas(priceToUse);
+					implementationPriceLabel.textContent = formatNumberWithCommas(implementationToUse);
+					currencySymbolLabels.forEach((label) => (label.textContent = currencySymbol));
+					submitButton.href = `/checkout?order=${plan.order}&length=${subscription}&currency=${currencyISO.toLowerCase()}`;
+				}
+
+				function updatePlanContent(plan) {
+					const planName = document.querySelector('.pricing-plan__name');
+					const planShortInfo = document.querySelector('.pricing-plan__short-info');
+					const planSize = document.querySelector('.pricing-plan__size');
+					const planDescription = document.querySelector('.pricing-plan__description-text');
+					const featuresList = document.querySelector('.pricing-plan__features');
+
+					planName.textContent = plan.name;
+					// TODO: add sortInfo to the JSON
+					planShortInfo.textContent = plan.sortInfo;
+					// TODO: add size to the JSON
+					planSize.textContent = plan.size;
+					// TODO: add description to the JSON
+					planDescription.textContent = plan.description;
+					featuresList.innerHTML = plan.features.map((feature) => `<li>${feature.name}</li>`).join('');
+				}
+
+				// Pricing plan change
+				pricingPlans.forEach((plan) => {
+					plan.addEventListener('click', (event) => {
+						currentPlanOrder = event.currentTarget.dataset.id;
+						changePricingPlan(currentPlanOrder);
+						// Scroll to pricing section on mobile
+						if (window.innerWidth <= 992) {
+							const pricingSection = document.querySelector('.pricing-plan');
+							const topPos = pricingSection.getBoundingClientRect().top + window.scrollY - 72;
+							window.scrollTo({ top: topPos, behavior: 'smooth' });
+						}
+					});
+				});
+
+				// Monthly - Annually change
+				subscriptionTabs.forEach((tab) => {
+					tab.addEventListener('click', (event) => {
+						isDiscount = tab.dataset.tab === 'annualy';
+						subscription = tab.dataset.tab;
+
+						updateRates(getPlanByOrder(currentPlanOrder));
+					});
+				});
+
+				// Currency change
+				currencySelector.addEventListener('change', () => {
+					const selectedOption = currencySelector.options[currencySelector.selectedIndex];
+					currencyISO = currencySelector.value;
+					rate = selectedOption.dataset.rate;
+					currencySymbol = selectedOption.dataset.currencySymbol;
+
+					updateRates(getPlanByOrder(currentPlanOrder));
+				});
+
+				// Initialize with the first plan
+				changePricingPlan(currentPlanOrder);
+			});
+		</script>
+	</body>
+</html>

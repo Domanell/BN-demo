@@ -120,11 +120,6 @@ $(document).on('ready', function () {
 	}
 
 	// Pricing plans
-	$('.pricing-size__item').on('click', function () {
-		$('.pricing-size__item').removeClass('active');
-		$(this).addClass('active');
-	});
-
 	if ($('.pricing-addons__slider').length) {
 		const $container = $('.pricing-addons__slider');
 		// Add Swiper CSS hooks and structure dynamically
@@ -249,30 +244,17 @@ $(document).on('ready', function () {
 		$('.payment-method__content[data-method="' + $(this).data('paymentMethod') + '"]').addClass('active');
 	});
 
-	if ($('.calendly-button').length) {
-		const pageName = window.location.pathname.split('/')?.slice(-1);
-		let targetButton = $('.calendly-button').filter(function () {
-			return $(this).data('variables')?.split(',').includes(pageName);
-		});
-		if (targetButton.length === 0) {
-			targetButton = $('.calendly-button').first();
-		}
-		const page = targetButton.data('target');
+	$('.tabs').on('click', '.tabs__button', function (event) {
+		event.preventDefault();
+		const $btn = $(this);
+		if ($btn.hasClass('active')) return;
 
-		changeCalendlyTab(page);
-	}
-	$('.calendly-button').on('click', function () {
-		if ($(this).hasClass('active')) return;
-		const target = $(this).data('target');
-		changeCalendlyTab(target);
+		const $previousTabBtn = $btn.closest('.tabs').find('.tabs__button.active');
+		$previousTabBtn.removeClass('active');
+		$previousTabBtn.attr('aria-selected', 'false');
+		$btn.addClass('active');
+		$btn.attr('aria-selected', 'true');
 	});
-
-	function changeCalendlyTab(target) {
-		$('.calendly-button').removeClass('active');
-		$('.calendly-form__content').removeClass('active');
-		$(`.calendly-button[data-target='${target}']`).addClass('active');
-		$(`#${target}`).addClass('active');
-	}
 
 	// International Telephone Input
 	if (document.querySelector('[id$=trial-phone]')) {
@@ -327,11 +309,6 @@ $(document).on('ready', function () {
 			top: offsetPosition,
 			behavior: 'smooth',
 		});
-	});
-
-	$('.pricing-accordion__trigger').on('click', function () {
-		$(this).next().slideToggle('fast');
-		$(this).parent().toggleClass('active');
 	});
 	//gallery
 	$('.gallery-content__switch input').on('click', function () {
