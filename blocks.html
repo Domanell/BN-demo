@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="initial-scale=1" />
+		<title>Blocks</title>
+		<link rel="icon" type="image/png" href="favicon.ico" />
+		<link rel="stylesheet" href="css/fontawesome.css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-grid.css" />
+		<link href="css/screen.css" rel="stylesheet" media="screen" />
+	</head>
+
+	<body>
+		<style>
+			.c-block-section {
+				padding: 32px 60px;
+				border-bottom: 1px solid #000;
+			}
+			.c-category-header {
+				margin-bottom: 32px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.c-controls {
+				display: flex;
+				gap: 24px;
+			}
+			.c-block-content {
+				padding: 8px;
+				border-radius: 20px;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+			}
+		</style>
+		<main class="main">
+			<div class="c-block-section">
+				<div class="c-category-header">
+					<h1 class="h1">H1 - Hero Home</h1>
+					<div class="c-controls">
+						<ul class="tabs">
+							<li class="tabs__item">
+								<button class="tabs__button active" data-action="media-video" data-selector=".col-lg-5.col-lg-auto" data-class="hero__video">Video</button>
+							</li>
+							<li class="tabs__item">
+								<button class="tabs__button" data-action="media-image" data-selector=".col-lg-5.col-lg-auto" data-class="hero__img">Image</button>
+							</li>
+						</ul>
+						<button class="button copy-button">Copy</button>
+					</div>
+				</div>
+				<div class="c-block-content">
+					<div class="hero">
+						<div class="container">
+							<!-- Hero content -->
+							<div class="hero__grid hero__grid--g-xl row flex-lg-nowrap align-items-center justify-content-between">
+								<div class="col-lg-7">
+									<div class="hero__content">
+										<h1 class="h1 text_balanced">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+										<h2 class="h4 text_balanced">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repudiandae debitis iusto itaque earum ullam. Placeat eum a rerum, harum ad
+											tempore
+										</h2>
+										<div class="hero__buttons">
+											<a class="button" href="/demo">Button</a>
+											<a class="button-secondary" href="/demo">Button Secondary</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-5 col-lg-auto">
+									<video src="video/homepage-hero.mp4" autoplay loop muted playsinline class="hero__video"></video>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c-block-section">
+				<div class="c-category-header">
+					<h1 class="h1">H2 - Hero Full</h1>
+					<div class="c-controls">
+						<ul class="tabs">
+							<li class="tabs__item">
+								<button class="tabs__button active" data-action="block-mod" data-selector=".hero-full" data-class="hero-full">Text Left</button>
+							</li>
+							<li class="tabs__item">
+								<button class="tabs__button" data-action="block-mod" data-selector=".hero-full" data-class="hero-full hero-full--center">Text Center</button>
+							</li>
+						</ul>
+						<ul class="tabs">
+							<li class="tabs__item">
+								<button class="tabs__button active" data-action="media-video" data-selector=".hero-full__media-bg">Video</button>
+							</li>
+							<li class="tabs__item">
+								<button class="tabs__button" data-action="media-image" data-selector=".hero-full__media-bg">Image</button>
+							</li>
+						</ul>
+						<button class="button copy-button">Copy</button>
+					</div>
+				</div>
+				<div class="c-block-content">
+					<div class="hero-full">
+						<div class="container">
+							<div class="hero-full__wrapper">
+								<div class="hero-full__media-bg">
+									<!-- <img src="img/invest-bg.jpg" alt="Investment Background" /> -->
+									<video src="video/solutions-hero.mp4" autoplay loop muted playsinline></video>
+								</div>
+								<div class="hero-full__content">
+									<h1 class="hero-full__title h1">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+									<p class="hero-full__text text--limit-lg">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi cum omnis expedita! Odio assumenda, minus esse atque quod cum dolorem, ipsa
+										corrupti consectetur beatae in hic quibusdam eligendi ullam ratione.
+									</p>
+									<div class="hero-full__buttons">
+										<a class="button" href="/demo">Button</a>
+										<a class="button-secondary" href="/demo">Button Secondary</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="js/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+		<script src="js/wow.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/common.js"></script>
+		<script>
+			const mediaVideoUrl = 'video/homepage-hero.mp4';
+			const mediaImageUrl = 'img/features-hero.jpg';
+
+			document.querySelectorAll('.copy-button').forEach((button) => {
+				button.addEventListener('click', () => {
+					const blockContent = button.closest('.c-block-section').querySelector('.c-block-content').innerHTML;
+					navigator.clipboard.writeText(blockContent).then(() => {
+						button.textContent = 'Copied!';
+						setTimeout(() => {
+							button.textContent = 'Copy';
+						}, 2000);
+					});
+				});
+			});
+
+			document.querySelectorAll('.tabs__item button').forEach((tab) => {
+				tab.addEventListener('click', () => {
+					const block = tab.closest('.c-block-section').querySelector('.c-block-content');
+					handleControls(block, tab.dataset);
+				});
+			});
+
+			function handleControls(block, data) {
+				const { action, selector, class: className } = data;
+
+				switch (action) {
+					case 'media-video':
+						block.querySelector(`${selector}`).innerHTML = `<video src="${mediaVideoUrl}" ${
+							className ? `class="${className}"` : ''
+						} autoplay loop muted playsinline></video>`;
+						break;
+					case 'media-image':
+						block.querySelector(`${selector}`).innerHTML = `<img src="${mediaImageUrl}" alt="" ${className ? `class="${className}"` : ''}/>`;
+						break;
+					case 'block-mod':
+						const target = block.querySelector(`${selector}`);
+						target.className = className;
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>
