@@ -1,1072 +1,1095 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="initial-scale=1" />
+		<title>Booking Ninjas: Combined Property Management/ Salesforce Solution Application</title>
+		<!--Favicon-->
+		<link rel="icon" type="image/png" href="favicon.ico" />
+		<!--End Favicon-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+		<link rel="stylesheet" href="css/fontawesome.css" />
+		<!--build:css css/styles.min.css-->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-grid.css" />
+		<link href="css/screen.css" rel="stylesheet" media="screen" />
+		<!--endbuild-->
+	</head>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="viewport" content="initial-scale=1" />
-	<title>Booking Ninjas: Combined Property Management/ Salesforce Solution Application</title>
-	<!--Favicon-->
-	<link rel="icon" type="image/png" href="favicon.ico" />
-	<!--End Favicon-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
-	<link rel="stylesheet" href="css/fontawesome.css" />
-	<!--build:css css/styles.min.css-->
-	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="css/bootstrap-grid.css" />
-	<link href="css/screen.css" rel="stylesheet" media="screen" />
-	<!--endbuild-->
-</head>
-
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="container header__wrapper">
-				<div class="header__logo">
-					<a class="logo" href="/"><img alt="Booking Ninjas Logo" src="img/logo.svg" /></a>
-				</div>
-				<div class="header__button">
-					<a href="#" class="button-secondary">View the Solution</a>
-				</div>
-				<div class="header__menu ">
-					<nav class="menu">
-						<div class="menu__mobile-head">
-							<div class="menu__back"><i class="fa fa-chevron-left"></i></div>
-							<div class="menu__current-title"></div>
-							<div class="menu__close"><i class="fa fa-times"></i></div>
-						</div>
-						<ul class="menu__list  mobile-menu">
-							<li class="menu__item">
-								<a href="/" class="menu__link-title">Home</a>
-							</li>
-							<li class="menu__item menu__item--has-submenu">
-								<span class="menu__link-title">Features</span>
-								<div class="menu__dropdown">
-									<div class="categories-menu container">
-										<div class="categories-menu__col categories-menu__category">
-											<p class="categories-menu__col-title">Category</p>
-											<ul class="categories-menu__list mobile-menu">
-												<li class="categories-menu__item active">
-													<img src="img/icons/hotel-01.svg" alt="Reservations &amp; Operations" />
-													Reservations &amp; Operations
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/business-center-outline-rounded.svg" alt="Finance &amp; Revenue" />
-													Finance &amp; Revenue
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/cleaning-outline.svg" alt="Property &amp; Task Management" />
-													Property &amp; Task Management
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/stash_integrations.svg" alt="Integrations &amp; Communication" />
-													Integrations &amp; Communication
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/reports.svg" alt="Insights &amp; Reporting" />
-													Insights &amp; Reporting
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/light_captive-portal.svg" alt="User Access &amp; Portals" />
-													User Access &amp; Portals
-												</li>
-											</ul>
-										</div>
-										<div class="categories-menu__col categories-menu__data mobile-menu">
-											<p class="categories-menu__col-title">Features</p>
-											<!-- Reservations and Operations -->
-											<div class="categories-menu__links active">
-												<ul>
-													<li><a href="#">Booking Engine</a></li>
-													<li><a href="#">Booking &amp; Reservation Management</a></li>
-													<li><a href="#">Group Booking</a></li>
-													<li><a href="#">Availability Calendar Grid</a></li>
-													<li><a href="#">Check-in / Check-out Management</a></li>
-													<li><a href="#">Resource/Class Scheduling</a></li>
-													<li><a href="#">Attendance Tracking</a></li>
-													<li><a href="#">POS (Point of Sale)</a></li>
-													<li><a href="#">Ticketing System</a></li>
-													<li><a href="#">Digital Waivers &amp; E-signatures</a></li>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container header__wrapper">
+					<div class="header__logo">
+						<a class="logo" href="/"><img alt="Booking Ninjas Logo" src="img/logo.svg" /></a>
+					</div>
+					<div class="header__button">
+						<a href="#" class="button-secondary">View the Solution</a>
+					</div>
+					<div class="header__menu">
+						<nav class="menu">
+							<div class="menu__mobile-head">
+								<div class="menu__back"><i class="fa fa-chevron-left"></i></div>
+								<div class="menu__current-title"></div>
+								<div class="menu__close"><i class="fa fa-times"></i></div>
+							</div>
+							<ul class="menu__list mobile-menu">
+								<li class="menu__item">
+									<a href="/" class="menu__link-title">Home</a>
+								</li>
+								<li class="menu__item menu__item--has-submenu">
+									<span class="menu__link-title">Features</span>
+									<div class="menu__dropdown">
+										<div class="categories-menu container">
+											<div class="categories-menu__col categories-menu__category">
+												<p class="categories-menu__col-title">Category</p>
+												<ul class="categories-menu__list mobile-menu">
+													<li class="categories-menu__item active">
+														<img src="img/icons/hotel-01.svg" alt="Reservations &amp; Operations" />
+														Reservations &amp; Operations
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/business-center-outline-rounded.svg" alt="Finance &amp; Revenue" />
+														Finance &amp; Revenue
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/cleaning-outline.svg" alt="Property &amp; Task Management" />
+														Property &amp; Task Management
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/stash_integrations.svg" alt="Integrations &amp; Communication" />
+														Integrations &amp; Communication
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/reports.svg" alt="Insights &amp; Reporting" />
+														Insights &amp; Reporting
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/light_captive-portal.svg" alt="User Access &amp; Portals" />
+														User Access &amp; Portals
+													</li>
 												</ul>
 											</div>
-											<!-- Finance and Revenue -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Rate Types &amp; Controller</a></li>
-													<li><a href="#">Time-Based Booking Options</a></li>
-													<li><a href="#">Promotions &amp; Discounts</a></li>
-													<li><a href="#">Invoicing &amp; Receipts</a></li>
-													<li><a href="#">Transactions &amp; Payments</a></li>
-													<li><a href="#">Refunds &amp; Adjustments</a></li>
-													<li><a href="#">Owner Statements</a></li>
-													<li><a href="#">Occupancy &amp; Revenue Forecasting</a></li>
-												</ul>
-											</div>
-											<!-- Property and Task Management -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Housekeeping &amp; Maintenance</a></li>
-													<li><a href="#">Task Management</a></li>
-													<li><a href="#">Inventory Management</a></li>
-													<li><a href="#">Access Control (Smart Entry)</a></li>
-													<li><a href="#">Staff App</a></li>
-													<li><a href="#">Maintenance &amp; Reminder Flows</a></li>
-													<li><a href="#">Booking &amp; Task Automation</a></li>
-												</ul>
-											</div>
-											<!-- Integrations and Communication -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Salesforce</a></li>
-													<li><a href="#">Einstein AI</a></li>
-													<li><a href="#">Lightning</a></li>
-													<li><a href="#">Compliance (Salesforce Compliance)</a></li>
-													<li><a href="#">Security &amp; Privacy</a></li>
-													<li><a href="#">Channel Manager (Airbnb, Booking.com, Expedia, Agoda)</a></li>
-													<li><a href="#">WhatsApp &amp; SMS Messaging</a></li>
-													<li><a href="#">Email Notifications &amp; Confirmations</a></li>
-													<li><a href="#">Slack Integration</a></li>
-													<li><a href="#">Internal Notes &amp; Task Comments</a></li>
-													<li><a href="#">Automated Reminders &amp; Alerts</a></li>
-													<li><a href="#">Guest Review Management</a></li>
-													<li><a href="#">Surveys &amp; Feedback</a></li>
-												</ul>
-											</div>
-											<!-- Insights and Reporting -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Custom Dashboards</a></li>
-													<li><a href="#">Standard &amp; Exportable Reports</a></li>
-													<li><a href="#">KPI Tracking &amp; Optimization Tools</a></li>
-												</ul>
-											</div>
-											<!-- User Access and Portals -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Owner Portal</a></li>
-													<li><a href="#">Tenant Portal</a></li>
-													<li><a href="#">Member Portal</a></li>
-													<li><a href="#">Guest Portal</a></li>
-													<li><a href="#">Student Portal</a></li>
-												</ul>
-											</div>
-											<div class="categories-menu__all">
-												<a href="#" class="">All Features <i class="fas fa-arrow-right"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="menu__item">
-								<a href="/pricing" class="menu__link-title">Pricing</a>
-							</li>
-							<li class="menu__item menu__item--has-submenu">
-								<span class="menu__link-title">Solutions</span>
-								<div class="menu__dropdown">
-									<div class="categories-menu container">
-										<div class="categories-menu__col categories-menu__category">
-											<p class="categories-menu__col-title">Category</p>
-											<ul class="categories-menu__list mobile-menu">
-												<li class="categories-menu__item active">
-													<img src="img/icons/hotel-outline-rounded.svg" alt="Hospitality &amp; Tourism" />
-													Hospitality &amp; Tourism
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/parks.svg" alt="Recreational Facilities" />
-													Recreational Facilities
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/residential.svg" alt="Residential Real Estate" />
-													Residential Real Estate
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/events.svg" alt="Events &amp; Venues" />
-													Events &amp; Venues
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/workspace.svg" alt="Commercial &amp; Workspaces" />
-													Commercial &amp; Workspaces
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/marine.svg" alt="Marine &amp; Luxury Recreation" />
-													Marine &amp; Luxury Recreation
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/specialty-housing.svg" alt="Specialty Housing" />
-													Specialty Housing
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/nonprofit.svg" alt="Nonprofit &amp; Governmental" />
-													Nonprofit &amp; Governmental
-												</li>
-											</ul>
-										</div>
-										<div class="categories-menu__col categories-menu__data mobile-menu">
-											<p class="categories-menu__col-title">Solutions</p>
-											<!-- Hospitality and Tourism -->
-											<div class="categories-menu__links active">
-												<ul>
-													<li><a href="#">Hotels</a></li>
-													<li><a href="#">Hostels</a></li>
-													<li><a href="#">Vacation Rentals</a></li>
-													<li><a href="#">Serviced Apartments</a></li>
-													<li><a href="#">Airbnb (as a platform)</a></li>
-													<li><a href="#">Restaurants</a></li>
-													<li><a href="#">Villas</a></li>
-												</ul>
-											</div>
-											<!-- Recreational Facilities -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Leisure Facility</a></li>
-													<li><a href="#">Parks &amp; Recreation</a></li>
-													<li><a href="#">Campground</a></li>
-													<li><a href="#">Equestrian Clubs</a></li>
-													<li><a href="#">YOGA</a></li>
-												</ul>
-											</div>
-											<!-- Residential Real Estate -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Condominiums</a></li>
-													<li><a href="#">Multi-Family Residential</a></li>
-													<li><a href="#">Residential</a></li>
-													<li><a href="#">Corporate Housing</a></li>
-													<li><a href="#">Serviced Apartments</a></li>
-												</ul>
-											</div>
-											<!-- Events and Venues -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Event Spaces</a></li>
-													<li><a href="#">Conference Centers</a></li>
-													<li><a href="#">Banquet Halls</a></li>
-												</ul>
-											</div>
-											<!-- Commercial and Workspaces -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Coworking Space</a></li>
-													<li><a href="#">Office Spaces</a></li>
-												</ul>
-											</div>
-											<!-- Marine and Luxury Recreation -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Yacht</a></li>
-													<li><a href="#">Marina</a></li>
-												</ul>
-											</div>
-											<!-- Specialty Housing -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Student Housing</a></li>
-													<li><a href="#">Senior Living</a></li>
-												</ul>
-											</div>
-											<!-- Nonprofit and Governmental -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Government</a></li>
-													<li><a href="#">Nonprofit</a></li>
-													<li><a href="#">YMCA</a></li>
-												</ul>
-											</div>
-											<div class="categories-menu__all">
-												<a href="#" class="">All Solutions <i class="fas fa-arrow-right"></i></a>
+											<div class="categories-menu__col categories-menu__data mobile-menu">
+												<p class="categories-menu__col-title">Features</p>
+												<!-- Reservations and Operations -->
+												<div class="categories-menu__links active">
+													<ul>
+														<li><a href="#">Booking Engine</a></li>
+														<li><a href="#">Booking &amp; Reservation Management</a></li>
+														<li><a href="#">Group Booking</a></li>
+														<li><a href="#">Availability Calendar Grid</a></li>
+														<li><a href="#">Check-in / Check-out Management</a></li>
+														<li><a href="#">Resource/Class Scheduling</a></li>
+														<li><a href="#">Attendance Tracking</a></li>
+														<li><a href="#">POS (Point of Sale)</a></li>
+														<li><a href="#">Ticketing System</a></li>
+														<li><a href="#">Digital Waivers &amp; E-signatures</a></li>
+													</ul>
+												</div>
+												<!-- Finance and Revenue -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Rate Types &amp; Controller</a></li>
+														<li><a href="#">Time-Based Booking Options</a></li>
+														<li><a href="#">Promotions &amp; Discounts</a></li>
+														<li><a href="#">Invoicing &amp; Receipts</a></li>
+														<li><a href="#">Transactions &amp; Payments</a></li>
+														<li><a href="#">Refunds &amp; Adjustments</a></li>
+														<li><a href="#">Owner Statements</a></li>
+														<li><a href="#">Occupancy &amp; Revenue Forecasting</a></li>
+													</ul>
+												</div>
+												<!-- Property and Task Management -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Housekeeping &amp; Maintenance</a></li>
+														<li><a href="#">Task Management</a></li>
+														<li><a href="#">Inventory Management</a></li>
+														<li><a href="#">Access Control (Smart Entry)</a></li>
+														<li><a href="#">Staff App</a></li>
+														<li><a href="#">Maintenance &amp; Reminder Flows</a></li>
+														<li><a href="#">Booking &amp; Task Automation</a></li>
+													</ul>
+												</div>
+												<!-- Integrations and Communication -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Salesforce</a></li>
+														<li><a href="#">Einstein AI</a></li>
+														<li><a href="#">Lightning</a></li>
+														<li><a href="#">Compliance (Salesforce Compliance)</a></li>
+														<li><a href="#">Security &amp; Privacy</a></li>
+														<li><a href="#">Channel Manager (Airbnb, Booking.com, Expedia, Agoda)</a></li>
+														<li><a href="#">WhatsApp &amp; SMS Messaging</a></li>
+														<li><a href="#">Email Notifications &amp; Confirmations</a></li>
+														<li><a href="#">Slack Integration</a></li>
+														<li><a href="#">Internal Notes &amp; Task Comments</a></li>
+														<li><a href="#">Automated Reminders &amp; Alerts</a></li>
+														<li><a href="#">Guest Review Management</a></li>
+														<li><a href="#">Surveys &amp; Feedback</a></li>
+													</ul>
+												</div>
+												<!-- Insights and Reporting -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Custom Dashboards</a></li>
+														<li><a href="#">Standard &amp; Exportable Reports</a></li>
+														<li><a href="#">KPI Tracking &amp; Optimization Tools</a></li>
+													</ul>
+												</div>
+												<!-- User Access and Portals -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Owner Portal</a></li>
+														<li><a href="#">Tenant Portal</a></li>
+														<li><a href="#">Member Portal</a></li>
+														<li><a href="#">Guest Portal</a></li>
+														<li><a href="#">Student Portal</a></li>
+													</ul>
+												</div>
+												<div class="categories-menu__all">
+													<a href="#" class="">All Features <i class="fas fa-arrow-right"></i></a>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</li>
-							<li class="menu__item menu__item--has-submenu language-menu">
-								<span class="menu__link-title menu__link-title--no-hover">
-									<div class="language-menu__item">
-										<span class="fi fi-us fis flag language-menu__icon"></span>
-										<span class="language-menu__name">English
-										</span>
+								</li>
+								<li class="menu__item">
+									<a href="/pricing" class="menu__link-title">Pricing</a>
+								</li>
+								<li class="menu__item menu__item--has-submenu">
+									<span class="menu__link-title">Solutions</span>
+									<div class="menu__dropdown">
+										<div class="categories-menu container">
+											<div class="categories-menu__col categories-menu__category">
+												<p class="categories-menu__col-title">Category</p>
+												<ul class="categories-menu__list mobile-menu">
+													<li class="categories-menu__item active">
+														<img src="img/icons/hotel-outline-rounded.svg" alt="Hospitality &amp; Tourism" />
+														Hospitality &amp; Tourism
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/parks.svg" alt="Recreational Facilities" />
+														Recreational Facilities
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/residential.svg" alt="Residential Real Estate" />
+														Residential Real Estate
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/events.svg" alt="Events &amp; Venues" />
+														Events &amp; Venues
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/workspace.svg" alt="Commercial &amp; Workspaces" />
+														Commercial &amp; Workspaces
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/marine.svg" alt="Marine &amp; Luxury Recreation" />
+														Marine &amp; Luxury Recreation
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/specialty-housing.svg" alt="Specialty Housing" />
+														Specialty Housing
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/nonprofit.svg" alt="Nonprofit &amp; Governmental" />
+														Nonprofit &amp; Governmental
+													</li>
+												</ul>
+											</div>
+											<div class="categories-menu__col categories-menu__data mobile-menu">
+												<p class="categories-menu__col-title">Solutions</p>
+												<!-- Hospitality and Tourism -->
+												<div class="categories-menu__links active">
+													<ul>
+														<li><a href="#">Hotels</a></li>
+														<li><a href="#">Hostels</a></li>
+														<li><a href="#">Vacation Rentals</a></li>
+														<li><a href="#">Serviced Apartments</a></li>
+														<li><a href="#">Airbnb (as a platform)</a></li>
+														<li><a href="#">Restaurants</a></li>
+														<li><a href="#">Villas</a></li>
+													</ul>
+												</div>
+												<!-- Recreational Facilities -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Leisure Facility</a></li>
+														<li><a href="#">Parks &amp; Recreation</a></li>
+														<li><a href="#">Campground</a></li>
+														<li><a href="#">Equestrian Clubs</a></li>
+														<li><a href="#">YOGA</a></li>
+													</ul>
+												</div>
+												<!-- Residential Real Estate -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Condominiums</a></li>
+														<li><a href="#">Multi-Family Residential</a></li>
+														<li><a href="#">Residential</a></li>
+														<li><a href="#">Corporate Housing</a></li>
+														<li><a href="#">Serviced Apartments</a></li>
+													</ul>
+												</div>
+												<!-- Events and Venues -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Event Spaces</a></li>
+														<li><a href="#">Conference Centers</a></li>
+														<li><a href="#">Banquet Halls</a></li>
+													</ul>
+												</div>
+												<!-- Commercial and Workspaces -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Coworking Space</a></li>
+														<li><a href="#">Office Spaces</a></li>
+													</ul>
+												</div>
+												<!-- Marine and Luxury Recreation -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Yacht</a></li>
+														<li><a href="#">Marina</a></li>
+													</ul>
+												</div>
+												<!-- Specialty Housing -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Student Housing</a></li>
+														<li><a href="#">Senior Living</a></li>
+													</ul>
+												</div>
+												<!-- Nonprofit and Governmental -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Government</a></li>
+														<li><a href="#">Nonprofit</a></li>
+														<li><a href="#">YMCA</a></li>
+													</ul>
+												</div>
+												<div class="categories-menu__all">
+													<a href="#" class="">All Solutions <i class="fas fa-arrow-right"></i></a>
+												</div>
+											</div>
+										</div>
 									</div>
-								</span>
-								<div class="menu__dropdown">
-									<ul class="container language-list">
-										<li>
-											<a href="/es/" class="language-list__item active"><span class="fi fi-us fis flag"></span> English</a>
-										</li>
-										<li>
-											<a href="/es/" class="language-list__item"><span class="fi fi-es fis flag"></span> Español</a>
-										</li>
-										<li>
-											<a href="/pt/" class="language-list__item"><span class="fi fi-br fis flag"></span> Portuguese</a>
-										</li>
-										<li>
-											<a href="/id/" class="language-list__item"><span class="fi fi-id fis flag"></span> Indonesian</a>
-										</li>
-										<li>
-											<a href="/tr/" class="language-list__item"><span class="fi fi-tr fis flag"></span> Turkish</a>
-										</li>
-										<li>
-											<a href="/de/" class="language-list__item"><span class="fi fi-de fis flag"></span> German</a>
-										</li>
-										<li>
-											<a href="/ae/" class="language-list__item"><span class="fi fi-ae fis flag"></span> Arabic</a>
-										</li>
-										<li>
-											<a href="/it/" class="language-list__item"><span class="fi fi-it fis flag"></span> Italian</a>
-										</li>
-										<li>
-											<a href="/nl/" class="language-list__item"><span class="fi fi-nl fis flag"></span> Dutch</a>
-										</li>
-										<li>
-											<a href="/fr/" class="language-list__item"><span class="fi fi-fr fis flag"></span> French</a>
-										</li>
-										<li>
-											<a href="/el/" class="language-list__item"><span class="fi fi-gr fis flag"></span> Greek</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<!-- CTA buttons in mobile menu -->
-							<li class="menu__item menu__item--button menu__item--mobile">
-								<a href="#" class="button-secondary">View the Solution</a>
-							</li>
-						</ul>
-					</nav>
-					<div class="menu-overlay"></div>
-					<div class="mobile-menu-trigger">
-						<span></span>
-					</div>
-				</div>
-			</div>
-		</header>
-		<main class="main">
-			<div class="homepage">
-				<div class="homepage__hero hero">
-					<div class="container">
-						<!-- Hero content -->
-						<div class="hero__grid hero__grid--g-xl row flex-lg-nowrap align-items-center justify-content-between">
-							<div class="col-lg-7">
-								<div class="hero__content">
-									<h1 class="h1 text_balanced">The Only Salesforce Property Management System Built to Scale Enterprise Portfolios</h1>
-									<h2 class="h4 text_balanced">Run your property business in Salesforce — increase revenue, cut manual work, and scale faster.</h2>
-									<div class="hero__buttons">
-										<a class="button" href="/demo">See Your ROI</a>
+								</li>
+								<li class="menu__item menu__item--has-submenu language-menu">
+									<span class="menu__link-title menu__link-title--no-hover">
+										<div class="language-menu__item">
+											<span class="fi fi-us fis flag language-menu__icon"></span>
+											<span class="language-menu__name">English </span>
+										</div>
+									</span>
+									<div class="menu__dropdown">
+										<ul class="container language-list">
+											<li>
+												<a href="/es/" class="language-list__item active"><span class="fi fi-us fis flag"></span> English</a>
+											</li>
+											<li>
+												<a href="/es/" class="language-list__item"><span class="fi fi-es fis flag"></span> Español</a>
+											</li>
+											<li>
+												<a href="/pt/" class="language-list__item"><span class="fi fi-br fis flag"></span> Portuguese</a>
+											</li>
+											<li>
+												<a href="/id/" class="language-list__item"><span class="fi fi-id fis flag"></span> Indonesian</a>
+											</li>
+											<li>
+												<a href="/tr/" class="language-list__item"><span class="fi fi-tr fis flag"></span> Turkish</a>
+											</li>
+											<li>
+												<a href="/de/" class="language-list__item"><span class="fi fi-de fis flag"></span> German</a>
+											</li>
+											<li>
+												<a href="/ae/" class="language-list__item"><span class="fi fi-ae fis flag"></span> Arabic</a>
+											</li>
+											<li>
+												<a href="/it/" class="language-list__item"><span class="fi fi-it fis flag"></span> Italian</a>
+											</li>
+											<li>
+												<a href="/nl/" class="language-list__item"><span class="fi fi-nl fis flag"></span> Dutch</a>
+											</li>
+											<li>
+												<a href="/fr/" class="language-list__item"><span class="fi fi-fr fis flag"></span> French</a>
+											</li>
+											<li>
+												<a href="/el/" class="language-list__item"><span class="fi fi-gr fis flag"></span> Greek</a>
+											</li>
+										</ul>
 									</div>
-								</div>
-							</div>
-							<div class="col-lg-5 col-lg-auto">
-								<video src="video/homepage-hero.mp4" autoplay loop muted playsinline class="hero__video"></video>
-							</div>
+								</li>
+								<!-- CTA buttons in mobile menu -->
+								<li class="menu__item menu__item--button menu__item--mobile">
+									<a href="#" class="button-secondary">View the Solution</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="menu-overlay"></div>
+						<div class="mobile-menu-trigger">
+							<span></span>
 						</div>
 					</div>
 				</div>
-				<div class="block">
-					<div class="container">
-						<div class="block__header">
-							<h2 class="h2 block__title">Why Choose Booking Ninjas?</h2>
-						</div>
-						<div class="row gy-4 justify-content-center">
-							<div class="col-sm-6 col-md-4">
-								<div class="plain-card">
-									<img class="plain-card__icon" src="img/icons/solar_dollar-broken.svg" alt="Proven ROI Icon" />
-									<div class="plain-card__content">
-										<h3 class="plain-card__title">Proven ROI</h3>
-										<p>Live in weeks, profit in your first quarter</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-4">
-								<div class="plain-card">
-									<img class="plain-card__icon" src="img/icons/tabler_view-360.svg" alt="Scale Without Staff Icon" />
-									<div class="plain-card__content">
-										<h3 class="plain-card__title">Scale Without Staff</h3>
-										<p>AI handles routine tasks</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-4">
-								<div class="plain-card">
-									<img class="plain-card__icon" src="img/icons/si_shield-security-line.svg" alt="Government-Tested Security Icon" />
-									<div class="plain-card__content">
-										<h3 class="plain-card__title">Government-Tested Security</h3>
-										<p>Independently SOC 2 &amp; GDPR verified.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="block">
-					<div class="container">
-						<div class="case-card">
-							<div class="case-card__logo">
-								<img src="img/clients/ymca-logo.png" alt="YMCA Logo" />
-							</div>
-							<div class="case-card__content">
-								<span class="case-card__tag">case study</span>
-								<h2 class="h2 case-card__title">From Manual Chaos to 6-Figure Cabin Revenue in 90 Days</h2>
-								<p class="case-card__text">YMCA turned seasonal cabin reservations into a profit engine with our Salesforce-native booking system — generating hundreds of thousands in new bookings and eliminating manual payment headaches</p>
-							</div>
-							<div class="case-card__action">
-								<a href="#" class="button">See How They Did It</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="block">
-					<div class="container">
-						<div class="block__header">
-							<h2 class="h2 block__title">Outpace. Outperform. Outgrow Your Legacy PMS.</h2>
-							<p class="block__subtitle">Bring reservations, CRM, and accounting together in one system — leaner, faster, built for growth.</p>
-						</div>
-
-						<div class="pms-growth">
-							<div class="pms-growth__item growth-card">
-								<div class="growth-card__header">
-									<div class="growth-card__icon">
-										<img src="img/icons/warning.svg" alt="Legacy Systems Icon" />
-									</div>
-									<div class="growth-card__name">
-										<h3 class="growth-card__title h3">Legacy Systems Slow You Down</h3>
-										<p>An outdated PMS raises costs and blocks efficiency</p>
-									</div>
-								</div>
-								<div class="growth-card__body">
-									<div class="growth-card__list-label h2">The Challenge</div>
-									<ul class="growth-card__list base-list base-list--cancel">
-										<li>Siloed PMS, CRM, and accounting</li>
-										<li>Expensive Add-ons</li>
-										<li>Reports stuck in spreadsheets</li>
-									</ul>
-								</div>
-							</div>
-							<div class="pms-growth__path">
-								<div class="pms-growth__path-icon">
-
-									<img src="img/icons/path-arrow.svg" alt="Arrow" />
-								</div>
-							</div>
-							<div class="pms-growth__item growth-card">
-								<div class="growth-card__header">
-									<div class="growth-card__icon">
-										<img src="img/icons/lamp.svg" alt="Modern Systems Icon" />
-									</div>
-									<div>
-										<h3 class="growth-card__title h3">A Modern System for Growth</h3>
-										<p>Operate at Enterprise Scale on Salesforce-Native PMS</p>
-									</div>
-								</div>
-								<div class="growth-card__body">
-									<div class="growth-card__list-label h2">The Solution</div>
-									<ul class="growth-card__list base-list base-list--circle-check">
-										<li>End-to-end operations in a single platform</li>
-										<li>Enterprise Features — No hidden costs</li>
-										<li>Real-Time Analytics — Instant insights</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="block why-salesforce">
-					<div class="container">
-						<div class="row gy-5 why-salesforce__row">
-							<div class="col-md-8 col-lg-8">
-								<div class="why-salesforce__content">
-									<h2 class="h2 why-salesforce__title">Why Salesforce - Powered Property Management Changes Everything</h2>
-									<a href="#" class="button">View on AppExchange</a>
-								</div>
-							</div>
-							<div class="col-auto col-md-4 col-lg-auto">
-								<div class="why-salesforce__image">
-									<img src="img/icons/salesforce-on-app-exchange.svg" alt="Salesforce App Exchange Icon" />
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="block">
-					<div class="container">
-						<div class="stocking-cards">
-							<div class="stocking-cards__item sf-card">
-								<div class="sf-card__header">
-									<div class="sf-card__icon">
-										<img src="img/icons/branch.svg" alt="Enterprise Scale Icon" />
-									</div>
-									<span>ENTERPRISE FOUNDATION</span>
-								</div>
-								<div class="sf-card__body">
-									<h3 class="h3 sf-card__title">Scale Without Limits</h3>
-									<p>World’s #1 CRM as your PMS backbone.</p>
-								</div>
-							</div>
-							<div class="stocking-cards__item sf-card">
-								<div class="sf-card__header">
-									<div class="sf-card__icon">
-										<img src="img/icons/automation.svg" alt="Automation Icon" />
-									</div>
-									<span>AUTOMATION</span>
-								</div>
-								<div class="sf-card__body">
-									<h3 class="h3 sf-card__title">AI-Driven Efficiency</h3>
-									<p>Scale intelligence across every property.</p>
-								</div>
-							</div>
-							<div class="stocking-cards__item sf-card">
-								<div class="sf-card__header">
-									<div class="sf-card__icon">
-										<img src="img/icons/fluent_connected.svg" alt="Unified Operations Icon" />
-									</div>
-									<span>UNIFIED OPERATIONS</span>
-								</div>
-								<div class="sf-card__body">
-									<h3 class="h3 sf-card__title">One Source of Truth</h3>
-									<p>Reservations, finance, reporting.</p>
-								</div>
-							</div>
-							<div class="stocking-cards__item sf-card">
-								<div class="sf-card__header">
-									<div class="sf-card__icon">
-										<img src="img/icons/carbon_security.svg" alt="Enterprise Security Icon" />
-									</div>
-									<span>ENTERPRISE SECURITY</span>
-								</div>
-								<div class="sf-card__body">
-									<h3 class="h3 sf-card__title">Trusted &amp; Certified</h3>
-									<p>SOC 2, GDPR, and Salesforce encryption.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="block">
-					<div class="container">
-						<div class="block__header">
-							<h2 class="h2 block__title">Built for Large Scale, Multi-Property Operations</h2>
-							<p class="block__subtitle">Powering Growth Across Every Property Type</p>
-						</div>
-					</div>
-					<div class="slider-outside">
+			</header>
+			<main class="main">
+				<div class="homepage">
+					<div class="homepage__hero hero">
 						<div class="container">
-							<div class="swiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="card-feature">
-											<div class="card-feature__cover">
-												<img src="img/solution-hotel.jpg" alt="Hotel Image" />
-											</div>
-											<div class="card-feature__content">
-												<h3 class="h3 card-feature__title">Hotel Chains &amp; Resorts</h3>
-												<p>Lift RevPAR ≈ 15%</p>
-												<a href="#" class="button button-outline card-feature__button">Learn More</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="card-feature">
-											<div class="card-feature__cover">
-												<img src="img/solution-student-housing.jpg" alt="Student Housing Image" />
-											</div>
-											<div class="card-feature__content">
-												<h3 class="h3 card-feature__title">Student Housing</h3>
-												<p>Cut admin work by ≈ 35%</p>
-												<a href="#" class="button button-outline card-feature__button">Learn More</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="card-feature">
-											<div class="card-feature__cover">
-												<img src="img/solution-vacation-rentals.jpg" alt="Vacation Rentals Image" />
-											</div>
-											<div class="card-feature__content">
-												<h3 class="h3 card-feature__title">Vacation Rentals</h3>
-												<p>Increase occupancy ≈ 18%</p>
-												<a href="#" class="button button-outline card-feature__button">Learn More</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="card-feature">
-											<div class="card-feature__cover">
-												<img src="img/solution-coworking.jpg" alt="Coworking/Office Space Image" />
-											</div>
-											<div class="card-feature__content">
-												<h3 class="h3 card-feature__title">Coworking/Office Space</h3>
-												<p>Boost desk utilization ≈ 22%</p>
-												<a href="#" class="button button-outline card-feature__button">Learn More</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="card-feature">
-											<div class="card-feature__cover">
-												<img src="img/solution-serviced-apartments.jpg" alt="Serviced Apartments Image" />
-											</div>
-											<div class="card-feature__content">
-												<h3 class="h3 card-feature__title">Serviced Apartments</h3>
-												<p>Drive repeat corporate stays ≈ 25%</p>
-												<a href="#" class="button button-outline card-feature__button">Learn More</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="card-feature">
-											<div class="card-feature__cover">
-												<img src="img/solution-niche-portfolios.jpg" alt="Niche Portfolios Image" />
-											</div>
-											<div class="card-feature__content">
-												<h3 class="h3 card-feature__title">Niche Portfolios</h3>
-												<p>From marinas, villas, campgrounds — Accelerate ROI across portfolios.</p>
-												<a href="#" class="button button-outline card-feature__button">Learn More</a>
-											</div>
+							<!-- Hero content -->
+							<div class="hero__grid hero__grid--g-xl row flex-lg-nowrap align-items-center justify-content-between">
+								<div class="col-lg-7">
+									<div class="hero__content">
+										<h1 class="h1 text_balanced">The Only Salesforce Property Management System Built to Scale Enterprise Portfolios</h1>
+										<h2 class="h4 text_balanced">Run your property business in Salesforce — increase revenue, cut manual work, and scale faster.</h2>
+										<div class="hero__buttons">
+											<a class="button" href="/demo">See Your ROI</a>
 										</div>
 									</div>
 								</div>
-								<div class="slider-outside__navigation">
-									<div class="swiper-arrow  swiper-arrow--prev"></div>
-									<div class="swiper-arrow  swiper-arrow--next"></div>
-								</div>
-								<div class="slider-outside__actions">
-									<div class="slider-outside__pagination"></div>
-									<a href="#" class="slider-outside__link arrow-link">View All Solutions <i class="fas fa-arrow-right"></i></a>
+								<div class="col-lg-5 col-lg-auto">
+									<video src="video/homepage-hero.mp4" autoplay loop muted playsinline class="hero__video"></video>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="block">
-					<div class="container">
-						<div class="block__header">
-							<h2 class="h2 block__title">Your Enterprise Command Center</h2>
-							<p class="block__subtitle">Real-time control of revenue, occupancy, and performance.</p>
-						</div>
-						<div class="interactive-list">
-							<div class="interactive-list__control">
-								<ul class="interactive-list__list">
-									<li class="interactive-list__item-card interactive-card active">
-										<div class="interactive-card__trigger">
-											<h3 class="h3 interactive-card__title">Direct Booking Engine</h3>
-										</div>
-										<div class="interactive-card__content">
-											<p>Commission-free, website as top revenue channel</p>
-											<a href="#" class="button-inverse">Learn More</a>
-										</div>
-									</li>
-									<li class="interactive-list__item-card interactive-card">
-										<div class="interactive-card__trigger">
-											<h3 class="h3 interactive-card__title">AI-Powered Rate Controller</h3>
-										</div>
-										<div class="interactive-card__content">
-											<p>Manage blocks and corporate stays</p>
-											<a href="#" class="button-inverse">Learn More</a>
-										</div>
-									</li>
-									<li class="interactive-list__item-card interactive-card ">
-										<div class="interactive-card__trigger">
-											<h3 class="h3 interactive-card__title">Group &amp; Multi-Unit Booking</h3>
-										</div>
-										<div class="interactive-card__content">
-											<p>Forecast and act in real time</p>
-											<a href="#" class="button-inverse">Learn More</a>
-										</div>
-									</li>
-									<li class="interactive-list__item-card interactive-card">
-										<div class="interactive-card__trigger">
-											<h3 class="h3 interactive-card__title">AI-Driven Reporting &amp; Forecasting</h3>
-										</div>
-										<div class="interactive-card__content">
-											<p>Adapt pricing instantly to demand</p>
-											<a href="#" class="button-inverse">Learn More</a>
-										</div>
-									</li>
-									<li class="interactive-list__item-card interactive-card">
-										<div class="interactive-card__trigger">
-											<h3 class="h3 interactive-card__title">Flexible Rates</h3>
-										</div>
-										<div class="interactive-card__content">
-											<p>Total visibility, instant decisions</p>
-											<a href="#" class="button-inverse">Learn More</a>
-										</div>
-									</li>
-								</ul>
-								<div class="interactive-list__all"><a href="#" class="arrow-link">View All Features<i class="fas fa-arrow-right"></i></a></div>
+					<div class="block">
+						<div class="container">
+							<div class="block__header">
+								<h2 class="h2 block__title">Why Choose Booking Ninjas?</h2>
 							</div>
-							<div class="interactive-list__content">
-								<div class="interactive-list__content-card active">
-									<video src="video/feature-be.mp4" poster="img/feat-be.jpg" autoplay loop muted playsinline></video>
-								</div>
-								<div class="interactive-list__content-card">
-									<img src="img/feat-ai-rate.jpg" alt="AI-Powered Rate Controller" />
-								</div>
-								<div class="interactive-list__content-card">
-									<img src="img/feat-group-booking.jpg" alt="Group &amp; Multi-Unit Booking" />
-								</div>
-								<div class="interactive-list__content-card">
-									<img src="img/feat-ai-reporting.jpg" alt="AI-Driven Reporting &amp; Forecasting" />
-								</div>
-								<div class="interactive-list__content-card">
-									<img src="img/feat-rates.jpg" alt="Flexible Rates" />
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="block app-integration">
-					<div class="container ovh">
-						<div class="block__header">
-							<h2 class="h2 block__title">Integrations That Power Every Operation</h2>
-							<p class="block__subtitle">Plug in. Run faster.</p>
-						</div>
-						<div class="card-grid card-grid--cols-5">
-							<div class="card-grid__item">
-								<div class="plain-card">
-									<img class="plain-card__icon" src="img/icons/connect.svg" alt="Channel Management Icon" />
-									<div class="plain-card__content">
-										<h3 class="plain-card__title">Channel Management </h3>
-										<p>Sync rates &amp; inventory</p>
+							<div class="row gy-4 justify-content-center">
+								<div class="col-sm-6 col-md-4">
+									<div class="plain-card">
+										<img class="plain-card__icon" src="img/icons/solar_dollar-broken.svg" alt="Proven ROI Icon" />
+										<div class="plain-card__content">
+											<h3 class="plain-card__title">Proven ROI</h3>
+											<p>Live in weeks, profit in your first quarter</p>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="card-grid__item">
-								<div class="plain-card">
-									<img class="plain-card__icon" src="img/icons/payment.svg" alt="Payments Icon" />
-									<div class="plain-card__content">
-										<h3 class="plain-card__title">Payments</h3>
-										<p>Secure global payments</p>
+								<div class="col-sm-6 col-md-4">
+									<div class="plain-card">
+										<img class="plain-card__icon" src="img/icons/tabler_view-360.svg" alt="Scale Without Staff Icon" />
+										<div class="plain-card__content">
+											<h3 class="plain-card__title">Scale Without Staff</h3>
+											<p>AI handles routine tasks</p>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="card-grid__item">
-								<div class="plain-card">
-									<img class="plain-card__icon" src="img/icons/branch.svg" alt="Accounting Icon" />
-									<div class="plain-card__content">
-										<h3 class="plain-card__title">Accounting</h3>
-										<p>Instant GL posting</p>
-									</div>
-								</div>
-							</div>
-							<div class="card-grid__item">
-								<div class="plain-card">
-									<img class="plain-card__icon" src="img/icons/messaging.svg" alt="Messaging &amp; Voice Icon" />
-									<div class="plain-card__content">
-										<h3 class="plain-card__title">Messaging &amp; Voice</h3>
-										<p>Built-in calls, SMS &amp; WhatsApp</p>
-									</div>
-								</div>
-							</div>
-							<div class="card-grid__item">
-								<div class="plain-card">
-									<img class="plain-card__icon" src="img/icons/ai-automation.svg" alt="AI &amp; Automation Icon" />
-									<div class="plain-card__content">
-										<h3 class="plain-card__title">AI &amp; Automation</h3>
-										<p>Intelligent workflows</p>
+								<div class="col-sm-6 col-md-4">
+									<div class="plain-card">
+										<img class="plain-card__icon" src="img/icons/si_shield-security-line.svg" alt="Government-Tested Security Icon" />
+										<div class="plain-card__content">
+											<h3 class="plain-card__title">Government-Tested Security</h3>
+											<p>Independently SOC 2 &amp; GDPR verified.</p>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="block">
-					<div class="animated-line">
-						<div class="animated-line__track">
-							<div class="animated-line__group">
-								<img src="img/icons/company-salesforce.svg" alt="Salesforce Logo" />
-								<img src="img/icons/company-airbnb.svg" alt="Airbnb Logo" />
-								<img src="img/icons/company-booking.svg" alt="Booking.com Logo" />
-								<img src="img/icons/company-stripe.svg" alt="Stripe Logo" />
-								<img src="img/icons/company-oracle.svg" alt="Oracle Logo" />
-								<img src="img/icons/company-slack.svg" alt="Slack Logo" />
-								<img src="img/icons/company-whatsapp.svg" alt="WhatsApp Logo" />
-								<img src="img/icons/company-twilio.svg" alt="Twilio Logo" />
-								<img src="img/icons/company-openai.svg" alt="OpenAI Logo" />
-							</div>
-							<div class="animated-line__group animated-line__group--clone">
-								<img src="img/icons/company-salesforce.svg" alt="Salesforce Logo" />
-								<img src="img/icons/company-airbnb.svg" alt="Airbnb Logo" />
-								<img src="img/icons/company-booking.svg" alt="Booking.com Logo" />
-								<img src="img/icons/company-stripe.svg" alt="Stripe Logo" />
-								<img src="img/icons/company-oracle.svg" alt="Oracle Logo" />
-								<img src="img/icons/company-slack.svg" alt="Slack Logo" />
-								<img src="img/icons/company-whatsapp.svg" alt="WhatsApp Logo" />
-								<img src="img/icons/company-twilio.svg" alt="Twilio Logo" />
-								<img src="img/icons/company-openai.svg" alt="OpenAI Logo" />
+					<div class="block">
+						<div class="container">
+							<div class="case-card">
+								<div class="case-card__logo">
+									<img src="img/clients/ymca-logo.png" alt="YMCA Logo" />
+								</div>
+								<div class="case-card__content">
+									<span class="case-card__tag">case study</span>
+									<h2 class="h2 case-card__title">From Manual Chaos to 6-Figure Cabin Revenue in 90 Days</h2>
+									<p class="case-card__text">
+										YMCA turned seasonal cabin reservations into a profit engine with our Salesforce-native booking system — generating hundreds of thousands in
+										new bookings and eliminating manual payment headaches
+									</p>
+								</div>
+								<div class="case-card__action">
+									<a href="#" class="button">See How They Did It</a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="block">
-					<div class="container">
-						<div class="block__header">
-							<h2 class="h2 block__title">Enterprise Modules</h2>
-							<p class="block__subtitle">Instantly extend the power of your PMS</p>
-						</div>
-						<div class="interactive-list">
-							<div class="interactive-list__control">
-								<ul class="interactive-list__list">
-									<li class="interactive-list__item-card interactive-card active">
-										<div class="interactive-card__trigger">
-											<h3 class="h3 interactive-card__title">Point of Sale (POS)</h3>
-										</div>
-										<div class="interactive-card__content">
-											<p>Sell anything on-site — auto-posted to reservations</p>
-											<a href="#" class="button-inverse">Learn More</a>
-										</div>
+					<div class="block">
+						<div class="container">
+							<div class="block__header">
+								<h2 class="h2 block__title">Outpace. Outperform. Outgrow Your Legacy PMS.</h2>
+								<p class="block__subtitle">Bring reservations, CRM, and accounting together in one system — leaner, faster, built for growth.</p>
+							</div>
 
-									</li>
-									<li class="interactive-list__item-card interactive-card ">
-										<div class="interactive-card__trigger">
-											<h3 class="h3 interactive-card__title">Portals (Guest, Owner, Student)</h3>
+							<div class="pms-growth">
+								<div class="pms-growth__item growth-card">
+									<div class="growth-card__header">
+										<div class="growth-card__icon">
+											<img src="img/icons/warning.svg" alt="Legacy Systems Icon" />
 										</div>
-										<div class="interactive-card__content">
-											<p>Self-service access for guests, owners, and residents.</p>
-											<a href="#" class="button-inverse">Learn More</a>
+										<div class="growth-card__name">
+											<h3 class="growth-card__title h3">Legacy Systems Slow You Down</h3>
+											<p>An outdated PMS raises costs and blocks efficiency</p>
 										</div>
-									</li>
-									<li class="interactive-list__item-card interactive-card">
-										<div class="interactive-card__trigger">
-											<h3 class="h3 interactive-card__title">Membership</h3>
-										</div>
-										<div class="interactive-card__content">
-											<p>Manage subscriptions, renewals, and member perks.</p>
-											<a href="#" class="button-inverse">Learn More</a>
-										</div>
-									</li>
-								</ul>
-								<div class="interactive-list__all"><a href="#" class="arrow-link">See Your ROI<i class="fas fa-arrow-right"></i></a></div>
-							</div>
-							<div class="interactive-list__content">
-								<div class="interactive-list__content-card active">
-									<img src="img/feat-pos.jpg" alt="Point of Sale (POS)" />
+									</div>
+									<div class="growth-card__body">
+										<div class="growth-card__list-label h2">The Challenge</div>
+										<ul class="growth-card__list base-list base-list--cancel">
+											<li>Siloed PMS, CRM, and accounting</li>
+											<li>Expensive Add-ons</li>
+											<li>Reports stuck in spreadsheets</li>
+										</ul>
+									</div>
 								</div>
-								<div class="interactive-list__content-card">
-									<img src="img/feat-portals.jpg" alt="Portals" />
+								<div class="pms-growth__path">
+									<div class="pms-growth__path-icon">
+										<img src="img/icons/path-arrow.svg" alt="Arrow" />
+									</div>
 								</div>
-								<div class="interactive-list__content-card">
-									<img src="img/feat-membership.jpg" alt="Membership" />
+								<div class="pms-growth__item growth-card">
+									<div class="growth-card__header">
+										<div class="growth-card__icon">
+											<img src="img/icons/lamp.svg" alt="Modern Systems Icon" />
+										</div>
+										<div>
+											<h3 class="growth-card__title h3">A Modern System for Growth</h3>
+											<p>Operate at Enterprise Scale on Salesforce-Native PMS</p>
+										</div>
+									</div>
+									<div class="growth-card__body">
+										<div class="growth-card__list-label h2">The Solution</div>
+										<ul class="growth-card__list base-list base-list--circle-check">
+											<li>End-to-end operations in a single platform</li>
+											<li>Enterprise Features — No hidden costs</li>
+											<li>Real-Time Analytics — Instant insights</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="block">
-					<div class="container">
-						<div class="case-card">
-							<div class="case-card__logo">
-								<img src="img/clients/ish-dc-logo.svg" alt="ISH DC Logo" />
-							</div>
-							<div class="case-card__content">
-								<span class="case-card__tag">case study</span>
-								<h2 class="h2 case-card__title">International Student House Removes the Operational Burden</h2>
-								<p class="case-card__text">Complex housing operations across bookings, billing, and communication are now streamlined. Efficiency elevated, operations simplified — giving staff more time to focus on students and community.</p>
-							</div>
-							<div class="case-card__action">
-								<a href="#" class="button">Read Case Study</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="block">
-					<div class="container">
-						<div class="cta-card">
-							<div class="cta-card__image">
-								<img src="img/cta-pricing.jpg" alt="Pricing Plans" />
-							</div>
-							<div class="cta-card__content">
-								<h2 class="h2 cta-card__title">Get enterprise-grade features without hidden fees</h2>
-								<p>Migration handled end-to-end — no disruption, no downtime</p>
-								<div class="cta-card__actions">
-									<a href="/pricing" class="button-inverse">View pricing</a>
-									<a href="#" class="cta-card__link">Start for free</a>
+					<div class="block why-salesforce">
+						<div class="container">
+							<div class="row gy-5 why-salesforce__row">
+								<div class="col-md-8 col-lg-8">
+									<div class="why-salesforce__content">
+										<h2 class="h2 why-salesforce__title">Why Salesforce - Powered Property Management Changes Everything</h2>
+										<a href="#" class="button">View on AppExchange</a>
+									</div>
+								</div>
+								<div class="col-auto col-md-4 col-lg-auto">
+									<div class="why-salesforce__image">
+										<img src="img/icons/salesforce-on-app-exchange.svg" alt="Salesforce App Exchange Icon" />
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="block">
-					<div class="container">
-						<div class="block__header">
-							<h2 class="h2 block__title">Frequently Asked Questions</h2>
-						</div>
-						<div class="faq-list">
-							<div class="accordion accordion--base">
-								<div class="accordion__header">
-									<h3 class="accordion__title h3">What makes Booking Ninjas different from other PMS systems?</h3>
+					<div class="block">
+						<div class="container">
+							<div class="stocking-cards">
+								<div class="stocking-cards__item sf-card">
+									<div class="sf-card__header">
+										<div class="sf-card__icon">
+											<img src="img/icons/branch.svg" alt="Enterprise Scale Icon" />
+										</div>
+										<span>ENTERPRISE FOUNDATION</span>
+									</div>
+									<div class="sf-card__body">
+										<h3 class="h3 sf-card__title">Scale Without Limits</h3>
+										<p>World’s #1 CRM as your PMS backbone.</p>
+									</div>
 								</div>
-								<div class="accordion__content">
-									<p>Booking Ninjas is the only PMS architected fully on Salesforce — delivering automation, scalability, and security at an enterprise standard no bolt-on can match.</p>
+								<div class="stocking-cards__item sf-card">
+									<div class="sf-card__header">
+										<div class="sf-card__icon">
+											<img src="img/icons/automation.svg" alt="Automation Icon" />
+										</div>
+										<span>AUTOMATION</span>
+									</div>
+									<div class="sf-card__body">
+										<h3 class="h3 sf-card__title">AI-Driven Efficiency</h3>
+										<p>Scale intelligence across every property.</p>
+									</div>
 								</div>
-							</div>
-							<div class="accordion accordion--base">
-								<div class="accordion__header">
-									<h3 class="accordion__title h3">Can it handle multiple properties and large portfolios?</h3>
+								<div class="stocking-cards__item sf-card">
+									<div class="sf-card__header">
+										<div class="sf-card__icon">
+											<img src="img/icons/fluent_connected.svg" alt="Unified Operations Icon" />
+										</div>
+										<span>UNIFIED OPERATIONS</span>
+									</div>
+									<div class="sf-card__body">
+										<h3 class="h3 sf-card__title">One Source of Truth</h3>
+										<p>Reservations, finance, reporting.</p>
+									</div>
 								</div>
-								<div class="accordion__content">
-									<p>Built for enterprise scale, Booking Ninjas delivers one source of truth for revenue, occupancy, and operations across properties worldwide.</p>
-								</div>
-							</div>
-							<div class="accordion accordion--base">
-								<div class="accordion__header">
-									<h3 class="accordion__title h3">Has Booking Ninjas been independently security tested?</h3>
-								</div>
-								<div class="accordion__content">
-									<p>Yes, Independently SOC 2 and GDPR certified, secured on Salesforce’s infrastructure — trusted by the world’s leading organizations.</p>
-								</div>
-							</div>
-							<div class="accordion accordion--base">
-								<div class="accordion__header">
-									<h3 class="accordion__title h3">How do you handle data migration and onboarding?</h3>
-								</div>
-								<div class="accordion__content">
-									<p>Our team manages migration, configuration, and training end-to-end — ensuring a seamless transition with no disruption to operations.</p>
-								</div>
-							</div>
-							<div class="accordion accordion--base">
-								<div class="accordion__header">
-									<h3 class="accordion__title h3">How fast can we see ROI?</h3>
-								</div>
-								<div class="accordion__content">
-									<p>Clients typically achieve measurable ROI in the first quarter — higher revenue, reduced operational overhead and lower OTA commissions.</p>
-								</div>
-							</div>
-							<div class="accordion accordion--base">
-								<div class="accordion__header">
-									<h3 class="accordion__title h3">What support and training do you provide?</h3>
-								</div>
-								<div class="accordion__content">
-									<p>Every client receives a dedicated success team, live onboarding, and 24/7 enterprise support — ensuring adoption, optimization, and long-term results.</p>
+								<div class="stocking-cards__item sf-card">
+									<div class="sf-card__header">
+										<div class="sf-card__icon">
+											<img src="img/icons/carbon_security.svg" alt="Enterprise Security Icon" />
+										</div>
+										<span>ENTERPRISE SECURITY</span>
+									</div>
+									<div class="sf-card__body">
+										<h3 class="h3 sf-card__title">Trusted &amp; Certified</h3>
+										<p>SOC 2, GDPR, and Salesforce encryption.</p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="block">
-					<div class="container">
-						<div class="base-cta-card">
-							<div class="base-cta-card__row row flex-lg-nowrap gy-5 justify-content-between">
-								<div class="col-12 col-lg-8 col-xl-6 align-items-spread">
-									<h2 class="base-cta-card__title">Ready to Run Your Entire Portfolio on <span class="highlight">Salesforce?</span></h2>
-									<div class="row">
-										<p class="col-md-10 col-lg-9">
-											Future-ready operations – grow revenue, reduce expenses, maximum control of your portfolio.
+					<div class="block">
+						<div class="container">
+							<div class="block__header">
+								<h2 class="h2 block__title">Built for Large Scale, Multi-Property Operations</h2>
+								<p class="block__subtitle">Powering Growth Across Every Property Type</p>
+							</div>
+						</div>
+						<div class="slider-outside">
+							<div class="container">
+								<div class="swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="card-feature">
+												<div class="card-feature__cover">
+													<img src="img/solution-hotel.jpg" alt="Hotel Image" />
+												</div>
+												<div class="card-feature__content">
+													<h3 class="h3 card-feature__title">Hotel Chains &amp; Resorts</h3>
+													<p>Lift RevPar +15%</p>
+													<a href="#" class="button button-outline card-feature__button">Learn More</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="card-feature">
+												<div class="card-feature__cover">
+													<img src="img/solution-student-housing.jpg" alt="Student Housing Image" />
+												</div>
+												<div class="card-feature__content">
+													<h3 class="h3 card-feature__title">Student Housing</h3>
+													<p>Cut admin work by -35%</p>
+													<a href="#" class="button button-outline card-feature__button">Learn More</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="card-feature">
+												<div class="card-feature__cover">
+													<img src="img/solution-vacation-rentals.jpg" alt="Vacation Rentals Image" />
+												</div>
+												<div class="card-feature__content">
+													<h3 class="h3 card-feature__title">Vacation Rentals</h3>
+													<p>Increase occupancy 18%</p>
+													<a href="#" class="button button-outline card-feature__button">Learn More</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="card-feature">
+												<div class="card-feature__cover">
+													<img src="img/solution-coworking.jpg" alt="Coworking/Office Space Image" />
+												</div>
+												<div class="card-feature__content">
+													<h3 class="h3 card-feature__title">Coworking/Office Space</h3>
+													<p>Boost desk utilization +22%</p>
+													<a href="#" class="button button-outline card-feature__button">Learn More</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="card-feature">
+												<div class="card-feature__cover">
+													<img src="img/solution-serviced-apartments.jpg" alt="Serviced Apartments Image" />
+												</div>
+												<div class="card-feature__content">
+													<h3 class="h3 card-feature__title">Serviced Apartments</h3>
+													<p>Drive repeat corporate stays +25%</p>
+													<a href="#" class="button button-outline card-feature__button">Learn More</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="card-feature">
+												<div class="card-feature__cover">
+													<img src="img/solution-niche-portfolios.jpg" alt="Niche Portfolios Image" />
+												</div>
+												<div class="card-feature__content">
+													<h3 class="h3 card-feature__title">Niche Portfolios</h3>
+													<p>From marinas, villas, campgrounds — Accelerate ROI across portfolios.</p>
+													<a href="#" class="button button-outline card-feature__button">Learn More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slider-outside__navigation">
+										<div class="swiper-arrow swiper-arrow--prev"></div>
+										<div class="swiper-arrow swiper-arrow--next"></div>
+									</div>
+									<div class="slider-outside__actions">
+										<div class="slider-outside__pagination"></div>
+										<a href="#" class="slider-outside__link arrow-link">View All Solutions <i class="fas fa-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block">
+						<div class="container">
+							<div class="block__header">
+								<h2 class="h2 block__title">Your Enterprise Command Center</h2>
+								<p class="block__subtitle">Real-time control of revenue, occupancy, and performance.</p>
+							</div>
+							<div class="interactive-list">
+								<div class="interactive-list__control">
+									<ul class="interactive-list__list">
+										<li class="interactive-list__item-card interactive-card active">
+											<div class="interactive-card__trigger">
+												<h3 class="h3 interactive-card__title">Direct Booking Engine</h3>
+											</div>
+											<div class="interactive-card__content">
+												<p>Commission-free, website as top revenue channel</p>
+												<a href="#" class="button-inverse">Learn More</a>
+											</div>
+										</li>
+										<li class="interactive-list__item-card interactive-card">
+											<div class="interactive-card__trigger">
+												<h3 class="h3 interactive-card__title">AI-Powered Rate Controller</h3>
+											</div>
+											<div class="interactive-card__content">
+												<p>Manage blocks and corporate stays</p>
+												<a href="#" class="button-inverse">Learn More</a>
+											</div>
+										</li>
+										<li class="interactive-list__item-card interactive-card">
+											<div class="interactive-card__trigger">
+												<h3 class="h3 interactive-card__title">Group &amp; Multi-Unit Booking</h3>
+											</div>
+											<div class="interactive-card__content">
+												<p>Forecast and act in real time</p>
+												<a href="#" class="button-inverse">Learn More</a>
+											</div>
+										</li>
+										<li class="interactive-list__item-card interactive-card">
+											<div class="interactive-card__trigger">
+												<h3 class="h3 interactive-card__title">AI-Driven Reporting &amp; Forecasting</h3>
+											</div>
+											<div class="interactive-card__content">
+												<p>Adapt pricing instantly to demand</p>
+												<a href="#" class="button-inverse">Learn More</a>
+											</div>
+										</li>
+										<li class="interactive-list__item-card interactive-card">
+											<div class="interactive-card__trigger">
+												<h3 class="h3 interactive-card__title">Flexible Rates</h3>
+											</div>
+											<div class="interactive-card__content">
+												<p>Total visibility, instant decisions</p>
+												<a href="#" class="button-inverse">Learn More</a>
+											</div>
+										</li>
+									</ul>
+									<div class="interactive-list__all">
+										<a href="#" class="arrow-link">View All Features<i class="fas fa-arrow-right"></i></a>
+									</div>
+								</div>
+								<div class="interactive-list__content">
+									<div class="interactive-list__content-card active">
+										<video src="video/feature-be.mp4" poster="img/feat-be.jpg" autoplay loop muted playsinline></video>
+									</div>
+									<div class="interactive-list__content-card">
+										<img src="img/feat-ai-rate.jpg" alt="AI-Powered Rate Controller" />
+									</div>
+									<div class="interactive-list__content-card">
+										<img src="img/feat-group-booking.jpg" alt="Group &amp; Multi-Unit Booking" />
+									</div>
+									<div class="interactive-list__content-card">
+										<img src="img/feat-ai-reporting.jpg" alt="AI-Driven Reporting &amp; Forecasting" />
+									</div>
+									<div class="interactive-list__content-card">
+										<img src="img/feat-rates.jpg" alt="Flexible Rates" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block app-integration">
+						<div class="container ovh">
+							<div class="block__header">
+								<h2 class="h2 block__title">Integrations That Power Every Operation</h2>
+								<p class="block__subtitle">Plug in. Run faster.</p>
+							</div>
+							<div class="card-grid card-grid--cols-5">
+								<div class="card-grid__item">
+									<div class="plain-card">
+										<img class="plain-card__icon" src="img/icons/connect.svg" alt="Channel Management Icon" />
+										<div class="plain-card__content">
+											<h3 class="plain-card__title">Channel Management</h3>
+											<p>Sync rates &amp; inventory</p>
+										</div>
+									</div>
+								</div>
+								<div class="card-grid__item">
+									<div class="plain-card">
+										<img class="plain-card__icon" src="img/icons/payment.svg" alt="Payments Icon" />
+										<div class="plain-card__content">
+											<h3 class="plain-card__title">Payments</h3>
+											<p>Secure global payments</p>
+										</div>
+									</div>
+								</div>
+								<div class="card-grid__item">
+									<div class="plain-card">
+										<img class="plain-card__icon" src="img/icons/branch.svg" alt="Accounting Icon" />
+										<div class="plain-card__content">
+											<h3 class="plain-card__title">Accounting</h3>
+											<p>Instant GL posting</p>
+										</div>
+									</div>
+								</div>
+								<div class="card-grid__item">
+									<div class="plain-card">
+										<img class="plain-card__icon" src="img/icons/messaging.svg" alt="Messaging &amp; Voice Icon" />
+										<div class="plain-card__content">
+											<h3 class="plain-card__title">Messaging &amp; Voice</h3>
+											<p>Built-in calls, SMS &amp; WhatsApp</p>
+										</div>
+									</div>
+								</div>
+								<div class="card-grid__item">
+									<div class="plain-card">
+										<img class="plain-card__icon" src="img/icons/ai-automation.svg" alt="AI &amp; Automation Icon" />
+										<div class="plain-card__content">
+											<h3 class="plain-card__title">AI &amp; Automation</h3>
+											<p>Intelligent workflows</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block">
+						<div class="animated-line">
+							<div class="animated-line__track">
+								<div class="animated-line__group">
+									<img src="img/icons/company-salesforce.svg" alt="Salesforce Logo" />
+									<img src="img/icons/company-airbnb.svg" alt="Airbnb Logo" />
+									<img src="img/icons/company-booking.svg" alt="Booking.com Logo" />
+									<img src="img/icons/company-stripe.svg" alt="Stripe Logo" />
+									<img src="img/icons/company-oracle.svg" alt="Oracle Logo" />
+									<img src="img/icons/company-slack.svg" alt="Slack Logo" />
+									<img src="img/icons/company-whatsapp.svg" alt="WhatsApp Logo" />
+									<img src="img/icons/company-twilio.svg" alt="Twilio Logo" />
+									<img src="img/icons/company-openai.svg" alt="OpenAI Logo" />
+								</div>
+								<div class="animated-line__group animated-line__group--clone">
+									<img src="img/icons/company-salesforce.svg" alt="Salesforce Logo" />
+									<img src="img/icons/company-airbnb.svg" alt="Airbnb Logo" />
+									<img src="img/icons/company-booking.svg" alt="Booking.com Logo" />
+									<img src="img/icons/company-stripe.svg" alt="Stripe Logo" />
+									<img src="img/icons/company-oracle.svg" alt="Oracle Logo" />
+									<img src="img/icons/company-slack.svg" alt="Slack Logo" />
+									<img src="img/icons/company-whatsapp.svg" alt="WhatsApp Logo" />
+									<img src="img/icons/company-twilio.svg" alt="Twilio Logo" />
+									<img src="img/icons/company-openai.svg" alt="OpenAI Logo" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block">
+						<div class="container">
+							<div class="block__header">
+								<h2 class="h2 block__title">Enterprise Modules</h2>
+								<p class="block__subtitle">Instantly extend the power of your PMS</p>
+							</div>
+							<div class="interactive-list">
+								<div class="interactive-list__control">
+									<ul class="interactive-list__list">
+										<li class="interactive-list__item-card interactive-card active">
+											<div class="interactive-card__trigger">
+												<h3 class="h3 interactive-card__title">Point of Sale (POS)</h3>
+											</div>
+											<div class="interactive-card__content">
+												<p>Sell anything on-site — auto-posted to reservations</p>
+												<a href="#" class="button-inverse">Learn More</a>
+											</div>
+										</li>
+										<li class="interactive-list__item-card interactive-card">
+											<div class="interactive-card__trigger">
+												<h3 class="h3 interactive-card__title">Portals (Guest, Owner, Student)</h3>
+											</div>
+											<div class="interactive-card__content">
+												<p>Self-service access for guests, owners, and residents.</p>
+												<a href="#" class="button-inverse">Learn More</a>
+											</div>
+										</li>
+										<li class="interactive-list__item-card interactive-card">
+											<div class="interactive-card__trigger">
+												<h3 class="h3 interactive-card__title">Membership</h3>
+											</div>
+											<div class="interactive-card__content">
+												<p>Manage subscriptions, renewals, and member perks.</p>
+												<a href="#" class="button-inverse">Learn More</a>
+											</div>
+										</li>
+									</ul>
+									<div class="interactive-list__all">
+										<a href="#" class="arrow-link">See Your ROI<i class="fas fa-arrow-right"></i></a>
+									</div>
+								</div>
+								<div class="interactive-list__content">
+									<div class="interactive-list__content-card active">
+										<img src="img/feat-pos.jpg" alt="Point of Sale (POS)" />
+									</div>
+									<div class="interactive-list__content-card">
+										<img src="img/feat-portals.jpg" alt="Portals" />
+									</div>
+									<div class="interactive-list__content-card">
+										<img src="img/feat-membership.jpg" alt="Membership" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block">
+						<div class="container">
+							<div class="case-card">
+								<div class="case-card__logo">
+									<img src="img/clients/ish-dc-logo.svg" alt="ISH DC Logo" />
+								</div>
+								<div class="case-card__content">
+									<span class="case-card__tag">case study</span>
+									<h2 class="h2 case-card__title">International Student House Removes the Operational Burden</h2>
+									<p class="case-card__text">
+										Complex housing operations across bookings, billing, and communication are now streamlined. Efficiency elevated, operations simplified —
+										giving staff more time to focus on students and community.
+									</p>
+								</div>
+								<div class="case-card__action">
+									<a href="#" class="button">Read Case Study</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block">
+						<div class="container">
+							<div class="cta-card">
+								<div class="cta-card__image">
+									<img src="img/cta-pricing.jpg" alt="Pricing Plans" />
+								</div>
+								<div class="cta-card__content">
+									<h2 class="h2 cta-card__title">Get enterprise-grade features without hidden fees</h2>
+									<p>Migration handled end-to-end — no disruption, no downtime</p>
+									<div class="cta-card__actions">
+										<a href="/pricing" class="button-inverse">View pricing</a>
+										<a href="#" class="cta-card__link">Start for free</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block">
+						<div class="container">
+							<div class="block__header">
+								<h2 class="h2 block__title">Frequently Asked Questions</h2>
+							</div>
+							<div class="faq-list">
+								<div class="accordion accordion--base">
+									<div class="accordion__header">
+										<h3 class="accordion__title h3">What makes Booking Ninjas different from other PMS systems?</h3>
+									</div>
+									<div class="accordion__content">
+										<p>
+											Booking Ninjas is the only PMS architected fully on Salesforce — delivering automation, scalability, and security at an enterprise
+											standard no bolt-on can match.
 										</p>
 									</div>
 								</div>
-								<div class="col-auto">
-									<a href="#" class="button-inverse">See Your ROI</a>
+								<div class="accordion accordion--base">
+									<div class="accordion__header">
+										<h3 class="accordion__title h3">Can it handle multiple properties and large portfolios?</h3>
+									</div>
+									<div class="accordion__content">
+										<p>
+											Built for enterprise scale, Booking Ninjas delivers one source of truth for revenue, occupancy, and operations across properties
+											worldwide.
+										</p>
+									</div>
+								</div>
+								<div class="accordion accordion--base">
+									<div class="accordion__header">
+										<h3 class="accordion__title h3">Has Booking Ninjas been independently security tested?</h3>
+									</div>
+									<div class="accordion__content">
+										<p>Yes, Independently SOC 2 and GDPR certified, secured on Salesforce’s infrastructure — trusted by the world’s leading organizations.</p>
+									</div>
+								</div>
+								<div class="accordion accordion--base">
+									<div class="accordion__header">
+										<h3 class="accordion__title h3">How do you handle data migration and onboarding?</h3>
+									</div>
+									<div class="accordion__content">
+										<p>Our team manages migration, configuration, and training end-to-end — ensuring a seamless transition with no disruption to operations.</p>
+									</div>
+								</div>
+								<div class="accordion accordion--base">
+									<div class="accordion__header">
+										<h3 class="accordion__title h3">How fast can we see ROI?</h3>
+									</div>
+									<div class="accordion__content">
+										<p>
+											Clients typically achieve measurable ROI in the first quarter — higher revenue, reduced operational overhead and lower OTA commissions.
+										</p>
+									</div>
+								</div>
+								<div class="accordion accordion--base">
+									<div class="accordion__header">
+										<h3 class="accordion__title h3">What support and training do you provide?</h3>
+									</div>
+									<div class="accordion__content">
+										<p>
+											Every client receives a dedicated success team, live onboarding, and 24/7 enterprise support — ensuring adoption, optimization, and
+											long-term results.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block">
+						<div class="container">
+							<div class="base-cta-card">
+								<div class="base-cta-card__row row flex-lg-nowrap gy-5 justify-content-between">
+									<div class="col-12 col-lg-8 col-xl-6 align-items-spread">
+										<h2 class="base-cta-card__title">Ready to Run Your Entire Portfolio on <span class="highlight">Salesforce?</span></h2>
+										<div class="row">
+											<p class="col-md-10 col-lg-9">Future-ready operations – grow revenue, reduce expenses, maximum control of your portfolio.</p>
+										</div>
+									</div>
+									<div class="col-auto">
+										<a href="#" class="button-inverse">See Your ROI</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</main>
-		<footer class="footer">
-			<div class="container">
-				<div class="footer__top">
-					<a class="footer__logo" href="/">
-						<img alt="Booking Ninjas Logo" src="img/logo-white.svg" />
-					</a>
-					<div class="footer__row row">
-						<div class="col-lg-9 col-xl-8">
-							<nav class="footer__nav row">
-								<div class="col-sm-6 col-lg-3">
-									<div class="footer__title">Company</div>
-									<ul class="footer__list">
-										<li><a href="/about-us">About Us</a></li>
-										<li><a href="/core-values-of-booking-ninjas-product">Core Values</a></li>
-										<li><a href="/booking-ninjas-careers">Careers</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-6 col-lg-3">
-									<div class="footer__title">Product</div>
-									<ul class="footer__list">
-										<li><a href="#">Features</a></li>
-										<li><a href="#">Solutions</a></li>
-										<li><a href="/pricing">Pricing</a></li>
-										<li><a href="/blog">Blog</a></li>
-										<li><a href="/faqs">FAQs</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-6 col-lg-3">
-									<div class="footer__title">Resources</div>
-									<ul class="footer__list">
-										<li><a href="/portal/s/">Client Portal</a></li>
-										<li><a href="/blog">Blog</a></li>
-										<li><a href="/faqs">FAQs</a></li>
-										<li><a href="/customer-stories">Customer Stories</a></li>
-										<li><a href="/booking-ninjas-webinars">Webinars</a></li>
-										<li><a href="#">Pilot</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-6 col-lg-3">
-									<div class="footer__title">Legal &amp; Contact</div>
-									<ul class="footer__list">
-										<li><a href="/terms-and-conditions">Terms of Use</a></li>
-										<li><a href="/privacy-policy">Privacy Policy</a></li>
-										<li><a href="/meeting">Contact Us</a></li>
-									</ul>
-								</div>
-							</nav>
-						</div>
-						<div class="col-lg-auto text_center">
-							<img src="img/salesforce-section-icon-1.png" alt="Salesforce Partner Badge" />
-						</div>
-					</div>
-					<div class="footer__badges">
-						<img src="img/icons/badge-aicpa.png" alt="AICPA Badge" />
-						<img src="img/icons/badge-gdpr.png" alt="GDPR Badge" />
-						<img src="img/icons/badge-owasp.png" alt="OWASP Badge" />
-						<img src="img/icons/badge-gt.svg" alt="Government Tested Badge" />
-					</div>
-
-				</div>
-				<div class="footer__bottom">
-					<div class="row justify-content-center justify-content-lg-between">
-						<div class="col-lg-6">
-							<form id="j_id0:j_id1:footer-form" name="j_id0:j_id1:footer-form" method="post" action="/BN_Index" class="footer__form" enctype="application/x-www-form-urlencoded">
-								<input type="hidden" name="j_id0:j_id1:footer-form" value="j_id0:j_id1:footer-form" />
-								<input type="text" name="j_id0:j_id1:footer-form:j_id199" value="" required="required" placeholder="Enter Your Email" /><input class="button footer-btn-submit" id="j_id0:j_id1:footer-form:j_id200" name="j_id0:j_id1:footer-form:j_id200" onclick="return A4J.AJAX.Submit('j_id0:j_id1:footer\x2Dform',event,{'similarityGroupingId':'j_id0:j_id1:footer\x2Dform:j_id200','html5Validate':true,'parameters':{'j_id0:j_id1:footer\x2Dform:j_id200':'j_id0:j_id1:footer\x2Dform:j_id200'} } );" value="Subscribe" type="submit" />
-								<div id="j_id0:j_id1:footer-form:j_id203"></div>
-							</form>
-							<div class="modal modal__success" id="modal-thanks">
-								<div class="modal__success-icon"><i class="far fa-check-circle"></i></div>
-								<p>Thanks</p>
-								<p>
-									We send a monthly email with announcements, tips, news, feature updates, and important info. We'll only e-mail you if it's important.
-								</p>
+			</main>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__top">
+						<a class="footer__logo" href="/">
+							<img alt="Booking Ninjas Logo" src="img/logo-white.svg" />
+						</a>
+						<div class="footer__row row">
+							<div class="col-lg-9 col-xl-8">
+								<nav class="footer__nav row">
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Company</div>
+										<ul class="footer__list">
+											<li><a href="/about-us">About Us</a></li>
+											<li><a href="/core-values-of-booking-ninjas-product">Core Values</a></li>
+											<li><a href="/booking-ninjas-careers">Careers</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Product</div>
+										<ul class="footer__list">
+											<li><a href="#">Features</a></li>
+											<li><a href="#">Solutions</a></li>
+											<li><a href="/pricing">Pricing</a></li>
+											<li><a href="/blog">Blog</a></li>
+											<li><a href="/faqs">FAQs</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Resources</div>
+										<ul class="footer__list">
+											<li><a href="/portal/s/">Client Portal</a></li>
+											<li><a href="/blog">Blog</a></li>
+											<li><a href="/faqs">FAQs</a></li>
+											<li><a href="/customer-stories">Customer Stories</a></li>
+											<li><a href="/booking-ninjas-webinars">Webinars</a></li>
+											<li><a href="#">Pilot</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Legal &amp; Contact</div>
+										<ul class="footer__list">
+											<li><a href="/terms-and-conditions">Terms of Use</a></li>
+											<li><a href="/privacy-policy">Privacy Policy</a></li>
+											<li><a href="/meeting">Contact Us</a></li>
+										</ul>
+									</div>
+								</nav>
 							</div>
-							<p class="footer__form-text">
-								Only strategic updates that matter — delivered monthly.
-							</p>
+							<div class="col-lg-auto text_center">
+								<img src="img/salesforce-section-icon-1.png" alt="Salesforce Partner Badge" />
+							</div>
 						</div>
-						<div class="col-auto">
-							<nav class="footer__social">
-								<a href="https://www.facebook.com/bookingninjas" target="_blank"><i class="fab fa-facebook"></i></a>
-								<a href="https://www.instagram.com/bookingninjas" target="_blank"><i class="fab fa-instagram"></i></a>
-								<a href="https://www.youtube.com/channel/UCOrcTzmQnmY7DG2nzwfa8zw" target="_blank"><i class="fab fa-youtube"></i></a>
-								<a href="https://www.linkedin.com/company/5346092/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-								<a href="https://twitter.com/bookingninjas" target="_blank"><i class="fab fa-twitter"></i></a>
-								<a href="https://www.pinterest.com/bookingninjas" target="_blank"><i class="fab fa-pinterest"></i></a>
-								<a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N3A00000DvKtaUAF" target="_blank"><i class="fab fa-salesforce"></i></a>
-							</nav>
-							<p class="footer__copyright">All rights reserved &copy; 2020 - Booking Ninjas</p>
+						<div class="footer__badges">
+							<img src="img/icons/badge-aicpa.png" alt="AICPA Badge" />
+							<img src="img/icons/badge-gdpr.png" alt="GDPR Badge" />
+							<img src="img/icons/badge-owasp.png" alt="OWASP Badge" />
+							<img src="img/icons/badge-gt.svg" alt="Government Tested Badge" />
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<div class="row justify-content-center justify-content-lg-between">
+							<div class="col-lg-6">
+								<form
+									id="j_id0:j_id1:footer-form"
+									name="j_id0:j_id1:footer-form"
+									method="post"
+									action="/BN_Index"
+									class="footer__form"
+									enctype="application/x-www-form-urlencoded"
+								>
+									<input type="hidden" name="j_id0:j_id1:footer-form" value="j_id0:j_id1:footer-form" />
+									<input type="text" name="j_id0:j_id1:footer-form:j_id199" value="" required="required" placeholder="Enter Your Email" /><input
+										class="button footer-btn-submit"
+										id="j_id0:j_id1:footer-form:j_id200"
+										name="j_id0:j_id1:footer-form:j_id200"
+										onclick="return A4J.AJAX.Submit('j_id0:j_id1:footer\x2Dform',event,{'similarityGroupingId':'j_id0:j_id1:footer\x2Dform:j_id200','html5Validate':true,'parameters':{'j_id0:j_id1:footer\x2Dform:j_id200':'j_id0:j_id1:footer\x2Dform:j_id200'} } );"
+										value="Subscribe"
+										type="submit"
+									/>
+									<div id="j_id0:j_id1:footer-form:j_id203"></div>
+								</form>
+								<div class="modal modal__success" id="modal-thanks">
+									<div class="modal__success-icon"><i class="far fa-check-circle"></i></div>
+									<p>Thanks</p>
+									<p>We send a monthly email with announcements, tips, news, feature updates, and important info. We'll only e-mail you if it's important.</p>
+								</div>
+								<p class="footer__form-text">Only strategic updates that matter — delivered monthly.</p>
+							</div>
+							<div class="col-auto">
+								<nav class="footer__social">
+									<a href="https://www.facebook.com/bookingninjas" target="_blank"><i class="fab fa-facebook"></i></a>
+									<a href="https://www.instagram.com/bookingninjas" target="_blank"><i class="fab fa-instagram"></i></a>
+									<a href="https://www.youtube.com/channel/UCOrcTzmQnmY7DG2nzwfa8zw" target="_blank"><i class="fab fa-youtube"></i></a>
+									<a href="https://www.linkedin.com/company/5346092/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+									<a href="https://twitter.com/bookingninjas" target="_blank"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.pinterest.com/bookingninjas" target="_blank"><i class="fab fa-pinterest"></i></a>
+									<a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N3A00000DvKtaUAF" target="_blank"><i class="fab fa-salesforce"></i></a>
+								</nav>
+								<p class="footer__copyright">All rights reserved &copy; 2020 - Booking Ninjas</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</footer>
-	</div>
+			</footer>
+		</div>
 
-	<!--SCRIPT -->
-	<script src="js/jquery.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
-	<!--build:js js/main.min.js -->
-	<script src="js/swiper-bundle.min.js"></script>
-	<script src="js/wow.js"></script>
-	<!-- endbuild -->
-	<script src="js/common.js"></script>
-	<!-- END OF SCRIPT -->
-</body>
-
+		<!--SCRIPT -->
+		<script src="js/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+		<!--build:js js/main.min.js -->
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/wow.js"></script>
+		<!-- endbuild -->
+		<script src="js/common.js"></script>
+		<!-- END OF SCRIPT -->
+	</body>
 </html>

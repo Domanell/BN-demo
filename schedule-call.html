@@ -1,348 +1,346 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="initial-scale=1" />
+		<title>Booking Ninjas: Combined Property Management/ Salesforce Solution Application</title>
+		<!--Favicon-->
+		<link rel="icon" type="image/png" href="favicon.ico" />
+		<!--End Favicon-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+		<link rel="stylesheet" href="css/fontawesome.css" />
+		<!--build:css css/styles.min.css-->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-grid.css" />
+		<link href="css/screen.css" rel="stylesheet" media="screen" />
+		<!--endbuild-->
+	</head>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="viewport" content="initial-scale=1" />
-	<title>Booking Ninjas: Combined Property Management/ Salesforce Solution Application</title>
-	<!--Favicon-->
-	<link rel="icon" type="image/png" href="favicon.ico" />
-	<!--End Favicon-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
-	<link rel="stylesheet" href="css/fontawesome.css" />
-	<!--build:css css/styles.min.css-->
-	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="css/bootstrap-grid.css" />
-	<link href="css/screen.css" rel="stylesheet" media="screen" />
-	<!--endbuild-->
-</head>
-
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="container header__wrapper">
-				<div class="header__logo">
-					<a class="logo" href="/"><img alt="Booking Ninjas Logo" src="img/logo.svg" /></a>
-				</div>
-				<div class="header__button">
-					<a href="#" class="button-secondary">View the Solution</a>
-				</div>
-				<div class="header__menu">
-					<nav class="menu">
-						<div class="menu__mobile-head">
-							<div class="menu__back"><i class="fa fa-chevron-left"></i></div>
-							<div class="menu__current-title"></div>
-							<div class="menu__close"><i class="fa fa-times"></i></div>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container header__wrapper">
+					<div class="header__logo">
+						<a class="logo" href="/"><img alt="Booking Ninjas Logo" src="img/logo.svg" /></a>
+					</div>
+					<div class="header__button">
+						<a href="#" class="button-secondary">View the Solution</a>
+					</div>
+					<div class="header__menu">
+						<nav class="menu">
+							<div class="menu__mobile-head">
+								<div class="menu__back"><i class="fa fa-chevron-left"></i></div>
+								<div class="menu__current-title"></div>
+								<div class="menu__close"><i class="fa fa-times"></i></div>
+							</div>
+							<ul class="menu__list mobile-menu">
+								<li class="menu__item">
+									<a href="/" class="menu__link-title">Home</a>
+								</li>
+								<li class="menu__item menu__item--has-submenu">
+									<span class="menu__link-title">Features</span>
+									<div class="menu__dropdown">
+										<div class="categories-menu container">
+											<div class="categories-menu__col categories-menu__category">
+												<p class="categories-menu__col-title">Category</p>
+												<ul class="categories-menu__list mobile-menu">
+													<li class="categories-menu__item active">
+														<img src="img/icons/hotel-01.svg" alt="Reservations &amp; Operations" />
+														Reservations &amp; Operations
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/business-center-outline-rounded.svg" alt="Finance &amp; Revenue" />
+														Finance &amp; Revenue
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/cleaning-outline.svg" alt="Property &amp; Task Management" />
+														Property &amp; Task Management
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/stash_integrations.svg" alt="Integrations &amp; Communication" />
+														Integrations &amp; Communication
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/reports.svg" alt="Insights &amp; Reporting" />
+														Insights &amp; Reporting
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/light_captive-portal.svg" alt="User Access &amp; Portals" />
+														User Access &amp; Portals
+													</li>
+												</ul>
+											</div>
+											<div class="categories-menu__col categories-menu__data mobile-menu">
+												<p class="categories-menu__col-title">Features</p>
+												<!-- Reservations and Operations -->
+												<div class="categories-menu__links active">
+													<ul>
+														<li><a href="#">Booking Engine</a></li>
+														<li><a href="#">Booking &amp; Reservation Management</a></li>
+														<li><a href="#">Group Booking</a></li>
+														<li><a href="#">Availability Calendar Grid</a></li>
+														<li><a href="#">Check-in / Check-out Management</a></li>
+														<li><a href="#">Resource/Class Scheduling</a></li>
+														<li><a href="#">Attendance Tracking</a></li>
+														<li><a href="#">POS (Point of Sale)</a></li>
+														<li><a href="#">Ticketing System</a></li>
+														<li><a href="#">Digital Waivers &amp; E-signatures</a></li>
+													</ul>
+												</div>
+												<!-- Finance and Revenue -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Rate Types &amp; Controller</a></li>
+														<li><a href="#">Time-Based Booking Options</a></li>
+														<li><a href="#">Promotions &amp; Discounts</a></li>
+														<li><a href="#">Invoicing &amp; Receipts</a></li>
+														<li><a href="#">Transactions &amp; Payments</a></li>
+														<li><a href="#">Refunds &amp; Adjustments</a></li>
+														<li><a href="#">Owner Statements</a></li>
+														<li><a href="#">Occupancy &amp; Revenue Forecasting</a></li>
+													</ul>
+												</div>
+												<!-- Property and Task Management -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Housekeeping &amp; Maintenance</a></li>
+														<li><a href="#">Task Management</a></li>
+														<li><a href="#">Inventory Management</a></li>
+														<li><a href="#">Access Control (Smart Entry)</a></li>
+														<li><a href="#">Staff App</a></li>
+														<li><a href="#">Maintenance &amp; Reminder Flows</a></li>
+														<li><a href="#">Booking &amp; Task Automation</a></li>
+													</ul>
+												</div>
+												<!-- Integrations and Communication -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Salesforce</a></li>
+														<li><a href="#">Einstein AI</a></li>
+														<li><a href="#">Lightning</a></li>
+														<li><a href="#">Compliance (Salesforce Compliance)</a></li>
+														<li><a href="#">Security &amp; Privacy</a></li>
+														<li><a href="#">Channel Manager (Airbnb, Booking.com, Expedia, Agoda)</a></li>
+														<li><a href="#">WhatsApp &amp; SMS Messaging</a></li>
+														<li><a href="#">Email Notifications &amp; Confirmations</a></li>
+														<li><a href="#">Slack Integration</a></li>
+														<li><a href="#">Internal Notes &amp; Task Comments</a></li>
+														<li><a href="#">Automated Reminders &amp; Alerts</a></li>
+														<li><a href="#">Guest Review Management</a></li>
+														<li><a href="#">Surveys &amp; Feedback</a></li>
+													</ul>
+												</div>
+												<!-- Insights and Reporting -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Custom Dashboards</a></li>
+														<li><a href="#">Standard &amp; Exportable Reports</a></li>
+														<li><a href="#">KPI Tracking &amp; Optimization Tools</a></li>
+													</ul>
+												</div>
+												<!-- User Access and Portals -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Owner Portal</a></li>
+														<li><a href="#">Tenant Portal</a></li>
+														<li><a href="#">Member Portal</a></li>
+														<li><a href="#">Guest Portal</a></li>
+														<li><a href="#">Student Portal</a></li>
+													</ul>
+												</div>
+												<div class="categories-menu__all">
+													<a href="#" class="">All Features <i class="fas fa-arrow-right"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu__item">
+									<a href="/pricing" class="menu__link-title">Pricing</a>
+								</li>
+								<li class="menu__item menu__item--has-submenu">
+									<span class="menu__link-title">Solutions</span>
+									<div class="menu__dropdown">
+										<div class="categories-menu container">
+											<div class="categories-menu__col categories-menu__category">
+												<p class="categories-menu__col-title">Category</p>
+												<ul class="categories-menu__list mobile-menu">
+													<li class="categories-menu__item active">
+														<img src="img/icons/hotel-outline-rounded.svg" alt="Hospitality &amp; Tourism" />
+														Hospitality &amp; Tourism
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/parks.svg" alt="Recreational Facilities" />
+														Recreational Facilities
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/residential.svg" alt="Residential Real Estate" />
+														Residential Real Estate
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/events.svg" alt="Events &amp; Venues" />
+														Events &amp; Venues
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/workspace.svg" alt="Commercial &amp; Workspaces" />
+														Commercial &amp; Workspaces
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/marine.svg" alt="Marine &amp; Luxury Recreation" />
+														Marine &amp; Luxury Recreation
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/specialty-housing.svg" alt="Specialty Housing" />
+														Specialty Housing
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/nonprofit.svg" alt="Nonprofit &amp; Governmental" />
+														Nonprofit &amp; Governmental
+													</li>
+												</ul>
+											</div>
+											<div class="categories-menu__col categories-menu__data mobile-menu">
+												<p class="categories-menu__col-title">Solutions</p>
+												<!-- Hospitality and Tourism -->
+												<div class="categories-menu__links active">
+													<ul>
+														<li><a href="#">Hotels</a></li>
+														<li><a href="#">Hostels</a></li>
+														<li><a href="#">Vacation Rentals</a></li>
+														<li><a href="#">Serviced Apartments</a></li>
+														<li><a href="#">Airbnb (as a platform)</a></li>
+														<li><a href="#">Restaurants</a></li>
+														<li><a href="#">Villas</a></li>
+													</ul>
+												</div>
+												<!-- Recreational Facilities -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Leisure Facility</a></li>
+														<li><a href="#">Parks &amp; Recreation</a></li>
+														<li><a href="#">Campground</a></li>
+														<li><a href="#">Equestrian Clubs</a></li>
+														<li><a href="#">YOGA</a></li>
+													</ul>
+												</div>
+												<!-- Residential Real Estate -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Condominiums</a></li>
+														<li><a href="#">Multi-Family Residential</a></li>
+														<li><a href="#">Residential</a></li>
+														<li><a href="#">Corporate Housing</a></li>
+														<li><a href="#">Serviced Apartments</a></li>
+													</ul>
+												</div>
+												<!-- Events and Venues -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Event Spaces</a></li>
+														<li><a href="#">Conference Centers</a></li>
+														<li><a href="#">Banquet Halls</a></li>
+													</ul>
+												</div>
+												<!-- Commercial and Workspaces -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Coworking Space</a></li>
+														<li><a href="#">Office Spaces</a></li>
+													</ul>
+												</div>
+												<!-- Marine and Luxury Recreation -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Yacht</a></li>
+														<li><a href="#">Marina</a></li>
+													</ul>
+												</div>
+												<!-- Specialty Housing -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Student Housing</a></li>
+														<li><a href="#">Senior Living</a></li>
+													</ul>
+												</div>
+												<!-- Nonprofit and Governmental -->
+												<div class="categories-menu__links">
+													<ul>
+														<li><a href="#">Government</a></li>
+														<li><a href="#">Nonprofit</a></li>
+														<li><a href="#">YMCA</a></li>
+													</ul>
+												</div>
+												<div class="categories-menu__all">
+													<a href="#" class="">All Solutions <i class="fas fa-arrow-right"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu__item menu__item--has-submenu language-menu">
+									<span class="menu__link-title menu__link-title--no-hover">
+										<div class="language-menu__item">
+											<span class="fi fi-us fis flag language-menu__icon"></span>
+											<span class="language-menu__name">English </span>
+										</div>
+									</span>
+									<div class="menu__dropdown">
+										<ul class="container language-list">
+											<li>
+												<a href="/es/" class="language-list__item active"><span class="fi fi-us fis flag"></span> English</a>
+											</li>
+											<li>
+												<a href="/es/" class="language-list__item"><span class="fi fi-es fis flag"></span> Español</a>
+											</li>
+											<li>
+												<a href="/pt/" class="language-list__item"><span class="fi fi-br fis flag"></span> Portuguese</a>
+											</li>
+											<li>
+												<a href="/id/" class="language-list__item"><span class="fi fi-id fis flag"></span> Indonesian</a>
+											</li>
+											<li>
+												<a href="/tr/" class="language-list__item"><span class="fi fi-tr fis flag"></span> Turkish</a>
+											</li>
+											<li>
+												<a href="/de/" class="language-list__item"><span class="fi fi-de fis flag"></span> German</a>
+											</li>
+											<li>
+												<a href="/ae/" class="language-list__item"><span class="fi fi-ae fis flag"></span> Arabic</a>
+											</li>
+											<li>
+												<a href="/it/" class="language-list__item"><span class="fi fi-it fis flag"></span> Italian</a>
+											</li>
+											<li>
+												<a href="/nl/" class="language-list__item"><span class="fi fi-nl fis flag"></span> Dutch</a>
+											</li>
+											<li>
+												<a href="/fr/" class="language-list__item"><span class="fi fi-fr fis flag"></span> French</a>
+											</li>
+											<li>
+												<a href="/el/" class="language-list__item"><span class="fi fi-gr fis flag"></span> Greek</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- CTA buttons in mobile menu -->
+								<li class="menu__item menu__item--button menu__item--mobile">
+									<a href="#" class="button-secondary">View the Solution</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="menu-overlay"></div>
+						<div class="mobile-menu-trigger">
+							<span></span>
 						</div>
-						<ul class="menu__list mobile-menu">
-							<li class="menu__item">
-								<a href="/" class="menu__link-title">Home</a>
-							</li>
-							<li class="menu__item menu__item--has-submenu">
-								<span class="menu__link-title">Features</span>
-								<div class="menu__dropdown">
-									<div class="categories-menu container">
-										<div class="categories-menu__col categories-menu__category">
-											<p class="categories-menu__col-title">Category</p>
-											<ul class="categories-menu__list mobile-menu">
-												<li class="categories-menu__item active">
-													<img src="img/icons/hotel-01.svg" alt="Reservations &amp; Operations" />
-													Reservations &amp; Operations
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/business-center-outline-rounded.svg" alt="Finance &amp; Revenue" />
-													Finance &amp; Revenue
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/cleaning-outline.svg" alt="Property &amp; Task Management" />
-													Property &amp; Task Management
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/stash_integrations.svg" alt="Integrations &amp; Communication" />
-													Integrations &amp; Communication
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/reports.svg" alt="Insights &amp; Reporting" />
-													Insights &amp; Reporting
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/light_captive-portal.svg" alt="User Access &amp; Portals" />
-													User Access &amp; Portals
-												</li>
-											</ul>
-										</div>
-										<div class="categories-menu__col categories-menu__data mobile-menu">
-											<p class="categories-menu__col-title">Features</p>
-											<!-- Reservations and Operations -->
-											<div class="categories-menu__links active">
-												<ul>
-													<li><a href="#">Booking Engine</a></li>
-													<li><a href="#">Booking &amp; Reservation Management</a></li>
-													<li><a href="#">Group Booking</a></li>
-													<li><a href="#">Availability Calendar Grid</a></li>
-													<li><a href="#">Check-in / Check-out Management</a></li>
-													<li><a href="#">Resource/Class Scheduling</a></li>
-													<li><a href="#">Attendance Tracking</a></li>
-													<li><a href="#">POS (Point of Sale)</a></li>
-													<li><a href="#">Ticketing System</a></li>
-													<li><a href="#">Digital Waivers &amp; E-signatures</a></li>
-												</ul>
-											</div>
-											<!-- Finance and Revenue -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Rate Types &amp; Controller</a></li>
-													<li><a href="#">Time-Based Booking Options</a></li>
-													<li><a href="#">Promotions &amp; Discounts</a></li>
-													<li><a href="#">Invoicing &amp; Receipts</a></li>
-													<li><a href="#">Transactions &amp; Payments</a></li>
-													<li><a href="#">Refunds &amp; Adjustments</a></li>
-													<li><a href="#">Owner Statements</a></li>
-													<li><a href="#">Occupancy &amp; Revenue Forecasting</a></li>
-												</ul>
-											</div>
-											<!-- Property and Task Management -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Housekeeping &amp; Maintenance</a></li>
-													<li><a href="#">Task Management</a></li>
-													<li><a href="#">Inventory Management</a></li>
-													<li><a href="#">Access Control (Smart Entry)</a></li>
-													<li><a href="#">Staff App</a></li>
-													<li><a href="#">Maintenance &amp; Reminder Flows</a></li>
-													<li><a href="#">Booking &amp; Task Automation</a></li>
-												</ul>
-											</div>
-											<!-- Integrations and Communication -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Salesforce</a></li>
-													<li><a href="#">Einstein AI</a></li>
-													<li><a href="#">Lightning</a></li>
-													<li><a href="#">Compliance (Salesforce Compliance)</a></li>
-													<li><a href="#">Security &amp; Privacy</a></li>
-													<li><a href="#">Channel Manager (Airbnb, Booking.com, Expedia, Agoda)</a></li>
-													<li><a href="#">WhatsApp &amp; SMS Messaging</a></li>
-													<li><a href="#">Email Notifications &amp; Confirmations</a></li>
-													<li><a href="#">Slack Integration</a></li>
-													<li><a href="#">Internal Notes &amp; Task Comments</a></li>
-													<li><a href="#">Automated Reminders &amp; Alerts</a></li>
-													<li><a href="#">Guest Review Management</a></li>
-													<li><a href="#">Surveys &amp; Feedback</a></li>
-												</ul>
-											</div>
-											<!-- Insights and Reporting -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Custom Dashboards</a></li>
-													<li><a href="#">Standard &amp; Exportable Reports</a></li>
-													<li><a href="#">KPI Tracking &amp; Optimization Tools</a></li>
-												</ul>
-											</div>
-											<!-- User Access and Portals -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Owner Portal</a></li>
-													<li><a href="#">Tenant Portal</a></li>
-													<li><a href="#">Member Portal</a></li>
-													<li><a href="#">Guest Portal</a></li>
-													<li><a href="#">Student Portal</a></li>
-												</ul>
-											</div>
-											<div class="categories-menu__all">
-												<a href="#" class="">All Features <i class="fas fa-arrow-right"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="menu__item">
-								<a href="/pricing" class="menu__link-title">Pricing</a>
-							</li>
-							<li class="menu__item menu__item--has-submenu">
-								<span class="menu__link-title">Solutions</span>
-								<div class="menu__dropdown">
-									<div class="categories-menu container">
-										<div class="categories-menu__col categories-menu__category">
-											<p class="categories-menu__col-title">Category</p>
-											<ul class="categories-menu__list mobile-menu">
-												<li class="categories-menu__item active">
-													<img src="img/icons/hotel-outline-rounded.svg" alt="Hospitality &amp; Tourism" />
-													Hospitality &amp; Tourism
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/parks.svg" alt="Recreational Facilities" />
-													Recreational Facilities
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/residential.svg" alt="Residential Real Estate" />
-													Residential Real Estate
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/events.svg" alt="Events &amp; Venues" />
-													Events &amp; Venues
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/workspace.svg" alt="Commercial &amp; Workspaces" />
-													Commercial &amp; Workspaces
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/marine.svg" alt="Marine &amp; Luxury Recreation" />
-													Marine &amp; Luxury Recreation
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/specialty-housing.svg" alt="Specialty Housing" />
-													Specialty Housing
-												</li>
-												<li class="categories-menu__item">
-													<img src="img/icons/nonprofit.svg" alt="Nonprofit &amp; Governmental" />
-													Nonprofit &amp; Governmental
-												</li>
-											</ul>
-										</div>
-										<div class="categories-menu__col categories-menu__data mobile-menu">
-											<p class="categories-menu__col-title">Solutions</p>
-											<!-- Hospitality and Tourism -->
-											<div class="categories-menu__links active">
-												<ul>
-													<li><a href="#">Hotels</a></li>
-													<li><a href="#">Hostels</a></li>
-													<li><a href="#">Vacation Rentals</a></li>
-													<li><a href="#">Serviced Apartments</a></li>
-													<li><a href="#">Airbnb (as a platform)</a></li>
-													<li><a href="#">Restaurants</a></li>
-													<li><a href="#">Villas</a></li>
-												</ul>
-											</div>
-											<!-- Recreational Facilities -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Leisure Facility</a></li>
-													<li><a href="#">Parks &amp; Recreation</a></li>
-													<li><a href="#">Campground</a></li>
-													<li><a href="#">Equestrian Clubs</a></li>
-													<li><a href="#">YOGA</a></li>
-												</ul>
-											</div>
-											<!-- Residential Real Estate -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Condominiums</a></li>
-													<li><a href="#">Multi-Family Residential</a></li>
-													<li><a href="#">Residential</a></li>
-													<li><a href="#">Corporate Housing</a></li>
-													<li><a href="#">Serviced Apartments</a></li>
-												</ul>
-											</div>
-											<!-- Events and Venues -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Event Spaces</a></li>
-													<li><a href="#">Conference Centers</a></li>
-													<li><a href="#">Banquet Halls</a></li>
-												</ul>
-											</div>
-											<!-- Commercial and Workspaces -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Coworking Space</a></li>
-													<li><a href="#">Office Spaces</a></li>
-												</ul>
-											</div>
-											<!-- Marine and Luxury Recreation -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Yacht</a></li>
-													<li><a href="#">Marina</a></li>
-												</ul>
-											</div>
-											<!-- Specialty Housing -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Student Housing</a></li>
-													<li><a href="#">Senior Living</a></li>
-												</ul>
-											</div>
-											<!-- Nonprofit and Governmental -->
-											<div class="categories-menu__links">
-												<ul>
-													<li><a href="#">Government</a></li>
-													<li><a href="#">Nonprofit</a></li>
-													<li><a href="#">YMCA</a></li>
-												</ul>
-											</div>
-											<div class="categories-menu__all">
-												<a href="#" class="">All Solutions <i class="fas fa-arrow-right"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="menu__item menu__item--has-submenu language-menu">
-								<span class="menu__link-title menu__link-title--no-hover">
-									<div class="language-menu__item">
-										<span class="fi fi-us fis flag language-menu__icon"></span>
-										<span class="language-menu__name">English </span>
-									</div>
-								</span>
-								<div class="menu__dropdown">
-									<ul class="container language-list">
-										<li>
-											<a href="/es/" class="language-list__item active"><span class="fi fi-us fis flag"></span> English</a>
-										</li>
-										<li>
-											<a href="/es/" class="language-list__item"><span class="fi fi-es fis flag"></span> Español</a>
-										</li>
-										<li>
-											<a href="/pt/" class="language-list__item"><span class="fi fi-br fis flag"></span> Portuguese</a>
-										</li>
-										<li>
-											<a href="/id/" class="language-list__item"><span class="fi fi-id fis flag"></span> Indonesian</a>
-										</li>
-										<li>
-											<a href="/tr/" class="language-list__item"><span class="fi fi-tr fis flag"></span> Turkish</a>
-										</li>
-										<li>
-											<a href="/de/" class="language-list__item"><span class="fi fi-de fis flag"></span> German</a>
-										</li>
-										<li>
-											<a href="/ae/" class="language-list__item"><span class="fi fi-ae fis flag"></span> Arabic</a>
-										</li>
-										<li>
-											<a href="/it/" class="language-list__item"><span class="fi fi-it fis flag"></span> Italian</a>
-										</li>
-										<li>
-											<a href="/nl/" class="language-list__item"><span class="fi fi-nl fis flag"></span> Dutch</a>
-										</li>
-										<li>
-											<a href="/fr/" class="language-list__item"><span class="fi fi-fr fis flag"></span> French</a>
-										</li>
-										<li>
-											<a href="/el/" class="language-list__item"><span class="fi fi-gr fis flag"></span> Greek</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<!-- CTA buttons in mobile menu -->
-							<li class="menu__item menu__item--button menu__item--mobile">
-								<a href="#" class="button-secondary">View the Solution</a>
-							</li>
-						</ul>
-					</nav>
-					<div class="menu-overlay"></div>
-					<div class="mobile-menu-trigger">
-						<span></span>
 					</div>
 				</div>
-			</div>
-		</header>
-		<main class="main">
-			<div class="container">
-				<div class="schedule-wrapper">
-					<div class="row g-5 ">
-						<div class="col-lg-6">
+			</header>
+			<main class="main">
+				<div class="container">
+					<div class="schedule-wrapper">
+						<div class="schedule-wrapper__info">
 							<div class="row flex-column g-4">
 								<h1 class="h1">See Your Revenue Potential</h1>
 								<p>
@@ -354,7 +352,8 @@
 								<h3 class="h3 schedule-testimonials__title">Loved by Customers</h3>
 								<div class="quote">
 									<blockquote>
-										Booking Ninjas didn’t just make our work easier — it gave us a competitive edge. We run leaner, respond faster, and our revenue is up. I wish we’d switched sooner.
+										Booking Ninjas didn’t just make our work easier — it gave us a competitive edge. We run leaner, respond faster, and our revenue is up. I
+										wish we’d switched sooner.
 									</blockquote>
 									<div class="quote__author">
 										<div class="quote__author-avatar">
@@ -369,7 +368,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6">
+
+						<div class="schedule-wrapper__form">
 							<div class="schedule-card">
 								<h2 class="schedule-card__title h2">Schedule a Call + Get Playground Access</h2>
 								<p>Get personalized playground access and discover how our solution can transform your workflow</p>
@@ -386,111 +386,127 @@
 								<a href="#" class="schedule-link arrow-link">Can’t Find a Time? Click Here <i class="fas fa-arrow-right"></i></a>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<footer class="footer">
-			<div class="container">
-				<div class="footer__top">
-					<a class="footer__logo" href="/">
-						<img alt="Booking Ninjas Logo" src="img/logo-white.svg" />
-					</a>
-					<div class="footer__row row">
-						<div class="col-lg-9 col-xl-8">
-							<nav class="footer__nav row">
-								<div class="col-sm-6 col-lg-3">
-									<div class="footer__title">Company</div>
-									<ul class="footer__list">
-										<li><a href="/about-us">About Us</a></li>
-										<li><a href="/core-values-of-booking-ninjas-product">Core Values</a></li>
-										<li><a href="/booking-ninjas-careers">Careers</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-6 col-lg-3">
-									<div class="footer__title">Product</div>
-									<ul class="footer__list">
-										<li><a href="#">Features</a></li>
-										<li><a href="#">Solutions</a></li>
-										<li><a href="/pricing">Pricing</a></li>
-										<li><a href="/blog">Blog</a></li>
-										<li><a href="/faqs">FAQs</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-6 col-lg-3">
-									<div class="footer__title">Resources</div>
-									<ul class="footer__list">
-										<li><a href="#">Client Portal</a></li>
-										<li><a href="/blog">Blog</a></li>
-										<li><a href="/faqs">FAQs</a></li>
-										<li><a href="/customer-stories">Customer Stories</a></li>
-										<li><a href="/booking-ninjas-webinars">Webinars</a></li>
-										<li><a href="#">Pilot</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-6 col-lg-3">
-									<div class="footer__title">Legal &amp; Contact</div>
-									<ul class="footer__list">
-										<li><a href="/terms-and-conditions">Terms of Use</a></li>
-										<li><a href="/privacy-policy">Privacy Policy</a></li>
-										<li><a href="/meeting">Contact Us</a></li>
-									</ul>
-								</div>
-							</nav>
-						</div>
-						<div class="col-lg-auto text_center">
-							<img src="img/salesforce-section-icon-1.png" alt="Salesforce Partner Badge" />
+						<div class="schedule-wrapper__badges">
+							<img src="img/sf-available-on-appExchange.png" alt="Salesforce AppExchange Badge" />
+							<img src="img/sf-partner-since-2016.svg" alt="Salesforce Partner Since 2016 Badge" />
 						</div>
 					</div>
-					<div class="footer__badges">
-						<img src="img/icons/badge-aicpa.png" alt="AICPA Badge" />
-						<img src="img/icons/badge-gdpr.png" alt="GDPR Badge" />
-						<img src="img/icons/badge-owasp.png" alt="OWASP Badge" />
-						<img src="img/icons/badge-gt.svg" alt="Government Tested Badge" />
-					</div>
 				</div>
-				<div class="footer__bottom">
-					<div class="row justify-content-center justify-content-lg-between">
-						<div class="col-lg-6">
-							<form id="j_id0:j_id1:footer-form" name="j_id0:j_id1:footer-form" method="post" action="/BN_Index" class="footer__form" enctype="application/x-www-form-urlencoded">
-								<input type="hidden" name="j_id0:j_id1:footer-form" value="j_id0:j_id1:footer-form" />
-								<input type="text" name="j_id0:j_id1:footer-form:j_id199" value="" required="required" placeholder="Enter Your Email" /><input class="button footer-btn-submit" id="j_id0:j_id1:footer-form:j_id200" name="j_id0:j_id1:footer-form:j_id200" onclick="return A4J.AJAX.Submit('j_id0:j_id1:footer\x2Dform',event,{'similarityGroupingId':'j_id0:j_id1:footer\x2Dform:j_id200','html5Validate':true,'parameters':{'j_id0:j_id1:footer\x2Dform:j_id200':'j_id0:j_id1:footer\x2Dform:j_id200'} } );" value="Subscribe" type="submit" />
-								<div id="j_id0:j_id1:footer-form:j_id203"></div>
-							</form>
-							<div class="modal modal__success" id="modal-thanks">
-								<div class="modal__success-icon"><i class="far fa-check-circle"></i></div>
-								<p>Thanks</p>
-								<p>We send a monthly email with announcements, tips, news, feature updates, and important info. We'll only e-mail you if it's important.</p>
+			</main>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__top">
+						<a class="footer__logo" href="/">
+							<img alt="Booking Ninjas Logo" src="img/logo-white.svg" />
+						</a>
+						<div class="footer__row row">
+							<div class="col-lg-9 col-xl-8">
+								<nav class="footer__nav row">
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Company</div>
+										<ul class="footer__list">
+											<li><a href="/about-us">About Us</a></li>
+											<li><a href="/core-values-of-booking-ninjas-product">Core Values</a></li>
+											<li><a href="/booking-ninjas-careers">Careers</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Product</div>
+										<ul class="footer__list">
+											<li><a href="#">Features</a></li>
+											<li><a href="#">Solutions</a></li>
+											<li><a href="/pricing">Pricing</a></li>
+											<li><a href="/blog">Blog</a></li>
+											<li><a href="/faqs">FAQs</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Resources</div>
+										<ul class="footer__list">
+											<li><a href="#">Client Portal</a></li>
+											<li><a href="/blog">Blog</a></li>
+											<li><a href="/faqs">FAQs</a></li>
+											<li><a href="/customer-stories">Customer Stories</a></li>
+											<li><a href="/booking-ninjas-webinars">Webinars</a></li>
+											<li><a href="#">Pilot</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Legal &amp; Contact</div>
+										<ul class="footer__list">
+											<li><a href="/terms-and-conditions">Terms of Use</a></li>
+											<li><a href="/privacy-policy">Privacy Policy</a></li>
+											<li><a href="/meeting">Contact Us</a></li>
+										</ul>
+									</div>
+								</nav>
 							</div>
-							<p class="footer__form-text">Only strategic updates that matter — delivered monthly.</p>
+							<div class="col-lg-auto text_center">
+								<img src="img/salesforce-section-icon-1.png" alt="Salesforce Partner Badge" />
+							</div>
 						</div>
-						<div class="col-auto">
-							<nav class="footer__social">
-								<a href="https://www.facebook.com/bookingninjas" target="_blank"><i class="fab fa-facebook"></i></a>
-								<a href="https://www.instagram.com/bookingninjas" target="_blank"><i class="fab fa-instagram"></i></a>
-								<a href="https://www.youtube.com/channel/UCOrcTzmQnmY7DG2nzwfa8zw" target="_blank"><i class="fab fa-youtube"></i></a>
-								<a href="https://www.linkedin.com/company/5346092/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-								<a href="https://twitter.com/bookingninjas" target="_blank"><i class="fab fa-twitter"></i></a>
-								<a href="https://www.pinterest.com/bookingninjas" target="_blank"><i class="fab fa-pinterest"></i></a>
-								<a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N3A00000DvKtaUAF" target="_blank"><i class="fab fa-salesforce"></i></a>
-							</nav>
-							<p class="footer__copyright">All rights reserved &copy; 2020 - Booking Ninjas</p>
+						<div class="footer__badges">
+							<img src="img/icons/badge-aicpa.png" alt="AICPA Badge" />
+							<img src="img/icons/badge-gdpr.png" alt="GDPR Badge" />
+							<img src="img/icons/badge-owasp.png" alt="OWASP Badge" />
+							<img src="img/icons/badge-gt.svg" alt="Government Tested Badge" />
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<div class="row justify-content-center justify-content-lg-between">
+							<div class="col-lg-6">
+								<form
+									id="j_id0:j_id1:footer-form"
+									name="j_id0:j_id1:footer-form"
+									method="post"
+									action="/BN_Index"
+									class="footer__form"
+									enctype="application/x-www-form-urlencoded"
+								>
+									<input type="hidden" name="j_id0:j_id1:footer-form" value="j_id0:j_id1:footer-form" />
+									<input type="text" name="j_id0:j_id1:footer-form:j_id199" value="" required="required" placeholder="Enter Your Email" /><input
+										class="button footer-btn-submit"
+										id="j_id0:j_id1:footer-form:j_id200"
+										name="j_id0:j_id1:footer-form:j_id200"
+										onclick="return A4J.AJAX.Submit('j_id0:j_id1:footer\x2Dform',event,{'similarityGroupingId':'j_id0:j_id1:footer\x2Dform:j_id200','html5Validate':true,'parameters':{'j_id0:j_id1:footer\x2Dform:j_id200':'j_id0:j_id1:footer\x2Dform:j_id200'} } );"
+										value="Subscribe"
+										type="submit"
+									/>
+									<div id="j_id0:j_id1:footer-form:j_id203"></div>
+								</form>
+								<div class="modal modal__success" id="modal-thanks">
+									<div class="modal__success-icon"><i class="far fa-check-circle"></i></div>
+									<p>Thanks</p>
+									<p>We send a monthly email with announcements, tips, news, feature updates, and important info. We'll only e-mail you if it's important.</p>
+								</div>
+								<p class="footer__form-text">Only strategic updates that matter — delivered monthly.</p>
+							</div>
+							<div class="col-auto">
+								<nav class="footer__social">
+									<a href="https://www.facebook.com/bookingninjas" target="_blank"><i class="fab fa-facebook"></i></a>
+									<a href="https://www.instagram.com/bookingninjas" target="_blank"><i class="fab fa-instagram"></i></a>
+									<a href="https://www.youtube.com/channel/UCOrcTzmQnmY7DG2nzwfa8zw" target="_blank"><i class="fab fa-youtube"></i></a>
+									<a href="https://www.linkedin.com/company/5346092/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+									<a href="https://twitter.com/bookingninjas" target="_blank"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.pinterest.com/bookingninjas" target="_blank"><i class="fab fa-pinterest"></i></a>
+									<a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N3A00000DvKtaUAF" target="_blank"><i class="fab fa-salesforce"></i></a>
+								</nav>
+								<p class="footer__copyright">All rights reserved &copy; 2020 - Booking Ninjas</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</footer>
-	</div>
+			</footer>
+		</div>
 
-	<!--SCRIPT -->
-	<script src="js/jquery.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
-	<!--build:js js/main.min.js -->
-	<script src="js/swiper-bundle.min.js"></script>
-	<script src="js/wow.js"></script>
-	<!-- endbuild -->
-	<script src="js/common.js"></script>
-	<!-- END OF SCRIPT -->
-</body>
-
+		<!--SCRIPT -->
+		<script src="js/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+		<!--build:js js/main.min.js -->
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/wow.js"></script>
+		<!-- endbuild -->
+		<script src="js/common.js"></script>
+		<!-- END OF SCRIPT -->
+	</body>
 </html>
