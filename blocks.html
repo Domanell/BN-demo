@@ -2608,6 +2608,7 @@
 				const copyButtons = document.querySelectorAll('.copy-button');
 
 				configuratorEnabled = !configuratorEnabled;
+				configuratorToggle.checked = configuratorEnabled;
 				configurator.classList.toggle('active', configuratorEnabled);
 
 				// Change copy buttons text and functionality
@@ -2723,6 +2724,85 @@
 					target.innerHTML = `<video src="${mediaVideoUrl}" ${mediaClass ? `class="${mediaClass}"` : ''} autoplay loop muted playsinline></video>`;
 				} else if (mediaType === 'image') {
 					target.innerHTML = `<img src="${mediaImageUrl}" alt="" ${mediaClass ? `class="${mediaClass}"` : ''}/>`;
+				}
+			}
+
+			function addMedia(block, selector, mediaWrapClass, mediaClass, mediaType) {
+				// Remove existing media wrapper if present
+				const mediaWrapperClass = `.${mediaWrapClass}`;
+				block.querySelector(mediaWrapperClass)?.remove();
+				const mediaWrapper = document.createElement('div');
+				mediaWrapper.className = mediaWrapClass;
+				block.querySelector(`${selector}`).insertBefore(mediaWrapper, block.querySelector(`${selector}`).firstChild);
+				changeMedia(block, mediaWrapperClass, null, mediaType);
+			}
+
+			function removeMedia(block, mediaWrapClass) {
+				if (!mediaWrapClass) return;
+				const mediaWrapperClass = `.${mediaWrapClass}`;
+				block.querySelector(mediaWrapperClass)?.remove();
+			}
+
+			function replicateChildElement(block, parentSelector, copies = 1) {
+				const parent = block.querySelector(parentSelector);
+				const children = parent.children;
+
+				while (children.length != copies) {
+					if (children.length < copies) {
+						parent.appendChild(children[0].cloneNode(true));
+					} else {
+						parent.removeChild(children[children.length - 1]);
+					}
+				}
+			}
+
+			function replaceClass(block, oldClass, newClass) {
+				const elements = block.querySelectorAll(`.${oldClass}`);
+				elements.forEach((el) => {
+					el.classList.remove(oldClass);
+					el.classList.add(newClass);
+				});
+			}
+
+			function handleControls(block, data) {
+				const { action, selector, mediaClass, modClass, mediaWrapClass, col } = data;
+				const controls = block.closest('.c-block-section').querySelector('.c-controls');
+
+				switch (action) {
+					case 'media-video':
+						changeMedia(block, selector, mediaClass, 'video');
+						break;
+					case 'media-image':
+						changeMedia(block, selector, mediaClass, 'image');
+						break;
+					case 'block-mod':
+						blockMode(block, selector, modClass);
+						break;
+					case 'block-mod-media':
+						blockMode(block, selector, modClass);
+						removeMedia(block, mediaWrapClass);
+						break;
+					case 'block-mod-media-video':
+						blockMode(block, selector, modClass);
+						addMedia(block, selector, mediaWrapClass, mediaClass, 'video');
+						break;
+					case 'block-mod-media-image':
+						blockMode(block, selector, modClass);
+						addMedia(block, selector, mediaWrapClass, mediaClass, 'image');
+						break;
+					case 'columns':
+						replicateChildElement(block, selector, col);
+						const columns = block.querySelector(selector).children;
+						blockMode(block, columns, modClass);
+						break;
+					case 'block-mod-additional':
+						const oldClass = controls.dataset.additionalClass;
+						if (oldClass) replaceClass(block, oldClass, modClass);
+						controls.setAttribute('data-additional-class', modClass);
+						break;
+					default:
+						alert('Unknown action');
+						break;
 				}
 			}
 		</script>
