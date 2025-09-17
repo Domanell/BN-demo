@@ -128,9 +128,8 @@
 			.c-configurator {
 				position: fixed;
 				bottom: 20px;
-				right: -230px;
-				width: 230px;
-				max-height: 400px;
+				right: -300px;
+				width: 300px;
 				background: #fff;
 				box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
 				z-index: 1001;
@@ -166,6 +165,10 @@
 				padding: 30px 10px;
 				font-size: 14px;
 			}
+			.c-configurator__list {
+				overflow-y: auto;
+				max-height: 360px;
+			}
 			.c-configurator__item {
 				display: flex;
 				justify-content: space-between;
@@ -179,6 +182,16 @@
 				flex: 1;
 				margin-right: 8px;
 				font-size: 13px;
+				cursor: pointer;
+				transition: background-color 0.2s ease;
+			}
+			.c-configurator__item:hover {
+				background: #e9ecef;
+			}
+			.c-configurator__item p {
+				margin: 0;
+				flex: 1;
+				margin-right: 8px;
 			}
 			.c-configurator__item-remove {
 				color: #dc3545;
@@ -197,11 +210,25 @@
 				display: none;
 			}
 			.c-preview__header {
-				padding: 15px;
+				top: 0;
+				position: fixed;
+				width: 100%;
+				text-align: center;
+				padding: 10px;
 				display: grid;
 				grid-template-columns: auto 1fr;
 				align-items: center;
 				gap: 32px;
+				background: #fff;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+				z-index: 10000;
+			}
+			.c-preview__content {
+				padding-top: 64px;
+			}
+			.c-preview-block {
+				margin-bottom: 40px;
+				scroll-margin-top: 80px;
 			}
 		</style>
 		<!-- Configurator Panel -->
@@ -2557,7 +2584,10 @@
 					list.innerHTML = selectedBlocks
 						.map(
 							(block, index) =>
-								`<div class="c-configurator__item"><p>${block.title}</p><button class="c-configurator__item-remove" onclick="removeBlock(${index})"><i class="fas fa-times"></i></button></div>`
+								`<div class="c-configurator__item" data-block-title="${block.title}" onclick="scrollToBlock('${block.title}')">
+									<p>${block.title}</p>
+									<button class="c-configurator__item-remove" onclick="event.stopPropagation(); removeBlock(${index})"><i class="fas fa-times"></i></button>
+								</div>`
 						)
 						.join('');
 				}
@@ -2574,6 +2604,30 @@
 			window.removeBlock = function (index) {
 				selectedBlocks.splice(index, 1);
 				updateConfiguratorList();
+			};
+
+			window.scrollToBlock = function (blockTitle) {
+				const trimmedTitle = blockTitle.trim();
+				let target;
+
+				if (previewEnabled) {
+					const previewContent = document.getElementById('cPreviewContent');
+					if (!previewContent) return;
+
+					const blockIndex = selectedBlocks.findIndex((block) => block.title.trim() === trimmedTitle);
+
+					target = blockIndex !== -1 ? previewContent.children[blockIndex] : null;
+				} else {
+					target = Array.from(document.querySelectorAll('.c-block-section')).find(
+						(section) => section.querySelector('.c-category-header h2')?.textContent.trim() === trimmedTitle
+					);
+				}
+
+				if (target) {
+					target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					target.style.backgroundColor = 'rgba(62, 99, 245, 0.1)';
+					setTimeout(() => (target.style.backgroundColor = ''), 2000);
+				}
 			};
 
 			// Toggle preview mode
@@ -2595,10 +2649,13 @@
 			function updateMainPreview() {
 				if (!previewEnabled) return;
 				const previewContent = document.getElementById('cPreviewContent');
-				previewContent.innerHTML =
-					selectedBlocks.length === 0
-						? '<div style="text-align: center; padding: 60px 20px; color: #999; font-style: italic; font-size: 18px;">No blocks selected for preview</div>'
-						: selectedBlocks.map((block) => block.content).join('');
+				if (selectedBlocks.length === 0) {
+					previewContent.innerHTML = '<div class="c-preview__empty">No blocks selected for preview</div>';
+				} else {
+					previewContent.innerHTML = selectedBlocks
+						.map((block, index) => `<div id="preview-block-${block.id}" class="c-preview-block">${block.content}</div>`)
+						.join('');
+				}
 			}
 
 			// Toggle configurator
