@@ -179,14 +179,33 @@
 				border-radius: 4px;
 				border-left: 3px solid #3e63f5;
 				font-weight: 500;
-				flex: 1;
-				margin-right: 8px;
 				font-size: 13px;
 				cursor: pointer;
-				transition: background-color 0.2s ease;
+				transition: all 0.2s ease;
+			}
+			.c-configurator__item p {
+				flex: 1;
+				margin: 0;
+				margin-left: 8px;
 			}
 			.c-configurator__item:hover {
 				background: #e9ecef;
+			}
+			.c-configurator__item.dragging {
+				opacity: 0.5;
+				transform: rotate(2deg);
+			}
+			.c-configurator__item.drag-over {
+				border-top: 2px solid #3e63f5;
+			}
+			.c-configurator__drag-handle {
+				cursor: grab;
+				color: #999;
+				margin-right: 8px;
+				font-size: 12px;
+			}
+			.c-configurator__drag-handle:active {
+				cursor: grabbing;
 			}
 			.c-configurator__item p {
 				margin: 0;
@@ -2584,12 +2603,14 @@
 					list.innerHTML = selectedBlocks
 						.map(
 							(block, index) =>
-								`<div class="c-configurator__item" data-block-title="${block.title}" onclick="scrollToBlock('${block.title}')">
+								`<div class="c-configurator__item" data-block-title="${block.title}" data-index="${index}" draggable="true" onclick="scrollToBlock('${block.title}')">
+									<i class="c-configurator__drag-handle fas fa-grip-vertical" onclick="event.stopPropagation()"></i>
 									<p>${block.title}</p>
 									<button class="c-configurator__item-remove" onclick="event.stopPropagation(); removeBlock(${index})"><i class="fas fa-times"></i></button>
 								</div>`
 						)
 						.join('');
+					initializeDragAndDrop();
 				}
 
 				if (previewEnabled) updateMainPreview();
@@ -2605,6 +2626,74 @@
 				selectedBlocks.splice(index, 1);
 				updateConfiguratorList();
 			};
+
+			// Initialize drag and drop functionality
+			function initializeDragAndDrop() {
+				const items = document.querySelectorAll('.c-configurator__item');
+
+				items.forEach((item) => {
+					item.addEventListener('dragstart', handleDragStart);
+					item.addEventListener('dragover', handleDragOver);
+					item.addEventListener('drop', handleDrop);
+					item.addEventListener('dragend', handleDragEnd);
+					item.addEventListener('dragenter', handleDragEnter);
+					item.addEventListener('dragleave', handleDragLeave);
+				});
+			}
+
+			let draggedElement = null;
+
+			function handleDragStart(e) {
+				draggedElement = this;
+				this.classList.add('dragging');
+				e.dataTransfer.effectAllowed = 'move';
+				e.dataTransfer.setData('text/html', this.outerHTML);
+			}
+
+			function handleDragOver(e) {
+				if (e.preventDefault) {
+					e.preventDefault();
+				}
+				e.dataTransfer.dropEffect = 'move';
+				return false;
+			}
+
+			function handleDragEnter(e) {
+				if (this !== draggedElement) {
+					this.classList.add('drag-over');
+				}
+			}
+
+			function handleDragLeave(e) {
+				this.classList.remove('drag-over');
+			}
+
+			function handleDrop(e) {
+				if (e.stopPropagation) {
+					e.stopPropagation();
+				}
+
+				if (draggedElement !== this) {
+					const draggedIndex = parseInt(draggedElement.dataset.index);
+					const targetIndex = parseInt(this.dataset.index);
+
+					// Reorder the selectedBlocks array
+					const [draggedBlock] = selectedBlocks.splice(draggedIndex, 1);
+					selectedBlocks.splice(targetIndex, 0, draggedBlock);
+
+					updateConfiguratorList();
+				}
+
+				return false;
+			}
+
+			function handleDragEnd(e) {
+				const items = document.querySelectorAll('.c-configurator__item');
+				items.forEach((item) => {
+					item.classList.remove('dragging', 'drag-over');
+				});
+				draggedElement = null;
+			}
 
 			window.scrollToBlock = function (blockTitle) {
 				const trimmedTitle = blockTitle.trim();
