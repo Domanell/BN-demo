@@ -212,11 +212,36 @@
 				flex: 1;
 				margin-right: 8px;
 			}
+			.c-configurator__item-copy {
+				color: #28a745;
+				font-size: 14px;
+				padding: 4px;
+				line-height: 1;
+				margin-right: 4px;
+				border: none;
+				background: none;
+				cursor: pointer;
+				border-radius: 3px;
+				transition: background-color 0.2s ease, color 0.2s ease;
+			}
+			.c-configurator__item-copy:hover {
+				background-color: #28a745;
+				color: white;
+			}
 			.c-configurator__item-remove {
 				color: #dc3545;
 				font-size: 16px;
 				padding: 2px;
 				line-height: 1;
+				border: none;
+				background: none;
+				cursor: pointer;
+				border-radius: 3px;
+				transition: background-color 0.2s ease, color 0.2s ease;
+			}
+			.c-configurator__item-remove:hover {
+				background-color: #dc3545;
+				color: white;
 			}
 			.c-configurator button:disabled {
 				background-color: #666;
@@ -2371,7 +2396,7 @@
 												</div>
 											</div>
 											<div class="col-auto">
-												<a href="#" class="button-inverse">Button Inverse</a>
+												<div class="base-cta-card__buttons"><a href="#" class="button-inverse">Button Inverse</a></div>
 											</div>
 										</div>
 									</div>
@@ -2606,6 +2631,7 @@
 								`<div class="c-configurator__item" data-block-title="${block.title}" data-index="${index}" draggable="true" onclick="scrollToBlock('${block.title}')">
 									<i class="c-configurator__drag-handle fas fa-grip-vertical" onclick="event.stopPropagation()"></i>
 									<p>${block.title}</p>
+									<button class="c-configurator__item-copy" onclick="event.stopPropagation(); copyBlockCode(${index})" title="Copy block code"><i class="fas fa-copy"></i></button>
 									<button class="c-configurator__item-remove" onclick="event.stopPropagation(); removeBlock(${index})"><i class="fas fa-times"></i></button>
 								</div>`
 						)
@@ -2625,6 +2651,34 @@
 			window.removeBlock = function (index) {
 				selectedBlocks.splice(index, 1);
 				updateConfiguratorList();
+			};
+
+			window.copyBlockCode = function (index) {
+				const block = selectedBlocks[index];
+				if (!block) return;
+
+				navigator.clipboard
+					.writeText(block.content)
+					.then(() => {
+						// Find the copy button and show feedback
+						const items = document.querySelectorAll('.c-configurator__item');
+						const targetItem = items[index];
+						const copyBtn = targetItem?.querySelector('.c-configurator__item-copy i');
+
+						if (copyBtn) {
+							const originalClass = copyBtn.className;
+							copyBtn.className = 'fas fa-check';
+							copyBtn.style.color = '#28a745';
+
+							setTimeout(() => {
+								copyBtn.className = originalClass;
+								copyBtn.style.color = '';
+							}, 2000);
+						}
+					})
+					.catch((err) => {
+						console.error('Failed to copy block code:', err);
+					});
 			};
 
 			// Initialize drag and drop functionality
