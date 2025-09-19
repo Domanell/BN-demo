@@ -335,7 +335,7 @@ $(document).on('ready', function () {
 		$('.checkout-form__second-step').show();
 	});
 
-	// Optimized Mega menu
+	// Mega menu
 	const menu = document.querySelector('.menu');
 
 	if (menu) {
@@ -500,6 +500,26 @@ $(document).on('ready', function () {
 				});
 			}
 		});
+	}
+
+	// Autodetect currency based on visitor location and set selector value
+	const currencySelectors = document.querySelectorAll('.currency-select');
+	if (currencySelectors.length) {
+		fetch('https://ipapi.co/json/')
+			.then((response) => response.json())
+			.then((data) => {
+				const userCurrency = data.currency;
+				currencySelectors.forEach((selector) => {
+					const availableCurrencies = Array.from(selector.options).map((opt) => opt.value);
+					if (availableCurrencies.includes(userCurrency)) {
+						selector.value = userCurrency;
+						selector.dispatchEvent(new Event('change'));
+					}
+				});
+			})
+			.catch((error) => {
+				console.error('Error fetching visitor location:', error);
+			});
 	}
 });
 

@@ -437,7 +437,7 @@
 										</div>
 										<div class="col-md-3">
 											<div class="currency-selector">
-												<select class="currency-selector__select" name="currency" id="currency-select">
+												<select class="currency-selector__select currency-select" name="currency" id="currency-select">
 													<!-- <apex:repeat value="{!Currency}" var="cur">
 														<apex:outputPanel layout="none" rendered="{!cur.code == 'USD'}">
 															<option value="{!cur.code}" data-rate="{!cur.rate}" data-currency-symbol="{!cur.symbol}" selected="selected">{!cur.code}</option>
@@ -448,6 +448,7 @@
 													</apex:repeat> -->
 													<option value="USD" data-rate="1" data-currency-symbol="$">USD</option>
 													<option value="COP" data-rate="3903.32" data-currency-symbol="$">COP</option>
+													<option value="EUR" data-rate="0.85" data-currency-symbol="€">EUR</option>
 												</select>
 												<i class="fas fa-chevron-down currency-selector__icon"></i>
 											</div>
@@ -612,8 +613,7 @@
 		<script>
 			// TODO:
 			// - Add product.description to the JSON
-			// - Add product.sortInfo to the JSON
-			// - Add product.description to the JSON
+			// - Add product.shortInfo to the JSON
 			document.addEventListener('DOMContentLoaded', () => {
 				// const productsData = JSON.parse('{!JSENCODE(productsJson)}');
 				// TODO: Replace the static data below with the dynamic data from Salesforce
@@ -1142,9 +1142,8 @@
 					const featuresList = document.querySelector('.pricing-plan__features');
 
 					planName.textContent = plan.name;
-					// TODO: add sortInfo to the JSON
-					planShortInfo.textContent = plan.sortInfo;
-					// TODO: add size to the JSON
+					// TODO: add shortInfo to the JSON
+					planShortInfo.textContent = plan.shortInfo;
 					planSize.textContent = plan.size;
 					// TODO: add description to the JSON
 					planDescription.textContent = plan.description;
