@@ -348,13 +348,28 @@
 					<div class="container">
 						<ul class="tabs subscription-length__tabs" role="tablist">
 							<li class="tabs__item" role="presentation">
-								<button class="tabs__button active" role="tab" aria-selected="true" data-tab="monthly">Monthly</button>
+								<button class="tabs__button active" role="tab" aria-selected="true" data-tab="monthly" data-period="month">Monthly Billing</button>
 							</li>
 							<li class="tabs__item" role="presentation">
-								<button class="tabs__button" role="tab" aria-selected="false" data-tab="annualy">Annual</button>
+								<button class="tabs__button" role="tab" aria-selected="false" data-tab="annualy" data-period="year">
+									Annual Billing (Save {!$Label.Annual_Subscription_Discount}%)
+								</button>
+							</li>
+							<li class="tabs__item" role="presentation">
+								<button class="tabs__button" role="tab" aria-selected="false" data-tab="multi-year" data-period="year">Multi Year</button>
 							</li>
 						</ul>
-						<p>Save {!$Label.Annual_Subscription_Discount}% on annual subscription</p>
+						<!-- Period selector -->
+						<div class="subscription-length__period">
+							<div class="selector">
+								<select name="multi-year-periods" id="multi-year-periods" class="selector__select">
+									<option value="2-Year Plan" selected="selected">2-Year Plan - Save 10%</option>
+									<option value="3-Year Plan">3-Year Plan - Save 15%</option>
+									<option value="4-Year Plan">4-Year Plan - Save 20%</option>
+								</select>
+								<i class="fas fa-chevron-down selector__icon"></i>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -460,7 +475,7 @@
 												<span class="pricing-plan__currency-symbol">$</span>
 												<span class="pricing-plan__price">0</span>
 											</span>
-											<span class="pricing-plan__period">/month</span>
+											<span class="pricing-plan__period">/<span>month</span></span>
 										</div>
 										<p class="pricing-plan__implementation">
 											+ One-time implementation fee&nbsp;<span class="pricing-plan__currency-symbol">$</span
@@ -486,10 +501,8 @@
 										<li>Mobile Apps</li>
 									</ul>
 									<div class="pricing-plan__buttons">
-										<a href="#" class="button-outline">WhatsApp Us <i class="fas fa-chevron-right"></i></a>
-										<a href="#" class="button-outline">Schedule a Demo <i class="fas fa-chevron-right"></i></a>
 										<a href="/checkout?order=40&length=monthly&currency=usd" class="button pricing-plan__button"
-											>Start now <i class="fas fa-chevron-right"></i
+											>Review &amp; Confirm Your Plan <i class="fas fa-chevron-right"></i
 										></a>
 									</div>
 								</div>
@@ -1083,16 +1096,18 @@
 						annualDiscount: 'Subscription Fee',
 					},
 				];
+
+				const subscriptionTabs = document.querySelectorAll('.subscription-length button');
+				const currencySelector = document.querySelector('.currency-selector__select');
+				const pricingPlans = document.querySelectorAll('.pricing-size__item');
+				const multiYearSelector = document.querySelector('#multi-year-periods');
 				let rate = 1.0;
 				let currencyISO = 'USD';
 				let currencySymbol = '$';
 				let isDiscount = false;
 				let subscription = 'monthly';
 				let currentPlanOrder = '10';
-
-				const subscriptionTabs = document.querySelectorAll('.subscription-length button');
-				const currencySelector = document.querySelector('.currency-selector__select');
-				const pricingPlans = document.querySelectorAll('.pricing-size__item');
+				let period = document.querySelector('.tabs__button.active').dataset.period;
 
 				function getPlanByOrder(order) {
 					const orderNumber = Number(order);
@@ -1111,26 +1126,30 @@
 					const subscriptionPriceLabel = document.querySelector('.pricing-plan__price');
 					const implementationPriceLabel = document.querySelector('.pricing-plan__implementation-price');
 					const currencySymbolLabels = document.querySelectorAll('.pricing-plan__currency-symbol');
-
+					const periodLabel = document.querySelector('.pricing-plan__period span');
 					const priceToUse = isDiscount ? plan.monthlyFeeAfterDiscount : plan.monthlyFee;
 					const implementationToUse = isDiscount ? plan.implementationFeeAfterDiscount : plan.implementationFee;
 
-					const formatNumberWithCommas = (number) => {
-						const value = number * rate;
-						// Determine if the number has a fractional part
-						const formattedNumber =
-							value % 1 === 0
-								? value.toFixed(0) // No fractional part, so no decimal places
-								: value % 0.1 === 0
-								? value.toFixed(1) // One fractional digit (like 47.50)
-								: value.toFixed(2); // Two fractional digits (like 47.25)
-
-						return formattedNumber.replace(/\B(?=(\d{3})+(?!\d))/g, ','); // Add commas for thousands
+					// Format: 7,7M for millions, plain number for <1M
+					const formatCompact = (value) => {
+						if (value >= 1000000) {
+							return (value / 1000000).toFixed(1).replace('.', ',') + 'M';
+						}
+						return new Intl.NumberFormat().format(value);
 					};
 
-					subscriptionPriceLabel.textContent = formatNumberWithCommas(priceToUse);
-					implementationPriceLabel.textContent = formatNumberWithCommas(implementationToUse);
+					const roundHalfUp = (value, decimals = 2) => {
+						return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
+					};
+
+					const subscriptionValue = roundHalfUp(priceToUse * rate, 0);
+					const implementationValue = roundHalfUp(implementationToUse * rate, 0);
+
+					subscriptionPriceLabel.textContent = formatCompact(subscriptionValue);
+					implementationPriceLabel.textContent = formatCompact(implementationValue);
+
 					currencySymbolLabels.forEach((label) => (label.textContent = currencySymbol));
+					periodLabel.textContent = period;
 					submitButton.href = `/checkout?order=${plan.order}&length=${subscription}&currency=${currencyISO.toLowerCase()}`;
 				}
 
@@ -1150,11 +1169,18 @@
 					featuresList.innerHTML = plan.features.map((feature) => `<li>${feature.name}</li>`).join('');
 				}
 
+				function toggleMultiYearSelectorVisibility(show) {
+					document.querySelector('.subscription-length__period').style.display = show ? 'block' : 'none';
+				}
+
 				// Pricing plan change
 				pricingPlans.forEach((plan) => {
 					plan.addEventListener('click', (event) => {
 						currentPlanOrder = event.currentTarget.dataset.id;
 						changePricingPlan(currentPlanOrder);
+						// Update selected class
+						pricingPlans.forEach((plan) => plan.classList.remove('active'));
+						event.currentTarget.classList.add('active');
 						// Scroll to pricing section on mobile
 						if (window.innerWidth <= 992) {
 							const pricingSection = document.querySelector('.pricing-plan');
@@ -1164,14 +1190,32 @@
 					});
 				});
 
+				// TODO: Refactor to use multiple discount types
+
 				// Monthly - Annually change
 				subscriptionTabs.forEach((tab) => {
 					tab.addEventListener('click', (event) => {
 						isDiscount = tab.dataset.tab === 'annualy';
 						subscription = tab.dataset.tab;
+						period = tab.dataset.period;
+
+						// Change multi-year selector visibility
+						if (subscription === 'multi-year') {
+							multiYearSelector.selectedIndex = 0;
+							subscription = multiYearSelector.value;
+							toggleMultiYearSelectorVisibility(true);
+						} else {
+							toggleMultiYearSelectorVisibility(false);
+						}
 
 						updateRates(getPlanByOrder(currentPlanOrder));
 					});
+				});
+
+				// Multi-year periods change
+				multiYearSelector.addEventListener('change', (event) => {
+					subscription = event.target.value;
+					updateRates(getPlanByOrder(currentPlanOrder));
 				});
 
 				// Currency change
