@@ -97,52 +97,28 @@
 										<h2 class="h2 checkout-content__block-title">Main Information</h2>
 									</div>
 									<div class="checkout-form__item">
-										<!-- <apex:outputLabel value="First Name" for="first-name" styleClass="checkout-form__label" />
+										<!-- <apex:outputLabel value="Full Name" for="full-name" styleClass="checkout-form__label" />
 										<apex:inputText
-											id="first-name"
-											value="{!firstName}"
+											id="full-name"
+											value="{!fullName}"
 											styleClass="checkout-form__input"
-											html-name="first-name"
-											html-autocomplete="given-name"
-											html-aria-describedby="first-name-error"
+											html-name="full-name"
+											html-autocomplete="name"
+											html-aria-describedby="full-name-error"
 											required="true"
 											maxlength="25"
 										/> -->
-										<label for="first-name" class="checkout-form__label">First Name</label>
+										<label for="full-name" class="checkout-form__label">Full Name</label>
 										<input
 											type="text"
-											id="first-name"
-											name="firstName"
+											id="full-name"
+											name="fullName"
 											class="checkout-form__input"
-											autocomplete="given-name"
+											autocomplete="name"
 											required
-											aria-describedby="first-name-error"
+											aria-describedby="full-name-error"
 										/>
-										<span id="first-name-error" class="checkout-form__input-error" style="display: none" aria-live="polite"></span>
-									</div>
-									<div class="checkout-form__item">
-										<!-- <apex:outputLabel value="Last Name" for="last-name" styleClass="checkout-form__label" />
-										<apex:inputText
-											id="last-name"
-											styleClass="checkout-form__input"
-											value="{!lastName}"
-											html-name="last-name"
-											html-autocomplete="family-name"
-											html-aria-describedby="last-name-error"
-											required="true"
-											maxlength="25"
-										/> -->
-										<label for="last-name" class="checkout-form__label">Last Name</label>
-										<input
-											type="text"
-											id="last-name"
-											name="lastName"
-											autocomplete="family-name"
-											class="checkout-form__input"
-											required
-											aria-describedby="last-name-error"
-										/>
-										<span id="last-name-error" class="checkout-form__input-error" style="display: none" aria-live="polite"></span>
+										<span id="full-name-error" class="checkout-form__input-error" style="display: none" aria-live="polite"></span>
 									</div>
 									<div class="checkout-form__item">
 										<!-- <apex:outputLabel value="Company Name" for="business-name" styleClass="checkout-form__label" />
@@ -361,14 +337,8 @@
 				// Initialize Stripe
 				initializeStripe();
 
-				function getCardholderName(formData) {
-					const firstName = formData.get('firstName') || '';
-					const lastName = formData.get('lastName') || '';
-					return `${firstName.trim()} ${lastName.trim()}`.trim();
-				}
-
 				async function pay(formData) {
-					const cardholderName = getCardholderName(formData);
+					const cardholderName = formData.get('fullName') || '';
 					const isSavingCard = true;
 					const payment_method = { card: state.card, billing_details: { name: cardholderName } };
 					const result = await state.stripe.confirmCardPayment(state.clientSecret, {
@@ -392,7 +362,7 @@
 						// Get form data from FormData object
 						const customerData = {
 							clientSecret,
-							cusName: getCardholderName(formData),
+							cusName: formData.get('fullName') || '',
 							cusPhone: formData.get('phone') || '',
 							cusEmail: formData.get('email') || '',
 							cusCompany: formData.get('businessName') || '',
