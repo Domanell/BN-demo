@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="initial-scale=1" />
+		<title>Booking Ninjas: Combined Property Management/ Salesforce Solution Application</title>
+		<link rel="icon" type="image/png" href="favicon.ico" />
+		<link rel="stylesheet" href="css/fontawesome.css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-grid.css" />
+		<link rel="stylesheet" href="css/intlTelInput.css" />
+		<link href="css/screen.css" rel="stylesheet" media="screen" />
+
+		<script src="https://js.stripe.com/v3/"></script>
+	</head>
+
+	<body>
+		<div class="wrapper wrapper--no-bg checkout-page">
+			<header class="header">
+				<div class="container header__wrapper">
+					<div class="header__logo">
+						<a class="logo" href="/"><img alt="Booking Ninjas Logo" src="img/logo-white.svg" /></a>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<div class="checkout-content">
+					<div class="checkout-content__section checkout-content__section--bg">
+						<div class="checkout-content__section-inner">
+							<div class="checkout-content__block">
+								<h1 class="h2 checkout-content__title">{!package.name} Package - {!package.size} Units.</h1>
+								<p class="checkout-content__description">Enterprise control for operators who demand certainty.</p>
+							</div>
+							<div class="checkout-content__block checkout-summary">
+								<div class="checkout-content__block-header checkout-summary__row flex-wrap">
+									<h2 class="h2 checkout-content__block-title">Order Summary</h2>
+									<span class="checkout-expire-badge">Offer expires in 2 days</span>
+								</div>
+								<apex:outputPanel rendered="{!NOT(ISBLANK(package.size))}">
+									<div class="checkout-summary__row checkout-summary__row--bordered">
+										<span> {!package.name} Package </span>
+										<span> {!package.size} units </span>
+									</div>
+								</apex:outputPanel>
+								<div class="checkout-summary__row">
+									<span>
+										<!-- {!IF(pkgLength == 'annualy', 'Annual', 'Monthly')} Fee  -->
+										Monthly Fee
+									</span>
+									<span>
+										<apex:outputText value="{0, number, #,##0.00}" styleClass="monthly-amount">
+											<apex:param value="{!package.monthlyAmount}" />
+										</apex:outputText>
+									</span>
+								</div>
+								<apex:outputPanel rendered="{!(package.implFee > 0)}">
+									<div class="checkout-summary__row">
+										<span> Implementation Fee </span>
+										<span>
+											<apex:outputText value="{0, number, #,##0.00}" styleClass="total-deposit">
+												<apex:param value="{!package.depositTotal}" />
+											</apex:outputText>
+										</span>
+									</div>
+								</apex:outputPanel>
+								<div class="checkout-summary__row checkout-summary__row--bordered">
+									<span>Total Payment</span>
+									<span>$00000</span>
+								</div>
+								<!-- Due Now -->
+								<apex:outputPanel rendered="{!(package.depositSplit > 0)}">
+									<div class="checkout-summary__row checkout-summary__row--total">
+										<span>
+											Due Now&#32;
+											<apex:outputText value="{0, number, #0}" styleClass="percentage-deposit">
+												<apex:param value="{!package.depositPercentage}" />
+											</apex:outputText>
+										</span>
+										<span>
+											<apex:outputText value="{0, number, #,##0.00}" styleClass="split-deposit">
+												<apex:param value="{!package.depositSplit}" />
+											</apex:outputText>
+										</span>
+									</div>
+								</apex:outputPanel>
+							</div>
+						</div>
+					</div>
+					<div class="checkout-content__section">
+						<div class="checkout-content__section-inner">
+							<!-- <apex:form id="checkout-form" styleClass="checkout-form" html-novalidate="true"> -->
+							<form class="checkout-form" id="checkout-form" novalidate>
+								<div class="checkout-content__block">
+									<div class="checkout-content__block-header">
+										<h2 class="h2 checkout-content__block-title">Main Information</h2>
+									</div>
+									<div class="checkout-form__item">
+										<!-- <apex:outputLabel value="First Name" for="first-name" styleClass="checkout-form__label" />
+										<apex:inputText
+											id="first-name"
+											value="{!firstName}"
+											styleClass="checkout-form__input"
+											html-name="first-name"
+											html-autocomplete="given-name"
+											html-aria-describedby="first-name-error"
+											required="true"
+											maxlength="25"
+										/> -->
+										<label for="first-name" class="checkout-form__label">First Name</label>
+										<input
+											type="text"
+											id="first-name"
+											name="firstName"
+											class="checkout-form__input"
+											autocomplete="given-name"
+											required
+											aria-describedby="first-name-error"
+										/>
+										<span id="first-name-error" class="checkout-form__input-error" style="display: none" aria-live="polite"></span>
+									</div>
+									<div class="checkout-form__item">
+										<!-- <apex:outputLabel value="Last Name" for="last-name" styleClass="checkout-form__label" />
+										<apex:inputText
+											id="last-name"
+											styleClass="checkout-form__input"
+											value="{!lastName}"
+											html-name="last-name"
+											html-autocomplete="family-name"
+											html-aria-describedby="last-name-error"
+											required="true"
+											maxlength="25"
+										/> -->
+										<label for="last-name" class="checkout-form__label">Last Name</label>
+										<input
+											type="text"
+											id="last-name"
+											name="lastName"
+											autocomplete="family-name"
+											class="checkout-form__input"
+											required
+											aria-describedby="last-name-error"
+										/>
+										<span id="last-name-error" class="checkout-form__input-error" style="display: none" aria-live="polite"></span>
+									</div>
+									<div class="checkout-form__item">
+										<!-- <apex:outputLabel value="Company Name" for="business-name" styleClass="checkout-form__label" />
+										<apex:inputText
+											id="business-name"
+											value="{!businessName}"
+											styleClass="checkout-form__input"
+											html-name="business-name"
+											html-autocomplete="organization-title"
+											html-aria-describedby="business-name-error"
+											required="true"
+											maxlength="50"
+										/> -->
+										<label for="business-name" class="checkout-form__label">Company Name</label>
+										<input
+											type="text"
+											id="business-name"
+											name="businessName"
+											autocomplete="organization-title"
+											class="checkout-form__input"
+											required
+											aria-describedby="business-name-error"
+										/>
+										<span id="business-name-error" class="checkout-form__input-error" style="display: none" aria-live="polite"></span>
+									</div>
+									<div class="checkout-form__item">
+										<!-- <apex:outputLabel value="Email Address" for="email" styleClass="checkout-form__label" />
+										<apex:inputText
+											id="email"
+											value="{!email}"
+											styleClass="checkout-form__input"
+											html-name="email"
+											html-autocomplete="email"
+											html-aria-describedby="email-error"
+											required="true"
+										/> -->
+										<label for="email" class="checkout-form__label">Email Address</label>
+										<input
+											type="email"
+											id="email"
+											name="email"
+											autocomplete="email"
+											inputmode="email"
+											class="checkout-form__input"
+											required
+											aria-describedby="email-error"
+										/>
+										<span id="email-error" class="checkout-form__input-error" style="display: none" aria-live="polite"></span>
+									</div>
+									<div class="checkout-form__item">
+										<!-- <apex:outputLabel value="Phone Number" for="phone" styleClass="checkout-form__label" /> -->
+										<!-- <apex:inputText
+											id="phone"
+											value="{!phone}"
+											styleClass="checkout-form__input"
+											html-name="phone"
+											html-autocomplete="tel"
+											html-aria-describedby="phone-error"
+											required="true"
+										/> -->
+										<label for="phone" class="checkout-form__label">Phone Number</label>
+										<input
+											type="tel"
+											id="phone"
+											name="phone"
+											maxlength="20"
+											class="phone-field"
+											inputmode="tel"
+											autocomplete="tel"
+											class="checkout-form__input"
+											required
+											aria-describedby="phone-error"
+										/>
+										<span id="phone-error" class="checkout-form__input-error" style="display: none" aria-live="polite"></span>
+									</div>
+								</div>
+								<div class="checkout-content__block">
+									<div class="checkout-content__block-header">
+										<h2 class="h2 checkout-content__block-title">Payment Details</h2>
+									</div>
+									<div class="checkout-form__card">
+										<div id="card-element" class="checkout-form__input checkout-form__input--card"></div>
+										<div class="checkout-form__input-error card-error" style="display: none" aria-live="assertive"></div>
+									</div>
+								</div>
+								<div class="checkout-content__block">
+									<div class="checkout-form__submit">
+										<p class="checkout-form__error"></p>
+										<button class="button-success button--stretch checkout-form__submit-button" type="submit" aria-live="polite">
+											<div class="spinner checkout-form__spinner">
+												<svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25" />
+													<path
+														d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
+													>
+														<animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite" />
+													</path>
+												</svg>
+											</div>
+											<span>Place Order</span>
+										</button>
+									</div>
+									<div class="checkout-form__info">
+										<img src="img/icons/si_shield-security-line-base.svg" alt="" />
+										Your payment is secure with enterprise-grade encryption.
+									</div>
+								</div>
+							</form>
+							<!-- </apex:form> -->
+							<div class="text_center">
+								<a href="#" class="checkout-help">Questions? Support is always available.</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<!--SCRIPT -->
+		<script src="js/jquery.js"></script>
+		<script src="js/intlTelInputWithUtils.min.js"></script>
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function () {
+				// Currency symbols
+				const monthlyAmount = document.querySelector('.monthly-amount');
+				if (monthlyAmount) monthlyAmount.innerHTML = `{!pkgCurrencySymbol}${monthlyAmount.innerHTML.trim()}`;
+				const totalDeposit = document.querySelector('.total-deposit');
+				if (totalDeposit) totalDeposit.innerHTML = `{!pkgCurrencySymbol}${totalDeposit.innerHTML.trim()}`;
+				const splitDeposit = document.querySelector('.split-deposit');
+				if (splitDeposit) splitDeposit.innerHTML = `{!pkgCurrencySymbol}${splitDeposit.innerHTML.trim()}`;
+
+				const form = document.querySelector('[id$=checkout-form]');
+				const formInputs = form.querySelectorAll('input, select, textarea');
+				const submitButton = document.querySelector('.checkout-form__submit-button');
+				const spinner = document.querySelector('.checkout-form__spinner');
+				const formError = document.querySelector('.checkout-form__error');
+				const cardError = document.querySelector('.card-error');
+
+				// Phone input initialization
+				const phoneInput = document.querySelector('[id$=phone]');
+				let iti = null;
+				if (phoneInput && window.intlTelInput) {
+					iti = window.intlTelInput(phoneInput, {
+						initialCountry: 'auto',
+						autoPlaceholder: 'off',
+						geoIpLookup: (success, failure) => {
+							fetch('https://ipapi.co/json')
+								.then((res) => res.json())
+								.then((data) => success(data.country_code))
+								.catch(() => failure());
+						},
+					});
+				}
+
+				// State for Stripe
+				const state = { stripe: null, elements: null, card: null, clientSecret: null, id: null };
+
+				async function initStripeSession() {
+					// Data from server-side
+					const vfCurrency = '{!pkgCurrencyName}';
+					const vfAmount = '{!package.depositSplitRounded}';
+					const vfDescription = '{!package.depositPercentage}%25 deposit of the {!package.name} package subscription.';
+					const amountValue = Number(vfAmount) || 0;
+					const orderData = {
+						items: [{ id: 'bn-subscription' }],
+						currency: vfCurrency,
+						amount: amountValue,
+						description: vfDescription,
+					};
+					const res = await fetch('/services/apexrest/Stripe/', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify(orderData),
+					});
+					if (!res.ok) throw new Error('Unable to start payment. Please try again.');
+					return res.json();
+				}
+
+				function setupElements(data) {
+					if (!Stripe) {
+						throw new Error('Stripe.js failed to load.');
+					}
+					if (!state.stripe) {
+						state.stripe = Stripe(data.publicKey);
+						state.elements = state.stripe.elements();
+						const style = {
+							base: {
+								color: '#333333',
+								fontFamily: 'Montserrat, sans-serif',
+								fontSize: '16px',
+								lineHeight: '26px',
+								'::placeholder': { color: '#96949a' },
+							},
+							invalid: { color: '#ff5b5b', iconColor: '#fa755a' },
+						};
+						state.card = state.elements.create('card', { style, hidePostalCode: true });
+						state.card.mount('#card-element');
+						state.card.on('change', function (event) {
+							showFieldErrorMessage(cardError, event.error?.message || '');
+						});
+					}
+					state.clientSecret = data.clientSecret;
+					state.id = data.id;
+				}
+
+				async function initializeStripe() {
+					try {
+						const data = await initStripeSession();
+						setupElements(data);
+					} catch (error) {
+						console.error('Failed to initialize Stripe:', error);
+						showFormError('Payment system unavailable. Please refresh the page and try again.');
+					}
+				}
+
+				// Initialize Stripe
+				initializeStripe();
+
+				function getCardholderName(formData) {
+					const firstName = formData.get('firstName') || '';
+					const lastName = formData.get('lastName') || '';
+					return `${firstName.trim()} ${lastName.trim()}`.trim();
+				}
+
+				async function pay(formData) {
+					const cardholderName = getCardholderName(formData);
+					const isSavingCard = true;
+					const payment_method = { card: state.card, billing_details: { name: cardholderName } };
+					const result = await state.stripe.confirmCardPayment(state.clientSecret, {
+						payment_method,
+						setup_future_usage: isSavingCard ? 'off_session' : undefined,
+					});
+					if (result.error) {
+						throw new Error(result.error.message);
+					}
+					return result;
+				}
+
+				function orderComplete(clientSecret, formData) {
+					state.stripe.retrievePaymentIntent(clientSecret).then((result) => {
+						if (result.error) {
+							changeLoadingState(false);
+							showFormError(result.error.message);
+							return;
+						}
+
+						// Get form data from FormData object
+						const customerData = {
+							clientSecret,
+							cusName: getCardholderName(formData),
+							cusPhone: formData.get('phone') || '',
+							cusEmail: formData.get('email') || '',
+							cusCompany: formData.get('businessName') || '',
+						};
+
+						fetch('/services/apexrest/Stripe2/', {
+							method: 'POST',
+							headers: { 'Content-Type': 'application/json' },
+							body: JSON.stringify(customerData),
+						}).then(() => {
+							window.location.href = `/order-successful?id=${clientSecret}&order={!pkgOrder}&length={!pkgLength}&invoice={!quoteId}`;
+						});
+					});
+				}
+
+				// Validation
+				function changeLoadingState(isLoading) {
+					const buttonText = submitButton.querySelector('span');
+					submitButton.disabled = isLoading;
+					spinner.style.display = isLoading ? 'inline-block' : 'none';
+					buttonText.style.display = isLoading ? 'none' : 'inline';
+				}
+
+				function getBaseId(el) {
+					return (el && el.id ? el.id : '').split(':').pop();
+				}
+
+				function setFieldError(input, message) {
+					const id = getBaseId(input);
+					const err = document.getElementById(`${id}-error`);
+					if (err) {
+						showFieldErrorMessage(err, message);
+					}
+					if (message) {
+						input.setAttribute('aria-invalid', 'true');
+					} else {
+						input.removeAttribute('aria-invalid');
+					}
+				}
+
+				showFieldErrorMessage = function (element, message) {
+					element.textContent = message || '';
+					element.style.display = message ? 'block' : 'none';
+				};
+
+				function validateEmail(value) {
+					return /.+@.+\..+/.test(value.trim());
+				}
+
+				function validatePhone(value) {
+					if (iti && typeof iti.isValidNumber === 'function') {
+						return iti.isValidNumber();
+					}
+					// Basic validation if intl-tel-input is not available
+					return /[0-9()+\-\.\s]{7,}/.test(value.trim());
+				}
+
+				function validateForm() {
+					let firstInvalid = null;
+
+					// Validate each field
+					formInputs.forEach((input) => {
+						if (!validateField(input)) {
+							firstInvalid = firstInvalid || input;
+						}
+					});
+
+					return { valid: !firstInvalid, firstInvalid };
+				}
+
+				function showFormError(msg) {
+					formError.textContent = msg || 'An unexpected error occurred.';
+					formError.style.display = 'block';
+				}
+
+				function clearFormError() {
+					formError.textContent = '';
+					formError.style.display = 'none';
+				}
+
+				function validateField(input) {
+					const id = getBaseId(input);
+					let value = input.value.trim();
+					if (id === 'phone' && iti) {
+						value = iti.getNumber();
+					}
+					let message = '';
+
+					// Custom validation for all fields
+					if (!value) {
+						message = 'Complete this field.';
+					} else if (id === 'email' && !validateEmail(value)) {
+						message = 'Please enter a valid email.';
+					} else if (id === 'phone' && !validatePhone(value)) {
+						message = 'Please enter a valid phone number.';
+					}
+
+					setFieldError(input, message);
+					return !message;
+				}
+
+				// Add blur and input validation to all form inputs
+				formInputs.forEach((input) => {
+					input.addEventListener('blur', () => validateField(input));
+					input.addEventListener('input', () => {
+						// Clear error as user types
+						const id = getBaseId(input);
+						const value = input.value.trim();
+						if (value) {
+							setFieldError(input, '');
+						}
+					});
+				});
+
+				// Single submit handler
+				let isProcessing = false;
+				if (form) {
+					form.addEventListener('submit', async function (evt) {
+						evt.preventDefault();
+						if (isProcessing) return;
+						isProcessing = true;
+						clearFormError();
+
+						// Get form data from event
+						const formData = new FormData(evt.target);
+
+						const { valid, firstInvalid } = validateForm();
+						if (!valid) {
+							if (firstInvalid && typeof firstInvalid.focus === 'function') firstInvalid.focus();
+							isProcessing = false;
+							return;
+						}
+
+						changeLoadingState(true);
+						try {
+							// Stripe should already be initialized, but check just in case
+							if (!state.clientSecret) {
+								throw new Error('Payment system not ready. Please refresh the page and try again.');
+							}
+							await pay(formData);
+							orderComplete(state.clientSecret, formData);
+						} catch (err) {
+							showFormError(err?.message || 'Payment failed. Please try again.');
+						} finally {
+							changeLoadingState(false);
+							isProcessing = false;
+						}
+					});
+				}
+			});
+		</script>
+		<script src="js/common.js"></script>
+		<!-- END OF SCRIPT -->
+	</body>
+</html>

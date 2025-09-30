@@ -1,13 +1,20 @@
 $(document).on('ready', function () {
 	const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 	//fancybox
-	$('.fancybox').fancybox({
-		helpers: {
-			overlay: {
-				locked: false,
+	const $fancyboxElements = $('.fancybox');
+	if ($fancyboxElements.length && typeof $fancyboxElements.get(0).fancybox === 'function') {
+		$fancyboxElements.fancybox({
+			helpers: {
+				overlay: {
+					locked: false,
+				},
 			},
-		},
-	});
+		});
+	}
+
+	//wow
+	if (typeof WOW === 'function') new WOW().init();
+
 	//menu
 	$('.navigation-dropdown__click').on('click', function () {
 		$(this).parent().find('.navigation-dropdown').toggleClass('active');
@@ -179,9 +186,6 @@ $(document).on('ready', function () {
 		});
 	}
 
-	//wow
-	new WOW().init();
-
 	//accordion
 	$('.faq__trigger').on('click', function () {
 		$(this).next().slideToggle('fast');
@@ -260,8 +264,13 @@ $(document).on('ready', function () {
 	if (document.querySelector('[id$=trial-phone]')) {
 		var input = document.querySelector('[id$=trial-phone]');
 		window.intlTelInput(input, {
-			preferredCountries: ['us'],
-			separateDialCode: true,
+			initialCountry: 'auto',
+			geoIpLookup: (success, failure) => {
+				fetch('https://ipapi.co/json')
+					.then((res) => res.json())
+					.then((data) => success(data.country_code))
+					.catch(() => failure());
+			},
 			// any initialization options go here
 		});
 	}
@@ -285,13 +294,14 @@ $(document).on('ready', function () {
 	});
 
 	//Add new payment modal (activation page)
-	$('.activation-card .add-payment').fancybox({
-		// Returns the first step on modal close
-		afterClose: function () {
-			$('.add-payment__form').show();
-			$('.add-payment-modal__thank-you').hide();
-		},
-	});
+	$('.activation-card .add-payment').fancybox &&
+		$('.activation-card .add-payment').fancybox({
+			// Returns the first step on modal close
+			afterClose: function () {
+				$('.add-payment__form').show();
+				$('.add-payment-modal__thank-you').hide();
+			},
+		});
 	// Shows Thank you section
 	$('.add-payment-modal .add-payment-modal__button').on('click', function () {
 		$('.add-payment__form').toggle();
@@ -313,21 +323,6 @@ $(document).on('ready', function () {
 	//gallery
 	$('.gallery-content__switch input').on('click', function () {
 		$('.gallery-content__tab').toggleClass('active');
-	});
-	// gallery
-	$('.thumb').fancybox({
-		prevEffect: 'none',
-		nextEffect: 'none',
-		afterLoad: function () {
-			this.title = this.title + '<a href="' + this.href + '" target="_blank">Download</a> ';
-		},
-		helpers: {
-			thumbs: {
-				width: 100,
-				height: 100,
-			},
-			buttons: {},
-		},
 	});
 	$('.proceed-payment').on('click', function (event) {
 		event.preventDefault();
@@ -528,9 +523,9 @@ $(window).on('scroll', function () {
 	var scroll = $(window).scrollTop();
 
 	if (scroll >= 100) {
-		$('.header').addClass('fixed');
+		$('.header').addClass('header--fixed');
 	} else {
-		$('.header').removeClass('fixed');
+		$('.header').removeClass('header--fixed');
 	}
 });
 
