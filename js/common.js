@@ -114,8 +114,8 @@ $(document).on('ready', function () {
 				1200: { slidesPerView: 'auto', slidesPerGroup: 3 },
 			},
 			navigation: {
-				nextEl: '.swiper-arrow--next',
-				prevEl: '.swiper-arrow--prev',
+				nextEl: '.swiper-base-arrow--next',
+				prevEl: '.swiper-base-arrow--prev',
 			},
 			pagination: {
 				el: '.slider-outside__pagination',
