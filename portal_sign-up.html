@@ -347,18 +347,48 @@
 							<div class="sign-up-form">
 								<p class="sign-up-form__title">Sign Up. Take Control.</p>
 								<p class="sign-up-form__subtitle">Step into the platform trusted by leading organizations to run operations with precision.</p>
-								<form class="sign-up-form__form">
+								<form class="sign-up-form__form" id="signUpForm" novalidate>
 									<div class="sign-up-form__item">
 										<label for="email" class="sign-up-form__label">Email Address</label>
-										<input type="email" class="sign-up-form__input" name="email" required />
+										<input
+											type="email"
+											class="sign-up-form__input"
+											id="email"
+											name="email"
+											autocomplete="email"
+											inputmode="email"
+											aria-describedby="email-error"
+											required
+										/>
+										<div class="sign-up-form__error" id="email-error" role="alert" aria-live="polite"></div>
 									</div>
 									<div class="sign-up-form__item">
 										<label for="password" class="sign-up-form__label">Password</label>
-										<input type="password" class="sign-up-form__input" name="password" min="8" required />
+										<input
+											type="password"
+											class="sign-up-form__input"
+											id="password"
+											name="password"
+											minlength="8"
+											autocomplete="new-password"
+											aria-describedby="password-error"
+											required
+										/>
+										<div class="sign-up-form__error" id="password-error" role="alert" aria-live="polite"></div>
 									</div>
 									<div class="sign-up-form__item">
 										<label for="confirm-password" class="sign-up-form__label">Confirm Password</label>
-										<input type="password" class="sign-up-form__input" name="confirm-password" min="8" required />
+										<input
+											type="password"
+											class="sign-up-form__input"
+											id="confirm-password"
+											name="confirm-password"
+											minlength="8"
+											autocomplete="new-password"
+											aria-describedby="confirm-password-error"
+											required
+										/>
+										<div class="sign-up-form__error" id="confirm-password-error" role="alert" aria-live="polite"></div>
 									</div>
 									<input type="submit" class="sign-up-form__submit button" value="Sign Up" />
 								</form>
@@ -402,6 +432,135 @@
 			function handleCredentialResponse(response) {
 				console.log('Encoded JWT ID token: ' + response.credential);
 			}
+
+			// Form validation
+			document.addEventListener('DOMContentLoaded', function () {
+				const formElement = document.querySelector('.sign-up-form__form');
+				const emailInput = formElement.querySelector('input[name="email"]');
+				const passwordInput = formElement.querySelector('input[name="password"]');
+				const confirmInput = formElement.querySelector('input[name="confirm-password"]');
+				const submitButton = formElement.querySelector('input[type="submit"]');
+
+				function getErrorElement(inputElement) {
+					const container = inputElement.closest('.sign-up-form__item');
+					return container ? container.querySelector('.sign-up-form__error') : null;
+				}
+
+				function setError(inputElement, message) {
+					const errorElement = getErrorElement(inputElement);
+					if (errorElement) {
+						errorElement.textContent = message || '';
+						if (message) {
+							errorElement.style.display = 'block';
+							inputElement.setAttribute('aria-invalid', 'true');
+						} else {
+							errorElement.style.display = 'none';
+							inputElement.removeAttribute('aria-invalid');
+						}
+					}
+				}
+
+				function isValidEmail(value) {
+					const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+					return emailPattern.test(value);
+				}
+
+				function validateEmail() {
+					const emailValue = emailInput.value.trim();
+					if (!emailValue) {
+						setError(emailInput, 'Please enter your email address.');
+						return false;
+					} else if (!isValidEmail(emailValue)) {
+						setError(emailInput, 'Please enter a valid email address.');
+						return false;
+					} else {
+						setError(emailInput, '');
+						return true;
+					}
+				}
+
+				function validatePassword() {
+					const passwordValue = passwordInput.value;
+					if (!passwordValue) {
+						setError(passwordInput, 'Please enter a password.');
+						return false;
+					} else if (passwordValue.length < 8) {
+						setError(passwordInput, 'Password must be at least 8 characters.');
+						return false;
+					} else {
+						setError(passwordInput, '');
+						return true;
+					}
+				}
+
+				function validateConfirmPassword() {
+					const confirmValue = confirmInput.value;
+					const passwordValue = passwordInput.value;
+					if (!confirmValue) {
+						setError(confirmInput, 'Please confirm your password.');
+						return false;
+					} else if (confirmValue !== passwordValue) {
+						setError(confirmInput, "Passwords don't match.");
+						return false;
+					} else {
+						setError(confirmInput, '');
+						return true;
+					}
+				}
+
+				function validateForm() {
+					const emailValid = validateEmail();
+					const passwordValid = validatePassword();
+					const confirmValid = validateConfirmPassword();
+					return emailValid && passwordValid && confirmValid;
+				}
+
+				// Live validation
+				emailInput.addEventListener('input', function () {
+					if (emailInput.value && isValidEmail(emailInput.value.trim())) {
+						setError(emailInput, '');
+					}
+				});
+
+				passwordInput.addEventListener('input', function () {
+					if (passwordInput.value.length >= 8) {
+						setError(passwordInput, '');
+					}
+					if (confirmInput.value) {
+						validateConfirmPassword();
+					}
+				});
+
+				confirmInput.addEventListener('input', function () {
+					validateConfirmPassword();
+				});
+
+				// Validation on blur
+				emailInput.addEventListener('blur', validateEmail);
+				passwordInput.addEventListener('blur', function () {
+					validatePassword();
+					if (confirmInput.value) {
+						validateConfirmPassword();
+					}
+				});
+				confirmInput.addEventListener('blur', validateConfirmPassword);
+
+				formElement.addEventListener('submit', function (event) {
+					event.preventDefault();
+					if (submitButton) submitButton.disabled = true;
+					const formIsValid = validateForm();
+					if (!formIsValid) {
+						// Focus first invalid field
+						const firstInvalidField = formElement.querySelector('[aria-invalid="true"]');
+						if (firstInvalidField) firstInvalidField.focus();
+						if (submitButton) submitButton.disabled = false;
+						return;
+					}
+
+					const formData = new FormData(formElement);
+					console.log('🚀 ~ formData:', formData);
+				});
+			});
 		</script>
 		<!-- END OF SCRIPT -->
 	</body>
