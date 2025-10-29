@@ -588,8 +588,128 @@ $(document).on('ready', function () {
 			});
 		});
 	}
-});
 
+	// FAQ Category Filter
+	const faqCategories = document.querySelectorAll('.faq-controls__categories a');
+
+	if (faqCategories.length) {
+		const categoryList = [...faqCategories].map((categoryLink) => {
+			const parent = categoryLink.parentElement;
+			return {
+				element: categoryLink,
+				category: categoryLink.getAttribute('href'),
+				hide: () => {
+					parent.style.display = 'none';
+				},
+				show: () => {
+					parent.style.display = '';
+				},
+				activate: () => {
+					categoryLink.classList.add('active');
+				},
+				deactivate: () => {
+					categoryLink.classList.remove('active');
+				},
+				isActive: () => categoryLink.classList.contains('active'),
+			};
+		});
+
+		const faqList = [...document.querySelectorAll('.faq-list .accordion')].map((item) => {
+			const header = item.firstElementChild;
+			const content = item.lastElementChild;
+			return {
+				element: item,
+				category: item.dataset.category,
+				content: `${header.textContent} ${content.textContent.replace(/\s+/g, ' ').trim()}`.toLowerCase(),
+				isSearchMatch: true,
+				hide: () => {
+					item.style.display = 'none';
+				},
+				show: () => {
+					item.style.display = '';
+				},
+				collapse: () => {
+					header.classList.remove('active');
+					content.style.display = 'none';
+				},
+			};
+		});
+
+		const searchInput = document.querySelector('.faq-controls__search input');
+		const nothingFoundText = document.querySelector('.faq-not-found');
+
+		const setActiveCategory = (category) => {
+			categoryList.forEach((link) => {
+				link.category === category ? link.activate() : link.deactivate();
+			});
+			filterByCategory(category);
+		};
+
+		const filterByCategory = (category) => {
+			faqList.forEach((item) => {
+				if (item.isSearchMatch && (item.category === category || category === 'all')) {
+					item.show();
+				} else {
+					item.hide();
+				}
+			});
+		};
+
+		const search = (term) => {
+			// This function could accept empty term to reset search
+			const words = term.toLowerCase().split(/\s+/).filter(Boolean);
+			const hasTerm = words.length > 0;
+			const includedCategories = new Set(['all']);
+			let hasResults = false;
+
+			faqList.forEach((item) => {
+				const match = !hasTerm || words.every((word) => item.content.includes(word));
+				item.isSearchMatch = match;
+				if (match) {
+					includedCategories.add(item.category);
+					hasResults = true;
+				}
+				item.collapse();
+			});
+
+			// Update category visibility
+			categoryList.forEach((cat) => {
+				includedCategories.has(cat.category) ? cat.show() : cat.hide();
+			});
+
+			// Set active category: if search has term, set to 'all', else default to first category
+			setActiveCategory(hasTerm ? 'all' : categoryList[1]?.category);
+
+			// Show/hide "nothing found" message
+			console.log('🚀 ~ hasResults:', hasResults);
+			nothingFoundText.style.display = hasResults ? 'none' : 'block';
+		};
+
+		// Search input handler
+		if (searchInput) {
+			let debounceTimeout = null;
+			searchInput.addEventListener('input', (event) => {
+				// Debounce search
+				clearTimeout(debounceTimeout);
+				debounceTimeout = setTimeout(() => search(event.target.value), 300);
+			});
+		}
+
+		// Category link click handlers
+		categoryList.forEach((categoryItem) => {
+			categoryItem.element.addEventListener('click', (event) => {
+				event.preventDefault();
+				setActiveCategory(categoryItem.category);
+			});
+		});
+
+		// Initialize active category
+		const initActiveCategory = categoryList.find((link) => link.isActive())?.category;
+		if (initActiveCategory) {
+			filterByCategory(initActiveCategory);
+		}
+	}
+});
 //fixed
 $(window).on('scroll', function () {
 	var scroll = $(window).scrollTop();
