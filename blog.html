@@ -5,7 +5,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Booking Ninjas: Combined Property Management/ Salesforce Solution Application</title>
+		<title>Booking Ninjas</title>
 		<link rel="icon" type="image/png" href="favicon.ico" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
 		<link rel="stylesheet" href="css/fontawesome.css" />
@@ -364,85 +364,66 @@
 						</div>
 					</div>
 
+					<!-- Search and filters results. Load 10 articles per page -->
 					<div class="block">
 						<!-- Filters and Search -->
-						<div class="blog-controls">
-							<ul class="blog-controls__tags blog-tags">
-								<li>
-									<a class="active" href="/blog">Latest</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Featured">Featured</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Property Management">Property Management</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Hospitality">Hospitality</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Trends">Trends</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Vacation Rental">Vacation Rental</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Hotel">Hotel</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Restaurants">Restaurants</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Self Storage">Self Storage</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Webinar">Webinar</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Senior Living">Senior Living</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Villas">Villas</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Student Housing">Student Housing</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Hostel">Hostel</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Serviced Apartment">Serviced Apartment</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Corporate Housing">Corporate Housing</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Condominium HOA">Condominium HOA</a>
-								</li>
-								<li>
-									<a class="" href="/blog?category=Yoga Fitness Center">Yoga Fitness Center</a>
-								</li>
-							</ul>
-							<div class="blog-controls__search">
-								<form id="search-form" class="blog-search">
-									<div class="blog-search__input-wrapper">
-										<input type="text" class="blog-search__input" placeholder="Search" />
-									</div>
-								</form>
+						<div class="blog-panel">
+							<h2 class="h2 bump-left">Articles</h2>
+							<div class="blog-controls">
+								<div class="blog-controls__select">
+									<form id="category-form" class="blog-select">
+										<div class="blog-select__input-wrapper">
+											<select name="" id="">
+												<option value="All">All</option>
+												<option value="Featured">Featured</option>
+												<option value="Property Management">Property Management</option>
+												<option value="Hospitality">Hospitality</option>
+												<option value="Trends">Trends</option>
+												<option value="Vacation Rental">Vacation Rental</option>
+												<option value="Hotel">Hotel</option>
+												<option value="Restaurants">Restaurants</option>
+												<option value="Self Storage">Self Storage</option>
+												<option value="Webinar">Webinar</option>
+												<option value="Senior Living">Senior Living</option>
+												<option value="Villas">Villas</option>
+												<option value="Student Housing">Student Housing</option>
+												<option value="Hostel">Hostel</option>
+												<option value="Serviced Apartment">Serviced Apartment</option>
+												<option value="Corporate Housing">Corporate Housing</option>
+												<option value="Condominium HOA">Condominium HOA</option>
+												<option value="Yoga Fitness Center">Yoga Fitness Center</option>
+											</select>
+										</div>
+									</form>
 
-								<apex:form id="search-form" styleClass="blog-search">
-									<apex:inputText styleClass="blog__search-input" html-placeholder="Search" value="{!searchQuery}" onkeyup="debounceSearch();" />
-									<apex:actionFunction name="performSearch" action="{!search}" reRender="search-results" />
-									<script>
-										let searchTimeout;
-										function debounceSearch() {
-											clearTimeout(searchTimeout);
-											searchTimeout = setTimeout(function () {
-												performSearch();
-											}, 500);
-										}
-									</script>
-								</apex:form>
+									<apex:form id="category-form" styleClass="blog-select">
+										<apex:selectList value="{!selectedCategory}" size="1" onchange="categoryChanged();" styleClass="blog-select__input">
+											<apex:selectOptions value="{!categoryOptions}" />
+										</apex:selectList>
+										<apex:actionFunction name="categoryChanged" action="{!filterByCategory}" reRender="search-results,paginationPanel" />
+									</apex:form>
+								</div>
+								<div class="blog-controls__search">
+									<form id="search-form" class="blog-search">
+										<div class="blog-search__input-wrapper">
+											<input type="text" class="blog-search__input" placeholder="Search" />
+										</div>
+									</form>
+
+									<apex:form id="search-form" styleClass="blog-search">
+										<apex:inputText styleClass="blog__search-input" html-placeholder="Search" value="{!searchQuery}" onkeyup="debounceSearch();" />
+										<apex:actionFunction name="performSearch" action="{!search}" reRender="search-results, paginationPanel" />
+										<script>
+											let searchTimeout;
+											function debounceSearch() {
+												clearTimeout(searchTimeout);
+												searchTimeout = setTimeout(function () {
+													performSearch();
+												}, 500);
+											}
+										</script>
+									</apex:form>
+								</div>
 							</div>
 						</div>
 
