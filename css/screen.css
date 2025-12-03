@@ -3505,6 +3505,14 @@ mark {
   }
 }
 
+.scroll-x {
+  overflow-x: auto;
+}
+
+.scroll-y {
+  overflow-y: auto;
+}
+
 .adaptive-img {
   max-width: 48vw;
 }
@@ -6579,14 +6587,14 @@ mark {
   }
 }
 
-.title-h2, .club-page__main-title h2, .be-segment-page__main-title h2, .villa-management-page__main-title h2, .student-housing-page__main-title h2, .student-housing-page__center-text h2, .parking-page__feature h2, .parking-page__center-text h2, .vacation-page__main-title h2, .parking-page__main-title h2, .vacation-page__center-text h2, .coworking-page__main-title h2, .coworking-page__center-text h2, .segment .section-pricing .h2, .segment .section-pricing .cta-section__title, .segment .section-pricing .card-full__title, .segment .section-pricing .full-card__title, .segment .section-pricing .square-text__text, .segment .section-pricing .about-person__title, .segment .section-pricing .pricing-card__title, .segment .h2, .segment .cta-section__title, .segment .card-full__title, .segment .full-card__title, .segment .square-text__text, .segment .about-person__title, .segment .pricing-card__title, .segment__prices h2 {
+.title-h2, .club-page__main-title h2, .villa-management-page__main-title h2, .student-housing-page__main-title h2, .student-housing-page__center-text h2, .parking-page__feature h2, .parking-page__center-text h2, .vacation-page__main-title h2, .parking-page__main-title h2, .vacation-page__center-text h2, .coworking-page__main-title h2, .coworking-page__center-text h2, .segment .section-pricing .h2, .segment .section-pricing .cta-section__title, .segment .section-pricing .card-full__title, .segment .section-pricing .full-card__title, .segment .section-pricing .square-text__text, .segment .section-pricing .about-person__title, .segment .section-pricing .pricing-card__title, .segment .h2, .segment .cta-section__title, .segment .card-full__title, .segment .full-card__title, .segment .square-text__text, .segment .about-person__title, .segment .pricing-card__title, .segment__prices h2 {
   font-size: 42px;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 1px;
 }
 @media only screen and (max-width: 991px) {
-  .title-h2, .club-page__main-title h2, .be-segment-page__main-title h2, .villa-management-page__main-title h2, .student-housing-page__main-title h2, .student-housing-page__center-text h2, .parking-page__feature h2, .parking-page__center-text h2, .vacation-page__main-title h2, .parking-page__main-title h2, .vacation-page__center-text h2, .coworking-page__main-title h2, .coworking-page__center-text h2, .segment .section-pricing .h2, .segment .section-pricing .cta-section__title, .segment .section-pricing .card-full__title, .segment .section-pricing .full-card__title, .segment .section-pricing .square-text__text, .segment .section-pricing .about-person__title, .segment .section-pricing .pricing-card__title, .segment .h2, .segment .cta-section__title, .segment .card-full__title, .segment .full-card__title, .segment .square-text__text, .segment .about-person__title, .segment .pricing-card__title, .segment__prices h2 {
+  .title-h2, .club-page__main-title h2, .villa-management-page__main-title h2, .student-housing-page__main-title h2, .student-housing-page__center-text h2, .parking-page__feature h2, .parking-page__center-text h2, .vacation-page__main-title h2, .parking-page__main-title h2, .vacation-page__center-text h2, .coworking-page__main-title h2, .coworking-page__center-text h2, .segment .section-pricing .h2, .segment .section-pricing .cta-section__title, .segment .section-pricing .card-full__title, .segment .section-pricing .full-card__title, .segment .section-pricing .square-text__text, .segment .section-pricing .about-person__title, .segment .section-pricing .pricing-card__title, .segment .h2, .segment .cta-section__title, .segment .card-full__title, .segment .full-card__title, .segment .square-text__text, .segment .about-person__title, .segment .pricing-card__title, .segment__prices h2 {
     font-size: 30px;
     font-weight: 500;
   }
@@ -6616,10 +6624,9 @@ mark {
   }
 }
 
-.title-bordered, .features-title-underline, .segment__article h2:not(.unstyled), .club-page__article h2:not(.unstyled), .be-segment-page__article h2:not(.unstyled), .villa-management-page__article h2:not(.unstyled), .student-housing-page__article h2:not(.unstyled), .parking-page__article h2:not(.unstyled), .vacation-page__article h2:not(.unstyled), .coworking-page__article h2:not(.unstyled),
+.title-bordered, .features-title-underline, .segment__article h2:not(.unstyled), .club-page__article h2:not(.unstyled), .villa-management-page__article h2:not(.unstyled), .student-housing-page__article h2:not(.unstyled), .parking-page__article h2:not(.unstyled), .vacation-page__article h2:not(.unstyled), .coworking-page__article h2:not(.unstyled),
 .segment__article h3.title-underline,
 .club-page__article h3.title-underline,
-.be-segment-page__article h3.title-underline,
 .villa-management-page__article h3.title-underline,
 .student-housing-page__article h3.title-underline,
 .parking-page__article h3.title-underline,
@@ -6634,10 +6641,9 @@ mark {
   letter-spacing: 0.75px;
 }
 @media only screen and (max-width: 991px) {
-  .title-bordered, .features-title-underline, .segment__article h2:not(.unstyled), .club-page__article h2:not(.unstyled), .be-segment-page__article h2:not(.unstyled), .villa-management-page__article h2:not(.unstyled), .student-housing-page__article h2:not(.unstyled), .parking-page__article h2:not(.unstyled), .vacation-page__article h2:not(.unstyled), .coworking-page__article h2:not(.unstyled),
+  .title-bordered, .features-title-underline, .segment__article h2:not(.unstyled), .club-page__article h2:not(.unstyled), .villa-management-page__article h2:not(.unstyled), .student-housing-page__article h2:not(.unstyled), .parking-page__article h2:not(.unstyled), .vacation-page__article h2:not(.unstyled), .coworking-page__article h2:not(.unstyled),
   .segment__article h3.title-underline,
   .club-page__article h3.title-underline,
-  .be-segment-page__article h3.title-underline,
   .villa-management-page__article h3.title-underline,
   .student-housing-page__article h3.title-underline,
   .parking-page__article h3.title-underline,
@@ -6646,10 +6652,9 @@ mark {
     font-size: 24px;
   }
 }
-.title-bordered:before, .features-title-underline:before, .segment__article h2:not(.unstyled):before, .club-page__article h2:not(.unstyled):before, .be-segment-page__article h2:not(.unstyled):before, .villa-management-page__article h2:not(.unstyled):before, .student-housing-page__article h2:not(.unstyled):before, .parking-page__article h2:not(.unstyled):before, .vacation-page__article h2:not(.unstyled):before, .coworking-page__article h2:not(.unstyled):before,
+.title-bordered:before, .features-title-underline:before, .segment__article h2:not(.unstyled):before, .club-page__article h2:not(.unstyled):before, .villa-management-page__article h2:not(.unstyled):before, .student-housing-page__article h2:not(.unstyled):before, .parking-page__article h2:not(.unstyled):before, .vacation-page__article h2:not(.unstyled):before, .coworking-page__article h2:not(.unstyled):before,
 .segment__article h3.title-underline:before,
 .club-page__article h3.title-underline:before,
-.be-segment-page__article h3.title-underline:before,
 .villa-management-page__article h3.title-underline:before,
 .student-housing-page__article h3.title-underline:before,
 .parking-page__article h3.title-underline:before,
@@ -9952,8 +9957,8 @@ mark {
 .comparison .selected::before {
   position: absolute;
   top: 0;
-  left: 16px;
-  right: 16px;
+  left: 12px;
+  right: 12px;
   bottom: 0;
   background: #444;
   pointer-events: none;
@@ -10029,6 +10034,11 @@ mark {
 }
 .comparison tbody td {
   line-height: 1;
+}
+@media (min-width: 768px) {
+  .comparison tbody .selected {
+    padding: 12px 16px;
+  }
 }
 @media (min-width: 768px) {
   .comparison tfoot .selected {
@@ -16474,51 +16484,51 @@ mark {
     font-weight: 500;
   }
 }
-.segment__hero, .club-page__hero, .be-segment-page__hero, .villa-management-page__hero, .student-housing-page__hero, .parking-page__hero, .vacation-page__hero, .coworking-page__hero {
+.segment__hero, .club-page__hero, .villa-management-page__hero, .student-housing-page__hero, .parking-page__hero, .vacation-page__hero, .coworking-page__hero {
   padding: 60px 0 300px 0;
   background: #f6f8fa url(../img/hotel-clouds.png) repeat-x bottom;
 }
 @media only screen and (max-width: 991px) {
-  .segment__hero, .club-page__hero, .be-segment-page__hero, .villa-management-page__hero, .student-housing-page__hero, .parking-page__hero, .vacation-page__hero, .coworking-page__hero {
+  .segment__hero, .club-page__hero, .villa-management-page__hero, .student-housing-page__hero, .parking-page__hero, .vacation-page__hero, .coworking-page__hero {
     padding-bottom: 250px;
   }
 }
-.segment__hero img, .club-page__hero img, .be-segment-page__hero img, .villa-management-page__hero img, .student-housing-page__hero img, .parking-page__hero img, .vacation-page__hero img, .coworking-page__hero img {
+.segment__hero img, .club-page__hero img, .villa-management-page__hero img, .student-housing-page__hero img, .parking-page__hero img, .vacation-page__hero img, .coworking-page__hero img {
   -webkit-filter: drop-shadow(0 0 38px rgba(0, 0, 0, 0.1));
   filter: drop-shadow(0 0 38px rgba(0, 0, 0, 0.1));
 }
 @media only screen and (max-width: 991px) {
-  .segment__hero img, .club-page__hero img, .be-segment-page__hero img, .villa-management-page__hero img, .student-housing-page__hero img, .parking-page__hero img, .vacation-page__hero img, .coworking-page__hero img {
+  .segment__hero img, .club-page__hero img, .villa-management-page__hero img, .student-housing-page__hero img, .parking-page__hero img, .vacation-page__hero img, .coworking-page__hero img {
     margin-bottom: 20px;
   }
 }
-.segment__hero h1, .club-page__hero h1, .be-segment-page__hero h1, .villa-management-page__hero h1, .student-housing-page__hero h1, .parking-page__hero h1, .vacation-page__hero h1, .coworking-page__hero h1 {
+.segment__hero h1, .club-page__hero h1, .villa-management-page__hero h1, .student-housing-page__hero h1, .parking-page__hero h1, .vacation-page__hero h1, .coworking-page__hero h1 {
   font-size: 48px;
   color: #3b3b3b;
   padding-bottom: 25px;
   font-weight: 500;
 }
 @media only screen and (max-width: 991px) {
-  .segment__hero h1, .club-page__hero h1, .be-segment-page__hero h1, .villa-management-page__hero h1, .student-housing-page__hero h1, .parking-page__hero h1, .vacation-page__hero h1, .coworking-page__hero h1 {
+  .segment__hero h1, .club-page__hero h1, .villa-management-page__hero h1, .student-housing-page__hero h1, .parking-page__hero h1, .vacation-page__hero h1, .coworking-page__hero h1 {
     font-size: 42px;
   }
 }
 @media only screen and (max-width: 766px) {
-  .segment__hero h1, .club-page__hero h1, .be-segment-page__hero h1, .villa-management-page__hero h1, .student-housing-page__hero h1, .parking-page__hero h1, .vacation-page__hero h1, .coworking-page__hero h1 {
+  .segment__hero h1, .club-page__hero h1, .villa-management-page__hero h1, .student-housing-page__hero h1, .parking-page__hero h1, .vacation-page__hero h1, .coworking-page__hero h1 {
     font-size: 36px;
   }
 }
-.segment__hero h2, .club-page__hero h2, .be-segment-page__hero h2, .villa-management-page__hero h2, .student-housing-page__hero h2, .parking-page__hero h2, .vacation-page__hero h2, .coworking-page__hero h2 {
+.segment__hero h2, .club-page__hero h2, .villa-management-page__hero h2, .student-housing-page__hero h2, .parking-page__hero h2, .vacation-page__hero h2, .coworking-page__hero h2 {
   font-size: 20px;
   color: #252525;
   padding-bottom: 25px;
 }
-.segment__hero a, .club-page__hero a, .be-segment-page__hero a, .villa-management-page__hero a, .student-housing-page__hero a, .parking-page__hero a, .vacation-page__hero a, .coworking-page__hero a, .segment__hero .blog-pagination__button, .club-page__hero .blog-pagination__button, .be-segment-page__hero .blog-pagination__button, .villa-management-page__hero .blog-pagination__button, .student-housing-page__hero .blog-pagination__button, .parking-page__hero .blog-pagination__button, .vacation-page__hero .blog-pagination__button, .coworking-page__hero .blog-pagination__button {
+.segment__hero a, .club-page__hero a, .villa-management-page__hero a, .student-housing-page__hero a, .parking-page__hero a, .vacation-page__hero a, .coworking-page__hero a, .segment__hero .blog-pagination__button, .club-page__hero .blog-pagination__button, .villa-management-page__hero .blog-pagination__button, .student-housing-page__hero .blog-pagination__button, .parking-page__hero .blog-pagination__button, .vacation-page__hero .blog-pagination__button, .coworking-page__hero .blog-pagination__button {
   min-width: 250px;
   padding: 15px 30px;
 }
 @media only screen and (max-width: 991px) {
-  .segment__hero, .club-page__hero, .be-segment-page__hero, .villa-management-page__hero, .student-housing-page__hero, .parking-page__hero, .vacation-page__hero, .coworking-page__hero {
+  .segment__hero, .club-page__hero, .villa-management-page__hero, .student-housing-page__hero, .parking-page__hero, .vacation-page__hero, .coworking-page__hero {
     text-align: center;
   }
 }
@@ -16580,42 +16590,42 @@ mark {
   font-weight: 400;
   padding: 0;
 }
-.segment__articles, .club-page__articles, .be-segment-page__articles, .villa-management-page__articles, .student-housing-page__articles, .parking-page__articles, .vacation-page__articles, .coworking-page__articles {
+.segment__articles, .club-page__articles, .villa-management-page__articles, .student-housing-page__articles, .parking-page__articles, .vacation-page__articles, .coworking-page__articles {
   font-size: 18px;
   color: #2d2d2d;
   font-weight: 400;
 }
 @media only screen and (max-width: 991px) {
-  .segment__articles, .club-page__articles, .be-segment-page__articles, .villa-management-page__articles, .student-housing-page__articles, .parking-page__articles, .vacation-page__articles, .coworking-page__articles {
+  .segment__articles, .club-page__articles, .villa-management-page__articles, .student-housing-page__articles, .parking-page__articles, .vacation-page__articles, .coworking-page__articles {
     font-size: 16px;
   }
 }
-.segment__article, .club-page__article, .be-segment-page__article, .villa-management-page__article, .student-housing-page__article, .parking-page__article, .vacation-page__article, .coworking-page__article {
+.segment__article, .club-page__article, .villa-management-page__article, .student-housing-page__article, .parking-page__article, .vacation-page__article, .coworking-page__article {
   padding: 100px 0;
 }
 @media only screen and (max-width: 991px) {
-  .segment__article, .club-page__article, .be-segment-page__article, .villa-management-page__article, .student-housing-page__article, .parking-page__article, .vacation-page__article, .coworking-page__article {
+  .segment__article, .club-page__article, .villa-management-page__article, .student-housing-page__article, .parking-page__article, .vacation-page__article, .coworking-page__article {
     padding: 30px 0;
   }
 }
-.segment__article figure, .club-page__article figure, .be-segment-page__article figure, .villa-management-page__article figure, .student-housing-page__article figure, .parking-page__article figure, .vacation-page__article figure, .coworking-page__article figure {
+.segment__article figure, .club-page__article figure, .villa-management-page__article figure, .student-housing-page__article figure, .parking-page__article figure, .vacation-page__article figure, .coworking-page__article figure {
   display: flex;
   justify-content: flex-end;
 }
 @media only screen and (max-width: 991px) {
-  .segment__article figure, .club-page__article figure, .be-segment-page__article figure, .villa-management-page__article figure, .student-housing-page__article figure, .parking-page__article figure, .vacation-page__article figure, .coworking-page__article figure {
+  .segment__article figure, .club-page__article figure, .villa-management-page__article figure, .student-housing-page__article figure, .parking-page__article figure, .vacation-page__article figure, .coworking-page__article figure {
     padding-bottom: 15px;
   }
 }
-.segment__article:nth-child(2n) figure, .club-page__article:nth-child(2n) figure, .be-segment-page__article:nth-child(2n) figure, .villa-management-page__article:nth-child(2n) figure, .student-housing-page__article:nth-child(2n) figure, .parking-page__article:nth-child(2n) figure, .vacation-page__article:nth-child(2n) figure, .coworking-page__article:nth-child(2n) figure {
+.segment__article:nth-child(2n) figure, .club-page__article:nth-child(2n) figure, .villa-management-page__article:nth-child(2n) figure, .student-housing-page__article:nth-child(2n) figure, .parking-page__article:nth-child(2n) figure, .vacation-page__article:nth-child(2n) figure, .coworking-page__article:nth-child(2n) figure {
   justify-content: flex-start;
 }
-.segment__article h3, .club-page__article h3, .be-segment-page__article h3, .villa-management-page__article h3, .student-housing-page__article h3, .parking-page__article h3, .vacation-page__article h3, .coworking-page__article h3 {
+.segment__article h3, .club-page__article h3, .villa-management-page__article h3, .student-housing-page__article h3, .parking-page__article h3, .vacation-page__article h3, .coworking-page__article h3 {
   font-size: 20px;
   font-weight: 500;
   padding-bottom: 10px;
 }
-.segment__article section, .club-page__article section, .be-segment-page__article section, .villa-management-page__article section, .student-housing-page__article section, .parking-page__article section, .vacation-page__article section, .coworking-page__article section {
+.segment__article section, .club-page__article section, .villa-management-page__article section, .student-housing-page__article section, .parking-page__article section, .vacation-page__article section, .coworking-page__article section {
   padding: 0 0 30px 0;
 }
 .segment__addons {
@@ -17850,10 +17860,10 @@ mark {
 .ukpms-section__bg {
   background-color: #f5f9fc;
 }
-.ukpms-section .title-h2, .ukpms-section .club-page__main-title h2, .club-page__main-title .ukpms-section h2, .ukpms-section .be-segment-page__main-title h2, .be-segment-page__main-title .ukpms-section h2, .ukpms-section .villa-management-page__main-title h2, .villa-management-page__main-title .ukpms-section h2, .ukpms-section .segment__prices h2, .segment__prices .ukpms-section h2, .ukpms-section .segment .h2, .segment .ukpms-section .h2, .ukpms-section .segment .cta-section__title, .segment .ukpms-section .cta-section__title, .ukpms-section .segment .card-full__title, .segment .ukpms-section .card-full__title, .ukpms-section .segment .full-card__title, .segment .ukpms-section .full-card__title, .ukpms-section .segment .square-text__text, .segment .ukpms-section .square-text__text, .ukpms-section .segment .about-person__title, .segment .ukpms-section .about-person__title, .ukpms-section .segment .pricing-card__title, .segment .ukpms-section .pricing-card__title, .ukpms-section .coworking-page__center-text h2, .coworking-page__center-text .ukpms-section h2, .ukpms-section .coworking-page__main-title h2, .coworking-page__main-title .ukpms-section h2, .ukpms-section .vacation-page__center-text h2, .vacation-page__center-text .ukpms-section h2, .ukpms-section .vacation-page__main-title h2, .vacation-page__main-title .ukpms-section h2, .ukpms-section .parking-page__center-text h2, .parking-page__center-text .ukpms-section h2, .ukpms-section .parking-page__feature h2, .parking-page__feature .ukpms-section h2, .ukpms-section .parking-page__main-title h2, .parking-page__main-title .ukpms-section h2, .ukpms-section .student-housing-page__center-text h2, .student-housing-page__center-text .ukpms-section h2, .ukpms-section .student-housing-page__main-title h2, .student-housing-page__main-title .ukpms-section h2 {
+.ukpms-section .title-h2, .ukpms-section .club-page__main-title h2, .club-page__main-title .ukpms-section h2, .ukpms-section .villa-management-page__main-title h2, .villa-management-page__main-title .ukpms-section h2, .ukpms-section .segment__prices h2, .segment__prices .ukpms-section h2, .ukpms-section .segment .h2, .segment .ukpms-section .h2, .ukpms-section .segment .cta-section__title, .segment .ukpms-section .cta-section__title, .ukpms-section .segment .card-full__title, .segment .ukpms-section .card-full__title, .ukpms-section .segment .full-card__title, .segment .ukpms-section .full-card__title, .ukpms-section .segment .square-text__text, .segment .ukpms-section .square-text__text, .ukpms-section .segment .about-person__title, .segment .ukpms-section .about-person__title, .ukpms-section .segment .pricing-card__title, .segment .ukpms-section .pricing-card__title, .ukpms-section .coworking-page__center-text h2, .coworking-page__center-text .ukpms-section h2, .ukpms-section .coworking-page__main-title h2, .coworking-page__main-title .ukpms-section h2, .ukpms-section .vacation-page__center-text h2, .vacation-page__center-text .ukpms-section h2, .ukpms-section .vacation-page__main-title h2, .vacation-page__main-title .ukpms-section h2, .ukpms-section .parking-page__center-text h2, .parking-page__center-text .ukpms-section h2, .ukpms-section .parking-page__feature h2, .parking-page__feature .ukpms-section h2, .ukpms-section .parking-page__main-title h2, .parking-page__main-title .ukpms-section h2, .ukpms-section .student-housing-page__center-text h2, .student-housing-page__center-text .ukpms-section h2, .ukpms-section .student-housing-page__main-title h2, .student-housing-page__main-title .ukpms-section h2 {
   padding-bottom: 30px;
 }
-.ukpms-section .title-h2 span, .ukpms-section .club-page__main-title h2 span, .club-page__main-title .ukpms-section h2 span, .ukpms-section .be-segment-page__main-title h2 span, .be-segment-page__main-title .ukpms-section h2 span, .ukpms-section .villa-management-page__main-title h2 span, .villa-management-page__main-title .ukpms-section h2 span, .ukpms-section .segment__prices h2 span, .segment__prices .ukpms-section h2 span, .ukpms-section .segment .h2 span, .segment .ukpms-section .h2 span, .ukpms-section .segment .cta-section__title span, .segment .ukpms-section .cta-section__title span, .ukpms-section .segment .card-full__title span, .segment .ukpms-section .card-full__title span, .ukpms-section .segment .full-card__title span, .segment .ukpms-section .full-card__title span, .ukpms-section .segment .square-text__text span, .segment .ukpms-section .square-text__text span, .ukpms-section .segment .about-person__title span, .segment .ukpms-section .about-person__title span, .ukpms-section .segment .pricing-card__title span, .segment .ukpms-section .pricing-card__title span, .ukpms-section .coworking-page__center-text h2 span, .coworking-page__center-text .ukpms-section h2 span, .ukpms-section .coworking-page__main-title h2 span, .coworking-page__main-title .ukpms-section h2 span, .ukpms-section .vacation-page__center-text h2 span, .vacation-page__center-text .ukpms-section h2 span, .ukpms-section .vacation-page__main-title h2 span, .vacation-page__main-title .ukpms-section h2 span, .ukpms-section .parking-page__center-text h2 span, .parking-page__center-text .ukpms-section h2 span, .ukpms-section .parking-page__feature h2 span, .parking-page__feature .ukpms-section h2 span, .ukpms-section .parking-page__main-title h2 span, .parking-page__main-title .ukpms-section h2 span, .ukpms-section .student-housing-page__center-text h2 span, .student-housing-page__center-text .ukpms-section h2 span, .ukpms-section .student-housing-page__main-title h2 span, .student-housing-page__main-title .ukpms-section h2 span {
+.ukpms-section .title-h2 span, .ukpms-section .club-page__main-title h2 span, .club-page__main-title .ukpms-section h2 span, .ukpms-section .villa-management-page__main-title h2 span, .villa-management-page__main-title .ukpms-section h2 span, .ukpms-section .segment__prices h2 span, .segment__prices .ukpms-section h2 span, .ukpms-section .segment .h2 span, .segment .ukpms-section .h2 span, .ukpms-section .segment .cta-section__title span, .segment .ukpms-section .cta-section__title span, .ukpms-section .segment .card-full__title span, .segment .ukpms-section .card-full__title span, .ukpms-section .segment .full-card__title span, .segment .ukpms-section .full-card__title span, .ukpms-section .segment .square-text__text span, .segment .ukpms-section .square-text__text span, .ukpms-section .segment .about-person__title span, .segment .ukpms-section .about-person__title span, .ukpms-section .segment .pricing-card__title span, .segment .ukpms-section .pricing-card__title span, .ukpms-section .coworking-page__center-text h2 span, .coworking-page__center-text .ukpms-section h2 span, .ukpms-section .coworking-page__main-title h2 span, .coworking-page__main-title .ukpms-section h2 span, .ukpms-section .vacation-page__center-text h2 span, .vacation-page__center-text .ukpms-section h2 span, .ukpms-section .vacation-page__main-title h2 span, .vacation-page__main-title .ukpms-section h2 span, .ukpms-section .parking-page__center-text h2 span, .parking-page__center-text .ukpms-section h2 span, .ukpms-section .parking-page__feature h2 span, .parking-page__feature .ukpms-section h2 span, .ukpms-section .parking-page__main-title h2 span, .parking-page__main-title .ukpms-section h2 span, .ukpms-section .student-housing-page__center-text h2 span, .student-housing-page__center-text .ukpms-section h2 span, .ukpms-section .student-housing-page__main-title h2 span, .student-housing-page__main-title .ukpms-section h2 span {
   color: #2b54a1;
 }
 .ukpms-section p {
@@ -18042,7 +18052,7 @@ mark {
   padding-top: 45px;
   padding-bottom: 25px;
 }
-.ukpms-section__why .title-h2, .ukpms-section__why .club-page__main-title h2, .club-page__main-title .ukpms-section__why h2, .ukpms-section__why .be-segment-page__main-title h2, .be-segment-page__main-title .ukpms-section__why h2, .ukpms-section__why .villa-management-page__main-title h2, .villa-management-page__main-title .ukpms-section__why h2, .ukpms-section__why .segment__prices h2, .segment__prices .ukpms-section__why h2, .ukpms-section__why .segment .h2, .segment .ukpms-section__why .h2, .ukpms-section__why .segment .cta-section__title, .segment .ukpms-section__why .cta-section__title, .ukpms-section__why .segment .card-full__title, .segment .ukpms-section__why .card-full__title, .ukpms-section__why .segment .full-card__title, .segment .ukpms-section__why .full-card__title, .ukpms-section__why .segment .square-text__text, .segment .ukpms-section__why .square-text__text, .ukpms-section__why .segment .about-person__title, .segment .ukpms-section__why .about-person__title, .ukpms-section__why .segment .pricing-card__title, .segment .ukpms-section__why .pricing-card__title, .ukpms-section__why .coworking-page__center-text h2, .coworking-page__center-text .ukpms-section__why h2, .ukpms-section__why .coworking-page__main-title h2, .coworking-page__main-title .ukpms-section__why h2, .ukpms-section__why .vacation-page__center-text h2, .vacation-page__center-text .ukpms-section__why h2, .ukpms-section__why .vacation-page__main-title h2, .vacation-page__main-title .ukpms-section__why h2, .ukpms-section__why .parking-page__center-text h2, .parking-page__center-text .ukpms-section__why h2, .ukpms-section__why .parking-page__feature h2, .parking-page__feature .ukpms-section__why h2, .ukpms-section__why .parking-page__main-title h2, .parking-page__main-title .ukpms-section__why h2, .ukpms-section__why .student-housing-page__center-text h2, .student-housing-page__center-text .ukpms-section__why h2, .ukpms-section__why .student-housing-page__main-title h2, .student-housing-page__main-title .ukpms-section__why h2 {
+.ukpms-section__why .title-h2, .ukpms-section__why .club-page__main-title h2, .club-page__main-title .ukpms-section__why h2, .ukpms-section__why .villa-management-page__main-title h2, .villa-management-page__main-title .ukpms-section__why h2, .ukpms-section__why .segment__prices h2, .segment__prices .ukpms-section__why h2, .ukpms-section__why .segment .h2, .segment .ukpms-section__why .h2, .ukpms-section__why .segment .cta-section__title, .segment .ukpms-section__why .cta-section__title, .ukpms-section__why .segment .card-full__title, .segment .ukpms-section__why .card-full__title, .ukpms-section__why .segment .full-card__title, .segment .ukpms-section__why .full-card__title, .ukpms-section__why .segment .square-text__text, .segment .ukpms-section__why .square-text__text, .ukpms-section__why .segment .about-person__title, .segment .ukpms-section__why .about-person__title, .ukpms-section__why .segment .pricing-card__title, .segment .ukpms-section__why .pricing-card__title, .ukpms-section__why .coworking-page__center-text h2, .coworking-page__center-text .ukpms-section__why h2, .ukpms-section__why .coworking-page__main-title h2, .coworking-page__main-title .ukpms-section__why h2, .ukpms-section__why .vacation-page__center-text h2, .vacation-page__center-text .ukpms-section__why h2, .ukpms-section__why .vacation-page__main-title h2, .vacation-page__main-title .ukpms-section__why h2, .ukpms-section__why .parking-page__center-text h2, .parking-page__center-text .ukpms-section__why h2, .ukpms-section__why .parking-page__feature h2, .parking-page__feature .ukpms-section__why h2, .ukpms-section__why .parking-page__main-title h2, .parking-page__main-title .ukpms-section__why h2, .ukpms-section__why .student-housing-page__center-text h2, .student-housing-page__center-text .ukpms-section__why h2, .ukpms-section__why .student-housing-page__main-title h2, .student-housing-page__main-title .ukpms-section__why h2 {
   padding-bottom: 50px;
 }
 .ukpms-section__why p {
@@ -18568,19 +18578,19 @@ mark {
   background-position-x: right;
 }
 
-.be-segment-page__hero {
-  background: url(../img/ukpms-hero-clouds.png) repeat-x, linear-gradient(0deg, #fff 1%, #c9e1fb 100%);
+.club-page__hero {
+  background: url(../img/club-hero-clouds.png) repeat-x, #f6f8fa;
   background-position: bottom;
   padding-bottom: 120px;
   padding-top: 30px;
 }
 @media only screen and (max-width: 991px) {
-  .be-segment-page__hero {
+  .club-page__hero {
     font-size: 24px;
   }
 }
 
-.be-segment-page__center-text {
+.club-page__center-text {
   background: linear-gradient(0deg, #fff 1%, #f5f9fc 100%);
   position: relative;
   overflow: hidden;
@@ -18588,68 +18598,61 @@ mark {
   padding: 20px 0 50px 0;
 }
 
-.be-segment-page__main-title {
+.club-page__main-title {
   text-align: center;
   padding-bottom: 20px;
 }
-.be-segment-page__main-title h2 {
+.club-page__main-title h2 {
   color: #303030;
   padding-bottom: 25px;
 }
-.be-segment-page__main-title p {
+.club-page__main-title p {
   padding-bottom: 20px;
   color: #525252;
 }
-.be-segment-page__main-title .be-segment-subtitle {
-  padding: 30px 0;
-  font-size: 30px;
-  font-weight: 500;
-  text-align: center;
-  color: #303030;
-}
 
-.be-segment-page__articles {
+.club-page__articles {
   padding-bottom: 45px;
 }
 @media only screen and (max-width: 991px) {
-  .be-segment-page__articles {
+  .club-page__articles {
     padding-bottom: 0;
   }
 }
 
-.be-segment-page__article {
-  padding: 15px 0;
+.club-page__article {
+  padding: 0;
   position: relative;
   color: #2d2d2d;
 }
-.be-segment-page__article article {
+.club-page__article article {
   padding: 50px 0;
 }
 @media only screen and (max-width: 991px) {
-  .be-segment-page__article article {
+  .club-page__article article {
     padding: 30px 0 20px;
   }
 }
-.be-segment-page__article article p {
+.club-page__article article p {
   padding-bottom: 20px;
 }
-.be-segment-page__article article p:last-child {
+.club-page__article article p:last-child {
   padding-bottom: 0;
 }
-.be-segment-page__article ul li {
+.club-page__article ul li {
   padding-bottom: 20px;
   position: relative;
   padding-left: 35px;
-  background: url(../img/be-list-icon.png) no-repeat left top;
+  background: url(../img/club-management-list-icon.png) no-repeat left top;
   color: #2d2d2d;
 }
-.be-segment-page__article ul li .unstyled {
+.club-page__article ul li .unstyled {
   font-size: inherit;
   font-weight: inherit;
   color: inherit;
   padding: 0;
 }
-.be-segment-page__article .segment-article-figure__right {
+.club-page__article .segment-article-figure__right {
   justify-content: flex-start;
 }
 
@@ -18730,84 +18733,6 @@ mark {
 }
 .segment-list__horizontal .segment-list-item p {
   text-align: initial;
-}
-
-.club-page__hero {
-  background: url(../img/club-hero-clouds.png) repeat-x, #f6f8fa;
-  background-position: bottom;
-  padding-bottom: 120px;
-  padding-top: 30px;
-}
-@media only screen and (max-width: 991px) {
-  .club-page__hero {
-    font-size: 24px;
-  }
-}
-
-.club-page__center-text {
-  background: linear-gradient(0deg, #fff 1%, #f5f9fc 100%);
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  padding: 20px 0 50px 0;
-}
-
-.club-page__main-title {
-  text-align: center;
-  padding-bottom: 20px;
-}
-.club-page__main-title h2 {
-  color: #303030;
-  padding-bottom: 25px;
-}
-.club-page__main-title p {
-  padding-bottom: 20px;
-  color: #525252;
-}
-
-.club-page__articles {
-  padding-bottom: 45px;
-}
-@media only screen and (max-width: 991px) {
-  .club-page__articles {
-    padding-bottom: 0;
-  }
-}
-
-.club-page__article {
-  padding: 0;
-  position: relative;
-  color: #2d2d2d;
-}
-.club-page__article article {
-  padding: 50px 0;
-}
-@media only screen and (max-width: 991px) {
-  .club-page__article article {
-    padding: 30px 0 20px;
-  }
-}
-.club-page__article article p {
-  padding-bottom: 20px;
-}
-.club-page__article article p:last-child {
-  padding-bottom: 0;
-}
-.club-page__article ul li {
-  padding-bottom: 20px;
-  position: relative;
-  padding-left: 35px;
-  background: url(../img/club-management-list-icon.png) no-repeat left top;
-  color: #2d2d2d;
-}
-.club-page__article ul li .unstyled {
-  font-size: inherit;
-  font-weight: inherit;
-  color: inherit;
-  padding: 0;
-}
-.club-page__article .segment-article-figure__right {
-  justify-content: flex-start;
 }
 
 .club-management-list {
@@ -20763,6 +20688,436 @@ a.features-card__item:hover, .features-card__item.blog-pagination__button:hover 
   color: #2e2e2e;
 }
 
+.feature-spotlight {
+  position: relative;
+  padding: 100px 0 200px 0;
+  color: #212020;
+  font-size: 18px;
+  font-weight: 300;
+}
+.feature-spotlight .title {
+  padding-bottom: 35px;
+}
+.feature-spotlight .title.blue-border {
+  border-bottom: 5px solid #3cb0fd;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight .title.blue-border {
+    border-bottom-width: 2px;
+  }
+}
+.feature-spotlight .back {
+  color: #212020;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: 25px;
+  display: block;
+}
+.feature-spotlight .back:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight {
+    padding: 70px 0 100px 0;
+  }
+}
+.feature-spotlight__slider-text {
+  padding: 30px 0 0 0;
+  color: #212020;
+  font-size: 18px;
+  font-weight: 300;
+}
+.feature-spotlight__slider-text h1 {
+  color: #212020;
+  font-size: 36px;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__slider-text h1 {
+    font-size: 24px;
+  }
+}
+.feature-spotlight__slider-text p {
+  padding-bottom: 30px;
+}
+.feature-spotlight__slider-text hr {
+  border: 1px solid #cfcfcf;
+  margin: 0 0 30px 0;
+}
+.feature-spotlight__slider-text ul {
+  padding-bottom: 30px;
+}
+.feature-spotlight__slider-text ul li {
+  padding: 0 0 15px 50px;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__slider-text ul li {
+    padding-left: 30px;
+  }
+}
+.feature-spotlight__slider-text ul li:before {
+  width: 24px;
+  height: 24px;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  background: #fbcd04;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__slider-text ul li:before {
+    width: 14px;
+    height: 14px;
+    top: 5px;
+  }
+}
+.feature-spotlight__slider-text .button {
+  color: #000;
+  min-width: 200px;
+}
+.feature-spotlight__slider img {
+  width: 100%;
+}
+.feature-spotlight__slider-big {
+  box-shadow: 0 10px 24px rgba(1, 2, 2, 0.08);
+  margin-bottom: 20px;
+}
+.feature-spotlight__slider-small {
+  position: relative;
+}
+.feature-spotlight__slider-small .slick-slide > div {
+  box-sizing: border-box;
+  padding: 15px;
+  box-shadow: 0 10px 14px rgba(1, 2, 2, 0.08);
+  background-color: #ffffff;
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__slider-small .slick-slide > div {
+    padding: 5px;
+  }
+}
+.feature-spotlight__slider-small img {
+  display: block;
+}
+.feature-spotlight__slider-small .slick-slide {
+  margin: 0 15px;
+  outline: none !important;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__slider-small .slick-slide {
+    margin: 0 5px;
+  }
+}
+.feature-spotlight__slider-small .slick-list {
+  margin: 0 -15px;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__slider-small .slick-list {
+    margin: 0 -5px;
+  }
+}
+.feature-spotlight__slider-small .slick-current > div {
+  border: 1px solid #cfcfcf;
+}
+.feature-spotlight__slider-small .slick-list {
+  outline: none !important;
+}
+.feature-spotlight__slider-small .slick-arrow {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  height: 100%;
+  width: 170px;
+  z-index: 2;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+.feature-spotlight__slider-small .slick-arrow:before {
+  content: "";
+  background: url(../img/arrow_Left.png) no-repeat;
+  width: 32px;
+  height: 22px;
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 30px;
+  transform: translateY(-50%);
+}
+.feature-spotlight__slider-small .slick-arrow.slick-prev {
+  right: auto;
+  left: -15px;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.feature-spotlight__slider-small .slick-arrow.slick-prev:before {
+  right: auto;
+  left: 30px;
+  transform: translateY(-50%) scale(-1, 1);
+}
+.feature-spotlight__slider-small .slick-arrow.slick-disabled {
+  visibility: hidden;
+}
+.feature-spotlight__grid {
+  padding-bottom: 150px;
+}
+.feature-spotlight__grid .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__grid {
+    padding-bottom: 50px;
+  }
+}
+.feature-spotlight__grid-item {
+  background-color: #f2f2f2;
+  display: flex;
+  width: 100%;
+  min-height: 25.26vw;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .feature-spotlight__grid-item {
+    padding: 15px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__grid-item {
+    height: auto;
+    min-height: 0px;
+  }
+}
+.feature-spotlight__grid-item:hover .feature-spotlight__grid-button {
+  opacity: 1;
+}
+.feature-spotlight__grid-item img {
+  width: 80%;
+}
+.feature-spotlight__grid-item figcaption {
+  color: #ffffff;
+  font-size: 1.875vw;
+  font-weight: 700;
+  padding-bottom: 2.34375vw;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__grid-item figcaption {
+    font-size: 16px;
+    padding-bottom: 1em;
+  }
+}
+.feature-spotlight__grid-item.light figcaption {
+  color: #212020;
+}
+.feature-spotlight__grid-button {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 4.6875vw;
+  background-image: linear-gradient(to top, rgba(51, 51, 46, 0.5) 0%, rgba(51, 51, 46, 0) 100%);
+  transition: all 0.5s ease;
+}
+@media only screen and (min-width: 768px) {
+  .feature-spotlight__grid-button .button {
+    font-size: 0.9375vw;
+    text-transform: none;
+    color: #212020;
+    padding: 1.145vw 2.08vw;
+  }
+}
+.feature-spotlight__text {
+  padding-bottom: 60px;
+}
+.feature-spotlight__text p {
+  padding-bottom: 35px;
+}
+.feature-spotlight__text.pb {
+  padding-bottom: 150px;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__text.pb {
+    padding-bottom: 50px;
+  }
+}
+.feature-spotlight__tag {
+  padding-bottom: 40px;
+}
+.feature-spotlight__tag:last-child {
+  padding-bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__tag {
+    text-align: center;
+  }
+}
+.feature-spotlight__tag-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbcd04;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__tag-img {
+    display: inline-flex;
+    margin-bottom: 15px;
+  }
+}
+.feature-spotlight__2collumn-text {
+  color: #212020;
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__2collumn-text {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+}
+.feature-spotlight__2collumn-text p {
+  padding-bottom: 30px;
+}
+.feature-spotlight__2collumn-text p strong {
+  font-size: 22px;
+}
+.feature-spotlight__picture {
+  padding-bottom: 100px;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__picture {
+    padding-bottom: 30px;
+  }
+}
+.feature-spotlight__picture img {
+  width: 100%;
+}
+.feature-spotlight .costumer-page__view-list h2 {
+  padding-bottom: 35px;
+}
+.feature-spotlight__text-section {
+  color: #212020;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  padding-bottom: 100px;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__text-section {
+    padding-bottom: 50px;
+  }
+}
+.feature-spotlight__text-section h2 {
+  color: #212020;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 40px;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__text-section h2 {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+}
+.feature-spotlight__text-section p {
+  padding-bottom: 30px;
+}
+.feature-spotlight__text-section ul li {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+.feature-spotlight__text-section ul li small {
+  padding-left: 35px;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__text-section ul li small {
+    padding-left: 20px;
+  }
+}
+.feature-spotlight__text-section-numb {
+  color: #fbcd05;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 44px;
+  text-transform: uppercase;
+  background-color: #fff7e5;
+  min-width: 70px;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transform: rotate(-45deg);
+}
+.feature-spotlight__text-section-numb span {
+  display: block;
+  transform: rotate(45deg);
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__text-section-numb {
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 20px;
+  }
+}
+.feature-spotlight__pager {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.feature-spotlight__pager-item {
+  width: calc(50% - 15px);
+  box-shadow: 0 20px 50px rgba(1, 1, 1, 0.05);
+  border-radius: 10px;
+  background-color: #ffffff;
+  max-height: 208px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #212020;
+  font-size: 22px;
+  font-weight: 700;
+}
+.feature-spotlight__pager-item:hover {
+  opacity: 0.8;
+}
+@media only screen and (max-width: 767px) {
+  .feature-spotlight__pager-item {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+
+.feature-spotlight-bg {
+  background: url(../img/feature-spotlight-bg.jpg) no-repeat bottom center;
+}
+
 .job-listing-single-bnr {
   height: auto;
   padding: 30px 0;
@@ -20869,162 +21224,6 @@ a.features-card__item:hover, .features-card__item.blog-pagination__button:hover 
   }
 }
 
-/*----------contacts----------*/
-.contacts_page {
-  background: #fafafa;
-  border-bottom: 1px solid #e8e8e8;
-}
-.contacts_page .container {
-  overflow: visible;
-}
-
-.contact_img {
-  float: left;
-  margin-left: -20px;
-  position: relative;
-}
-.contact_img img {
-  display: block;
-}
-
-.contact_side {
-  overflow: hidden;
-  padding: 25px 0 0 0;
-  width: 520px;
-  float: left;
-}
-
-.contact_top {
-  overflow: hidden;
-  padding-bottom: 20px;
-}
-.contact_top .title {
-  font-weight: 500;
-  text-transform: uppercase;
-  float: left;
-  padding-bottom: 0;
-  background: none;
-}
-.contact_top .title:after {
-  margin: 15px 0 0 0;
-}
-.contact_top .contact_txt {
-  float: right;
-  width: 220px;
-  text-align: right;
-}
-.contact_top .contact_txt .tel {
-  font-size: 25px;
-  color: #53545e;
-  display: block;
-  text-decoration: none;
-}
-.contact_top .contact_txt .email {
-  font-size: 16px;
-  color: #009ddc;
-  display: block;
-  font-weight: 300;
-  text-decoration: none;
-}
-
-.contact_form div {
-  margin-bottom: 10px;
-  padding-left: 1%;
-}
-.contact_form input, .contact_form .checkout-form__input--card,
-.contact_form textarea,
-.contact_form select {
-  width: 98%;
-  height: 50px;
-  border: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.27);
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 300;
-  color: #999999;
-  padding: 0 15px;
-}
-.contact_form input.small, .contact_form .small.checkout-form__input--card,
-.contact_form textarea.small,
-.contact_form select.small {
-  width: 48%;
-}
-.contact_form input.small:first-child, .contact_form .small.checkout-form__input--card:first-child,
-.contact_form textarea.small:first-child,
-.contact_form select.small:first-child {
-  margin-right: 1.3%;
-}
-.contact_form small {
-  display: block;
-  color: #636363;
-  font-size: 14px;
-  font-weight: 300;
-  padding-bottom: 17px;
-}
-.contact_form textarea {
-  padding: 13px 15px;
-  height: 120px;
-}
-.contact_form label {
-  color: #464646;
-  font-size: 16px;
-  font-weight: 300;
-}
-.contact_form label:first-of-type {
-  padding: 0 47px 0 0;
-}
-.contact_form label input, .contact_form label .checkout-form__input--card,
-.contact_form label select {
-  width: 76px;
-  margin-left: 17px;
-}
-.contact_form input.button, .contact_form .button.checkout-form__input--card {
-  margin-top: 15px;
-  color: #fff;
-  box-shadow: none;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 300;
-  background: #20a9df;
-  width: 215px;
-  border-radius: 25px;
-}
-.contact_form input.button:hover, .contact_form .button.checkout-form__input--card:hover {
-  background: #0f91c4;
-}
-
-.advantage_wrap {
-  padding: 44px 0;
-}
-.advantage_wrap .title {
-  background: none;
-  margin-bottom: 0;
-}
-
-.advantage_block {
-  padding: 0 0 10px 0;
-  display: flex;
-  justify-content: space-between;
-}
-.advantage_block figure {
-  padding-bottom: 30px;
-  display: inline-block;
-  vertical-align: top;
-  width: 250px;
-  overflow: hidden;
-  color: #53545e;
-  font-size: 14px;
-}
-.advantage_block figure figcaption {
-  overflow: hidden;
-  font-weight: 300;
-}
-.advantage_block figure img {
-  float: left;
-  padding: 0 20px 0 0;
-}
-
-/*----------end contacts----------*/
 .about-page-top__img {
   position: relative;
   z-index: 1;
