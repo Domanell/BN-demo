@@ -15,20 +15,10 @@ $(document).on('ready', function () {
 	//wow
 	if (typeof WOW === 'function') new WOW().init();
 
-	//menu
-	$('.navigation-dropdown__click').on('click', function () {
-		$(this).parent().find('.navigation-dropdown').toggleClass('active');
-	});
-	$('.dropdown-menu__button').on('click', function () {
-		$(this).toggleClass('active');
-		$(this).parent().find('.dropdown-menu__dropdown').toggleClass('active');
-	});
-	$('body').on('click', function (e) {
-		if (!$(e.target).hasClass('dropdown-menu__button') && $('.dropdown-menu__button').hasClass('active')) {
-			$('.dropdown-menu__button').removeClass('active');
-			$('.dropdown-menu__dropdown').removeClass('active');
-		}
-	});
+	// RTL
+	if ($('html').attr('dir') === 'rtl') {
+		$('body').addClass('rtl');
+	}
 	//form
 	$('.footer__form, .subscribe-form').on('submit', function () {
 		$.fancybox.open({ src: '#modal-thanks', type: 'inline' });
@@ -187,10 +177,6 @@ $(document).on('ready', function () {
 	}
 
 	//accordion
-	$('.faq__trigger').on('click', function () {
-		$(this).next().slideToggle('fast');
-		$(this).toggleClass('active');
-	});
 	$('.segment-accordion__trigger').on('click', function () {
 		$(this).next().slideToggle('fast');
 		$(this).parent().toggleClass('active');
@@ -199,8 +185,12 @@ $(document).on('ready', function () {
 		$('.add-code-container').slideToggle('fast');
 	});
 	$('.accordion__header').on('click', function () {
-		$(this).parent().find('.accordion__content').slideToggle('fast');
-		$(this).toggleClass('active');
+		const parent = $(this).closest('.accordion');
+		const content = parent.find('.accordion__content');
+		const isExpanded = parent.hasClass('accordion--expanded');
+		content[0].style.display = isExpanded ? 'block' : 'none';
+		parent.toggleClass('accordion--expanded');
+		content[isExpanded ? 'slideUp' : 'slideDown']('fast');
 	});
 	$('.interactive-card__trigger').on('click', function (event) {
 		const $trigger = $(this);
@@ -629,7 +619,7 @@ $(document).on('ready', function () {
 					item.style.display = '';
 				},
 				collapse: () => {
-					header.classList.remove('active');
+					item.classList.remove('accordion--expanded');
 					content.style.display = 'none';
 				},
 			};
@@ -681,7 +671,6 @@ $(document).on('ready', function () {
 			setActiveCategory(hasTerm ? 'all' : categoryList[1]?.category);
 
 			// Show/hide "nothing found" message
-			console.log('🚀 ~ hasResults:', hasResults);
 			nothingFoundText.style.display = hasResults ? 'none' : 'block';
 		};
 
@@ -744,3 +733,141 @@ function handleBasePlanCurrencyChange(target) {
 	const basePlanPriceText = document.querySelector('.plan-detail__price');
 	basePlanPriceText.innerText = formatNumberWithCommas(basePlanPriceText.dataset.price);
 }
+
+// Form validation
+const FormValidator = (function () {
+	// Validators
+	const validators = {
+		required: (value) => ({
+			valid: value.length > 0,
+			message: 'Complete this field.',
+		}),
+		email: (value) => ({
+			valid: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value),
+			message: 'Please enter a valid email address.',
+		}),
+		phone: (value, iti) => {
+			const isValid = iti?.isValidNumber ? iti.isValidNumber() : /[0-9()+\-.\s]{7,}/.test(value);
+			return {
+				valid: isValid,
+				message: 'Please enter a valid phone number.',
+			};
+		},
+	};
+
+	// Utility functions
+	const getBaseId = (el) => (el?.id || '').split(':').pop();
+
+	const setFieldError = (inputElement, message) => {
+		const errorElement = document.getElementById(getBaseId(inputElement) + '-error');
+		if (!errorElement) return;
+
+		errorElement.textContent = message || '';
+		errorElement.style.display = message ? 'block' : 'none';
+		inputElement.toggleAttribute('aria-invalid', !!message);
+	};
+
+	// Get field value
+	const getFieldValue = (input, iti) => {
+		const id = getBaseId(input);
+		if (id === 'phone' && iti) {
+			return iti.getNumber();
+		}
+		return input.value.trim();
+	};
+
+	// Validate single field
+	const validateField = (input, iti = null) => {
+		const id = getBaseId(input);
+		const value = getFieldValue(input, iti);
+		const isRequired = input.hasAttribute('required');
+
+		// If field is empty
+		if (!value) {
+			if (isRequired) {
+				setFieldError(input, validators.required(value).message);
+				return false;
+			}
+			setFieldError(input, '');
+			return true;
+		}
+
+		// Field has value - validate by type
+		if (id === 'email') {
+			const result = validators.email(value);
+			setFieldError(input, result.valid ? '' : result.message);
+			return result.valid;
+		}
+
+		if (id === 'phone') {
+			const result = validators.phone(value, iti);
+			setFieldError(input, result.valid ? '' : result.message);
+			return result.valid;
+		}
+
+		// Other fields - just check if filled when required
+		setFieldError(input, '');
+		return true;
+	};
+
+	// Initialize phone input
+	const initPhoneInput = (phoneInput) => {
+		if (!phoneInput || !window.intlTelInput) return null;
+
+		return window.intlTelInput(phoneInput, {
+			initialCountry: 'auto',
+			autoPlaceholder: 'off',
+			geoIpLookup: (success, failure) => {
+				fetch('https://ipapi.co/json')
+					.then((res) => res.json())
+					.then((data) => success(data.country_code))
+					.catch(() => failure());
+			},
+		});
+	};
+
+	// Public API
+	return {
+		init: function (formSelector) {
+			const form = document.querySelector(formSelector);
+			if (!form) return null;
+
+			const formInputs = form.querySelectorAll('input, select, textarea');
+			const emailInput = form.querySelector('input[name="email"]');
+			const phoneInput = form.querySelector('.phone-field');
+
+			// Initialize phone only if exists
+			const iti = phoneInput ? initPhoneInput(phoneInput) : null;
+
+			// Validate entire form
+			const validateForm = () => {
+				let isValid = true;
+				formInputs.forEach((input) => {
+					if (!validateField(input, iti)) {
+						isValid = false;
+					}
+				});
+				return isValid;
+			};
+
+			// Email live validation
+			if (emailInput) {
+				emailInput.addEventListener('input', () => {
+					const value = emailInput.value.trim();
+					if (value && validators.email(value).valid) {
+						setFieldError(emailInput, '');
+					}
+				});
+
+				emailInput.addEventListener('blur', () => validateField(emailInput, iti));
+			}
+
+			// Return API
+			return {
+				validate: validateForm,
+				validateField: (input) => validateField(input, iti),
+				form: form,
+			};
+		},
+	};
+})();
