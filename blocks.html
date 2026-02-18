@@ -308,6 +308,11 @@
 				margin-bottom: 40px;
 				scroll-margin-top: 80px;
 			}
+			.c-important-note {
+				font-size: 14px;
+				color: #dc3545;
+				margin-top: 4px;
+			}
 		</style>
 		<!-- Configurator Panel -->
 		<div class="c-configurator row flex-column g-2" id="configurator">
@@ -379,7 +384,14 @@
 											</div>
 										</div>
 										<div class="col-lg-5 col-lg-auto">
-											<video src="video/homepage-hero.mp4" autoplay loop muted playsinline class="hero__video"></video>
+											<video
+												src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/video/homepage-hero.mp4"
+												autoplay
+												loop
+												muted
+												playsinline
+												class="hero__video"
+											></video>
 										</div>
 									</div>
 								</div>
@@ -417,7 +429,7 @@
 									<div class="hero-full__wrapper">
 										<div class="hero-full__media-bg">
 											<!-- <img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/invest-bg.jpg" alt="Investment Background" /> -->
-											<video src="video/solutions-hero.mp4" autoplay loop muted playsinline></video>
+											<video src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/video/solutions-hero.mp4" autoplay loop muted playsinline></video>
 										</div>
 										<div class="hero-full__content">
 											<h1 class="hero-full__title h1">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
@@ -476,7 +488,152 @@
 											</div>
 											<div class="hero-base__media">
 												<!-- <img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/homepage-hero.jpg" alt="Salesforce Property Management System" class="hero-base__img" /> -->
-												<video src="video/solutions-hero.mp4" autoplay loop muted playsinline class="hero-base__video"></video>
+												<video
+													src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/video/solutions-hero.mp4"
+													autoplay
+													loop
+													muted
+													playsinline
+													class="hero-base__video"
+												></video>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="c-block-section">
+						<div class="c-category-header">
+							<div class="">
+								<h2 class="h2">Hero 4 - Blur *</h2>
+								<p class="c-important-note">
+									* To apply lines background, the <b>wrapper</b> element in <b>BN Template</b> should have the <code>bg-circle-lines</code> class
+								</p>
+							</div>
+							<div class="c-controls">
+								<ul class="tabs">
+									<li class="tabs__item">
+										<button
+											class="tabs__button active"
+											data-action="block-mod"
+											data-selector=".hero-blur"
+											data-mod-class="hero-blur hero-blur--center hero-blur--has-icons"
+										>
+											With Icons
+										</button>
+									</li>
+									<li class="tabs__item">
+										<button class="tabs__button" data-action="block-mod" data-selector=".hero-blur" data-mod-class="hero-blur hero-blur--center">
+											Without Icons
+										</button>
+									</li>
+								</ul>
+								<button class="button copy-button">Copy</button>
+							</div>
+						</div>
+						<div class="c-block-content bg-circle-lines">
+							<div class="hero-blur hero-blur--center hero-blur--has-icons">
+								<div class="container">
+									<div class="hero-blur__wrapper">
+										<!-- Left icons -->
+										<div class="hero-icons hero-icons--left-bottom">
+											<div class="hero-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+													<g clip-path="url(#clip0_416_5154)">
+														<path
+															d="M0.646484 12.2886V12.612L6.79082 18.7563H7.11421C8.0578 17.8132 9.33732 17.2834 10.6715 17.2834C12.0056 17.2834 13.2851 17.8132 14.2287 18.7563L25.8706 30.3982H30.398V25.8708L29.1045 24.5773H26.5174V21.9902H23.9303V19.4031L18.7561 14.2289C17.813 13.2853 17.2831 12.0058 17.2831 10.6717C17.2831 9.33757 17.813 8.05804 18.7561 7.11445V6.79106L12.6118 0.646729H12.2884C9.20076 0.646729 6.2396 1.87328 4.05632 4.05656C1.87304 6.23984 0.646484 9.201 0.646484 12.2886Z"
+															stroke="var(--color-primary)"
+															stroke-width="1.5"
+														/>
+														<path
+															d="M5.82031 7.76112C5.82031 7.24651 6.02474 6.75299 6.38862 6.38911C6.7525 6.02523 7.24602 5.8208 7.76063 5.8208C8.27523 5.8208 8.76876 6.02523 9.13264 6.38911C9.49652 6.75299 9.70095 7.24651 9.70095 7.76112C9.70095 8.27572 9.49652 8.76925 9.13264 9.13313C8.76876 9.49701 8.27523 9.70143 7.76063 9.70143C7.24602 9.70143 6.7525 9.49701 6.38862 9.13313C6.02474 8.76925 5.82031 8.27572 5.82031 7.76112Z"
+															stroke="var(--color-primary)"
+															stroke-width="1.5"
+														/>
+													</g>
+													<defs>
+														<clipPath id="clip0_416_5154">
+															<rect width="31.0451" height="31.0451" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+											</div>
+											<div class="hero-icon hero-icon--large hero-icon--bottom">
+												<svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
+													<path
+														d="M16.7766 29.7961V15.5724H8.94646C8.4676 15.5724 8.07941 15.3751 7.7819 14.9804C7.4832 14.5857 7.4109 14.1607 7.56499 13.7056L10.2462 5.13581C10.4382 4.53248 10.7819 4.04651 11.2774 3.67788C11.7752 3.31043 12.3406 3.12671 12.9735 3.12671H22.3576C22.9906 3.12671 23.5554 3.31043 24.052 3.67788C24.5499 4.04651 24.8942 4.53248 25.085 5.13581L27.7662 13.7056C27.9203 14.1619 27.848 14.5869 27.5493 14.9804C27.2518 15.3751 26.8636 15.5724 26.3847 15.5724H18.5546V29.7961H16.7766ZM9.39807 13.7945H25.9331L23.4173 5.69053C23.3485 5.46295 23.2176 5.27508 23.0244 5.12692C22.8312 4.97875 22.6089 4.90467 22.3576 4.90467H12.9753C12.724 4.90467 12.5012 4.97875 12.3068 5.12692C12.1124 5.27508 11.982 5.46295 11.9157 5.69053L9.39807 13.7945ZM11.4427 33.3521V31.5741H23.8885V33.3521H11.4427Z"
+														fill="var(--color-primary)"
+													/>
+												</svg>
+											</div>
+										</div>
+										<!-- Right icons -->
+										<div class="hero-icons hero-icons--right-top">
+											<div class="hero-icon hero-icon--large">
+												<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+													<path
+														d="M19.9115 31.7106H9.58715C6.80547 31.7106 5.4161 31.7106 4.5518 30.8463C3.6875 29.982 3.6875 28.5926 3.6875 25.811V9.58691C3.6875 6.80522 3.6875 5.41585 4.5518 4.55155C5.4161 3.68726 6.80547 3.68726 9.58715 3.68726H14.0119C16.7936 3.68726 18.1829 3.68726 19.0472 4.55155C19.9115 5.41585 19.9115 6.80522 19.9115 9.58691V31.7106ZM19.9115 31.7106V11.0618H25.8112C28.5929 11.0618 29.9822 11.0618 30.8465 11.9261C31.7108 12.7904 31.7108 14.1798 31.7108 16.9615V25.811C31.7108 28.5926 31.7108 29.982 30.8465 30.8463C29.9822 31.7106 28.5929 31.7106 25.8112 31.7106H19.9115ZM8.11224 8.112H9.58715M14.0119 8.112H15.4868M8.11224 12.5367H9.58715M14.0119 12.5367H15.4868M8.11224 16.9615H9.58715M14.0119 16.9615H15.4868M8.11224 21.3862H9.58715M14.0119 21.3862H15.4868M11.7995 31.7106V27.2859M25.0737 15.4866H26.5487M25.0737 19.9113H26.5487M25.0737 24.336H26.5487"
+														stroke="var(--color-primary)"
+														stroke-width="1.5"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+													/>
+												</svg>
+											</div>
+											<div class="hero-icon hero-icon--small hero-icon--bottom">
+												<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+													<g clip-path="url(#clip0_416_5137)">
+														<path
+															d="M23.2447 8.94042V9.45181C23.2447 13.4273 24.7801 14.4763 28.0129 16.0927V22.053H25.0328M23.2447 8.94042H25.6288V8.34439C25.6288 8.34439 23.8407 7.15234 23.2447 5.36426H0.595703V22.053H2.97981M23.2447 8.94042H17.2844V13.7086H24.4594M25.0328 22.053C25.0328 22.8434 24.7188 23.6014 24.1599 24.1603C23.601 24.7192 22.843 25.0331 22.0527 25.0331C21.2623 25.0331 20.5043 24.7192 19.9454 24.1603C19.3865 23.6014 19.0725 22.8434 19.0725 22.053M25.0328 22.053C25.0328 21.2626 24.7188 20.5046 24.1599 19.9457C23.601 19.3868 22.843 19.0729 22.0527 19.0729C21.2623 19.0729 20.5043 19.3868 19.9454 19.9457C19.3865 20.5046 19.0725 21.2626 19.0725 22.053M2.97981 22.053C2.97981 22.8434 3.29379 23.6014 3.85267 24.1603C4.41155 24.7192 5.16956 25.0331 5.95994 25.0331C6.75032 25.0331 7.50833 24.7192 8.06721 24.1603C8.6261 23.6014 8.94007 22.8434 8.94007 22.053M2.97981 22.053C2.97981 21.2626 3.29379 20.5046 3.85267 19.9457C4.41155 19.3868 5.16956 19.0729 5.95994 19.0729C6.75032 19.0729 7.50833 19.3868 8.06721 19.9457C8.6261 20.5046 8.94007 21.2626 8.94007 22.053M19.0725 22.053H8.94007M13.7083 13.7086V8.94042H4.17186V13.7086H13.7083Z"
+															stroke="var(--color-primary)"
+															stroke-width="1.5"
+														/>
+													</g>
+													<defs>
+														<clipPath id="clip0_416_5137">
+															<rect width="28.6093" height="28.6093" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+											</div>
+											<div class="hero-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+													<g clip-path="url(#clip0_416_5162)">
+														<path
+															d="M0 16.1694H18.7098M27.8578 16.1694H31.0451M12.9354 12.9355V9.70164C12.9354 9.70164 10.9951 8.40809 7.76127 8.40809C4.5274 8.40809 2.58709 9.70164 2.58709 9.70164V12.9355M20.6967 31.0451V23.9306H16.1693V23.6072L16.2624 23.4132C18.3307 19.0693 19.4037 14.3187 19.4032 9.5076V9.08332C20.6462 8.62877 21.9603 8.39967 23.2838 8.4068C24.9499 8.4068 26.2732 8.75088 27.1644 9.08332V9.5076C27.1644 14.3196 28.2381 19.0682 30.3052 23.4119L30.3983 23.6059V23.9293H25.8709V31.0451M7.56723 5.821C7.56723 5.821 5.49756 4.52746 5.49756 2.91053C5.49756 2.31084 5.73579 1.73572 6.15983 1.31168C6.58387 0.887638 7.15899 0.649414 7.75868 0.649414C8.35836 0.649414 8.93349 0.887638 9.35753 1.31168C9.78157 1.73572 10.0198 2.31084 10.0198 2.91053C10.0198 4.52746 7.9553 5.821 7.9553 5.821H7.56723ZM23.0898 5.821C23.0898 5.821 21.0201 4.52746 21.0201 2.91053C21.0201 2.31084 21.2583 1.73572 21.6824 1.31168C22.1064 0.887638 22.6815 0.649414 23.2812 0.649414C23.8809 0.649414 24.456 0.887638 24.8801 1.31168C25.3041 1.73572 25.5423 2.31084 25.5423 2.91053C25.5423 4.52746 23.4778 5.821 23.4778 5.821H23.0898Z"
+															stroke="var(--color-primary)"
+															stroke-width="1.5"
+														/>
+													</g>
+													<defs>
+														<clipPath id="clip0_416_5162">
+															<rect width="31.0451" height="31.0451" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="hero-blur__content">
+											<div class="hero-blur__eyebrow-badge">
+												<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+													<path
+														d="M12.4583 15.8124C13.4002 17.3829 14.7349 18.6809 16.331 19.5787L17.7292 20.3645V20.6041H5.27083V20.3645L6.66904 19.5787C8.26513 18.6809 9.59983 17.3829 10.5417 15.8124M1.4375 12.9374H21.5625M21.5625 2.39575H1.4375V15.8124H21.5625V2.39575Z"
+														stroke="var(--color-primary)"
+														stroke-width="1.5"
+													/>
+												</svg>
+												Flexible platform
+											</div>
+											<h1 class="hero-blur__title h1">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+											<p class="hero-blur__text text--limit-lg">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi cum omnis expedita! Odio assumenda, minus esse atque quod cum dolorem,
+												ipsa corrupti consectetur beatae in hic quibusdam eligendi ullam ratione.
+											</p>
+											<div class="hero-blur__buttons">
+												<a class="button" href="/demo">Button</a>
+												<a class="button-secondary" href="/demo">Button Secondary</a>
 											</div>
 										</div>
 									</div>
@@ -498,7 +655,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Base
 										</button>
@@ -509,7 +666,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--dark"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Dark
 										</button>
@@ -520,7 +677,7 @@
 											data-action="block-mod-media-image"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Image
 										</button>
@@ -531,7 +688,7 @@
 											data-action="block-mod-media-video"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Video
 										</button>
@@ -660,7 +817,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Base
 										</button>
@@ -671,7 +828,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--dark"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Dark
 										</button>
@@ -682,7 +839,7 @@
 											data-action="block-mod-media-image"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Image
 										</button>
@@ -693,7 +850,7 @@
 											data-action="block-mod-media-video"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Video
 										</button>
@@ -816,7 +973,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Base
 										</button>
@@ -827,7 +984,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--dark"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Dark
 										</button>
@@ -838,7 +995,7 @@
 											data-action="block-mod-media-image"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Image
 										</button>
@@ -849,7 +1006,7 @@
 											data-action="block-mod-media-video"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Video
 										</button>
@@ -1024,7 +1181,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Base
 										</button>
@@ -1035,7 +1192,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--dark"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Dark
 										</button>
@@ -1056,7 +1213,7 @@
 									</div>
 									<div class="block__body">
 										<div class="article-section">
-											<div class="row align-items-center g-5">
+											<div class="row align-items-center gx-lg-5 gy-5 gy-lg-0">
 												<div class="col-lg-6 article-section__image-col">
 													<img src="https://placehold.co/600x400.jpg" alt="Section Image" class="article-section__image" />
 												</div>
@@ -1111,7 +1268,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Base
 										</button>
@@ -1122,7 +1279,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--dark"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Dark
 										</button>
@@ -1136,7 +1293,7 @@
 								<div class="container">
 									<div class="block__body">
 										<div class="article-section">
-											<div class="row align-items-center g-5">
+											<div class="row align-items-center gx-lg-5 gy-5 gy-lg-0">
 												<div class="col-lg-6 article-section__image-col">
 													<img src="https://placehold.co/600x400.jpg" alt="Section Image" class="article-section__image" />
 												</div>
@@ -1155,6 +1312,50 @@
 															managers and hoteliers.
 														</p>
 													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="c-block-section">
+						<div class="c-category-header">
+							<h2 class="h2">Text 4 - Feature Columns</h2>
+							<div class="c-controls">
+								<ul class="tabs">
+									<li class="tabs__item">
+										<button class="tabs__button active" data-action="block-mod" data-selector=".article-section" data-mod-class="article-section">
+											Image left
+										</button>
+									</li>
+									<li class="tabs__item">
+										<button
+											class="tabs__button"
+											data-action="block-mod"
+											data-selector=".article-section"
+											data-mod-class="article-section article-section--reverse"
+										>
+											Image right
+										</button>
+									</li>
+								</ul>
+								<button class="button copy-button">Copy</button>
+							</div>
+						</div>
+						<div class="c-block-content">
+							<div class="block">
+								<div class="container">
+									<div class="block__body">
+										<div class="article-section">
+											<div class="row justify-content-between align-items-center gx-lg-5 gy-5 gy-lg-0">
+												<div class="col-lg-6 article-section__image-col">
+													<img src="./img/hubpage-feature-promo-be.png" alt="Section Image" class="article-section__image" />
+												</div>
+												<div class="col-lg-6 col-xl-5">
+													<p class="h2 highlight-gray">We don’t sell off-the-shelf tools</p>
+													<p class="h2">We build residential property management software around how communities actually operate.</p>
 												</div>
 											</div>
 										</div>
@@ -1201,7 +1402,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Base
 										</button>
@@ -1212,7 +1413,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--dark"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Dark
 										</button>
@@ -1223,7 +1424,7 @@
 											data-action="block-mod-media-image"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Image
 										</button>
@@ -1234,7 +1435,7 @@
 											data-action="block-mod-media-video"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Video
 										</button>
@@ -1472,7 +1673,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Base
 										</button>
@@ -1483,7 +1684,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--dark"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Dark
 										</button>
@@ -1494,7 +1695,7 @@
 											data-action="block-mod-media-image"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Image
 										</button>
@@ -1505,7 +1706,7 @@
 											data-action="block-mod-media-video"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Video
 										</button>
@@ -1603,7 +1804,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Base
 										</button>
@@ -1614,7 +1815,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--dark"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Dark
 										</button>
@@ -1625,7 +1826,7 @@
 											data-action="block-mod-media-image"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Image
 										</button>
@@ -1636,7 +1837,7 @@
 											data-action="block-mod-media-video"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Video
 										</button>
@@ -1704,7 +1905,151 @@
 					</div>
 					<div class="c-block-section">
 						<div class="c-category-header">
-							<h2 class="h2">Card 6 - Numbered</h2>
+							<h2 class="h2">Card 6 - Primary Icon With Arrow Link</h2>
+							<div class="c-controls">
+								<div class="">
+									Columns:&nbsp;
+									<ul class="tabs">
+										<li class="tabs__item">
+											<button class="tabs__button" data-action="columns" data-selector=".block__body > .row" data-mod-class="col-md-6" data-col="2">2</button>
+										</li>
+										<li class="tabs__item">
+											<button
+												class="tabs__button active"
+												data-action="columns"
+												data-selector=".block__body > .row"
+												data-mod-class="col-md-6 col-lg-4"
+												data-col="3"
+											>
+												3
+											</button>
+										</li>
+										<li class="tabs__item">
+											<button class="tabs__button" data-action="columns" data-selector=".block__body > .row" data-mod-class="col-md-6 col-xxl-3" data-col="4">
+												4
+											</button>
+										</li>
+									</ul>
+								</div>
+								<ul class="tabs">
+									<li class="tabs__item">
+										<button class="tabs__button" data-action="block-mod" data-selector=".icon-card" data-mod-class="icon-card  icon-card--text-small ">
+											Base
+										</button>
+									</li>
+									<li class="tabs__item">
+										<button
+											class="tabs__button active"
+											data-action="block-mod"
+											data-selector=".icon-card"
+											data-mod-class="icon-card  icon-card--text-small  icon-card--inverse"
+										>
+											Inverse
+										</button>
+									</li>
+								</ul>
+								<button class="button copy-button">Copy</button>
+							</div>
+						</div>
+						<div class="c-block-content">
+							<div class="block">
+								<div class="container">
+									<div class="block__header">
+										<h2 class="h2 block__title">Block Title</h2>
+										<p class="block__subtitle">
+											Block Subtitle - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptatibus a ullam adipisci eveniet cupiditate quasi
+											possimus autem
+										</p>
+									</div>
+									<div class="block__body">
+										<div class="row g-4 justify-content-center">
+											<div class="col-md-6 col-lg-4">
+												<div class="icon-card icon-card--inverse icon-card--text-small">
+													<div class="icon-card__header">
+														<div class="icon-card__icon">
+															<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+																<path
+																	d="M17.4997 18.9584C19.0468 18.9584 20.5305 18.3438 21.6245 17.2499C22.7184 16.1559 23.333 14.6722 23.333 13.1251C23.333 11.578 22.7184 10.0943 21.6245 9.00029C20.5305 7.90633 19.0468 7.29175 17.4997 7.29175C15.9526 7.29175 14.4688 7.90633 13.3749 9.00029C12.2809 10.0943 11.6663 11.578 11.6663 13.1251C11.6663 14.6722 12.2809 16.1559 13.3749 17.2499C14.4688 18.3438 15.9526 18.9584 17.4997 18.9584ZM17.4997 18.9584C15.179 18.9584 12.9534 19.8803 11.3125 21.5212C9.67155 23.1622 8.74968 25.3878 8.74968 27.7084V32.0834M17.4997 18.9584C19.8203 18.9584 22.0459 19.8803 23.6869 21.5212C25.3278 23.1622 26.2497 25.3878 26.2497 27.7084V32.0834M18.958 7.29175C19.5472 4.86508 21.8966 2.91675 24.7913 2.91675C27.9588 2.91675 30.5955 5.52716 30.6247 8.75008C30.5955 11.973 27.9588 14.5834 24.7913 14.5834M24.7913 14.5834H23.333M24.7913 14.5834C29.5863 14.5834 33.5413 18.5005 33.5413 23.3334V26.2501M16.0413 7.29175C15.4522 4.86508 13.1028 2.91675 10.208 2.91675C7.04051 2.91675 4.40384 5.52716 4.37467 8.75008C4.40384 11.973 7.04051 14.5834 10.208 14.5834M10.208 14.5834H11.6663M10.208 14.5834C5.41301 14.5834 1.45801 18.5005 1.45801 23.3334V26.2501"
+																	stroke="currentColor"
+																	stroke-width="1.5"
+																/>
+															</svg>
+														</div>
+													</div>
+													<div class="icon-card__row">
+														<div class="icon-card__body">
+															<h3 class="icon-card__title">Card Title</h3>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio dignissimos exercitationem sunt quas, unde rem dolorem.</p>
+														</div>
+														<a href="#" class="icon-card__content-arrow-link">
+															<svg width="24" height="24" viewBox="0 0 24 24">
+																<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+															</svg>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="icon-card icon-card--inverse icon-card--text-small">
+													<div class="icon-card__header">
+														<div class="icon-card__icon">
+															<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+																<path
+																	d="M17.4997 18.9584C19.0468 18.9584 20.5305 18.3438 21.6245 17.2499C22.7184 16.1559 23.333 14.6722 23.333 13.1251C23.333 11.578 22.7184 10.0943 21.6245 9.00029C20.5305 7.90633 19.0468 7.29175 17.4997 7.29175C15.9526 7.29175 14.4688 7.90633 13.3749 9.00029C12.2809 10.0943 11.6663 11.578 11.6663 13.1251C11.6663 14.6722 12.2809 16.1559 13.3749 17.2499C14.4688 18.3438 15.9526 18.9584 17.4997 18.9584ZM17.4997 18.9584C15.179 18.9584 12.9534 19.8803 11.3125 21.5212C9.67155 23.1622 8.74968 25.3878 8.74968 27.7084V32.0834M17.4997 18.9584C19.8203 18.9584 22.0459 19.8803 23.6869 21.5212C25.3278 23.1622 26.2497 25.3878 26.2497 27.7084V32.0834M18.958 7.29175C19.5472 4.86508 21.8966 2.91675 24.7913 2.91675C27.9588 2.91675 30.5955 5.52716 30.6247 8.75008C30.5955 11.973 27.9588 14.5834 24.7913 14.5834M24.7913 14.5834H23.333M24.7913 14.5834C29.5863 14.5834 33.5413 18.5005 33.5413 23.3334V26.2501M16.0413 7.29175C15.4522 4.86508 13.1028 2.91675 10.208 2.91675C7.04051 2.91675 4.40384 5.52716 4.37467 8.75008C4.40384 11.973 7.04051 14.5834 10.208 14.5834M10.208 14.5834H11.6663M10.208 14.5834C5.41301 14.5834 1.45801 18.5005 1.45801 23.3334V26.2501"
+																	stroke="currentColor"
+																	stroke-width="1.5"
+																/>
+															</svg>
+														</div>
+													</div>
+													<div class="icon-card__row">
+														<div class="icon-card__body">
+															<h3 class="icon-card__title">Card Title</h3>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio dignissimos exercitationem sunt quas, unde rem dolorem.</p>
+														</div>
+														<a href="#" class="icon-card__content-arrow-link">
+															<svg width="24" height="24" viewBox="0 0 24 24">
+																<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+															</svg>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="icon-card icon-card--inverse icon-card--text-small">
+													<div class="icon-card__header">
+														<div class="icon-card__icon">
+															<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+																<path
+																	d="M17.4997 18.9584C19.0468 18.9584 20.5305 18.3438 21.6245 17.2499C22.7184 16.1559 23.333 14.6722 23.333 13.1251C23.333 11.578 22.7184 10.0943 21.6245 9.00029C20.5305 7.90633 19.0468 7.29175 17.4997 7.29175C15.9526 7.29175 14.4688 7.90633 13.3749 9.00029C12.2809 10.0943 11.6663 11.578 11.6663 13.1251C11.6663 14.6722 12.2809 16.1559 13.3749 17.2499C14.4688 18.3438 15.9526 18.9584 17.4997 18.9584ZM17.4997 18.9584C15.179 18.9584 12.9534 19.8803 11.3125 21.5212C9.67155 23.1622 8.74968 25.3878 8.74968 27.7084V32.0834M17.4997 18.9584C19.8203 18.9584 22.0459 19.8803 23.6869 21.5212C25.3278 23.1622 26.2497 25.3878 26.2497 27.7084V32.0834M18.958 7.29175C19.5472 4.86508 21.8966 2.91675 24.7913 2.91675C27.9588 2.91675 30.5955 5.52716 30.6247 8.75008C30.5955 11.973 27.9588 14.5834 24.7913 14.5834M24.7913 14.5834H23.333M24.7913 14.5834C29.5863 14.5834 33.5413 18.5005 33.5413 23.3334V26.2501M16.0413 7.29175C15.4522 4.86508 13.1028 2.91675 10.208 2.91675C7.04051 2.91675 4.40384 5.52716 4.37467 8.75008C4.40384 11.973 7.04051 14.5834 10.208 14.5834M10.208 14.5834H11.6663M10.208 14.5834C5.41301 14.5834 1.45801 18.5005 1.45801 23.3334V26.2501"
+																	stroke="currentColor"
+																	stroke-width="1.5"
+																/>
+															</svg>
+														</div>
+													</div>
+													<div class="icon-card__row">
+														<div class="icon-card__body">
+															<h3 class="icon-card__title">Card Title</h3>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio dignissimos exercitationem sunt quas, unde rem dolorem.</p>
+														</div>
+														<a href="#" class="icon-card__content-arrow-link">
+															<svg width="24" height="24" viewBox="0 0 24 24">
+																<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+															</svg>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="c-block-section">
+						<div class="c-category-header">
+							<h2 class="h2">Card 7 - Numbered</h2>
 							<div class="c-controls">
 								<div class="">
 									Columns:&nbsp;
@@ -1778,7 +2123,7 @@
 					</div>
 					<div class="c-block-section">
 						<div class="c-category-header">
-							<h2 class="h2">Card 7 - Core Values</h2>
+							<h2 class="h2">Card 8 - Core Values</h2>
 							<div class="c-controls">
 								<div class="">
 									Columns:&nbsp;
@@ -1868,7 +2213,7 @@
 					</div>
 					<div class="c-block-section">
 						<div class="c-category-header">
-							<h2 class="h2">Card 8 - Full-width</h2>
+							<h2 class="h2">Card 9 - Full-width</h2>
 							<div class="c-controls">
 								<ul class="tabs">
 									<li class="tabs__item">
@@ -1919,7 +2264,7 @@
 					</div>
 					<div class="c-block-section">
 						<div class="c-category-header">
-							<h2 class="h2">Card 9 - Horizontal</h2>
+							<h2 class="h2">Card 10 - Horizontal</h2>
 							<div class="c-controls">
 								<button class="button copy-button">Copy</button>
 							</div>
@@ -1986,7 +2331,7 @@
 					</div>
 					<div class="c-block-section">
 						<div class="c-category-header">
-							<h2 class="h2">Card 10 - Bento</h2>
+							<h2 class="h2">Card 11 - Bento</h2>
 							<div class="c-controls">
 								<button class="button copy-button">Copy</button>
 							</div>
@@ -2063,7 +2408,7 @@
 					</div>
 					<div class="c-block-section">
 						<div class="c-category-header">
-							<h2 class="h2">Card 11 - Grouped Stats</h2>
+							<h2 class="h2">Card 12 - Grouped Stats</h2>
 							<div class="c-controls">
 								<div class="">
 									Columns:&nbsp;
@@ -2281,13 +2626,13 @@
 										</div>
 										<div class="interactive-list__content">
 											<div class="interactive-list__content-card active">
-												<video src="video/solutions-hero.mp4" autoplay loop muted playsinline></video>
+												<video src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/video/solutions-hero.mp4" autoplay loop muted playsinline></video>
 											</div>
 											<div class="interactive-list__content-card">
-												<video src="video/solutions-hero.mp4" autoplay loop muted playsinline></video>
+												<video src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/video/solutions-hero.mp4" autoplay loop muted playsinline></video>
 											</div>
 											<div class="interactive-list__content-card">
-												<video src="video/solutions-hero.mp4" autoplay loop muted playsinline></video>
+												<video src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/video/solutions-hero.mp4" autoplay loop muted playsinline></video>
 											</div>
 										</div>
 									</div>
@@ -2318,6 +2663,17 @@
 												2
 											</button>
 										</li>
+										<li class="tabs__item">
+											<button
+												class="tabs__button"
+												data-action="block-mod"
+												data-selector=".links-list"
+												data-mod-class="links-list links-list--cols-3"
+												data-col="3"
+											>
+												3
+											</button>
+										</li>
 									</ul>
 								</div>
 								<ul class="tabs">
@@ -2327,7 +2683,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Base
 										</button>
@@ -2338,7 +2694,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--dark"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Dark
 										</button>
@@ -2349,7 +2705,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--primary"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Primary
 										</button>
@@ -2360,7 +2716,7 @@
 											data-action="block-mod-media-image"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Image
 										</button>
@@ -2371,7 +2727,7 @@
 											data-action="block-mod-media-video"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Video
 										</button>
@@ -2452,7 +2808,7 @@
 					</div>
 					<div class="c-block-section">
 						<div class="c-category-header">
-							<h2 class="h2">Separated List </h2>
+							<h2 class="h2">Separated List</h2>
 							<div class="c-controls">
 								<div class="">
 									Columns:&nbsp;
@@ -2482,7 +2838,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Base
 										</button>
@@ -2493,7 +2849,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--dark"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Dark
 										</button>
@@ -2504,7 +2860,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--primary"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Primary
 										</button>
@@ -2515,7 +2871,7 @@
 											data-action="block-mod-media-image"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Image
 										</button>
@@ -2526,7 +2882,7 @@
 											data-action="block-mod-media-video"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Video
 										</button>
@@ -2551,7 +2907,10 @@
 												<div class="icon-link-card">
 													<div class="icon-link-card__content">
 														<p class="icon-link-card__title">Separated List Title</p>
-														<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem et inventore praesentium est sed velit corporis laborum cupiditate, optio vero, libero ratione? Modi odit laudantium repellat aliquid itaque.</p>
+														<p>
+															Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem et inventore praesentium est sed velit corporis laborum cupiditate,
+															optio vero, libero ratione? Modi odit laudantium repellat aliquid itaque.
+														</p>
 													</div>
 												</div>
 											</li>
@@ -2559,7 +2918,10 @@
 												<div class="icon-link-card">
 													<div class="icon-link-card__content">
 														<p class="icon-link-card__title">Separated List Title</p>
-														<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem et inventore praesentium est sed velit corporis laborum cupiditate, optio vero, libero ratione? Modi odit laudantium repellat aliquid itaque.</p>
+														<p>
+															Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem et inventore praesentium est sed velit corporis laborum cupiditate,
+															optio vero, libero ratione? Modi odit laudantium repellat aliquid itaque.
+														</p>
 													</div>
 												</div>
 											</li>
@@ -2567,7 +2929,10 @@
 												<div class="icon-link-card">
 													<div class="icon-link-card__content">
 														<p class="icon-link-card__title">Separated List Title</p>
-														<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem et inventore praesentium est sed velit corporis laborum cupiditate, optio vero, libero ratione? Modi odit laudantium repellat aliquid itaque.</p>
+														<p>
+															Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem et inventore praesentium est sed velit corporis laborum cupiditate,
+															optio vero, libero ratione? Modi odit laudantium repellat aliquid itaque.
+														</p>
 													</div>
 												</div>
 											</li>
@@ -2575,7 +2940,10 @@
 												<div class="icon-link-card">
 													<div class="icon-link-card__content">
 														<p class="icon-link-card__title">Separated List Title</p>
-														<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem et inventore praesentium est sed velit corporis laborum cupiditate, optio vero, libero ratione? Modi odit laudantium repellat aliquid itaque.</p>
+														<p>
+															Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem et inventore praesentium est sed velit corporis laborum cupiditate,
+															optio vero, libero ratione? Modi odit laudantium repellat aliquid itaque.
+														</p>
 													</div>
 												</div>
 											</li>
@@ -2606,6 +2974,17 @@
 												2
 											</button>
 										</li>
+										<li class="tabs__item">
+											<button
+												class="tabs__button"
+												data-action="block-mod"
+												data-selector=".circled-list"
+												data-mod-class="circled-list list-cols--3"
+												data-col="3"
+											>
+												3
+											</button>
+										</li>
 									</ul>
 								</div>
 								<ul class="tabs">
@@ -2615,7 +2994,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Base
 										</button>
@@ -2626,7 +3005,7 @@
 											data-action="block-mod-media"
 											data-selector=".block"
 											data-mod-class="block block--dark"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Dark
 										</button>
@@ -2637,7 +3016,7 @@
 											data-action="block-mod-media-image"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Image
 										</button>
@@ -2648,7 +3027,7 @@
 											data-action="block-mod-media-video"
 											data-selector=".block"
 											data-mod-class="block block--media"
-											data-media-wrap-class="block__media-bg"
+											data-media-wrap-class="media-overlay"
 										>
 											Video
 										</button>
@@ -2936,7 +3315,52 @@
 					</div>
 					<div class="c-block-section">
 						<div class="c-category-header">
-							<h2 class="h2">CTA 2 - With image</h2>
+							<h2 class="h2">CTA 2 - Vertical with image background</h2>
+							<div class="c-controls">
+								<ul class="tabs">
+									<li class="tabs__item">
+										<button class="tabs__button" data-action="block-mod" data-selector=".base-cta-card" data-mod-class="base-cta-card">Text left</button>
+									</li>
+									<li class="tabs__item">
+										<button
+											class="tabs__button active"
+											data-action="block-mod"
+											data-selector=".base-cta-card"
+											data-mod-class="base-cta-card base-cta-card--center"
+										>
+											Text center
+										</button>
+									</li>
+								</ul>
+								<button class="button copy-button">Copy</button>
+							</div>
+						</div>
+						<div class="c-block-content">
+							<div class="block">
+								<div class="container">
+									<div class="base-cta-card base-cta-card--center">
+										<div class="media-overlay">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/bg-vector-lines.svg" />
+										</div>
+										<div class="base-cta-card__content">
+											<h2 class="base-cta-card__title text--limit-xl">Lorem ipsum dolor sit amet consectetur adipi sicing elit. Laboriosam, numquam.</h2>
+											<p class="text--limit-lg">
+												Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nemo cum facilis voluptatem nisi unde voluptas, ea dolorem,
+												voluptatum repudiandae optio reiciendis deleniti.
+											</p>
+											<div class="base-cta-card__buttons">
+												<a href="#" class="button">Button</a>
+												<a href="#" class="button-inverse">Button Inverse</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="c-block-section">
+						<div class="c-category-header">
+							<h2 class="h2">CTA 3 - With image</h2>
 							<div class="c-controls">
 								<button class="button copy-button">Copy</button>
 							</div>
@@ -2963,7 +3387,7 @@
 					</div>
 					<div class="c-block-section">
 						<div class="c-category-header">
-							<h2 class="h2">CTA 3 - Case</h2>
+							<h2 class="h2">CTA 4 - Case</h2>
 							<div class="c-controls">
 								<button class="button copy-button">Copy</button>
 							</div>

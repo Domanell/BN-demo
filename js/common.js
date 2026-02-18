@@ -540,7 +540,7 @@ $(document).on('ready', function () {
 			{
 				rootMargin: '-40% 0px -50% 0px',
 				threshold: 0,
-			}
+			},
 		);
 
 		sections.forEach((section) => {
@@ -697,6 +697,46 @@ $(document).on('ready', function () {
 		if (initActiveCategory) {
 			filterByCategory(initActiveCategory);
 		}
+	}
+
+	// Marquee
+	if (document.querySelector('.marquee')) {
+		const marquees = document.querySelectorAll('.marquee');
+
+		marquees.forEach((marquee) => {
+			const track = marquee.querySelector('.marquee__track');
+			const group = track.querySelector('.marquee__group');
+			const groupWidth = group.getBoundingClientRect().width;
+			const marqueeWidth = marquee.getBoundingClientRect().width;
+
+			// Calculate how many times we need to clone the group to fill the track
+			const clonesNeeded = Math.ceil(marqueeWidth / groupWidth);
+
+			// If only 1 clone is needed, clone the group, otherwise additionally clone items in group to ensure seamless loop
+			if (clonesNeeded > 1) {
+				const groupItems = group.children;
+				const clonesPerGroup = Math.ceil(clonesNeeded / 2);
+
+				for (let i = 0; i < clonesPerGroup; i++) {
+					Array.from(groupItems).forEach((item) => {
+						const itemClone = item.cloneNode(true);
+						itemClone.setAttribute('aria-hidden', 'true');
+						group.appendChild(itemClone);
+					});
+				}
+			}
+
+			const groupClone = group.cloneNode(true);
+			groupClone.classList.add('marquee__group--clone');
+			groupClone.setAttribute('aria-hidden', 'true');
+			track.appendChild(groupClone);
+
+			// Adjust duration based on content width to maintain consistent speed - duration to scroll 1 screen width
+			const duration = parseFloat(getComputedStyle(track).animationDuration) || 20;
+			const updatedTrackWidth = track.getBoundingClientRect().width;
+			const newDuration = (updatedTrackWidth / marqueeWidth) * duration;
+			track.style.animationDuration = `${newDuration}s`;
+		});
 	}
 });
 //fixed

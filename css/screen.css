@@ -154,21 +154,105 @@ q:after {
   content: none;
 }
 
-/* nexa-700 */
+/* cyrillic-ext */
 @font-face {
+  font-family: "Nunito Sans";
+  font-style: italic;
+  font-weight: 200 1000;
+  font-stretch: 100%;
   font-display: swap;
-  font-family: "Nexa";
-  font-style: normal;
-  font-weight: 700;
-  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/Nexa-Bold.woff2") format("woff2");
+  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/nunitosans/pe0OMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t3NeCAAFOvV9SNjBw3uBZFI.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
-/* nexa-900 */
+/* cyrillic */
 @font-face {
+  font-family: "Nunito Sans";
+  font-style: italic;
+  font-weight: 200 1000;
+  font-stretch: 100%;
   font-display: swap;
-  font-family: "Nexa";
+  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/nunitosans/pe0OMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t3NeCAAFOvV9SNjBynuBZFI.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: italic;
+  font-weight: 200 1000;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/nunitosans/pe0OMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t3NeCAAFOvV9SNjBwXuBZFI.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: italic;
+  font-weight: 200 1000;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/nunitosans/pe0OMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t3NeCAAFOvV9SNjBwHuBZFI.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: italic;
+  font-weight: 200 1000;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/nunitosans/pe0OMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t3NeCAAFOvV9SNjBznuB.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: "Nunito Sans";
   font-style: normal;
-  font-weight: 900;
-  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/Nexa-Black.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/nunitosans/pe0AMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfUVwoNnq4CLz0_kJDxzGOF.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 200 1000;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/nunitosans/pe0AMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfUVwoNnq4CLz0_kJnxzGOF.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 200 1000;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/nunitosans/pe0AMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfUVwoNnq4CLz0_kJLxzGOF.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 200 1000;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/nunitosans/pe0AMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfUVwoNnq4CLz0_kJPxzGOF.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 200 1000;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/fonts/nunitosans/pe0AMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfUVwoNnq4CLz0_kJ3xzA.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* montserrat-100 - latin_latin-ext */
 @font-face {
@@ -332,7 +416,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 16px;
   font-weight: normal;
   color: #333333;
@@ -353,7 +437,7 @@ input:where(:not([type=checkbox], [type=radio], [type=submit])), .checkout-form_
   font-size: 16px;
   font-weight: 400;
   color: #333333;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 input:where(:not([type=checkbox], [type=radio], [type=submit])):focus, .checkout-form__input--card:where(:not([type=checkbox], [type=radio], [type=submit])):focus, input:where(:not([type=checkbox], [type=radio], [type=submit])):active, .checkout-form__input--card:where(:not([type=checkbox], [type=radio], [type=submit])):active, input:where(:not([type=checkbox], [type=radio], [type=submit])):target, .checkout-form__input--card:where(:not([type=checkbox], [type=radio], [type=submit])):target {
   border-color: #3e63f5;
@@ -372,7 +456,7 @@ select {
   font-size: 16px;
   font-weight: 400;
   color: #333333;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 select:focus, select:active, select:target {
   border-color: #3e63f5;
@@ -389,7 +473,7 @@ textarea {
   font-size: 16px;
   font-weight: 400;
   color: #333333;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 textarea:focus, textarea:active, textarea:target {
   border-color: #3e63f5;
@@ -2848,7 +2932,7 @@ mark {
     justify-content: start;
     align-items: stretch;
     overflow: hidden auto;
-    gap: 16px;
+    gap: 8px;
     position: relative;
   }
 }
@@ -2935,7 +3019,7 @@ mark {
 @media (min-width: 991.99px) {
   .menu__dropdown {
     position: fixed;
-    padding: 96px 32px 24px;
+    padding: 96px 0px 24px;
     left: 0;
     height: auto;
     background-color: initial;
@@ -2951,6 +3035,11 @@ mark {
     z-index: -1;
   }
 }
+@media (min-width: 991.99px) and (max-width: 1200px) {
+  .menu__dropdown {
+    padding: 96px 24px 24px;
+  }
+}
 .menu__dropdown.active {
   opacity: 1;
   visibility: visible;
@@ -2963,9 +3052,9 @@ mark {
 }
 .menu__dropdown a:not(.menu-all-card__button), .menu__dropdown .blog-pagination__button:not(.menu-all-card__button) {
   color: #5d5c5d;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -3032,7 +3121,7 @@ mark {
   max-height: 100vh;
   overflow-y: auto;
   display: flex;
-  gap: 72px;
+  gap: 32px;
 }
 @media (max-width: 992px) {
   .categories-menu {
@@ -3041,11 +3130,16 @@ mark {
     padding: 0;
   }
 }
+@media (min-width: 991.99px) and (max-width: 1200px) {
+  .categories-menu {
+    max-width: 1140px;
+  }
+}
 .categories-menu__item {
   padding: 8px 0px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   border-radius: 12px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -3082,7 +3176,7 @@ mark {
 }
 @media (min-width: 991.99px) {
   .categories-menu__item {
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
     padding: 12px 16px;
   }
@@ -3094,7 +3188,7 @@ mark {
   }
 }
 .categories-menu__item + .categories-menu__item {
-  margin-top: 16px;
+  margin-top: 8px;
 }
 @media (min-width: 991.99px) {
   .categories-menu__item + .categories-menu__item {
@@ -3108,13 +3202,26 @@ mark {
 .categories-menu__links.active {
   display: block;
 }
-.categories-menu__links ul {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+@media (min-width: 991.99px) {
+  .categories-menu__links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 }
-.categories-menu__links ul li {
+@media (min-width: 991.99px) {
+  .categories-menu__links li {
+    width: max(50% - 8px, 208px);
+  }
+}
+.categories-menu__links a, .categories-menu__links .blog-pagination__button {
+  display: inline-block;
   padding: 8px 0;
+}
+@media (min-width: 991.99px) {
+  .categories-menu__links a, .categories-menu__links .blog-pagination__button {
+    padding: 0px;
+  }
 }
 .categories-menu__col-title {
   margin-bottom: 32px;
@@ -3135,7 +3242,7 @@ mark {
 }
 .categories-menu__grid {
   display: flex;
-  gap: 16px 12px;
+  gap: 8px 12px;
   flex-direction: column;
 }
 @media (min-width: 991.99px) {
@@ -3165,7 +3272,7 @@ mark {
   }
 }
 .categories-menu__all {
-  flex: 0 1 260px;
+  flex: 0 1 auto;
 }
 
 .mobile-menu-trigger {
@@ -3214,6 +3321,7 @@ mark {
   width: 28px;
   height: 28px;
   border-radius: 50%;
+  box-shadow: 0 0 4px 0px rgba(2, 2, 2, 0.15);
 }
 .language-menu__name {
   display: none;
@@ -3257,6 +3365,7 @@ mark {
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  box-shadow: 0 0 4px 0px rgba(2, 2, 2, 0.15);
 }
 
 @media (max-width: 992px) {
@@ -3280,11 +3389,9 @@ mark {
 }
 
 .menu-all-card {
-  min-width: 220px;
+  width: 200px;
   min-height: 240px;
-  height: 100%;
-  max-height: 320px;
-  padding: 24px;
+  padding: 20px;
   border-radius: 16px;
   background-color: #3e63f5;
   color: #eff9ff;
@@ -3579,6 +3686,11 @@ mark {
 .counter::before {
   counter-increment: counter;
   content: counter(counter);
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*!
@@ -6522,7 +6634,7 @@ mark {
 }
 @media (min-width: 1400px) {
   .bg-circle-lines::before {
-    background-size: cover;
+    background-size: 100%;
   }
 }
 
@@ -6539,12 +6651,46 @@ mark {
   background: url(../img/pages-top-bg-graphic.png) no-repeat top;
 }
 
+.marquee {
+  --duration: 15s;
+  overflow: hidden;
+}
+.marquee__track {
+  display: flex;
+  width: fit-content;
+  animation: marquee var(--duration) linear infinite;
+  will-change: transform;
+}
+.marquee__group {
+  display: flex;
+  flex-shrink: 0;
+}
+.marquee--hover-pause:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee__track .item {
+  width: 150px;
+  background: rgb(146, 146, 247);
+}
+.marquee__track .item:nth-child(2n) {
+  background: rgb(247, 146, 146);
+}
+
 .iti {
   color: #333333;
   --iti-arrow-height: 6px;
   --iti-arrow-width: 10px;
   --iti-triangle-border: calc(var(--iti-arrow-width) / 2);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   width: 100%;
 }
 
@@ -6682,7 +6828,7 @@ mark {
   line-height: 1.25;
   font-weight: 700;
   color: #202020;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 32px;
   font-weight: 900;
 }
@@ -6696,7 +6842,7 @@ mark {
   line-height: 1.25;
   font-weight: 700;
   color: #202020;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 24px;
 }
 @media only screen and (min-width: 992px) {
@@ -6705,16 +6851,16 @@ mark {
   }
 }
 
-.h3, .customer-content h3, .customer-content h2, .form__title,
+.h3, .customer-content h3, .customer-content h2, .feat-grid-card__title, .form__title,
 .sign-up-form__title, .icon-link-card__title, .card-feature__title, .plain-card__title, .card__title, .tile__title, .accordion.accordion--base .accordion__title, .accordion__title {
   line-height: 1.25;
   font-weight: 700;
   color: #202020;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
 }
 @media only screen and (min-width: 992px) {
-  .h3, .customer-content h3, .customer-content h2, .form__title,
+  .h3, .customer-content h3, .customer-content h2, .feat-grid-card__title, .form__title,
   .sign-up-form__title, .icon-link-card__title, .card-feature__title, .plain-card__title, .card__title, .tile__title, .accordion.accordion--base .accordion__title, .accordion__title {
     font-size: 24px;
   }
@@ -6724,7 +6870,7 @@ mark {
   line-height: 1.25;
   font-weight: 700;
   color: #202020;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 18px;
 }
 @media only screen and (min-width: 992px) {
@@ -6737,7 +6883,7 @@ mark {
   line-height: 1.25;
   font-weight: 700;
   color: #202020;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 16px;
 }
 @media only screen and (min-width: 992px) {
@@ -6750,7 +6896,7 @@ mark {
   line-height: 1.25;
   font-weight: 700;
   color: #202020;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 16px;
 }
 
@@ -6774,14 +6920,22 @@ mark {
   max-width: 800px;
 }
 
+.text--limit-xl {
+  max-width: 960px;
+}
+
 .highlight {
   color: #3e63f5;
+}
+
+.highlight-gray {
+  color: #828282;
 }
 
 .button {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -6807,7 +6961,7 @@ mark {
 .button-secondary {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -6833,7 +6987,7 @@ mark {
 .button-whatsapp {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -6859,7 +7013,7 @@ mark {
 .button-success {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -6885,7 +7039,7 @@ mark {
 .button-danger {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -6911,7 +7065,7 @@ mark {
 .button-warning {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -6937,7 +7091,7 @@ mark {
 .button-outline {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -6963,7 +7117,7 @@ mark {
 .button-outline-white {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -6989,7 +7143,7 @@ mark {
 .button-inverse {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -7022,7 +7176,7 @@ mark {
 .button-whatsapp {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -7049,7 +7203,7 @@ mark {
 .button-orange {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -7076,7 +7230,7 @@ mark {
 .button-blue {
   padding: 8px 32px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -7211,7 +7365,7 @@ mark {
 
 .arrow-link {
   color: #3e63f5;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-decoration: none;
@@ -7290,6 +7444,9 @@ mark {
 .circled-list li ul {
   width: 100%;
 }
+.circled-list--icon-color-auto li::before {
+  border-color: var(--inverse-color, #3e63f5);
+}
 
 .rtl .circled-list {
   padding-left: 0;
@@ -7336,6 +7493,20 @@ mark {
     gap: 36px 12%;
   }
 }
+.list-cols--3 {
+  gap: 32px;
+}
+@media (min-width: 768px) {
+  .list-cols--3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .list-cols--3 {
+    gap: 36px;
+  }
+}
 
 @media (min-width: 992px) {
   .links-list--cols-2 {
@@ -7347,6 +7518,13 @@ mark {
 @media (min-width: 1200px) {
   .links-list--cols-2 {
     gap: 0 72px;
+  }
+}
+@media (min-width: 992px) {
+  .links-list--cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 36px;
   }
 }
 
@@ -7364,7 +7542,7 @@ mark {
 .badge-list li {
   padding: 12px 16px;
   border-radius: 20px;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.2;
@@ -7418,7 +7596,7 @@ mark {
   justify-items: center;
   background-color: transparent;
   border-radius: 48px;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 700;
   font-size: 18px;
   transition: all 0.3s ease;
@@ -7466,13 +7644,13 @@ mark {
     --bs-gutter-x: 24px;
   }
 }
-.hero__content, .hero-text__content, .hero-card__content, .hero-base__content, .hero-full__content {
+.hero__content, .hero-blur__content, .hero-text__content, .hero-card__content, .hero-base__content, .hero-full__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 24px;
 }
-.hero__text, .hero-base__text, .hero-full__text {
+.hero__text, .hero-blur__text, .hero-base__text, .hero-full__text {
   font-size: 18px;
   line-height: 24px;
 }
@@ -7490,32 +7668,45 @@ mark {
 .hero__video {
   width: 100%;
 }
-.hero__buttons, .hero-base__buttons, .hero-full__buttons {
+.hero__buttons, .hero-blur__buttons, .hero-base__buttons, .hero-full__buttons {
   margin-top: 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 @media (max-width: 991.98px) {
-  .hero__buttons, .hero-base__buttons, .hero-full__buttons {
+  .hero__buttons, .hero-blur__buttons, .hero-base__buttons, .hero-full__buttons {
     justify-content: center;
   }
 }
+.hero__eyebrow-badge, .hero-blur__eyebrow-badge {
+  min-height: 36px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  background: #fbfdff;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
 
-.hero-full {
+.hero-full, .hero-blur {
   position: relative;
   margin-top: 60px;
   margin-bottom: 60px;
   font-size: 18px;
   color: #ffffff;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 @media (min-width: 992px) {
-  .hero-full {
+  .hero-full, .hero-blur {
     margin-bottom: 90px;
   }
 }
-.hero-full__wrapper {
+.hero-full__wrapper, .hero-blur__wrapper {
   padding: 40px;
   position: relative;
   min-height: 400px;
@@ -7526,7 +7717,7 @@ mark {
   background-color: #333333;
 }
 @media (min-width: 992px) {
-  .hero-full__wrapper {
+  .hero-full__wrapper, .hero-blur__wrapper {
     padding: 72px;
     min-height: 600px;
   }
@@ -7560,11 +7751,14 @@ mark {
 .hero-full__content {
   position: relative;
 }
-.hero-full h1,
+.hero-full h1, .hero-blur h1,
 .hero-full h2,
+.hero-blur h2,
 .hero-full h3,
-.hero-full p {
-  color: #ffffff;
+.hero-blur h3,
+.hero-full p,
+.hero-blur p {
+  color: inherit;
 }
 .hero-full__buttons {
   justify-content: flex-start;
@@ -7665,6 +7859,86 @@ mark {
     font-size: 20px;
     line-height: 28px;
   }
+}
+
+.hero-blur {
+  color: #333333;
+}
+.hero-blur__wrapper {
+  background: rgba(245, 247, 250, 0.1);
+  box-shadow: 0 433px 121px 0 rgba(127, 126, 145, 0), 0 277px 111px 0 rgba(127, 126, 145, 0.01), 0 156px 93px 0 rgba(127, 126, 145, 0.05);
+  backdrop-filter: blur(5px);
+}
+.hero-blur__buttons {
+  justify-content: flex-start;
+}
+.hero-blur--center .hero-blur__content {
+  text-align: center;
+  align-items: center;
+}
+.hero-blur--center .hero-blur__buttons {
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .hero-blur--has-icons .hero-blur__wrapper {
+    min-height: 560px;
+    padding-top: 128px;
+    padding-bottom: 144px;
+  }
+}
+.hero-blur--has-icons .hero-blur__content {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-blur:not(.hero-blur--has-icons) .hero-icons {
+  display: none;
+}
+
+.hero-icons {
+  display: none;
+  align-items: end;
+  position: absolute;
+}
+@media (min-width: 992px) {
+  .hero-icons {
+    display: flex;
+  }
+}
+.hero-icons--left-bottom {
+  left: 40px;
+  bottom: 120px;
+}
+.hero-icons--right-top {
+  right: 40px;
+  top: 40px;
+}
+
+.hero-icon {
+  width: 64px;
+  height: 64px;
+  padding: 16px;
+  background: #fbfdff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-icon img,
+.hero-icon svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.hero-icon--large {
+  width: 72px;
+  height: 72px;
+}
+.hero-icon--small {
+  width: 56px;
+  height: 56px;
+}
+.hero-icon--bottom {
+  transform: translateY(100%);
 }
 
 .video {
@@ -7895,6 +8169,7 @@ mark {
 }
 
 .cta-card {
+  position: relative;
   border-radius: 24px;
   background-color: #333333;
   padding: 24px;
@@ -7904,8 +8179,8 @@ mark {
   color: #fff;
   font-size: 20px;
   line-height: 26px;
-  font-weight: 700;
-  font-family: "Nexa", sans-serif;
+  font-weight: 500;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 @media (min-width: 576px) {
   .cta-card {
@@ -7942,10 +8217,12 @@ mark {
 .cta-card__content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
+  position: relative;
 }
 .cta-card__title {
   color: #fff;
+  text-wrap-style: pretty;
 }
 .cta-card__actions {
   margin-top: 32px;
@@ -7961,7 +8238,7 @@ mark {
 }
 .cta-card__link {
   color: #fff;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -7970,6 +8247,16 @@ mark {
   color: #fff;
   opacity: 0.7;
   transition: all 0.3s ease;
+}
+.cta-card--center {
+  text-align: center;
+  justify-content: center;
+}
+.cta-card--center .cta-card__actions {
+  justify-content: center;
+}
+.cta-card--center .cta-card__content {
+  align-items: center;
 }
 
 .net-bg {
@@ -7987,13 +8274,14 @@ mark {
 }
 
 .base-cta-card {
+  position: relative;
   min-height: 350px;
   padding: 24px;
   color: #fff;
   font-size: 20px;
   line-height: 26px;
-  font-weight: 700;
-  font-family: "Nexa", sans-serif;
+  font-weight: 500;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   border-radius: 24px;
   background-color: #333333;
 }
@@ -8007,19 +8295,37 @@ mark {
     padding: 42px;
   }
 }
+.base-cta-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
 .base-cta-card__title {
   margin-bottom: 24px;
   color: #fff;
+  text-wrap-style: pretty;
 }
 @media (min-width: 992px) {
   .base-cta-card__title {
     font-size: 40px;
   }
 }
+.base-cta-card__content .base-cta-card__title {
+  margin-bottom: 0;
+}
 .base-cta-card__buttons {
   display: flex;
-  flex-direction: column;
   gap: 20px;
+}
+.base-cta-card--center {
+  text-align: center;
+}
+.base-cta-card--center .base-cta-card__content {
+  align-items: center;
+}
+.base-cta-card--center .base-cta-card__buttons {
+  justify-content: center;
 }
 
 .case-card {
@@ -8363,7 +8669,7 @@ mark {
   font-size: 16px;
   font-weight: 400;
   color: #333333;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 .slider__input-container {
   flex: 0;
@@ -8493,7 +8799,8 @@ mark {
 .card__footer--no-padding {
   padding: 0;
 }
-.card__image img {
+.card__image img,
+.card__image svg {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
@@ -8525,6 +8832,7 @@ mark {
   width: 48px;
   height: 48px;
   margin-bottom: 24px;
+  object-fit: contain;
 }
 .plain-card__content {
   position: relative;
@@ -8550,7 +8858,7 @@ mark {
   position: absolute;
   left: 0px;
   top: 0;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 900;
   font-size: 100px;
   line-height: 1;
@@ -8722,7 +9030,7 @@ mark {
 .icon-link-card__title {
   color: inherit;
 }
-.icon-link-card__icon {
+.icon-link-card__icon, .icon-card__content-arrow-link {
   flex: 0 0 auto;
   display: block;
   width: 32px;
@@ -8733,15 +9041,15 @@ mark {
   align-items: center;
   justify-content: center;
 }
-.icon-link-card__icon svg {
+.icon-link-card__icon svg, .icon-card__content-arrow-link svg {
   width: 20px;
 }
 @media (min-width: 576px) {
-  .icon-link-card__icon {
+  .icon-link-card__icon, .icon-card__content-arrow-link {
     width: 64px;
     height: 64px;
   }
-  .icon-link-card__icon svg {
+  .icon-link-card__icon svg, .icon-card__content-arrow-link svg {
     width: 24px;
   }
 }
@@ -8765,7 +9073,7 @@ mark {
   font-size: 40px;
   line-height: 1;
   color: #3e63f5;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 .quote__author {
   margin-top: 20px;
@@ -8833,9 +9141,13 @@ mark {
   justify-content: center;
   background-color: #fff;
 }
-.icon-card__icon img {
+.icon-card__icon img,
+.icon-card__icon svg {
   max-width: 36px;
   max-height: 36px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .icon-card__body {
   margin-top: auto;
@@ -8843,11 +9155,37 @@ mark {
   flex-direction: column;
   gap: 8px;
 }
+.icon-card__row {
+  display: flex;
+  gap: 0.5rem;
+}
+.icon-card__content-arrow-link {
+  align-self: flex-end;
+  width: 64px;
+  height: 64px;
+}
 .icon-card--auto-height {
   height: auto;
 }
 .icon-card--auto-height .icon-card__body {
   margin-top: 0;
+}
+.icon-card--text-small {
+  font-size: 14px;
+}
+.icon-card--inverse {
+  --inverse-color: #ffffff;
+  background-color: #333333;
+  color: #ffffff;
+}
+.icon-card--inverse .icon-card__content-arrow-link {
+  color: #ffffff;
+}
+.icon-card--inverse .icon-card__title {
+  color: inherit;
+}
+.icon-card--inverse .icon-card__icon {
+  background-color: #606162;
 }
 
 .full-card {
@@ -8858,7 +9196,7 @@ mark {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   border-radius: 24px;
   background-color: #333333;
 }
@@ -9117,7 +9455,6 @@ mark {
 .block, .faq, .cta-section {
   --inverse-color: #333333;
   --text-color: #333333;
-  --fdd: red;
   position: relative;
   margin-bottom: 64px;
 }
@@ -9156,7 +9493,7 @@ mark {
 .block__subtitle {
   font-size: 20px;
   font-weight: 700;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 .block--no-space {
   margin-bottom: 0;
@@ -9186,35 +9523,6 @@ mark {
 .block--media .block__header {
   position: relative;
   z-index: 1;
-}
-.block__media-bg, .card-full__media-bg, .full-card__media-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-  border-radius: inherit;
-}
-.block__media-bg:after, .card-full__media-bg:after, .full-card__media-bg:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.block__media-bg img, .card-full__media-bg img, .full-card__media-bg img,
-.block__media-bg video,
-.card-full__media-bg video,
-.full-card__media-bg video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 .block__body {
   position: relative;
@@ -9396,6 +9704,43 @@ mark {
   .blocks-wrapper .block__sections {
     gap: 64px;
   }
+}
+
+.media-overlay, .card-full__media-bg, .full-card__media-bg, .block__media-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: inherit;
+}
+.media-overlay:after, .card-full__media-bg:after, .full-card__media-bg:after, .block__media-bg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.media-overlay img, .card-full__media-bg img, .full-card__media-bg img, .block__media-bg img,
+.media-overlay video,
+.card-full__media-bg video,
+.full-card__media-bg video,
+.block__media-bg video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.media-overlay--light:after {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.media-overlay--dark:after {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .slider-outside {
@@ -9834,7 +10179,7 @@ mark {
   font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 .currency-selector__icon,
 .selector__icon {
@@ -10090,6 +10435,69 @@ mark {
   }
 }
 
+.features-grid {
+  --item-width: 400px;
+  --gap: 24px;
+  padding-left: calc(var(--gap) / 2);
+  padding-right: calc(var(--gap) / 2);
+  display: flex;
+  gap: var(--gap);
+  height: 600px;
+}
+.features-grid__item {
+  flex: 0 0 auto;
+  width: var(--item-width);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+.features-grid__item--col-2 {
+  width: calc(var(--item-width) * 2 + var(--gap));
+}
+
+.feat-grid-card {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  padding: 24px;
+  border-radius: 20px;
+  background: #fbfdff;
+  font-size: 16px;
+  font-weight: 400;
+}
+.feat-grid-card__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.feat-grid-card--full {
+  min-width: 100%;
+}
+.feat-grid-card__title {
+  text-transform: capitalize;
+}
+.feat-grid-card--full .feat-grid-card__desc {
+  max-width: calc(50% - 24px - var(--gap) / 2);
+}
+.feat-grid-card__illustration {
+  margin-left: auto;
+  margin-right: auto;
+}
+.feat-grid-card__wrapper-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.feat-grid-card__wrapper-bg img,
+.feat-grid-card__wrapper-bg svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
 @media only screen and (max-width: 1100px) {
   .contact_img {
     display: none;
@@ -10196,6 +10604,15 @@ mark {
     width: 100%;
   }
 }
+:root {
+  --color-primary: #3e63f5;
+  --color-primary-light: #eff9ff;
+  --color-dark: #333333;
+  --color-dark-light: #606162;
+  --color-dark-inverse: #ffffff;
+  --text-color: #333333;
+}
+
 .pms-growth {
   display: flex;
   flex-direction: column;
@@ -10555,7 +10972,7 @@ mark {
 .about-timeline__date {
   padding: 8px 24px;
   display: inline-block;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 1;
@@ -10585,11 +11002,14 @@ mark {
 .about-person__img {
   display: block;
   border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
 }
 .about-person__text {
   font-size: 16px;
   font-weight: 700;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 @media (min-width: 768px) {
   .about-person__text {
@@ -15876,7 +16296,7 @@ mark {
 .checkout-summary__row--total {
   font-size: 24px;
   font-weight: 700;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 .checkout-summary__row--bordered {
   border-bottom: 1px solid #d0d0d0;
@@ -17199,7 +17619,7 @@ mark {
   margin-bottom: 18px;
 }
 .segment .section-illustrations .h3, .segment .section-illustrations .customer-content h3, .customer-content .segment .section-illustrations h3, .segment .section-illustrations .customer-content h2, .customer-content .segment .section-illustrations h2, .segment .section-illustrations .accordion__title, .segment .section-illustrations .tile__title, .segment .section-illustrations .card__title, .segment .section-illustrations .plain-card__title, .segment .section-illustrations .card-feature__title, .segment .section-illustrations .icon-link-card__title, .segment .section-illustrations .form__title,
-.segment .section-illustrations .sign-up-form__title {
+.segment .section-illustrations .sign-up-form__title, .segment .section-illustrations .feat-grid-card__title {
   letter-spacing: 0.18px;
 }
 .segment .section-illustrations .item-row {
@@ -19663,7 +20083,7 @@ a.features-card__item:hover, .features-card__item.blog-pagination__button:hover 
   font-size: 16px;
   font-weight: 400;
   color: #333333;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 .client-filters__input input:not([type=checkbox], [type=radio]):focus, .client-filters__input .checkout-form__input--card:not([type=checkbox], [type=radio]):focus, .client-filters__input input:not([type=checkbox], [type=radio]):active, .client-filters__input .checkout-form__input--card:not([type=checkbox], [type=radio]):active, .client-filters__input input:not([type=checkbox], [type=radio]):target, .client-filters__input .checkout-form__input--card:not([type=checkbox], [type=radio]):target,
 .client-filters__input select:focus,
@@ -19788,7 +20208,7 @@ a.features-card__item:hover, .features-card__item.blog-pagination__button:hover 
   object-fit: contain;
 }
 .client-card__title {
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.25;
@@ -19797,7 +20217,7 @@ a.features-card__item:hover, .features-card__item.blog-pagination__button:hover 
 .client-card__read-more {
   display: inline-flex;
   align-items: center;
-  font-family: "Nexa", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
