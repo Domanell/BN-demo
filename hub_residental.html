@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Booking Ninjas</title>
+		<link rel="icon" type="image/png" href="favicon.ico" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+		<link rel="stylesheet" href="css/fontawesome.css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-grid.css" />
+		<link href="css/screen.css" rel="stylesheet" media="screen" />
+	</head>
+
+	<body>
+		<div class="wrapper bg-circle-lines">
+			<header class="header">
+				<div class="container header__wrapper">
+					<div class="header__logo">
+						<a class="logo" href="/"><img alt="Booking Ninjas Logo" src="img/logo.svg" /></a>
+					</div>
+					<div class="header__button">
+						<a href="#" class="button-secondary">View the Solution</a>
+					</div>
+					<div class="header__menu">
+						<nav class="menu">
+							<div class="menu__mobile-head">
+								<div class="menu__back"><i class="fa fa-chevron-left"></i></div>
+								<div class="menu__current-title"></div>
+								<div class="menu__close"><i class="fa fa-times"></i></div>
+							</div>
+							<ul class="menu__list mobile-menu">
+								<li class="menu__item">
+									<a href="/" class="menu__link-title">Home</a>
+								</li>
+								<li class="menu__item menu__item--has-submenu">
+									<span class="menu__link-title">Features</span>
+									<div class="menu__dropdown">
+										<div class="categories-menu container">
+											<div class="categories-menu__col categories-menu__category">
+												<p class="categories-menu__col-title">Category</p>
+												<ul class="categories-menu__list mobile-menu">
+													<li class="categories-menu__item active">
+														<img src="img/icons/hotel-01.svg" alt="Reservations &amp; Operations" />
+														Reservations &amp; Operations
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/business-center-outline-rounded.svg" alt="Finance &amp; Revenue" />
+														Finance &amp; Revenue
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/cleaning-outline.svg" alt="Property &amp; Task Management" />
+														Property &amp; Task Management
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/stash_integrations.svg" alt="Integrations &amp; Communication" />
+														Integrations &amp; Communication
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/reports.svg" alt="Insights &amp; Reporting" />
+														Insights &amp; Reporting
+													</li>
+													<li class="categories-menu__item">
+														<img src="img/icons/light_captive-portal.svg" alt="User Access &amp; Portals" />
+														User Access &amp; Portals
+													</li>
+													<li class="categories-menu__item categories-menu__item--all">
+														<a href="#"> All Features </a>
+													</li>
+												</ul>
+											</div>
+											<div class="categories-menu__col categories-menu__data mobile-menu">
+												<p class="categories-menu__col-title">Features</p>
+												<div class="categories-menu__grid">
+													<!-- Reservations and Operations -->
+													<div class="categories-menu__links active">
+														<ul>
+															<li><a href="#">Booking Engine</a></li>
+															<li><a href="#">Booking &amp; Reservation Management</a></li>
+															<li><a href="#">Group Booking</a></li>
+															<li><a href="#">Availability Calendar Grid</a></li>
+															<li><a href="#">Check-in / Check-out Management</a></li>
+															<li><a href="#">Resource/Class Scheduling</a></li>
+															<li><a href="#">Attendance Tracking</a></li>
+															<li><a href="#">POS (Point of Sale)</a></li>
+															<li><a href="#">Ticketing System</a></li>
+															<li><a href="#">Digital Waivers &amp; E-signatures</a></li>
+														</ul>
+													</div>
+													<!-- Finance and Revenue -->
+													<div class="categories-menu__links">
+														<ul>
+															<li><a href="#">Rate Types &amp; Controller</a></li>
+															<li><a href="#">Time-Based Booking Options</a></li>
+															<li><a href="#">Promotions &amp; Discounts</a></li>
+															<li><a href="#">Invoicing &amp; Receipts</a></li>
+															<li><a href="#">Transactions &amp; Payments</a></li>
+															<li><a href="#">Refunds &amp; Adjustments</a></li>
+															<li><a href="#">Owner Statements</a></li>
+															<li><a href="#">Occupancy &amp; Revenue Forecasting</a></li>
+														</ul>
+													</div>
+													<!-- Property and Task Management -->
+													<div class="categories-menu__links">
+														<ul>
+															<li><a href="#">Housekeeping &amp; Maintenance</a></li>
+															<li><a href="#">Task Management</a></li>
+															<li><a href="#">Inventory Management</a></li>
+															<li><a href="#">Access Control (Smart Entry)</a></li>
+															<li><a href="#">Staff App</a></li>
+															<li><a href="#">Maintenance &amp; Reminder Flows</a></li>
+															<li><a href="#">Booking &amp; Task Automation</a></li>
+														</ul>
+													</div>
+													<!-- Integrations and Communication -->
+													<div class="categories-menu__links">
+														<ul>
+															<li><a href="#">Salesforce</a></li>
+															<li><a href="#">Einstein AI</a></li>
+															<li><a href="#">Lightning</a></li>
+															<li><a href="#">Compliance (Salesforce Compliance)</a></li>
+															<li><a href="#">Security &amp; Privacy</a></li>
+															<li><a href="#">Channel Manager (Airbnb, Booking.com, Expedia, Agoda)</a></li>
+															<li><a href="#">WhatsApp &amp; SMS Messaging</a></li>
+															<li><a href="#">Email Notifications &amp; Confirmations</a></li>
+															<li><a href="#">Slack Integration</a></li>
+															<li><a href="#">Internal Notes &amp; Task Comments</a></li>
+															<li><a href="#">Automated Reminders &amp; Alerts</a></li>
+															<li><a href="#">Guest Review Management</a></li>
+															<li><a href="#">Surveys &amp; Feedback</a></li>
+														</ul>
+													</div>
+													<!-- Insights and Reporting -->
+													<div class="categories-menu__links">
+														<ul>
+															<li><a href="#">Custom Dashboards</a></li>
+															<li><a href="#">Standard &amp; Exportable Reports</a></li>
+															<li><a href="#">KPI Tracking &amp; Optimization Tools</a></li>
+														</ul>
+													</div>
+													<!-- User Access and Portals -->
+													<div class="categories-menu__links">
+														<ul>
+															<li><a href="#">Owner Portal</a></li>
+															<li><a href="#">Tenant Portal</a></li>
+															<li><a href="#">Member Portal</a></li>
+															<li><a href="#">Guest Portal</a></li>
+															<li><a href="#">Student Portal</a></li>
+														</ul>
+													</div>
+													<div class="categories-menu__all">
+														<div class="menu-all-card menu-all-card--features">
+															<p class="h4 menu-all-card__title">Browse Features</p>
+															<p>Unlock all the ways we can help you grow.</p>
+															<a href="#" class="button-outline-white menu-all-card__button">All Features</a>
+														</div>
+														<a href="#" class="menu-all-link">All Features</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu__item">
+									<a href="/pricing" class="menu__link-title">Pricing</a>
+								</li>
+								<li class="menu__item menu__item--has-submenu">
+									<span class="menu__link-title">Solutions</span>
+									<div class="menu__dropdown">
+										<div class="categories-menu container">
+											<div class="categories-menu__col categories-menu__category">
+												<p class="categories-menu__col-title">Category</p>
+												<ul class="categories-menu__list mobile-menu">
+													<li class="categories-menu__item active">
+														<img alt="Hospitality" src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/icons/hotel-outline-rounded.svg" />
+														Hospitality
+													</li>
+													<li class="categories-menu__item">
+														<img alt="Recreational" src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/icons/parks.svg" />
+														Recreational
+													</li>
+													<li class="categories-menu__item">
+														<img alt="Residential" src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/icons/residential.svg" />
+														Residential
+													</li>
+													<li class="categories-menu__item">
+														<img alt="Venue" src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/icons/events.svg" />
+														Venue
+													</li>
+													<li class="categories-menu__item">
+														<img alt="Commercial" src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/icons/workspace.svg" />
+														Commercial
+													</li>
+													<li class="categories-menu__item">
+														<img
+															alt="Educational Property"
+															src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/icons/educational-institutions.svg"
+														/>
+														Educational Property
+													</li>
+													<li class="categories-menu__item">
+														<img alt="Club &amp;#38; Community" src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/icons/parks.svg" />
+														Club &amp; Community
+													</li>
+													<li class="categories-menu__item">
+														<img alt="Public Sector" src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/icons/specialty-housing.svg" />
+														Public Sector
+													</li>
+													<li class="categories-menu__item">
+														<img alt="Non-profit &amp;#38; Religious" src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/icons/nonprofit.svg" />
+														Non-profit &amp; Religious
+													</li>
+													<li class="categories-menu__item categories-menu__item--all">
+														<a href="/solutions"> All Solutions </a>
+													</li>
+												</ul>
+											</div>
+											<div class="categories-menu__col categories-menu__data mobile-menu">
+												<p class="categories-menu__col-title">Solutions</p>
+												<div class="categories-menu__grid">
+													<div class="categories-menu__links active">
+														<ul>
+															<li>
+																<a href="/solutions/hospitality/hybrid-hotel">Hybrid Hotel</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/resort">Resort</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/bed-and-breakfast-property">Bed and Breakfast</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/motel">Motel</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/lodge">Lodge</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/aparthotel">Aparthotel</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/retreat-center">Retreat</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/hotel">Hotel</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/restaurant">Restaurant</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/vacation-rental">Vacation Rental</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/villa">Villa</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/airbnb-property">Airbnb Property</a>
+															</li>
+															<li>
+																<a href="/solutions/hospitality/hostel">Hostel</a>
+															</li>
+														</ul>
+													</div>
+
+													<div class="categories-menu__links">
+														<ul>
+															<li>
+																<a href="/solutions/recreational/escape-room">Escape Room</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/ice-rink">Ice Rink</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/trampoline-park">Trampoline Park</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/golf-course">Golf Course</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/gaming-lounge">Gaming Lounge</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/arcade">Arcade</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/amusement-park">Amusement Park</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/shooting-range">Shooting Range</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/zoo">Zoo</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/adventure-park">Adventure Park</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/tennis-court">Tennis Court</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/campground">Campground</a>
+															</li>
+															<li>
+																<a href="/solutions/leisure-facilities">Leisure Facilities</a>
+															</li>
+															<li>
+																<a href="/solutions/parks-and-recreation">Parks &amp; Recreation</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/rv-park">RV Park</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/recreation-center">Recreation Center</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/water-park">Water Park</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/theme-park">Theme Park</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/spa-and-med-spa">Spa &amp; Med Spa</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/yoga-studio">Yoga Studio</a>
+															</li>
+														</ul>
+													</div>
+
+													<div class="categories-menu__links">
+														<ul>
+															<li>
+																<a href="/solutions/recreational/gym">Gym</a>
+															</li>
+															<li>
+																<a href="/solutions/residential/senior-living">Senior Living</a>
+															</li>
+															<li>
+																<a href="/solutions/residential/corporate-housing">Corporate Housing</a>
+															</li>
+															<li>
+																<a href="/solutions/residential/multifamily-property">Multi-Family</a>
+															</li>
+															<li>
+																<a href="/condo-management-software">Condominium</a>
+															</li>
+															<li>
+																<a href="/solutions/residential/co-living">Co-living</a>
+															</li>
+															<li>
+																<a href="/solutions/residential/mobile-home-park">Mobile Home Park</a>
+															</li>
+															<li>
+																<a href="/solutions/residential/housing-association">Housing Association</a>
+															</li>
+															<li>
+																<a href="/residential-management-software">Residential</a>
+															</li>
+															<li>
+																<a href="/solutions/residential/single-family-property">Single Family Home</a>
+															</li>
+															<li>
+																<a href="/solutions/residential/serviced-apartment">Serviced Apartment</a>
+															</li>
+															<li>
+																<a href="/solutions/residential/student-housing">Student Housing</a>
+															</li>
+														</ul>
+													</div>
+
+													<div class="categories-menu__links">
+														<ul>
+															<li>
+																<a href="/solutions/banquet-halls">Banquet Halls</a>
+															</li>
+															<li>
+																<a href="/event-management-software">Event Spaces</a>
+															</li>
+															<li>
+																<a href="/solutions/conference-centers">Conference Centers</a>
+															</li>
+														</ul>
+													</div>
+
+													<div class="categories-menu__links">
+														<ul>
+															<li>
+																<a href="/solutions/self-storage">Self Storage Facilities</a>
+															</li>
+															<li>
+																<a href="/solutions/investment-portfolios">Investment Portfolios</a>
+															</li>
+															<li>
+																<a href="/solutions/mixed-portfolios">Mixed Portfolio Management</a>
+															</li>
+															<li>
+																<a href="/solutions/commercial-properties">Commercial</a>
+															</li>
+															<li>
+																<a href="/solutions/parking">Parking Facilities</a>
+															</li>
+															<li>
+																<a href="/coworking-space-management-software">Coworking/Office Space</a>
+															</li>
+														</ul>
+													</div>
+
+													<div class="categories-menu__links">
+														<ul>
+															<li>
+																<a href="/solutions/educational-property/higher-education-property">Higher Education</a>
+															</li>
+															<li>
+																<a href="/solutions/educational-property/boarding-school">Boarding School</a>
+															</li>
+															<li>
+																<a href="/solutions/vocational-schools">Vocational Schools</a>
+															</li>
+															<li>
+																<a href="/solutions/educational-property/private-school">Private School</a>
+															</li>
+															<li>
+																<a href="/solutions/education/martial-arts-school">Martial Arts School</a>
+															</li>
+															<li>
+																<a href="/solutions/educational-property/dance-school">Dance School</a>
+															</li>
+															<li>
+																<a href="/solutions/educational-property/music-school">Music School</a>
+															</li>
+															<li>
+																<a href="/solutions/educational-property/training-center">Training Center</a>
+															</li>
+															<li>
+																<a href="/solutions/educational-property/sports-academy">Sports Academy</a>
+															</li>
+															<li>
+																<a href="/solutions/educational-property/international-school">International School</a>
+															</li>
+															<li>
+																<a href="/solutions/educational-property/public-school">Public School</a>
+															</li>
+														</ul>
+													</div>
+
+													<div class="categories-menu__links">
+														<ul>
+															<li>
+																<a href="/solutions/club-and-community/private-club">Private Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/social-club">Social Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/country-club">Country Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/health-club">Health Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/fitness-club">Fitness Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/martial-arts-club">Martial Arts Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/after-school-club">After School</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/social-club">Social Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/soccer-club">Soccer Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/jcc">Jewish Community Center</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/gymnastics-club">Gymnastics Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/football-club">Football Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/volleyball-club">Volleyball Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/swim-club">Swim Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/baseball-club">Baseball Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/cycling-club">Cycling Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/tennis-club">Tennis Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/pickleball-club">Pickleball Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/soccer-club">Soccer Club</a>
+															</li>
+															<li>
+																<a href="/solutions/club-and-community/wine-club">Wine Club</a>
+															</li>
+															<li>
+																<a href="/club-management-software">Clubs</a>
+															</li>
+															<li>
+																<a href="/solutions/equestrian-clubs">Equestrian Club</a>
+															</li>
+														</ul>
+													</div>
+
+													<div class="categories-menu__links">
+														<ul>
+															<li>
+																<a href="/solutions/club-and-community/yacht-club">Yacht</a>
+															</li>
+															<li>
+																<a href="/solutions/private-islands">Private Islands</a>
+															</li>
+															<li>
+																<a href="/solutions/recreational/marina">Marina</a>
+															</li>
+														</ul>
+													</div>
+
+													<div class="categories-menu__links">
+														<ul>
+															<li>
+																<a href="/solutions/non-profits">Non-Profit</a>
+															</li>
+															<li>
+																<a href="/solutions/public-sector/military-housing">Military Housing</a>
+															</li>
+															<li>
+																<a href="/solutions/public-sector/public-housing">Public Housing Authority</a>
+															</li>
+															<li>
+																<a href="/solutions/residential/affordable-housing">Affordable Housing</a>
+															</li>
+															<li>
+																<a href="/solutions/public-sector/government-property">Government</a>
+															</li>
+															<li>
+																<a href="/solutions/ymca">YMCA</a>
+															</li>
+														</ul>
+													</div>
+													<div class="categories-menu__all">
+														<div class="menu-all-card menu-all-card--solutions">
+															<p class="h4 menu-all-card__title">Browse Solutions</p>
+															<p>Find the right tools for your property.</p>
+															<a class="button-outline-white menu-all-card__button" href="/solutions">All Solutions</a>
+														</div>
+														<a class="menu-all-link" href="/solutions">All Solutions</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu__item menu__item--has-submenu language-menu">
+									<span class="menu__link-title menu__link-title--no-hover">
+										<div class="language-menu__item">
+											<span class="fi fi-us fis flag language-menu__icon"></span>
+											<span class="language-menu__name">English </span>
+										</div>
+									</span>
+									<div class="menu__dropdown">
+										<ul class="container language-list">
+											<li>
+												<a href="/es/" class="language-list__item active"><span class="fi fi-us fis flag"></span> English</a>
+											</li>
+											<li>
+												<a href="/es/" class="language-list__item"><span class="fi fi-es fis flag"></span> Español</a>
+											</li>
+											<li>
+												<a href="/pt/" class="language-list__item"><span class="fi fi-br fis flag"></span> Portuguese</a>
+											</li>
+											<li>
+												<a href="/id/" class="language-list__item"><span class="fi fi-id fis flag"></span> Indonesian</a>
+											</li>
+											<li>
+												<a href="/tr/" class="language-list__item"><span class="fi fi-tr fis flag"></span> Turkish</a>
+											</li>
+											<li>
+												<a href="/de/" class="language-list__item"><span class="fi fi-de fis flag"></span> German</a>
+											</li>
+											<li>
+												<a href="/ae/" class="language-list__item"><span class="fi fi-ae fis flag"></span> Arabic</a>
+											</li>
+											<li>
+												<a href="/it/" class="language-list__item"><span class="fi fi-it fis flag"></span> Italian</a>
+											</li>
+											<li>
+												<a href="/nl/" class="language-list__item"><span class="fi fi-nl fis flag"></span> Dutch</a>
+											</li>
+											<li>
+												<a href="/fr/" class="language-list__item"><span class="fi fi-fr fis flag"></span> French</a>
+											</li>
+											<li>
+												<a href="/el/" class="language-list__item"><span class="fi fi-gr fis flag"></span> Greek</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<!-- CTA buttons in mobile menu -->
+								<li class="menu__item menu__item--button menu__item--mobile">
+									<a href="#" class="button-secondary">View the Solution</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="menu-overlay"></div>
+						<div class="mobile-menu-trigger">
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<div class="hero-blur hero-blur--center hero-blur--has-icons">
+					<div class="container">
+						<div class="hero-blur__wrapper">
+							<!-- Left icons -->
+							<div class="hero-icons hero-icons--left-bottom">
+								<div class="hero-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+										<g clip-path="url(#clip0_416_5154)">
+											<path
+												d="M0.646484 12.2886V12.612L6.79082 18.7563H7.11421C8.0578 17.8132 9.33732 17.2834 10.6715 17.2834C12.0056 17.2834 13.2851 17.8132 14.2287 18.7563L25.8706 30.3982H30.398V25.8708L29.1045 24.5773H26.5174V21.9902H23.9303V19.4031L18.7561 14.2289C17.813 13.2853 17.2831 12.0058 17.2831 10.6717C17.2831 9.33757 17.813 8.05804 18.7561 7.11445V6.79106L12.6118 0.646729H12.2884C9.20076 0.646729 6.2396 1.87328 4.05632 4.05656C1.87304 6.23984 0.646484 9.201 0.646484 12.2886Z"
+												stroke="#3E63F5"
+												stroke-width="1.5"
+											/>
+											<path
+												d="M5.82031 7.76112C5.82031 7.24651 6.02474 6.75299 6.38862 6.38911C6.7525 6.02523 7.24602 5.8208 7.76063 5.8208C8.27523 5.8208 8.76876 6.02523 9.13264 6.38911C9.49652 6.75299 9.70095 7.24651 9.70095 7.76112C9.70095 8.27572 9.49652 8.76925 9.13264 9.13313C8.76876 9.49701 8.27523 9.70143 7.76063 9.70143C7.24602 9.70143 6.7525 9.49701 6.38862 9.13313C6.02474 8.76925 5.82031 8.27572 5.82031 7.76112Z"
+												stroke="#3E63F5"
+												stroke-width="1.5"
+											/>
+										</g>
+										<defs>
+											<clipPath id="clip0_416_5154">
+												<rect width="31.0451" height="31.0451" fill="currentColor" />
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<div class="hero-icon hero-icon--large hero-icon--bottom">
+									<svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
+										<path
+											d="M16.7766 29.7961V15.5724H8.94646C8.4676 15.5724 8.07941 15.3751 7.7819 14.9804C7.4832 14.5857 7.4109 14.1607 7.56499 13.7056L10.2462 5.13581C10.4382 4.53248 10.7819 4.04651 11.2774 3.67788C11.7752 3.31043 12.3406 3.12671 12.9735 3.12671H22.3576C22.9906 3.12671 23.5554 3.31043 24.052 3.67788C24.5499 4.04651 24.8942 4.53248 25.085 5.13581L27.7662 13.7056C27.9203 14.1619 27.848 14.5869 27.5493 14.9804C27.2518 15.3751 26.8636 15.5724 26.3847 15.5724H18.5546V29.7961H16.7766ZM9.39807 13.7945H25.9331L23.4173 5.69053C23.3485 5.46295 23.2176 5.27508 23.0244 5.12692C22.8312 4.97875 22.6089 4.90467 22.3576 4.90467H12.9753C12.724 4.90467 12.5012 4.97875 12.3068 5.12692C12.1124 5.27508 11.982 5.46295 11.9157 5.69053L9.39807 13.7945ZM11.4427 33.3521V31.5741H23.8885V33.3521H11.4427Z"
+											fill="#3E63F5"
+										/>
+									</svg>
+								</div>
+							</div>
+							<!-- Right icons -->
+							<div class="hero-icons hero-icons--right-top">
+								<div class="hero-icon hero-icon--large">
+									<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+										<path
+											d="M19.9115 31.7106H9.58715C6.80547 31.7106 5.4161 31.7106 4.5518 30.8463C3.6875 29.982 3.6875 28.5926 3.6875 25.811V9.58691C3.6875 6.80522 3.6875 5.41585 4.5518 4.55155C5.4161 3.68726 6.80547 3.68726 9.58715 3.68726H14.0119C16.7936 3.68726 18.1829 3.68726 19.0472 4.55155C19.9115 5.41585 19.9115 6.80522 19.9115 9.58691V31.7106ZM19.9115 31.7106V11.0618H25.8112C28.5929 11.0618 29.9822 11.0618 30.8465 11.9261C31.7108 12.7904 31.7108 14.1798 31.7108 16.9615V25.811C31.7108 28.5926 31.7108 29.982 30.8465 30.8463C29.9822 31.7106 28.5929 31.7106 25.8112 31.7106H19.9115ZM8.11224 8.112H9.58715M14.0119 8.112H15.4868M8.11224 12.5367H9.58715M14.0119 12.5367H15.4868M8.11224 16.9615H9.58715M14.0119 16.9615H15.4868M8.11224 21.3862H9.58715M14.0119 21.3862H15.4868M11.7995 31.7106V27.2859M25.0737 15.4866H26.5487M25.0737 19.9113H26.5487M25.0737 24.336H26.5487"
+											stroke="#3E63F5"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</div>
+								<div class="hero-icon hero-icon--small hero-icon--bottom">
+									<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+										<g clip-path="url(#clip0_416_5137)">
+											<path
+												d="M23.2447 8.94042V9.45181C23.2447 13.4273 24.7801 14.4763 28.0129 16.0927V22.053H25.0328M23.2447 8.94042H25.6288V8.34439C25.6288 8.34439 23.8407 7.15234 23.2447 5.36426H0.595703V22.053H2.97981M23.2447 8.94042H17.2844V13.7086H24.4594M25.0328 22.053C25.0328 22.8434 24.7188 23.6014 24.1599 24.1603C23.601 24.7192 22.843 25.0331 22.0527 25.0331C21.2623 25.0331 20.5043 24.7192 19.9454 24.1603C19.3865 23.6014 19.0725 22.8434 19.0725 22.053M25.0328 22.053C25.0328 21.2626 24.7188 20.5046 24.1599 19.9457C23.601 19.3868 22.843 19.0729 22.0527 19.0729C21.2623 19.0729 20.5043 19.3868 19.9454 19.9457C19.3865 20.5046 19.0725 21.2626 19.0725 22.053M2.97981 22.053C2.97981 22.8434 3.29379 23.6014 3.85267 24.1603C4.41155 24.7192 5.16956 25.0331 5.95994 25.0331C6.75032 25.0331 7.50833 24.7192 8.06721 24.1603C8.6261 23.6014 8.94007 22.8434 8.94007 22.053M2.97981 22.053C2.97981 21.2626 3.29379 20.5046 3.85267 19.9457C4.41155 19.3868 5.16956 19.0729 5.95994 19.0729C6.75032 19.0729 7.50833 19.3868 8.06721 19.9457C8.6261 20.5046 8.94007 21.2626 8.94007 22.053M19.0725 22.053H8.94007M13.7083 13.7086V8.94042H4.17186V13.7086H13.7083Z"
+												stroke="#3E63F5"
+												stroke-width="1.5"
+											/>
+										</g>
+										<defs>
+											<clipPath id="clip0_416_5137">
+												<rect width="28.6093" height="28.6093" fill="currentColor" />
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<div class="hero-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+										<g clip-path="url(#clip0_416_5162)">
+											<path
+												d="M0 16.1694H18.7098M27.8578 16.1694H31.0451M12.9354 12.9355V9.70164C12.9354 9.70164 10.9951 8.40809 7.76127 8.40809C4.5274 8.40809 2.58709 9.70164 2.58709 9.70164V12.9355M20.6967 31.0451V23.9306H16.1693V23.6072L16.2624 23.4132C18.3307 19.0693 19.4037 14.3187 19.4032 9.5076V9.08332C20.6462 8.62877 21.9603 8.39967 23.2838 8.4068C24.9499 8.4068 26.2732 8.75088 27.1644 9.08332V9.5076C27.1644 14.3196 28.2381 19.0682 30.3052 23.4119L30.3983 23.6059V23.9293H25.8709V31.0451M7.56723 5.821C7.56723 5.821 5.49756 4.52746 5.49756 2.91053C5.49756 2.31084 5.73579 1.73572 6.15983 1.31168C6.58387 0.887638 7.15899 0.649414 7.75868 0.649414C8.35836 0.649414 8.93349 0.887638 9.35753 1.31168C9.78157 1.73572 10.0198 2.31084 10.0198 2.91053C10.0198 4.52746 7.9553 5.821 7.9553 5.821H7.56723ZM23.0898 5.821C23.0898 5.821 21.0201 4.52746 21.0201 2.91053C21.0201 2.31084 21.2583 1.73572 21.6824 1.31168C22.1064 0.887638 22.6815 0.649414 23.2812 0.649414C23.8809 0.649414 24.456 0.887638 24.8801 1.31168C25.3041 1.73572 25.5423 2.31084 25.5423 2.91053C25.5423 4.52746 23.4778 5.821 23.4778 5.821H23.0898Z"
+												stroke="#3E63F5"
+												stroke-width="1.5"
+											/>
+										</g>
+										<defs>
+											<clipPath id="clip0_416_5162">
+												<rect width="31.0451" height="31.0451" fill="currentColor" />
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+							</div>
+							<div class="hero-blur__content">
+								<div class="hero-blur__eyebrow-badge">
+									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+										<path
+											d="M12.4583 15.8124C13.4002 17.3829 14.7349 18.6809 16.331 19.5787L17.7292 20.3645V20.6041H5.27083V20.3645L6.66904 19.5787C8.26513 18.6809 9.59983 17.3829 10.5417 15.8124M1.4375 12.9374H21.5625M21.5625 2.39575H1.4375V15.8124H21.5625V2.39575Z"
+											stroke="#3E63F5"
+											stroke-width="1.5"
+										/>
+									</svg>
+									Flexible platform
+								</div>
+								<h1 class="hero-blur__title h1">Residential Property Management Software Built on Salesforce</h1>
+								<p class="hero-blur__text text--limit-lg">
+									Whether you manage one property or a large residential portfolio, we help you simplify operations and gain clear visibility across your
+									communities.
+								</p>
+								<div class="hero-blur__buttons">
+									<a class="button" href="/demo">Button</a>
+									<a class="button-secondary" href="/demo">Button Secondary</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">A Flexible Residential Property Management Platform</h2>
+						</div>
+						<div class="block__body">
+							<div class="row g-4 justify-content-center">
+								<div class="col-sm-6 col-md-4">
+									<div class="plain-card">
+										<div class="plain-card__content">
+											<p>
+												We build residential property management software on Salesforce that helps property owners, operators, and housing organizations manage
+												leasing, residents, payments, maintenance, and operations in one centralized system. Our platform is flexible, configurable, and
+												designed to support long-term residential management.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-4">
+									<div class="plain-card">
+										<div class="plain-card__content">
+											<p>
+												Whether you manage one property or a large residential portfolio, we help you simplify operations and gain clear visibility across your
+												communities.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-4">
+									<div class="plain-card">
+										<div class="plain-card__content">
+											<p>
+												Our residential property management software is designed to support multiple residential models from a single Salesforce-native
+												foundation. Instead of maintaining separate systems for each property type, we configure one platform that adapts to how you operate.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">Residential property types we support:</h2>
+						</div>
+						<div class="block__body">
+							<div class="row g-4 justify-content-center">
+								<div class="col-md-6 col-lg-4">
+									<div class="icon-card icon-card--inverse icon-card--text-small">
+										<div class="icon-card__header">
+											<div class="icon-card__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+													<path
+														d="M16.7917 16.7917C18.3388 16.7917 19.8225 16.1771 20.9165 15.0831C22.0104 13.9892 22.625 12.5054 22.625 10.9583C22.625 9.41124 22.0104 7.92751 20.9165 6.83354C19.8225 5.73958 18.3388 5.125 16.7917 5.125C15.2446 5.125 13.7608 5.73958 12.6669 6.83354C11.5729 7.92751 10.9583 9.41124 10.9583 10.9583C10.9583 12.5054 11.5729 13.9892 12.6669 15.0831C13.7608 16.1771 15.2446 16.7917 16.7917 16.7917ZM16.7917 16.7917C14.471 16.7917 12.2454 17.7135 10.6045 19.3545C8.96354 20.9954 8.04167 23.221 8.04167 25.5417V29.9167M16.7917 16.7917C19.1123 16.7917 21.3379 17.7135 22.9789 19.3545C24.6198 20.9954 25.5417 23.221 25.5417 25.5417V29.9167M18.25 5.125C18.8392 2.69833 21.1885 0.75 24.0833 0.75C27.2508 0.75 29.8875 3.36042 29.9167 6.58333C29.8875 9.80625 27.2508 12.4167 24.0833 12.4167M24.0833 12.4167H22.625M24.0833 12.4167C28.8783 12.4167 32.8333 16.3338 32.8333 21.1667V24.0833M15.3333 5.125C14.7442 2.69833 12.3948 0.75 9.5 0.75C6.3325 0.75 3.69583 3.36042 3.66667 6.58333C3.69583 9.80625 6.3325 12.4167 9.5 12.4167M9.5 12.4167H10.9583M9.5 12.4167C4.705 12.4167 0.75 16.3338 0.75 21.1667V24.0833"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+												</svg>
+											</div>
+										</div>
+										<div class="icon-card__row">
+											<div class="icon-card__body">
+												<h3 class="icon-card__title">Co-Living</h3>
+												<p>
+													Manage shared living spaces, flexible leases, resident communication, and community operations in one system built for modern
+													co-living environments.
+												</p>
+											</div>
+											<a href="#" class="icon-card__content-arrow-link">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-4">
+									<div class="icon-card icon-card--inverse icon-card--text-small">
+										<div class="icon-card__header">
+											<div class="icon-card__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+													<g clip-path="url(#clip0_416_4970)">
+														<path
+															d="M28.4378 10.9375V11.5631C28.4378 16.4267 30.3162 17.71 34.2712 19.6875V26.9792H30.6253M28.4378 10.9375H31.3545V10.2083C31.3545 10.2083 29.167 8.75 28.4378 6.5625H0.729492V26.9792H3.64616M28.4378 10.9375H21.1462V16.7708H29.9239M30.6253 26.9792C30.6253 27.9461 30.2412 28.8734 29.5575 29.5572C28.8738 30.2409 27.9464 30.625 26.9795 30.625C26.0126 30.625 25.0852 30.2409 24.4015 29.5572C23.7178 28.8734 23.3337 27.9461 23.3337 26.9792M30.6253 26.9792C30.6253 26.0122 30.2412 25.0849 29.5575 24.4012C28.8738 23.7174 27.9464 23.3333 26.9795 23.3333C26.0126 23.3333 25.0852 23.7174 24.4015 24.4012C23.7178 25.0849 23.3337 26.0122 23.3337 26.9792M3.64616 26.9792C3.64616 27.9461 4.03027 28.8734 4.714 29.5572C5.39773 30.2409 6.32506 30.625 7.29199 30.625C8.25893 30.625 9.18626 30.2409 9.86999 29.5572C10.5537 28.8734 10.9378 27.9461 10.9378 26.9792M3.64616 26.9792C3.64616 26.0122 4.03027 25.0849 4.714 24.4012C5.39773 23.7174 6.32506 23.3333 7.29199 23.3333C8.25893 23.3333 9.18626 23.7174 9.86999 24.4012C10.5537 25.0849 10.9378 26.0122 10.9378 26.9792M23.3337 26.9792H10.9378M16.7712 16.7708V10.9375H5.10449V16.7708H16.7712Z"
+															stroke="currentColor"
+															stroke-width="1.5"
+														/>
+													</g>
+													<defs>
+														<clipPath id="clip0_416_4970">
+															<rect width="35" height="35" fill="currentColor" />
+														</clipPath>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="icon-card__row">
+											<div class="icon-card__body">
+												<h3 class="icon-card__title">Mobile Home Park</h3>
+												<p>
+													Manage lots, residents, long-term leases, payments, maintenance, and operations for mobile home parks with clear site-level
+													visibility.
+												</p>
+											</div>
+											<a href="#" class="icon-card__content-arrow-link">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-4">
+									<div class="icon-card icon-card--inverse icon-card--text-small">
+										<div class="icon-card__header">
+											<div class="icon-card__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+													<g clip-path="url(#clip0_416_4981)">
+														<path
+															d="M9.47917 30.6251C9.48074 28.8639 9.05699 27.1284 8.24396 25.5661C8.09857 25.2915 7.92612 25.0321 7.72917 24.7918H0.729167V25.1563C1.68438 26.8291 2.1875 28.7001 2.1875 30.6251H14.5833M21.875 34.2709H0M22.6042 13.8543C22.6057 12.0931 22.182 10.3576 21.369 8.7953C21.2236 8.52068 21.0511 8.26127 20.8542 8.02093H13.8542V8.38551C14.8094 10.0582 15.3125 11.9293 15.3125 13.8543H27.7083M35 17.5001H21.875M21.1458 31.3543V27.7084C21.1458 27.7084 18.9583 26.2501 15.3125 26.2501C13.8454 26.2501 12.6146 26.4863 11.6667 26.7678M34.2708 14.5834V10.9376C34.2708 10.9376 32.0833 9.47926 28.4375 9.47926C26.9704 9.47926 25.7396 9.71551 24.7917 9.99843M15.0938 23.3334C15.0938 23.3334 12.7604 21.8751 12.7604 20.0522C12.7604 19.3761 13.029 18.7277 13.5071 18.2496C13.9851 17.7716 14.6335 17.503 15.3096 17.503C15.9857 17.503 16.6341 17.7716 17.1121 18.2496C17.5902 18.7277 17.8588 19.3761 17.8588 20.0522C17.8588 21.8751 15.5312 23.3334 15.5312 23.3334H15.0938ZM28.2188 6.56259C28.2188 6.56259 25.8854 5.10426 25.8854 3.28134C25.8854 2.60526 26.154 1.95687 26.6321 1.47881C27.1101 1.00075 27.7585 0.732178 28.4346 0.732178C29.1107 0.732178 29.7591 1.00075 30.2371 1.47881C30.7152 1.95687 30.9838 2.60526 30.9838 3.28134C30.9838 5.10426 28.6563 6.56259 28.6563 6.56259H28.2188Z"
+															stroke="currentColor"
+															stroke-width="1.5"
+														/>
+													</g>
+													<defs>
+														<clipPath id="clip0_416_4981">
+															<rect width="35" height="35" fill="currentColor" />
+														</clipPath>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="icon-card__row">
+											<div class="icon-card__body">
+												<h3 class="icon-card__title">Corporate Housing</h3>
+												<p>Manage short- and mid-term corporate housing stays, tenants, billing, and reporting while supporting flexible occupancy models.</p>
+											</div>
+											<a href="#" class="icon-card__content-arrow-link">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-4">
+									<div class="icon-card icon-card--inverse icon-card--text-small">
+										<div class="icon-card__header">
+											<div class="icon-card__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+													<path
+														d="M32.8122 30.625V14.9479L32.452 14.7831C26.992 12.2804 22.4378 8.15297 19.4116 2.96479L18.958 2.1875H16.0413L15.5878 2.96479C12.5616 8.15297 8.00737 12.2804 2.54738 14.7831L2.18717 14.9479V30.625M33.5413 32.8125H1.45801M21.8747 30.625V24.7917C21.8747 23.6313 21.4137 22.5185 20.5933 21.6981C19.7728 20.8776 18.66 20.4167 17.4997 20.4167C16.3394 20.4167 15.2266 20.8776 14.4061 21.6981C13.5856 22.5185 13.1247 23.6313 13.1247 24.7917V30.625"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+												</svg>
+											</div>
+										</div>
+										<div class="icon-card__row">
+											<div class="icon-card__body">
+												<h3 class="icon-card__title">Housing Association</h3>
+												<p>
+													Centralize member records, fees, maintenance requests, communications, and governance operations for housing associations and
+													residential communities.
+												</p>
+											</div>
+											<a href="#" class="icon-card__content-arrow-link">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-4">
+									<div class="icon-card icon-card--inverse icon-card--text-small">
+										<div class="icon-card__header">
+											<div class="icon-card__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+													<path
+														d="M19.6872 31.3541H9.47884C6.72842 31.3541 5.35467 31.3541 4.50009 30.4995C3.64551 29.6449 3.64551 28.2712 3.64551 25.5208V9.47909C3.64551 6.72867 3.64551 5.35492 4.50009 4.50034C5.35467 3.64575 6.72842 3.64575 9.47884 3.64575H13.8538C16.6043 3.64575 17.978 3.64575 18.8326 4.50034C19.6872 5.35492 19.6872 6.72867 19.6872 9.47909V31.3541ZM19.6872 31.3541V10.9374H25.5205C28.2709 10.9374 29.6447 10.9374 30.4993 11.792C31.3538 12.6466 31.3538 14.0203 31.3538 16.7708V25.5208C31.3538 28.2712 31.3538 29.6449 30.4993 30.4995C29.6447 31.3541 28.2709 31.3541 25.5205 31.3541H19.6872ZM8.02051 8.02075H9.47884M13.8538 8.02075H15.3122M8.02051 12.3958H9.47884M13.8538 12.3958H15.3122M8.02051 16.7708H9.47884M13.8538 16.7708H15.3122M8.02051 21.1458H9.47884M13.8538 21.1458H15.3122M11.6663 31.3541V26.9791M24.7913 15.3124H26.2497M24.7913 19.6874H26.2497M24.7913 24.0624H26.2497"
+														stroke="currentColor"
+														stroke-width="1.5"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+													/>
+												</svg>
+											</div>
+										</div>
+										<div class="icon-card__row">
+											<div class="icon-card__body">
+												<h3 class="icon-card__title">Condominium</h3>
+												<p>
+													Manage condo units, owners, tenants, association fees, maintenance, and shared amenities in a centralized residential management
+													platform.
+												</p>
+											</div>
+											<a href="#" class="icon-card__content-arrow-link">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-4">
+									<div class="icon-card icon-card--inverse icon-card--text-small">
+										<div class="icon-card__header">
+											<div class="icon-card__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+													<path
+														d="M11.6673 15.3124C13.6809 15.3124 15.3132 13.6801 15.3132 11.6666C15.3132 9.65305 13.6809 8.02075 11.6673 8.02075C9.65378 8.02075 8.02148 9.65305 8.02148 11.6666C8.02148 13.6801 9.65378 15.3124 11.6673 15.3124Z"
+														stroke="currentColor"
+														stroke-width="1.5"
+														stroke-linecap="round"
+													/>
+													<path
+														d="M17.1624 12.3957C17.3525 12.0614 17.6069 11.7679 17.9109 11.5322C18.2149 11.2965 18.5625 11.1233 18.9337 11.0225C19.3049 10.9218 19.6924 10.8954 20.0739 10.945C20.4553 10.9946 20.8232 11.1191 21.1563 11.3114C21.4894 11.5038 21.7812 11.7601 22.0148 12.0656C22.2485 12.3712 22.4194 12.7199 22.5177 13.0918C22.616 13.4637 22.6398 13.8513 22.5877 14.2324C22.5356 14.6135 22.4086 14.9806 22.2141 15.3124C21.8246 15.9768 21.188 16.4602 20.4434 16.6571C19.6988 16.854 18.9066 16.7483 18.2396 16.3632C17.5726 15.9781 17.0849 15.3448 16.8831 14.6015C16.6814 13.8582 16.7817 13.0653 17.1624 12.3957Z"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+													<path
+														d="M18.2296 26.25H5.10461V27.7083H18.2296V26.25ZM4.50378 25.6463C4.69336 24.4592 5.14836 22.7719 6.21878 21.3952C7.26149 20.0535 8.92399 18.9583 11.6671 18.9583V17.5C8.46024 17.5 6.3792 18.8125 5.0667 20.4998C3.78336 22.1535 3.27149 24.1165 3.06441 25.4158L4.50378 25.6463ZM11.6671 18.9583C14.4102 18.9583 16.0713 20.0521 17.1154 21.3952C18.1859 22.7719 18.6409 24.4577 18.8304 25.6463L20.2698 25.4158C20.0627 24.1179 19.5523 22.1535 18.2675 20.5012C16.955 18.8125 14.874 17.5 11.6671 17.5V18.9583ZM5.10461 26.25C4.67878 26.25 4.45857 25.9335 4.50378 25.6463L3.06441 25.4158C2.85587 26.7196 3.91899 27.7083 5.10461 27.7083V26.25ZM18.2296 27.7083C19.4152 27.7083 20.4769 26.7196 20.2698 25.4158L18.8304 25.6463C18.8757 25.9335 18.6554 26.25 18.2296 26.25V27.7083Z"
+														fill="currentColor"
+													/>
+													<path
+														d="M17.2093 20.3889L16.8184 19.7735L16.0674 20.2503L16.6828 20.892L17.2093 20.3889ZM23.9103 26.2499H18.2301V27.7083H23.9103V26.2499ZM24.5184 25.5762C24.5957 25.8897 24.3668 26.2499 23.9103 26.2499V27.7083C25.179 27.7083 26.2728 26.5824 25.933 25.2218L24.5184 25.5762ZM19.6884 20.4166C21.1876 20.4166 22.2405 21.1501 23.0105 22.1768C23.798 23.2239 24.2588 24.5466 24.5184 25.5762L25.933 25.2218C25.653 24.1076 25.1309 22.5735 24.1772 21.3003C23.2074 20.0083 21.7593 18.9583 19.6884 18.9583V20.4166ZM17.6001 21.0043C18.1688 20.6441 18.8513 20.4166 19.6884 20.4166V18.9583C18.5684 18.9583 17.6161 19.2674 16.8184 19.7735L17.6001 21.0043ZM16.6828 20.892C18.0638 22.3358 18.6165 24.303 18.8309 25.6462L20.2703 25.4158C20.037 23.9574 19.4201 21.6445 17.7372 19.8843L16.6828 20.892ZM18.8309 25.6462C18.8761 25.9335 18.6559 26.2499 18.2301 26.2499V27.7083C19.4157 27.7083 20.4774 26.7195 20.2703 25.4158L18.8309 25.6462Z"
+														fill="currentColor"
+													/>
+													<path
+														d="M29.8962 7.65625H24.0628C23.8615 7.65625 23.6982 7.81948 23.6982 8.02083C23.6982 8.22219 23.8615 8.38542 24.0628 8.38542H29.8962C30.0975 8.38542 30.2607 8.22219 30.2607 8.02083C30.2607 7.81948 30.0975 7.65625 29.8962 7.65625Z"
+														stroke="currentColor"
+														stroke-width="1.5"
+														stroke-linecap="round"
+													/>
+													<path
+														d="M27.3438 10.9374V5.10409C27.3438 4.90273 27.1805 4.7395 26.9792 4.7395C26.7778 4.7395 26.6146 4.90273 26.6146 5.10409V10.9374C26.6146 11.1388 26.7778 11.302 26.9792 11.302C27.1805 11.302 27.3438 11.1388 27.3438 10.9374Z"
+														stroke="currentColor"
+														stroke-width="1.5"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</div>
+										</div>
+										<div class="icon-card__row">
+											<div class="icon-card__body">
+												<h3 class="icon-card__title">Multifamily Property</h3>
+												<p>
+													Manage multifamily portfolios by tracking units, residents, leases, payments, maintenance, and reporting across multiple properties.
+												</p>
+											</div>
+											<a href="#" class="icon-card__content-arrow-link">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-4">
+									<div class="icon-card icon-card--inverse icon-card--text-small">
+										<div class="icon-card__header">
+											<div class="icon-card__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+													<g clip-path="url(#clip0_416_5033)">
+														<path
+															d="M17.5059 34.2709C16.0475 34.2709 14.9538 32.0834 14.9538 32.0834C13.86 29.8959 13.86 26.9793 13.86 24.7918V24.0626L6.56836 20.4168V20.0522L9.19773 12.428C9.49456 11.5673 10.0525 10.8205 10.7939 10.292C11.5353 9.7634 12.4231 9.47929 13.3336 9.47926H15.3169L16.0738 13.2534C16.272 14.2451 16.8076 15.1375 17.5896 15.7788C18.3715 16.4201 19.3515 16.7707 20.3627 16.7709H21.875M10.9434 25.5209C10.6371 25.5209 10.2638 25.7149 9.86857 26.0226C7.23628 28.0584 6.56836 31.6722 6.56836 35.0001M23.3334 21.1459V18.9584C23.3334 18.3783 23.5638 17.8219 23.9741 17.4116C24.3843 17.0014 24.9407 16.7709 25.5209 16.7709C26.101 16.7709 26.6574 17.0014 27.0677 17.4116C27.4779 17.8219 27.7084 18.3783 27.7084 18.9584V34.2709M15.0996 6.56259C15.0996 6.56259 12.7663 5.10426 12.7663 3.28134C12.7663 2.60526 13.0348 1.95687 13.5129 1.47881C13.991 1.00075 14.6394 0.732178 15.3154 0.732178C15.9915 0.732178 16.6399 1.00075 17.118 1.47881C17.596 1.95687 17.8646 2.60526 17.8646 3.28134C17.8646 5.10426 15.5371 6.56259 15.5371 6.56259H15.0996Z"
+															stroke="currentColor"
+															stroke-width="1.5"
+														/>
+													</g>
+													<defs>
+														<clipPath id="clip0_416_5033">
+															<rect width="35" height="35" fill="currentColor" />
+														</clipPath>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="icon-card__row">
+											<div class="icon-card__body">
+												<h3 class="icon-card__title">Senior Living</h3>
+												<p>
+													Support senior living communities by managing residents, units, services, billing, and daily operations while accommodating long-term
+													care workflows.
+												</p>
+											</div>
+											<a href="#" class="icon-card__content-arrow-link">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-4">
+									<div class="icon-card icon-card--inverse icon-card--text-small">
+										<div class="icon-card__header">
+											<div class="icon-card__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+													<g clip-path="url(#clip0_416_5044)">
+														<path
+															d="M17.5003 10.9375V24.7917M17.5003 10.9375C17.5003 9.77718 17.0394 8.66438 16.2189 7.84391C15.3984 7.02344 14.2856 6.5625 13.1253 6.5625H2.91699V8.14479C2.91692 14.8474 2.18339 21.5299 0.729492 28.0729V28.4375H13.1253C14.2856 28.4375 15.3984 28.8984 16.2189 29.7189C17.0394 30.5394 17.5003 31.6522 17.5003 32.8125M17.5003 10.9375C17.5003 9.77718 17.9613 8.66438 18.7817 7.84391C19.6022 7.02344 20.715 6.5625 21.8753 6.5625H32.0837V8.14479C32.0837 14.8473 32.8172 21.5308 34.2712 28.0729V28.4375H21.8753C20.715 28.4375 19.6022 28.8984 18.7817 29.7189C17.9613 30.5394 17.5003 31.6522 17.5003 32.8125M17.5003 32.8125V33.5417"
+															stroke="currentColor"
+															stroke-width="1.5"
+														/>
+													</g>
+													<defs>
+														<clipPath id="clip0_416_5044">
+															<rect width="35" height="35" fill="currentColor" />
+														</clipPath>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="icon-card__row">
+											<div class="icon-card__body">
+												<h3 class="icon-card__title">Student Housing</h3>
+												<p>
+													Manage student units, leasing cycles, roommates, payments, and communication with tools designed for academic-year housing operations.
+												</p>
+											</div>
+											<a href="#" class="icon-card__content-arrow-link">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-4">
+									<div class="icon-card icon-card--inverse icon-card--text-small">
+										<div class="icon-card__header">
+											<div class="icon-card__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+													<path
+														d="M16.7927 28.5882V14.9412H9.10044C8.63001 14.9412 8.24865 14.7518 7.95638 14.3731C7.66294 13.9944 7.59191 13.5867 7.74329 13.15L10.3772 4.92765C10.5659 4.34878 10.9036 3.88251 11.3903 3.52882C11.8794 3.17627 12.4348 3 13.0566 3H22.2754C22.8972 3 23.4521 3.17627 23.94 3.52882C24.4291 3.88251 24.7673 4.34878 24.9548 4.92765L27.5887 13.15C27.7401 13.5878 27.6691 13.9955 27.3757 14.3731C27.0834 14.7518 26.702 14.9412 26.2316 14.9412H18.5393V28.5882H16.7927ZM9.54409 13.2353H25.7879L23.3164 5.45988C23.2489 5.24153 23.1202 5.06127 22.9304 4.91912C22.7406 4.77696 22.5223 4.70588 22.2754 4.70588H13.0584C12.8115 4.70588 12.5926 4.77696 12.4016 4.91912C12.2106 5.06127 12.0826 5.24153 12.0173 5.45988L9.54409 13.2353ZM11.5527 32V30.2941H23.7793V32H11.5527Z"
+														fill="currentColor"
+													/>
+												</svg>
+											</div>
+										</div>
+										<div class="icon-card__row">
+											<div class="icon-card__body">
+												<h3 class="icon-card__title">Serviced Apartment</h3>
+												<p>
+													Manage short- and long-term serviced apartment stays, guest services, billing, and operations in one flexible residential platform.
+												</p>
+											</div>
+											<a href="#" class="icon-card__content-arrow-link">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-4">
+									<div class="icon-card icon-card--inverse icon-card--text-small">
+										<div class="icon-card__header">
+											<div class="icon-card__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+													<g clip-path="url(#clip0_416_5067)">
+														<path
+															d="M5.10417 35V25.5208C5.10417 24.7473 4.79688 24.0054 4.24989 23.4584C3.70291 22.9114 2.96105 22.6041 2.1875 22.6041V10.9375C2.1875 10.9375 4.375 9.47914 8.02083 9.47914C9.12828 9.47912 10.2313 9.61926 11.3035 9.89622M15.314 35V26.9791H10.2083V26.6146L10.3133 26.3958C12.6447 21.4995 13.8543 16.1447 13.8542 10.7216V10.2418C15.2555 9.72938 16.7371 9.4711 18.2292 9.47914C20.1075 9.47914 21.5994 9.86706 22.6042 10.2418V10.7216C22.6041 11.8933 22.6606 13.0642 22.7733 14.2304M30.2604 35V30.0037C30.2604 28.3325 31.4038 26.9791 32.8125 26.9791V17.5539C32.8125 17.5539 30.8992 16.0416 27.7083 16.0416C24.5175 16.0416 22.6042 17.5539 22.6042 17.5539V26.9791C24.0144 26.9791 25.1563 28.3339 25.1563 30.0037V35M7.80208 6.56247C7.80208 6.56247 5.46875 5.10414 5.46875 3.28122C5.46875 2.94646 5.53469 2.61498 5.66279 2.3057C5.7909 1.99642 5.97867 1.7154 6.21538 1.47869C6.4521 1.24198 6.73311 1.05421 7.04239 0.926099C7.35167 0.797992 7.68316 0.732056 8.01792 0.732056C8.35268 0.732056 8.68416 0.797992 8.99344 0.926099C9.30272 1.05421 9.58374 1.24198 9.82045 1.47869C10.0572 1.7154 10.2449 1.99642 10.373 2.3057C10.5011 2.61498 10.5671 2.94646 10.5671 3.28122C10.5671 5.10414 8.23958 6.56247 8.23958 6.56247H7.80208ZM18.0104 6.56247C18.0104 6.56247 15.6771 5.10414 15.6771 3.28122C15.6771 2.60514 15.9457 1.95675 16.4237 1.47869C16.9018 1.00063 17.5502 0.732056 18.2263 0.732056C18.9023 0.732056 19.5507 1.00063 20.0288 1.47869C20.5068 1.95675 20.7754 2.60514 20.7754 3.28122C20.7754 5.10414 18.4479 6.56247 18.4479 6.56247H18.0104ZM27.5231 13.125C27.5231 13.125 25.5208 11.8489 25.5208 10.2535C25.5208 9.02122 26.5008 8.02081 27.7113 8.02081C28.9217 8.02081 29.8958 9.02122 29.8958 10.2535C29.8958 11.8489 27.8979 13.125 27.8979 13.125H27.5231Z"
+															stroke="currentColor"
+															stroke-width="1.5"
+														/>
+													</g>
+													<defs>
+														<clipPath id="clip0_416_5067">
+															<rect width="35" height="35" fill="currentColor" />
+														</clipPath>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="icon-card__row">
+											<div class="icon-card__body">
+												<h3 class="icon-card__title">Single-Family Property</h3>
+												<p>
+													Support senior living communities by managing residents, units, services, billing, and daily operations while accommodating long-term
+													care workflows.
+												</p>
+											</div>
+											<a href="#" class="icon-card__content-arrow-link">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-4">
+									<div class="icon-card icon-card--inverse icon-card--text-small">
+										<div class="icon-card__header">
+											<div class="icon-card__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+													<g clip-path="url(#clip0_416_5078)">
+														<path
+															d="M25.5212 3.64587H9.47949L9.04345 5.08379C7.89995 8.8567 5.68856 12.2178 2.67637 14.7613L0.729492 16.4063V16.7709M25.5212 3.64587L25.0807 5.1115C23.9407 8.91294 21.7175 12.2997 18.683 14.8575L16.8441 16.4063L16.4066 16.7709H0.729492M25.5212 3.64587L25.9616 5.1115C27.102 8.91312 29.3257 12.2999 32.3607 14.8575L34.1982 16.4063L34.2712 16.4792V31.3542H0.729492V16.7709M16.7712 16.4675V31.3542M25.5212 31.3542V24.7917"
+															stroke="currentColor"
+															stroke-width="1.5"
+														/>
+													</g>
+													<defs>
+														<clipPath id="clip0_416_5078">
+															<rect width="35" height="35" fill="currentColor" />
+														</clipPath>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="icon-card__row">
+											<div class="icon-card__body">
+												<h3 class="icon-card__title">Affordable Housing</h3>
+												<p>
+													Manage student units, leasing cycles, roommates, payments, and communication with tools designed for academic-year housing operations.
+												</p>
+											</div>
+											<a href="#" class="icon-card__content-arrow-link">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<path d="M4 12h16m0 0-6 6m6-6-6-6" stroke="currentColor"></path>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Residental block -->
+				<div class="block">
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">Why Our Residential Property Management Software Is Different</h2>
+							<p class="block__subtitle">
+								Many residential property management systems are outdated, rigid, or limited to one housing model. We take a different approach.
+							</p>
+						</div>
+					</div>
+					<div class="marquee marquee--hover-pause">
+						<div class="marquee__track">
+							<div class="marquee__group features-grid">
+								<div class="features-grid__item features-grid__item--col-2">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-centralized-data.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Centralized data</h3>
+											<p class="feat-grid-card__desc">Residents, properties, payments, and operations in one system</p>
+										</div>
+									</div>
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-salesforce.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Salesforce-native foundation</h3>
+											<p class="feat-grid-card__desc">Secure, scalable, and reliable</p>
+										</div>
+									</div>
+									<div class="feat-grid-card feat-grid-card--full">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-compliance.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Compliance-ready</h3>
+											<p class="feat-grid-card__desc">Support audits, reporting, and regulatory requirements</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Configurable workflows</h3>
+											<div class="feat-grid-card__illustration">
+												<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-workflows.svg" alt="Configurable workflows illustration" />
+											</div>
+											<p class="feat-grid-card__desc">Adapt leasing, maintenance, and operations to your property type</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Future-proof design</h3>
+											<div class="feat-grid-card__illustration">
+												<img
+													src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-future-proof-design.svg"
+													alt="Future-proof design illustration"
+												/>
+											</div>
+											<p class="feat-grid-card__desc">Add new residential models without replacing software</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Club & Community block -->
+				<div class="block">
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">Why Our Club & Community Management Software Is Different</h2>
+							<p class="block__subtitle">
+								Most club management tools focus on just one function, like memberships or scheduling. We take a broader operational approach.
+							</p>
+						</div>
+					</div>
+					<div class="marquee marquee--hover-pause">
+						<div class="marquee__track">
+							<div class="marquee__group features-grid">
+								<div class="features-grid__item features-grid__item--col-2">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-centralized-data.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Centralized data</h3>
+											<p class="feat-grid-card__desc">members, facilities, programs, payments, and operations in one system</p>
+										</div>
+									</div>
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-salesforce.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Salesforce-native foundation</h3>
+											<p class="feat-grid-card__desc">Secure, scalable, and reliable</p>
+										</div>
+									</div>
+									<div class="feat-grid-card feat-grid-card--full">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-multi-program-support.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Multi-program support</h3>
+											<p class="feat-grid-card__desc">Manage diverse activities and facilities together</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Configurable workflows</h3>
+											<div class="feat-grid-card__illustration">
+												<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-workflows.svg" alt="Configurable workflows illustration" />
+											</div>
+											<p class="feat-grid-card__desc">Adapt leasing, maintenance, and operations to your property type</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Future-proof design</h3>
+											<div class="feat-grid-card__illustration">
+												<img
+													src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-future-proof-design.svg"
+													alt="Future-proof design illustration"
+												/>
+											</div>
+											<p class="feat-grid-card__desc">Add new club types without replacing software</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Public Sector block -->
+				<div class="block">
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">Why Our Public Sector Management Software Is Different</h2>
+							<p class="block__subtitle">Most public sector systems are rigid, difficult to customize, and slow to evolve. We take a different approach.</p>
+						</div>
+					</div>
+					<div class="marquee marquee--hover-pause">
+						<div class="marquee__track">
+							<div class="marquee__group features-grid">
+								<div class="features-grid__item features-grid__item--col-2">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-centralized-data.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Centralized data</h3>
+											<p class="feat-grid-card__desc">Residents, properties, payments, and operations in one system</p>
+										</div>
+									</div>
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-salesforce.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Salesforce-native foundation</h3>
+											<p class="feat-grid-card__desc">Secure, scalable, and reliable</p>
+										</div>
+									</div>
+									<div class="feat-grid-card feat-grid-card--full">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-compliance.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Compliance-ready</h3>
+											<p class="feat-grid-card__desc">Support audits, reporting, and regulatory requirements</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Configurable workflows</h3>
+											<div class="feat-grid-card__illustration">
+												<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-workflows.svg" alt="Configurable workflows illustration" />
+											</div>
+											<p class="feat-grid-card__desc">Adapt processes to your agency, not the other way around</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Future-proof design</h3>
+											<div class="feat-grid-card__illustration">
+												<img
+													src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-future-proof-design.svg"
+													alt="Future-proof design illustration"
+												/>
+											</div>
+											<p class="feat-grid-card__desc">Add new programs, properties, or departments without replacing software</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Hospitality block -->
+				<div class="block">
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">Why Our Hospitality Property Management Software Is Different</h2>
+							<p class="block__subtitle">
+								Most hospitality property management software is rigid, outdated, or limited to one property type. We take a different approach.
+							</p>
+						</div>
+					</div>
+					<div class="marquee marquee--hover-pause">
+						<div class="marquee__track">
+							<div class="marquee__group features-grid">
+								<div class="features-grid__item features-grid__item--col-2">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">AI-Ready Architecture</h3>
+											<div class="feat-grid-card__illustration">
+												<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-ai-ready.svg" alt="AI-ready architecture illustration" />
+											</div>
+											<p class="feat-grid-card__desc">Enable automation, forecasting, and intelligent reporting</p>
+										</div>
+									</div>
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-salesforce.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Salesforce-native foundation</h3>
+											<p class="feat-grid-card__desc">Enterprise-grade security, scalability, and reliability</p>
+										</div>
+									</div>
+									<div class="feat-grid-card feat-grid-card--full">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-single-sot.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Single source of truth</h3>
+											<p class="feat-grid-card__desc">guests, reservations, payments, and operations in one platform</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Configurable workflows</h3>
+											<div class="feat-grid-card__illustration">
+												<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-workflows.svg" alt="Configurable workflows illustration" />
+											</div>
+											<p class="feat-grid-card__desc">Adapt the system to your operations, not the other way around</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Future-proof design</h3>
+											<div class="feat-grid-card__illustration">
+												<img
+													src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-future-proof-design.svg"
+													alt="Future-proof design illustration"
+												/>
+											</div>
+											<p class="feat-grid-card__desc">Add new property types without changing systems</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Venue block -->
+				<div class="block">
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">Venue TITLE</h2>
+							<p class="block__subtitle">SUBTITLE</p>
+						</div>
+					</div>
+					<div class="marquee marquee--hover-pause">
+						<div class="marquee__track">
+							<div class="marquee__group features-grid">
+								<div class="features-grid__item features-grid__item--col-2">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-centralized-data.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Centralized data</h3>
+											<p class="feat-grid-card__desc">Bookings, events, payments, staff, and facilities in one system</p>
+										</div>
+									</div>
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-salesforce.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Salesforce-native foundation</h3>
+											<p class="feat-grid-card__desc">Secure, scalable, and enterprise-ready</p>
+										</div>
+									</div>
+									<div class="feat-grid-card feat-grid-card--full">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-multi-event-support.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Multi-event support</h3>
+											<p class="feat-grid-card__desc">Manage overlapping and recurring events with ease</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Configurable workflows</h3>
+											<div class="feat-grid-card__illustration">
+												<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-workflows.svg" alt="Configurable workflows illustration" />
+											</div>
+											<p class="feat-grid-card__desc">Adapt to different venue sizes and event types</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Future-proof design</h3>
+											<div class="feat-grid-card__illustration">
+												<img
+													src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-future-proof-design.svg"
+													alt="Future-proof design illustration"
+												/>
+											</div>
+											<p class="feat-grid-card__desc">Add new property types without changing systems</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Commercial block -->
+				<div class="block">
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">Commercial TITLE</h2>
+							<p class="block__subtitle">SUBTITLE</p>
+						</div>
+					</div>
+					<div class="marquee marquee--hover-pause">
+						<div class="marquee__track">
+							<div class="marquee__group features-grid">
+								<div class="features-grid__item features-grid__item--col-2">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-centralized-data.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Centralized data</h3>
+											<p class="feat-grid-card__desc">Leases, tenants, facilities, payments, and reporting together</p>
+										</div>
+									</div>
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-salesforce.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Salesforce-native foundation</h3>
+											<p class="feat-grid-card__desc">Secure, scalable, and enterprise-ready</p>
+										</div>
+									</div>
+									<div class="feat-grid-card feat-grid-card--full">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-portfolio-level-visibility.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Portfolio-level visibility</h3>
+											<p class="feat-grid-card__desc">Manage single assets or large commercial portfolios</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Configurable workflows</h3>
+											<div class="feat-grid-card__illustration">
+												<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-workflows.svg" alt="Configurable workflows illustration" />
+											</div>
+											<p class="feat-grid-card__desc">Adapt to different commercial asset types</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Future-proof design</h3>
+											<div class="feat-grid-card__illustration">
+												<img
+													src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-future-proof-design.svg"
+													alt="Future-proof design illustration"
+												/>
+											</div>
+											<p class="feat-grid-card__desc">Add new commercial property types without replacing software</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Non-profit & Religious block -->
+				<div class="block">
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">Non-profit & Religious TITLE</h2>
+							<p class="block__subtitle">SUBTITLE</p>
+						</div>
+					</div>
+					<div class="marquee marquee--hover-pause">
+						<div class="marquee__track">
+							<div class="marquee__group features-grid">
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Built for faith-based organizations</h3>
+											<div class="feat-grid-card__illustration">
+												<img
+													src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-religious.svg"
+													alt="Built for faith-based organizations illustration"
+												/>
+											</div>
+											<p class="feat-grid-card__desc">Support religious properties and congregations</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item features-grid__item--col-2">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-centralized-data.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Centralized data</h3>
+											<p class="feat-grid-card__desc">Programs, people, facilities, payments, and operations in one system</p>
+										</div>
+									</div>
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-salesforce.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Salesforce-native foundation</h3>
+											<p class="feat-grid-card__desc">Secure, scalable, and enterprise-ready</p>
+										</div>
+									</div>
+									<div class="feat-grid-card feat-grid-card--full">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-compliance.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Transparency-ready</h3>
+											<p class="feat-grid-card__desc">Support reporting, accountability, and oversight</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Configurable workflows</h3>
+											<div class="feat-grid-card__illustration">
+												<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-workflows.svg" alt="Configurable workflows illustration" />
+											</div>
+											<p class="feat-grid-card__desc">Adapt to different missions and organizational structures</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Future-proof design</h3>
+											<div class="feat-grid-card__illustration">
+												<img
+													src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-future-proof-design.svg"
+													alt="Future-proof design illustration"
+												/>
+											</div>
+											<p class="feat-grid-card__desc">Add new programs or locations without replacing software</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Educational block -->
+				<div class="block">
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">Educational TITLE</h2>
+							<p class="block__subtitle">SUBTITLE</p>
+						</div>
+					</div>
+					<div class="marquee marquee--hover-pause">
+						<div class="marquee__track">
+							<div class="marquee__group features-grid">
+								<div class="features-grid__item features-grid__item--col-2">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-centralized-data.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Centralized data</h3>
+											<p class="feat-grid-card__desc">Facilities, housing, schedules, payments, and operations in one system</p>
+										</div>
+									</div>
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-salesforce.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Salesforce-native foundation</h3>
+											<p class="feat-grid-card__desc">Secure, scalable, and enterprise-ready</p>
+										</div>
+									</div>
+									<div class="feat-grid-card feat-grid-card--full">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-multi-campus-support.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Multi-campus support</h3>
+											<p class="feat-grid-card__desc">Manage multiple schools or locations from one platform</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Configurable workflows</h3>
+											<div class="feat-grid-card__illustration">
+												<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-workflows.svg" alt="Configurable workflows illustration" />
+											</div>
+											<p class="feat-grid-card__desc">Adapt to different education models and campus structures</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Future-proof design</h3>
+											<div class="feat-grid-card__illustration">
+												<img
+													src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-future-proof-design.svg"
+													alt="Future-proof design illustration"
+												/>
+											</div>
+											<p class="feat-grid-card__desc">Add new programs, campuses, or property types without replacing software</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Recreational block -->
+				<div class="block">
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">Recreational TITLE</h2>
+							<p class="block__subtitle">SUBTITLE</p>
+						</div>
+					</div>
+					<div class="marquee marquee--hover-pause">
+						<div class="marquee__track">
+							<div class="marquee__group features-grid">
+								<div class="features-grid__item features-grid__item--col-2">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-centralized-data.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Centralized data</h3>
+											<p class="feat-grid-card__desc">Bookings, members, facilities, payments, and operations in one system</p>
+										</div>
+									</div>
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-salesforce.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Salesforce-native foundation</h3>
+											<p class="feat-grid-card__desc">Secure, scalable, and enterprise-ready</p>
+										</div>
+									</div>
+									<div class="feat-grid-card feat-grid-card--full">
+										<div class="feat-grid-card__wrapper-bg">
+											<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-seasonal-flexibility.svg" />
+										</div>
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Seasonal flexibility</h3>
+											<p class="feat-grid-card__desc">Support peak seasons and off-season operations</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Configurable workflows</h3>
+											<div class="feat-grid-card__illustration">
+												<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-workflows.svg" alt="Configurable workflows illustration" />
+											</div>
+											<p class="feat-grid-card__desc">Adapt to different recreational business models</p>
+										</div>
+									</div>
+								</div>
+								<div class="features-grid__item">
+									<div class="feat-grid-card">
+										<div class="feat-grid-card__content">
+											<h3 class="feat-grid-card__title">Future-proof design</h3>
+											<div class="feat-grid-card__illustration">
+												<img
+													src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/fc-future-proof-design.svg"
+													alt="Future-proof design illustration"
+												/>
+											</div>
+											<p class="feat-grid-card__desc">Add new recreational property types without replacing software</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="container">
+						<div class="block__body">
+							<div class="article-section">
+								<div class="row justify-content-between align-items-center gx-lg-5 gy-5 gy-lg-0">
+									<div class="col-lg-6 article-section__image-col">
+										<img src="./img/hubpage-feature-promo-be.png" alt="Section Image" class="article-section__image" />
+									</div>
+									<div class="col-lg-6 col-xl-5">
+										<p class="h2">
+											<span class="highlight-gray">We don’t sell off-the-shelf tools.</span>
+											<br />We build residential property management software around how communities actually operate.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block block--media">
+					<div class="media-overlay media-overlay--light">
+						<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/waves-bg.jpg" />
+					</div>
+					<div class="container">
+						<div class="block__header">
+							<h2 class="h2 block__title">Built for Growing Residential Portfolios</h2>
+							<p class="block__subtitle">Our residential property management software supports:</p>
+						</div>
+
+						<div class="block__body">
+							<ul class="circled-list list-cols--3 circled-list--icon-color-auto">
+								<li>Small clubs and large community organizations;</li>
+								<li>Single-location and multi-facility operations;</li>
+								<li>Daily member activities and long-term growth.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- CTA -->
+				<div class="block">
+					<div class="container">
+						<div class="base-cta-card base-cta-card--center">
+							<div class="media-overlay">
+								<img src="https://s3-us-west-2.amazonaws.com/www.bookingninjas.com/img/bg-vector-lines.svg" />
+							</div>
+							<div class="base-cta-card__content">
+								<h2 class="base-cta-card__title text--limit-xl">Build Your Residential Property Management Software with Booking Ninjas</h2>
+								<p class="text--limit-lg">
+									If you’re looking for residential property management software that’s flexible, scalable, and built on Salesforce, we’re ready to design it
+									with you.
+								</p>
+								<div class="base-cta-card__buttons">
+									<a href="/pricing" class="button">View pricing</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__top">
+						<a class="footer__logo" href="/">
+							<img alt="Booking Ninjas Logo" src="img/logo-white.svg" />
+						</a>
+						<div class="footer__row row">
+							<div class="col-lg-9 col-xl-8">
+								<nav class="footer__nav row">
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Company</div>
+										<ul class="footer__list">
+											<li><a href="/about-us">About Us</a></li>
+											<li><a href="/core-values-of-booking-ninjas-product">Core Values</a></li>
+											<li><a href="/booking-ninjas-careers">Careers</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Product</div>
+										<ul class="footer__list">
+											<li><a href="#">Features</a></li>
+											<li><a href="#">Solutions</a></li>
+											<li><a href="/pricing">Pricing</a></li>
+											<li><a href="/blog">Blog</a></li>
+											<li><a href="/faqs">FAQs</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Resources</div>
+										<ul class="footer__list">
+											<li><a href="/portal/s/">Client Portal</a></li>
+											<li><a href="/blog">Blog</a></li>
+											<li><a href="/faqs">FAQs</a></li>
+											<li><a href="/customer-stories">Customer Stories</a></li>
+											<li><a href="/booking-ninjas-webinars">Webinars</a></li>
+											<li><a href="#">Pilot</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="footer__title">Legal &amp; Contact</div>
+										<ul class="footer__list">
+											<li><a href="/terms-and-conditions">Terms of Use</a></li>
+											<li><a href="/privacy-policy">Privacy Policy</a></li>
+											<li><a href="/meeting">Contact Us</a></li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+							<div class="col-lg-auto text_center">
+								<img src="img/salesforce-section-icon-1.png" alt="Salesforce Partner Badge" />
+							</div>
+						</div>
+						<div class="footer__badges">
+							<img src="img/icons/badge-aicpa.png" alt="AICPA Badge" />
+							<img src="img/icons/badge-gdpr.png" alt="GDPR Badge" />
+							<img src="img/icons/badge-owasp.png" alt="OWASP Badge" />
+							<img src="img/icons/badge-gt.svg" alt="Government Tested Badge" />
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<div class="row justify-content-center justify-content-lg-between">
+							<div class="col-lg-6">
+								<form
+									id="j_id0:j_id1:footer-form"
+									name="j_id0:j_id1:footer-form"
+									method="post"
+									action="/BN_Index"
+									class="footer__form"
+									enctype="application/x-www-form-urlencoded"
+								>
+									<input type="hidden" name="j_id0:j_id1:footer-form" value="j_id0:j_id1:footer-form" />
+									<input type="text" name="j_id0:j_id1:footer-form:j_id199" value="" required="required" placeholder="Enter Your Email" /><input
+										class="button footer-btn-submit"
+										id="j_id0:j_id1:footer-form:j_id200"
+										name="j_id0:j_id1:footer-form:j_id200"
+										onclick="return A4J.AJAX.Submit('j_id0:j_id1:footer\x2Dform',event,{'similarityGroupingId':'j_id0:j_id1:footer\x2Dform:j_id200','html5Validate':true,'parameters':{'j_id0:j_id1:footer\x2Dform:j_id200':'j_id0:j_id1:footer\x2Dform:j_id200'} } );"
+										value="Subscribe"
+										type="submit"
+									/>
+									<div id="j_id0:j_id1:footer-form:j_id203"></div>
+								</form>
+								<div class="modal modal__success" id="modal-thanks">
+									<div class="modal__success-icon"><i class="far fa-check-circle"></i></div>
+									<p>Thanks</p>
+									<p>We send a monthly email with announcements, tips, news, feature updates, and important info. We'll only e-mail you if it's important.</p>
+								</div>
+								<p class="footer__form-text">Only strategic updates that matter — delivered monthly.</p>
+							</div>
+							<div class="col-auto">
+								<nav class="footer__social">
+									<a href="https://www.facebook.com/bookingninjas" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+									<a href="https://www.instagram.com/bookingninjas" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+									<a href="https://www.youtube.com/channel/UCOrcTzmQnmY7DG2nzwfa8zw" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+									<a href="https://www.linkedin.com/company/5346092/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+									<a href="https://twitter.com/bookingninjas" target="_blank"> <i class="fa-brands fa-x-twitter"></i></a>
+									<a href="https://www.pinterest.com/bookingninjas" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+									<a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N3A00000DvKtaUAF" target="_blank">
+										<i class="fa-brands fa-salesforce"></i>
+									</a>
+								</nav>
+								<p class="footer__copyright">All rights reserved &copy; 2020 - Booking Ninjas</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!--SCRIPT -->
+		<script src="js/jquery.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/common.js"></script>
+		<!-- END OF SCRIPT -->
+	</body>
+</html>
