@@ -115,6 +115,78 @@ $(document).on('ready', function () {
 			},
 		});
 	}
+	// Combined split slider
+	const splitSliderNode = document.querySelector('.split-slider');
+	if (splitSliderNode) {
+		const asideNode = splitSliderNode.querySelector('.split-slider__aside');
+
+		// Float content repositioning is only relevant when the aside panel exists
+		if (asideNode) {
+			// Build index  { floatContent, mainSlide, asideSlide }
+			const mainSlides = Array.from(splitSliderNode.querySelectorAll('.split-slider__main .split-slider__slide'));
+			const asideSlides = Array.from(asideNode.querySelectorAll('.split-slider__aside-slide'));
+			const floatItems = mainSlides.reduce((acc, slide, index) => {
+				const floatContent = slide.querySelector('.split-slider__float-content');
+				if (floatContent) {
+					acc.push({ floatContent, mainSlide: slide, asideSlide: asideSlides[index] || null });
+				}
+				return acc;
+			}, []);
+
+			// Moves each float content into the aside slide (>992px) or back into the main slide (<=992px)
+			const moveFloatContent = (isDesktop) => {
+				floatItems.forEach(({ floatContent, mainSlide, asideSlide }) => {
+					if (isDesktop && asideSlide) {
+						asideSlide.appendChild(floatContent);
+					} else {
+						mainSlide.appendChild(floatContent);
+					}
+				});
+			};
+
+			let isDesktop = window.innerWidth > 992;
+			moveFloatContent(isDesktop);
+
+			// Resize handler: only repositions content when crossing the 992px breakpoint
+			let splitSliderResizeTimer;
+			window.addEventListener('resize', () => {
+				clearTimeout(splitSliderResizeTimer);
+				splitSliderResizeTimer = setTimeout(() => {
+					const nowDesktop = window.innerWidth > 992;
+					if (nowDesktop !== isDesktop) {
+						isDesktop = nowDesktop;
+						moveFloatContent(isDesktop);
+					}
+				}, 100);
+			});
+		}
+
+		const splitSlider = new Swiper('.split-slider .split-slider__main .swiper', {
+			slidesPerView: 1,
+			spaceBetween: 48,
+			navigation: {
+				nextEl: '.swiper-base-arrow--next',
+				prevEl: '.swiper-base-arrow--prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'progressbar',
+			},
+		});
+
+		if (asideNode) {
+			const imagesSlider = new Swiper('.split-slider .split-slider__aside.swiper', {
+				slidesPerView: 1,
+				allowTouchMove: false,
+				effect: 'fade',
+				pagination: {
+					el: '.split-slider__aside-pagination',
+					type: 'fraction',
+				},
+			});
+			splitSlider.controller.control = imagesSlider;
+		}
+	}
 
 	// Pricing plans
 	if ($('.pricing-addons__slider').length) {
