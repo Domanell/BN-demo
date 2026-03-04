@@ -116,8 +116,7 @@ $(document).on('ready', function () {
 		});
 	}
 	// Combined split slider
-	const splitSliderNode = document.querySelector('.split-slider');
-	if (splitSliderNode) {
+	document.querySelectorAll('.split-slider').forEach((splitSliderNode) => {
 		const asideNode = splitSliderNode.querySelector('.split-slider__aside');
 
 		// Float content repositioning is only relevant when the aside panel exists
@@ -161,32 +160,34 @@ $(document).on('ready', function () {
 			});
 		}
 
-		const splitSlider = new Swiper('.split-slider .split-slider__main .swiper', {
+		const mainSwiperEl = splitSliderNode.querySelector('.split-slider__main .swiper');
+		const splitSlider = new Swiper(mainSwiperEl, {
 			slidesPerView: 1,
 			spaceBetween: 48,
 			navigation: {
-				nextEl: '.swiper-base-arrow--next',
-				prevEl: '.swiper-base-arrow--prev',
+				nextEl: splitSliderNode.querySelector('.swiper-base-arrow--next'),
+				prevEl: splitSliderNode.querySelector('.swiper-base-arrow--prev'),
 			},
 			pagination: {
-				el: '.swiper-pagination',
+				el: splitSliderNode.querySelector('.swiper-pagination'),
 				type: 'progressbar',
 			},
 		});
 
 		if (asideNode) {
-			const imagesSlider = new Swiper('.split-slider .split-slider__aside.swiper', {
+			const asideSwiperEl = splitSliderNode.querySelector('.split-slider__aside.swiper');
+			const imagesSlider = new Swiper(asideSwiperEl, {
 				slidesPerView: 1,
 				allowTouchMove: false,
 				effect: 'fade',
 				pagination: {
-					el: '.split-slider__aside-pagination',
+					el: splitSliderNode.querySelector('.split-slider__aside-pagination'),
 					type: 'fraction',
 				},
 			});
 			splitSlider.controller.control = imagesSlider;
 		}
-	}
+	});
 
 	// Pricing plans
 	if ($('.pricing-addons__slider').length) {

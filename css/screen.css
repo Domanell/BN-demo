@@ -14046,6 +14046,9 @@ mark {
   border-radius: 20px;
   background: #fbfdff;
 }
+.split-slider__float-content--unset {
+  background-color: unset;
+}
 .split-slider__navigation {
   direction: ltr;
   margin-top: auto;
@@ -14099,6 +14102,9 @@ mark {
   .split-slider__aside-slide .split-slider__float-content {
     left: unset;
     width: 320px;
+  }
+  .split-slider__aside-slide .split-slider__float-content--unset {
+    width: auto;
   }
 }
 
